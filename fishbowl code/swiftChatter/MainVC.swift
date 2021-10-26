@@ -18,18 +18,28 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == CBManagerState.poweredOn {
                     print("BLE powered on")
+            central.scanForPeripherals(withServices: nil, options: nil)
+
                     // Turned on
                 }
                 else {
                     print("Something wrong with BLE")
                     // Not on, but can have different issues
                 }
-    }
-
+        
+        }
+        
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+            if let pname = peripheral.name {
+                    print(pname)
+                print(peripheral.identifier)
+                }
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         centralManager = CBCentralManager(delegate: self, queue: nil)
-
+        
         // setup refreshControler here later
                refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
                
@@ -101,4 +111,5 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
                }
            }
        }
+    
 }
