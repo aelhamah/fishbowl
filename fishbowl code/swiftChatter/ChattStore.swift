@@ -75,7 +75,7 @@ final class ChattStore {
                     if (chattEntry.count == self.nFields) {
                         self.chatts.append(Chatt(username: chattEntry[0],
                                          message: chattEntry[1],
-                                         timestamp: chattEntry[2],
+                                         distance: chattEntry[2],
                                          imageUrl: chattEntry[3],
                                          videoUrl: chattEntry[4]))
                     } else {
