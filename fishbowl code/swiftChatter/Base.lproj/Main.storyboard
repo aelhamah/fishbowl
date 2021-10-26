@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510.14492753623193" y="-83.035714285714278"/>
+            <point key="canvasLocation" x="1420.289855072464" y="-83.035714285714278"/>
         </scene>
         <!--Fishbowl-->
         <scene sceneID="j3h-tI-Zp2">
@@ -115,7 +115,6 @@
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChattTableCell" rowHeight="114" id="6BI-ZJ-bDv" customClass="ChattTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="114"/>
->>>>>>> Stashed changes
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6BI-ZJ-bDv" id="RVX-1A-FMj">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
@@ -171,7 +170,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNI-SU-Mbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-989.85507246376824" y="-83.035714285714278"/>
+            <point key="canvasLocation" x="-79.710144927536234" y="-83.035714285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fwT-Wc-jxg">
@@ -189,7 +188,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndU-i4-2Wo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-268.1159420289855" y="-83.035714285714278"/>
+            <point key="canvasLocation" x="642.02898550724638" y="-83.035714285714278"/>
+        </scene>
+        <!--Sign-In-->
+        <scene sceneID="9ZN-Ni-ef4">
+            <objects>
+                <viewController title="Sign-In" id="7CD-7P-ZLd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3c-Us-ILw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2021-10-13 at 8.45.15 PM" translatesAutoresizingMaskIntoConstraints="NO" id="7NU-XY-1HK">
+                                <rect key="frame" x="63" y="298" width="288" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have to add sign-in ability at least" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-qK-zGa">
+                                <rect key="frame" x="93" y="599" width="258" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ge4-kM-5RM"/>
+                        <color key="backgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pox-tI-vDE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3R-Ha-87v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3901" y="-83"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cc7-3c-JUU">
@@ -207,10 +235,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3H-2l-Sku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900.0000000000002" y="-83.035714285714278"/>
+            <point key="canvasLocation" x="-989.85507246376824" y="-83.035714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TdF-Uv-xap">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZGg-cV-uKB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="duZ-Xh-FMH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7CD-7P-ZLd" kind="relationship" relationship="rootViewController" id="cdk-DS-2oD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E61-7O-bg4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4739" y="-83"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Screen Shot 2021-10-13 at 8.45.15 PM" width="938" height="830"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="photo" catalog="system" width="128" height="93"/>
