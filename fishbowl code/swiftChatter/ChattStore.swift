@@ -75,9 +75,8 @@ final class ChattStore {
                     if (chattEntry.count == self.nFields) {
                         self.chatts.append(Chatt(username: chattEntry[0],
                                          message: chattEntry[1],
-                                         distance: chattEntry[2],
-                                         imageUrl: chattEntry[3],
-                                         videoUrl: chattEntry[4]))
+                                         imageUrl: chattEntry[2],
+                                         videoUrl: chattEntry[3]))
                     } else {
                         print("getChatts: Received unexpected number of fields: \(chattEntry.count) instead of \(self.nFields).")
                     }
