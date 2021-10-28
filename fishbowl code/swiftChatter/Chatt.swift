@@ -9,7 +9,7 @@ import Foundation
 struct Chatt {
     var username: String?
     var message: String?
-    var distance: String?
+    var timestamp: String?
     
     @ChattPropWrapper var imageUrl: String?
     @ChattPropWrapper var videoUrl: String?
@@ -33,3 +33,4 @@ struct ChattPropWrapper {
         self.wrappedValue = wrappedValue
     }
 }
+
