@@ -91,6 +91,7 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.tableView.rowHeight = 80;
         centralManager = CBCentralManager(delegate: self, queue: nil)
         
         // setup refreshControler here later
@@ -126,13 +127,15 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 //            cell.messageLabel.text = chatt.message
             cell.timestampLabel.text = chatt.timestamp
         
-            if let urlString = chatt.imageUrl, let imageUrl = URL(string: urlString) {
-                cell.chattImageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "photo"), options: [.progressiveLoad])
-                cell.chattImageView.isHidden = false
-            } else {
-                cell.chattImageView.image = nil
-                cell.chattImageView.isHidden = true
-            }
+    
+        
+//            if let urlString = chatt.imageUrl, let imageUrl = URL(string: urlString) {
+//                cell.chattImageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "photo"), options: [.progressiveLoad])
+//                cell.chattImageView.isHidden = false
+//            } else {
+//                cell.chattImageView.image = nil
+//                cell.chattImageView.isHidden = true
+//            }
         
 //            if let urlString = chatt.videoUrl, let videoUrl = URL(string: urlString) {
 //                cell.videoButton.isHidden = false // remember: cells are recycled and reused

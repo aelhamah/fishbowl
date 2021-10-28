@@ -12,7 +12,7 @@ final class ChattTableCell: UITableViewCell {
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
+//    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var chattImageView: UIImageView!
     @IBOutlet weak var videoButton: UIButton!
 //    @IBAction func videoTapped(_ sender: Any) {
