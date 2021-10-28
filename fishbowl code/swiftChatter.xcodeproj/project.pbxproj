@@ -19,6 +19,7 @@
 		B362603F26E8003900A44FEC /* ChattStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362603E26E8003900A44FEC /* ChattStore.swift */; };
 		B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604626E802E000A44FEC /* ChatTableCell.swift */; };
 		B362604C26E803AC00A44FEC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604B26E803AC00A44FEC /* MainVC.swift */; };
+		BBDD7D1A272AFA3100040C0F /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD7D19272AFA3100040C0F /* ProfilePage.swift */; };
 		D388E89A26FD106400C0556B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388E89926FD106400C0556B /* Extensions.swift */; };
 		E58FA2CA83EE88BE711CBF74 /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256E1BB8A430CA8279F620CA /* Pods_swiftChatter.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		B362603E26E8003900A44FEC /* ChattStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattStore.swift; sourceTree = "<group>"; };
 		B362604626E802E000A44FEC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		B362604B26E803AC00A44FEC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		BBDD7D19272AFA3100040C0F /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		D388E89926FD106400C0556B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +129,9 @@
 			children = (
 				B362600026E7F1D800A44FEC /* AppDelegate.swift */,
 				B362600226E7F1D800A44FEC /* SceneDelegate.swift */,
+				B362604B26E803AC00A44FEC /* MainVC.swift */,
 				B362600426E7F1D800A44FEC /* PostVC.swift */,
+				BBDD7D19272AFA3100040C0F /* ProfilePage.swift */,
 				B362600626E7F1D800A44FEC /* Main.storyboard */,
 				B362600926E7F1DA00A44FEC /* Assets.xcassets */,
 				B362600B26E7F1DA00A44FEC /* LaunchScreen.storyboard */,
@@ -135,7 +139,6 @@
 				B362603926E7FFA600A44FEC /* Chatt.swift */,
 				B362603E26E8003900A44FEC /* ChattStore.swift */,
 				B362604626E802E000A44FEC /* ChatTableCell.swift */,
-				B362604B26E803AC00A44FEC /* MainVC.swift */,
 				D388E89926FD106400C0556B /* Extensions.swift */,
 			);
 			path = swiftChatter;
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDD7D1A272AFA3100040C0F /* ProfilePage.swift in Sources */,
 				B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */,
 				B362600526E7F1D800A44FEC /* PostVC.swift in Sources */,
 				B362600126E7F1D800A44FEC /* AppDelegate.swift in Sources */,
