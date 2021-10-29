@@ -104,6 +104,14 @@
             </objects>
             <point key="canvasLocation" x="1420.289855072464" y="-83.035714285714278"/>
         </scene>
+        <!--ProfilePage-->
+        <scene sceneID="sYj-gv-IKe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfilePage" id="tfe-ym-0xa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAc-Rc-c3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="-520"/>
+        </scene>
         <!--Fishbowl-->
         <scene sceneID="j3h-tI-Zp2">
             <objects>
@@ -157,6 +165,7 @@
                                     <outlet property="chattImageView" destination="fzq-qv-PVZ" id="qPF-4g-kNN"/>
                                     <outlet property="timestampLabel" destination="lnE-yv-qhJ" id="2zq-NX-Zle"/>
                                     <outlet property="usernameLabel" destination="YTO-dm-H6y" id="Lxc-Mj-a7O"/>
+                                    <segue destination="tfe-ym-0xa" kind="presentation" id="vkz-1o-Qqf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -200,22 +209,6 @@
             </objects>
             <point key="canvasLocation" x="642.02898550724638" y="-83.035714285714278"/>
         </scene>
-        <!--ProfilePage-->
-        <scene sceneID="vNa-le-GVF">
-            <objects>
-                <viewController title="ProfilePage" id="nda-MZ-GmL" customClass="ProfilePage" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CHD-1t-SbN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="bmp-50-mRE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Tn5-3W-4l2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xtu-SM-h6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1665.217391304348" y="-800.22321428571422"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="cc7-3c-JUU">
             <objects>
@@ -233,24 +226,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3H-2l-Sku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-989.85507246376824" y="-83.035714285714278"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Pzd-Gb-cLi">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k9j-e4-G0w" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zLl-fP-Ld4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nda-MZ-GmL" kind="relationship" relationship="rootViewController" id="uCB-rX-EpQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KVK-G4-EG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2575.36231884058" y="-800.22321428571422"/>
         </scene>
     </scenes>
     <resources>
