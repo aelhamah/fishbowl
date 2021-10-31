@@ -36,6 +36,29 @@ struct Profile : View {
             
             Image("profilepic").resizable().edgesIgnoringSafeArea(.all)
             
+            VStack{
+                
+                HStack{
+                    
+                    Button(action: {
+                        
+                    }) {
+                        
+                        Image("menu").renderingMode(.original).resizable().frame(width: 20, height: 20)
+                    }
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        
+                    }){
+                        
+                        Image("close").renderingMode(.original).resizable().frame(width: 20, height: 20)
+                    }
+                }
+                
+            }.padding()
+            
         }
     }
     
