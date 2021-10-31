@@ -69,7 +69,7 @@
                             <constraint firstItem="t5q-gX-j3K" firstAttribute="leading" secondItem="mct-nU-iBm" secondAttribute="leading" constant="16" id="RGD-k8-gcl"/>
                             <constraint firstItem="b2r-j5-foG" firstAttribute="leading" secondItem="mct-nU-iBm" secondAttribute="leading" constant="16" id="k8b-L0-heb"/>
                             <constraint firstItem="mct-nU-iBm" firstAttribute="bottom" secondItem="b2r-j5-foG" secondAttribute="bottom" priority="250" id="lVA-4r-hpb"/>
-                            <constraint firstItem="b2r-j5-foG" firstAttribute="top" secondItem="41H-oK-R6a" secondAttribute="bottom" constant="40" id="rMA-5n-867"/>
+                            <constraint firstItem="b2r-j5-foG" firstAttribute="top" secondItem="t5q-gX-j3K" secondAttribute="bottom" constant="23" id="rMA-5n-867"/>
                             <constraint firstItem="41H-oK-R6a" firstAttribute="top" secondItem="mct-nU-iBm" secondAttribute="top" constant="20" id="vpD-1w-LxR"/>
                         </constraints>
                     </view>
