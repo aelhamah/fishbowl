@@ -15,7 +15,7 @@ final class ChattStore {
     var chatts = [Chatt]()
     private let nFields = Mirror(reflecting: Chatt()).children.count
 
-    private let serverUrl = "https://3.135.185.107/"
+    private let serverUrl = "https://3.22.41.185/"
     
     func postChatt(_ chatt: Chatt, image: UIImage?) {
             guard let apiUrl = URL(string: serverUrl+"postimages/") else {
@@ -47,7 +47,7 @@ final class ChattStore {
         }
     
     func getChatts(_ completion: ((Bool) -> ())?) {
-            guard let apiUrl = URL(string: serverUrl+"getimages/") else {
+            guard let apiUrl = URL(string: serverUrl+"getusers/") else {
                 print("getChatts: bad URL")
                 return
             }
