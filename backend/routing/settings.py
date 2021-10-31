@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1^$ep_(04)yqy95r_pb^frxn81x)*$z!!#deqhy)ijmpeq=-j3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.22.41.185', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['3.22.41.185','fishbowl.ml', 'www.fishbowl.ml',  'localhost', '127.0.0.1']
 
 
 # Application definition
