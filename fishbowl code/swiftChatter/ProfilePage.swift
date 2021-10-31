@@ -57,9 +57,43 @@ struct Profile : View {
                     }
                 }
                 
+                Spacer()
+                
+                VStack{
+                    
+                    HStack{
+                        
+                        Text("Hello").padding()
+                        
+                        Spacer()
+                    }
+                    
+                    
+                }
+                 .frame(height: 250)
+                .background(Color.white)
+                .clipShape(BottomShape())
+                
             }.padding()
             
         }
+    }
+    
+}
+
+struct BottomShape : Shape {
+    
+    func path(in rect: CGRect) -> Path {
+        
+        return Path{path in
+            
+            path.move(to: CGPoint(x: 0, y: 0))
+            path.addLine(to: CGPoint(x:0, y:rect.height))
+            path.addLine(to:CGPoint(x:rect.width, y: rect.height))
+            path.addLine(to:CGPoint(x:rect.width, y:0))
+            
+        }
+        
     }
     
 }
