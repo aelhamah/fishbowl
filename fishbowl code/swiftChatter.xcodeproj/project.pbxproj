@@ -17,6 +17,7 @@
 		B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604626E802E000A44FEC /* ChatTableCell.swift */; };
 		BBDD7D362731EF0E00040C0F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD7D352731EF0E00040C0F /* Profile.swift */; };
 		BBDD7D382731F33800040C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD7D372731F33800040C0F /* AppDelegate.swift */; };
+		BBDD7D3A2731F49B00040C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDD7D392731F49B00040C0F /* LaunchScreen.storyboard */; };
 		D388E89A26FD106400C0556B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388E89926FD106400C0556B /* Extensions.swift */; };
 		E58FA2CA83EE88BE711CBF74 /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256E1BB8A430CA8279F620CA /* Pods_swiftChatter.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		B362604626E802E000A44FEC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		BBDD7D352731EF0E00040C0F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BBDD7D372731F33800040C0F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBDD7D392731F49B00040C0F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D388E89926FD106400C0556B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				B362600026E7F1D800A44FEC /* MainVC.swift */,
 				B362600426E7F1D800A44FEC /* PostVC.swift */,
 				BBDD7D352731EF0E00040C0F /* Profile.swift */,
+				BBDD7D392731F49B00040C0F /* LaunchScreen.storyboard */,
 				B362600E26E7F1DA00A44FEC /* Info.plist */,
 				B362600926E7F1DA00A44FEC /* Assets.xcassets */,
 				B362603926E7FFA600A44FEC /* Chatt.swift */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B362600A26E7F1DA00A44FEC /* Assets.xcassets in Resources */,
+				BBDD7D3A2731F49B00040C0F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
