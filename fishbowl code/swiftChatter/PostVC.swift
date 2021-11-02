@@ -28,7 +28,7 @@ final class PostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                                  imageUrl: nil,
                                  videoUrl: videoUrl?.absoluteString)
                
-               ChattStore.shared.postChatt(chatt, image: postImage.image)
+               FishbowlStore.shared.postChatt(chatt, image: postImage.image)
 
                dismiss(animated: true, completion: nil)
     }

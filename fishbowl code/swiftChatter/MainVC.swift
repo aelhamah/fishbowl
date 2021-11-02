@@ -108,7 +108,7 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
        
        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            // how many rows per section
-           return ChattStore.shared.chatts.count
+           return FishbowlStore.shared.users.count
        }
        
        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -121,51 +121,36 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
                 fatalError("No reusable cell!")
             }
             
-            let chatt = ChattStore.shared.chatts[indexPath.row]
+            let user = FishbowlStore.shared.users[indexPath.row]
             cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
-            cell.usernameLabel.text = chatt.username
+            cell.usernameLabel.text = user.username
 //            cell.messageLabel.text = chatt.message
-            cell.timestampLabel.text = chatt.timestamp
+//            cell.timestampLabel.text = chatt.timestamp
         
-    
-        
-//            if let urlString = chatt.imageUrl, let imageUrl = URL(string: urlString) {
-//                cell.chattImageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "photo"), options: [.progressiveLoad])
-//                cell.chattImageView.isHidden = false
-//            } else {
-//                cell.chattImageView.image = nil
-//                cell.chattImageView.isHidden = true
-//            }
-        
-//            if let urlString = chatt.videoUrl, let videoUrl = URL(string: urlString) {
-//                cell.videoButton.isHidden = false // remember: cells are recycled and reused
-//                cell.playVideo = {
-//                    let avPlayerVC = AVPlayerViewController()
-//                    avPlayerVC.player = AVPlayer(url: videoUrl)
-//                    if let player = avPlayerVC.player {
-//                        self.present(avPlayerVC, animated: true) {
-//                            player.play()
-//                        }
-//                    }
-//                }
-//            } else {
-//                cell.videoButton.isHidden = true
-//                cell.playVideo = nil
-//            }
-        
+            if let urlString = user.imageUrl, let imageUrl = URL(string: urlString) {
+                cell.chattImageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "photo"), options: [.progressiveLoad])
+                cell.chattImageView.isHidden = false
+            } else {
+                cell.chattImageView.image = nil
+                cell.chattImageView.isHidden = true
+            }
             return cell
         }
     
     private func refreshTimeline(_ sender: UIAction?) {
-           ChattStore.shared.getChatts { success in
-               DispatchQueue.main.async {
-                   if success {
-                       self.tableView.reloadData()
-                   }
-                   // stop the refreshing animation upon completion:
-                   self.refreshControl?.endRefreshing()
-               }
-           }
+        let user_list = [1]
+           FishbowlStore.shared.getProfile(user_list)
+//        { success in
+//               DispatchQueue.main.async {
+//                   if success {
+//                       self.tableView.reloadData()
+//                   }
+//                   // stop the refreshing animation upon completion:
+//                   self.refreshControl?.endRefreshing()
+//               }
+//           }
+        
+        //FishbowlStore.shared.getProfile(true, user_list)
        }
     
 }
