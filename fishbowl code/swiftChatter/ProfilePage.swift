@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-final class ProfilePage: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // setup refreshControler here later
-    }
-}
-
 struct ContentView: View{
     var body: some View{
         Profile()
