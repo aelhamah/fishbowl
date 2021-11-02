@@ -16,6 +16,7 @@
 		B362603F26E8003900A44FEC /* ChattStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362603E26E8003900A44FEC /* ChattStore.swift */; };
 		B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604626E802E000A44FEC /* ChatTableCell.swift */; };
 		BBDD7D362731EF0E00040C0F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD7D352731EF0E00040C0F /* Profile.swift */; };
+		BBDD7D382731F33800040C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD7D372731F33800040C0F /* AppDelegate.swift */; };
 		D388E89A26FD106400C0556B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388E89926FD106400C0556B /* Extensions.swift */; };
 		E58FA2CA83EE88BE711CBF74 /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256E1BB8A430CA8279F620CA /* Pods_swiftChatter.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		B362603E26E8003900A44FEC /* ChattStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattStore.swift; sourceTree = "<group>"; };
 		B362604626E802E000A44FEC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		BBDD7D352731EF0E00040C0F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		BBDD7D372731F33800040C0F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D388E89926FD106400C0556B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 		B3625FFF26E7F1D800A44FEC /* swiftChatter */ = {
 			isa = PBXGroup;
 			children = (
+				BBDD7D372731F33800040C0F /* AppDelegate.swift */,
 				B362600026E7F1D800A44FEC /* MainVC.swift */,
 				B362600426E7F1D800A44FEC /* PostVC.swift */,
 				BBDD7D352731EF0E00040C0F /* Profile.swift */,
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDD7D382731F33800040C0F /* AppDelegate.swift in Sources */,
 				B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */,
 				B362600526E7F1D800A44FEC /* PostVC.swift in Sources */,
 				B362600126E7F1D800A44FEC /* MainVC.swift in Sources */,
