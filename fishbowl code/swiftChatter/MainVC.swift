@@ -12,6 +12,19 @@ import SDWebImage
 import CoreBluetooth
 
 final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
+    
+    override func loadView() {
+            super.loadView()
+
+            tableView.register(ChattTableCell.self, forCellReuseIdentifier: "ChattTableCell")
+
+            refreshControl = UIRefreshControl()
+        }
+    
+    
+
+    
+    
     var centralManager: CBCentralManager!
     var myPeripheral: CBPeripheral!
     var uuidDict: [UUID: [String : Any]] = [:]
@@ -98,6 +111,16 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
                refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
                
                refreshTimeline(nil)
+        
+        let composeButton = UIBarButtonItem(
+                    systemItem: .compose,
+                    primaryAction:UIAction(handler: { _ in
+                                            let postVC = PostVC()
+                                            self.navigationController?.present(
+                                                UINavigationController(rootViewController: postVC), animated: true
+                    ) }))
+                self.navigationItem.rightBarButtonItem = composeButton
+                self.navigationItem.title = "Chatter"
     }
     // MARK:- TableView handlers
 
