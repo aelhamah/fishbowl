@@ -8,6 +8,14 @@
 import UIKit
 
 final class MainVC: UITableViewController {
+    
+    override func loadView() {
+        super.loadView()
+
+        tableView.register(ChattTableCell.self, forCellReuseIdentifier: "ChattTableCell")
+
+        refreshControl = UIRefreshControl()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +23,8 @@ final class MainVC: UITableViewController {
         // setup refreshControler here later
         // setup refreshControler here later
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
+        
+        
         
         refreshTimeline(nil)
     }

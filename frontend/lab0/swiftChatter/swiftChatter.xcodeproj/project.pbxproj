@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0074F0E227330C940034B682 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074F0E127330C940034B682 /* Extensions.swift */; };
 		00AFAAFD26E7E95300024432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFAAFC26E7E95300024432 /* AppDelegate.swift */; };
-		00AFAAFF26E7E95300024432 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFAAFE26E7E95300024432 /* SceneDelegate.swift */; };
-		00AFAB0126E7E95300024432 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFAB0026E7E95300024432 /* PostVC.swift */; };
-		00AFAB0426E7E95300024432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AFAB0226E7E95300024432 /* Main.storyboard */; };
 		00AFAB0626E7E95600024432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00AFAB0526E7E95600024432 /* Assets.xcassets */; };
 		00AFAB0926E7E95600024432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AFAB0726E7E95600024432 /* LaunchScreen.storyboard */; };
 		00AFAB1126E836FA00024432 /* Chatt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFAB1026E836FA00024432 /* Chatt.swift */; };
@@ -20,11 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0074F0E127330C940034B682 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		00AFAAF926E7E95300024432 /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AFAAFC26E7E95300024432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00AFAAFE26E7E95300024432 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00AFAB0026E7E95300024432 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
-		00AFAB0326E7E95300024432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00AFAB0526E7E95600024432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00AFAB0826E7E95600024432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00AFAB0A26E7E95600024432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,9 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				00AFAAFC26E7E95300024432 /* AppDelegate.swift */,
-				00AFAAFE26E7E95300024432 /* SceneDelegate.swift */,
-				00AFAB0026E7E95300024432 /* PostVC.swift */,
-				00AFAB0226E7E95300024432 /* Main.storyboard */,
+				0074F0E127330C940034B682 /* Extensions.swift */,
 				00AFAB0526E7E95600024432 /* Assets.xcassets */,
 				00AFAB0726E7E95600024432 /* LaunchScreen.storyboard */,
 				00AFAB0A26E7E95600024432 /* Info.plist */,
@@ -138,7 +132,6 @@
 			files = (
 				00AFAB0926E7E95600024432 /* LaunchScreen.storyboard in Resources */,
 				00AFAB0626E7E95600024432 /* Assets.xcassets in Resources */,
-				00AFAB0426E7E95300024432 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,27 +142,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00AFAB0126E7E95300024432 /* PostVC.swift in Sources */,
 				00AFAB1526E84FBE00024432 /* ChattTableCell.swift in Sources */,
 				00AFAAFD26E7E95300024432 /* AppDelegate.swift in Sources */,
 				00AFAB1126E836FA00024432 /* Chatt.swift in Sources */,
-				00AFAAFF26E7E95300024432 /* SceneDelegate.swift in Sources */,
 				00AFAB1326E8374700024432 /* ChattStore.swift in Sources */,
 				00AFAB1726E850A300024432 /* MainVC.swift in Sources */,
+				0074F0E227330C940034B682 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		00AFAB0226E7E95300024432 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00AFAB0326E7E95300024432 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		00AFAB0726E7E95600024432 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
