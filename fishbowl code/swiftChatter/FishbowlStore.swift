@@ -49,56 +49,17 @@ final class FishbowlStore {
         }
     
     func getProfile(_ user_list: [Int]) {
-                guard let apiUrl = URL(string: serverUrl+"getusers/") else {
-                    print("getProfile: bad URL")
-                    return
-                }
+        guard let apiUrl = URL(string: serverUrl+"getusers/") else {
+            print("getProfile: bad URL")
+            return
+        }
         
-                let jsonObj = ["user_id": user_list]
-                guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
-                    print("getProfile: jsonData serialization error")
-                    return
-                }
-                var request = URLRequest(url: apiUrl)
-                request.httpMethod = "GET"
-                request.httpBody = jsonData
-    
-                AF.request(apiUrl, method: .get).responseJSON { response in
-                    var success = false
-//                    defer { completion?(success) }
-//                    print("printing here")
-                    
-                    
-                    if let resp_data = response.data,
-                       let urlContent = NSString(data: response.data!, encoding: String.Encoding.ascii.rawValue) {
-                        print(urlContent)
-                        }
-                    guard let data = response.data, response.error == nil else {
-                        print("getProfile: NETWORKING ERROR")
-                        return
-                    }
-                    if let httpStatus = response.response, httpStatus.statusCode != 200 {
-                        print("getProfile: HTTP STATUS: \(httpStatus.statusCode)")
-                        return
-                    }
-    
-                    guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
-                        print("getProfile: failed JSON deserialization")
-                        return
-                    }
-                    let profilesReceived = jsonObj["users"] as? [[String?]] ?? []
-                    self.users = [User]()
-                    for userEntry in profilesReceived {
-                        if (userEntry.count == self.nFields) {
-                            self.users.append(User(username: userEntry[1],
-                                             imageUrl: userEntry[5]))
-                        } else {
-                            print("getProfile: Received unexpected number of fields: \(userEntry.count) instead of \(self.nFields).")
-                        }
-                    }
-                    success = true // for completion(success)
-                }
-            }
+        let parameters: [String: Any] = ["users_id": 1,2]
+        print(apiUrl)
+        AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).response { response in
+            debugPrint(response)
+        }
+    }
     
 //    func getProfile(_ completion: ((Bool) -> ())?) {
 //            guard let apiUrl = URL(string: serverUrl+"getimages/") else {
