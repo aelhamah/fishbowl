@@ -50,9 +50,10 @@ class BluetoothDeviceDiscovery: NSObject {
         self.peripheralManager = CBPeripheralManager(delegate: self, queue: queue)
 
         // If a device name is provided, capture it
-        // TODO : SET THE DEVICE NAME
+//        if let deviceName = deviceName { self.deviceName = deviceName }
+        
+        //Set device name
         self.deviceName = "rithikag"
-
     }
 
     // Start advertising (Or re-advertise) this device as a peipheral
@@ -67,7 +68,6 @@ class BluetoothDeviceDiscovery: NSObject {
         peripheralManager.startAdvertising(
             [CBAdvertisementDataServiceUUIDsKey: [BluetoothConstants.chatDiscoveryServiceID],
              CBAdvertisementDataLocalNameKey: deviceName])
-        print(deviceName)
     }
 
     // If a new device is discovered by the central manager, update the visible list
@@ -75,8 +75,6 @@ class BluetoothDeviceDiscovery: NSObject {
         // If a device already exists in the list, replace it with this new device
         if let index = devices.firstIndex(where: { $0.peripheral.identifier == device.peripheral.identifier }) {
             guard devices[index].name != device.name else { return }
-            print(devices[index].name)
-            print(device.name)
             devices.remove(at: index)
             devices.insert(device, at: index)
             devicesListUpdatedHandler?()
@@ -109,7 +107,7 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         if let deviceName = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
             name = deviceName
         }
-        
+
         // Capture all of this in a device object
         let device = Device(peripheral: peripheral, name: name)
 
