@@ -89,17 +89,19 @@ extension JoinViewController {
 
             // Ideally, we'll make the device name editable.
             // This code shows a table cell with an editable text field
-            // let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.nameCellIdentifier,
-            //                                         for: indexPath)
-            // if let nameCell = cell as? TextFieldTableViewCell {
-            //     nameCell.textField.text = deviceName
-            //     nameCell.textFieldChangedHandler = { [weak self] name in
-            //         self?.deviceName = name
-            //     }
-            // }
-
-            let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
-                                             for: indexPath)
+            
+            // CHANGE USER NAME
+             let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.nameCellIdentifier,
+                                                     for: indexPath)
+             if let nameCell = cell as? TextFieldTableViewCell {
+                 nameCell.textField.text = deviceName
+                 nameCell.textFieldChangedHandler = { [weak self] name in
+                     self?.deviceName = name
+                 }
+             }
+            // CHANGE USER NAME
+//            let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
+//                                             for: indexPath)
             if let deviceCell = cell as? DeviceTableViewCell {
                 deviceCell.configureForDevice(named: deviceName, selectable: false)
             }

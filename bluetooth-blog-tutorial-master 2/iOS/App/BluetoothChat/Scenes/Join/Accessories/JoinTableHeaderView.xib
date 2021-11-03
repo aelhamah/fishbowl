@@ -23,7 +23,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PAl-fu-Ptj">
-                            <rect key="frame" x="195.5" y="38" width="51" height="37"/>
+                            <rect key="frame" x="175.5" y="38" width="51" height="37"/>
                         </switch>
                     </subviews>
                     <constraints>
@@ -31,7 +31,7 @@
                         <constraint firstAttribute="bottom" secondItem="PAl-fu-Ptj" secondAttribute="bottom" constant="64" id="9ak-71-R9l"/>
                         <constraint firstItem="ZtR-TW-xlq" firstAttribute="leading" secondItem="H8S-sX-wwZ" secondAttribute="leading" constant="20" id="AMI-se-xnw"/>
                         <constraint firstItem="ZtR-TW-xlq" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="top" constant="38" id="Rmw-om-r1x"/>
-                        <constraint firstItem="PAl-fu-Ptj" firstAttribute="leading" secondItem="ZtR-TW-xlq" secondAttribute="trailing" constant="40" id="nSb-o2-fCx"/>
+                        <constraint firstItem="PAl-fu-Ptj" firstAttribute="leading" secondItem="ZtR-TW-xlq" secondAttribute="trailing" constant="20" id="nSb-o2-fCx"/>
                         <constraint firstItem="PAl-fu-Ptj" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="top" constant="38" id="wAd-dm-6p5"/>
                     </constraints>
                 </view>
