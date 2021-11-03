@@ -78,18 +78,18 @@ extension JoinViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == Sections.name { return 1 }
+        if section == Sections.name { return 0 }
         return max(deviceDiscovery.devices.count, 1)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        // For the name section, dequeue a text field cell and configure it
+//        // For the name section, dequeue a text field cell and configure it
         if indexPath.section == Sections.name {
 
             // Ideally, we'll make the device name editable.
             // This code shows a table cell with an editable text field
-            
+
             // CHANGE USER NAME
              let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.nameCellIdentifier,
                                                      for: indexPath)
@@ -129,7 +129,7 @@ extension JoinViewController {
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == Sections.availableDevices { return "Available Devices" }
-        return "Device Name"
+        return ""
     }
 }
 
