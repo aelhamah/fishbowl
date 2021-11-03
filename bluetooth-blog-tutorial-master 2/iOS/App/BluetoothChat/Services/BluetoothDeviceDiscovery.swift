@@ -50,7 +50,10 @@ class BluetoothDeviceDiscovery: NSObject {
         self.peripheralManager = CBPeripheralManager(delegate: self, queue: queue)
 
         // If a device name is provided, capture it
-        if let deviceName = deviceName { self.deviceName = deviceName }
+//        if let deviceName = deviceName { self.deviceName = deviceName }
+        
+        //Set device name
+        self.deviceName = "rithikag"
     }
 
     // Start advertising (Or re-advertise) this device as a peipheral
