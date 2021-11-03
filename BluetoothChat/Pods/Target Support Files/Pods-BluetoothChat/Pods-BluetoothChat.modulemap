@@ -1,0 +1,6 @@
+module Pods_BluetoothChat {
+  umbrella header "Pods-BluetoothChat-umbrella.h"
+
+  export *
+  module * { export * }
+}
