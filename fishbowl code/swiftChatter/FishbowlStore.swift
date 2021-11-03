@@ -54,10 +54,30 @@ final class FishbowlStore {
             return
         }
         
-        let parameters: [String: Any] = ["users_id": 1,2]
+        let parameters: [String: String] = ["users_id": "1,2"]
         print(apiUrl)
-        AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).response { response in
-            debugPrint(response)
+        AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
+            guard let data = response.data, response.error == nil else {
+                print("getProfile: NETWORKING ERROR")
+                return
+            }
+            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+                print("getProfile: failed JSON deserialization")
+                return
+            }
+            print(jsonObj["users"])
+            let usersReceived = jsonObj["users"] as? [[String?: Any?]] 
+            print(usersReceived)
+            self.users = [User]()
+//                for userEntry in usersReceived {
+//                    print(userEntry)
+//                    if (userEntry.count == self.nFields) {
+//                        self.users.append(User(username: userEntry[1],
+//                                               imageUrl: userEntry[2]))
+//                    } else {
+//                        print("getProfile: Received unexpected number of fields: \(userEntry.count) instead of \(self.nFields).")
+//                    }
+//                }
         }
     }
     
@@ -100,4 +120,3 @@ final class FishbowlStore {
 //            }
 //        }
 }
-
