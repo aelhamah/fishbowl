@@ -54,7 +54,7 @@ final class FishbowlStore {
             return
         }
         
-        let parameters: [String: String] = ["users_id": "1,2"]
+        let parameters: [String: String] = ["user_ids": "1,2"]
         print(apiUrl)
         AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
             guard let data = response.data, response.error == nil else {
@@ -65,19 +65,15 @@ final class FishbowlStore {
                 print("getProfile: failed JSON deserialization")
                 return
             }
-            print(jsonObj["users"])
-            let usersReceived = jsonObj["users"] as? [[String?: Any?]] 
-            print(usersReceived)
+        
+            let usersReceived = jsonObj["users"] as! Dictionary<String, Dictionary<String, Any>>
             self.users = [User]()
-//                for userEntry in usersReceived {
-//                    print(userEntry)
-//                    if (userEntry.count == self.nFields) {
-//                        self.users.append(User(username: userEntry[1],
-//                                               imageUrl: userEntry[2]))
-//                    } else {
-//                        print("getProfile: Received unexpected number of fields: \(userEntry.count) instead of \(self.nFields).")
-//                    }
-//                }
+//            print(usersReceived?[1]["username"])
+            for (_, value) in usersReceived {
+                    print(value["username"]!)
+                    print(value["display_name"]!)
+                    self.users.append(User(username: (value["display_name"] as! String)))
+                }
         }
     }
     
