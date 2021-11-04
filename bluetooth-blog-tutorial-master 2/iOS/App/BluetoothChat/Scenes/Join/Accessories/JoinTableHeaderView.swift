@@ -29,6 +29,7 @@ class JoinTableHeaderView: UIView {
         if sender.isOn{
             print("ON")
             
+            
         } else {
             print("OFF")
         }

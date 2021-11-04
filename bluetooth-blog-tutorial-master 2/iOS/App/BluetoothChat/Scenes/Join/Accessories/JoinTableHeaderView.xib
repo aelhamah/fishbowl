@@ -24,7 +24,7 @@
                             </connections>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fishbowl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-TW-xlq" userLabel="Title">
-                            <rect key="frame" x="20" y="35" width="135.5" height="37"/>
+                            <rect key="frame" x="20" y="38" width="135.5" height="37"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -33,11 +33,10 @@
                     <constraints>
                         <constraint firstItem="ZtR-TW-xlq" firstAttribute="leading" secondItem="H8S-sX-wwZ" secondAttribute="leading" constant="20" id="AMI-se-xnw"/>
                         <constraint firstAttribute="trailing" secondItem="PAl-fu-Ptj" secondAttribute="trailing" constant="146" id="K0g-QO-oY9"/>
-                        <constraint firstItem="ZtR-TW-xlq" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="topMargin" constant="-17" id="ZcO-ZO-ZVK"/>
+                        <constraint firstItem="ZtR-TW-xlq" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="top" constant="38" id="ZcO-ZO-ZVK"/>
                         <constraint firstItem="PAl-fu-Ptj" firstAttribute="leading" secondItem="ZtR-TW-xlq" secondAttribute="trailing" constant="39.5" id="fCr-Dd-Qjc"/>
                         <constraint firstItem="PAl-fu-Ptj" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="top" constant="38" id="i06-Uz-fbe"/>
                         <constraint firstAttribute="bottomMargin" secondItem="PAl-fu-Ptj" secondAttribute="bottom" constant="-5" id="m9s-v2-JJH"/>
-                        <constraint firstAttribute="bottom" secondItem="ZtR-TW-xlq" secondAttribute="bottom" constant="34" id="mFx-Mf-LLO"/>
                     </constraints>
                 </view>
             </subviews>
