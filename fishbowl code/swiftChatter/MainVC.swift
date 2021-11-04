@@ -141,16 +141,16 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
     
     private func refreshTimeline(_ sender: UIAction?) {
         let user_list = [1]
-           FishbowlStore.shared.getProfile(user_list)
-//        { success in
-//               DispatchQueue.main.async {
-//                   if success {
-//                       self.tableView.reloadData()
-//                   }
-//                   // stop the refreshing animation upon completion:
-//                   self.refreshControl?.endRefreshing()
-//               }
-//           }
+        FishbowlStore.shared.getProfile(user_list: user_list) { success in
+               DispatchQueue.main.async {
+                   print("reached here")
+                   if success {
+                       self.tableView.reloadData()
+                   }
+                   // stop the refreshing animation upon completion:
+                   self.refreshControl?.endRefreshing()
+               }
+           }
         
         //FishbowlStore.shared.getProfile(true, user_list)
        }

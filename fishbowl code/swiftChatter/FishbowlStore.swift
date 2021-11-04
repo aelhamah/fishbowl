@@ -48,7 +48,7 @@ final class FishbowlStore {
             }
         }
     
-    func getProfile(_ user_list: [Int]) {
+    func getProfile(user_list: [Int], _ completion: ((Bool) -> ())?) {
         guard let apiUrl = URL(string: serverUrl+"getusers/") else {
             print("getProfile: bad URL")
             return
