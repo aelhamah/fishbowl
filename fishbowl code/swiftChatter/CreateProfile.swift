@@ -1,13 +1,13 @@
 //
-//  ProfilePage.swift
+//  CreateProfile.swift
 //  swiftChatter
 //
-//  Created by Nicole Iannaci on 10/28/21.
+//  Created by Nicole Iannaci on 11/4/21.
 //
 
 import SwiftUI
 
-final class ProfilePage: UIViewController {
+final class CreateProfile: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
