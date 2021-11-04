@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('getusers/', views.getusers, name='getusers'),
     path('postlikes/', views.postlikes, name='postlikes'),
+    path('createusers/', views.createusers, name='createusers'),
 ]
