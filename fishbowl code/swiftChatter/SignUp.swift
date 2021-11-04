@@ -14,6 +14,11 @@ final class SignUp: UIViewController {
     
     @IBOutlet weak var SigningIn: UIButton!
     
+    @IBAction func GoToSignUp(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "CreateProfilePage", sender: self)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
