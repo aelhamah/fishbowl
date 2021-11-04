@@ -51,7 +51,7 @@ class BluetoothDeviceDiscovery: NSObject {
 
         // If a device name is provided, capture it
 //        if let deviceName = deviceName { self.deviceName = deviceName }
-        
+    
         //Set device name
         self.deviceName = "rithikag"
     }

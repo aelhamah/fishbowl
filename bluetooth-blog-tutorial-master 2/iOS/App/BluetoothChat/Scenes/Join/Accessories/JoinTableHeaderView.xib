@@ -10,38 +10,46 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="JoinTableHeaderView" customModule="BluetoothChat" customModuleProvider="target">
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="JoinTableHeaderView" customModule="BluetoothChat">
             <rect key="frame" x="0.0" y="0.0" width="433" height="106"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8S-sX-wwZ" userLabel="Container">
-                    <rect key="frame" x="21.5" y="0.0" width="390" height="139"/>
+                <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8S-sX-wwZ" userLabel="Container">
+                    <rect key="frame" x="21.5" y="0.0" width="390" height="106"/>
                     <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="toggleBluetooth" translatesAutoresizingMaskIntoConstraints="NO" id="PAl-fu-Ptj" userLabel="bluetoothToggle">
+                            <rect key="frame" x="195" y="38" width="51" height="31"/>
+                            <accessibility key="accessibilityConfiguration" identifier="bluetoothToggle"/>
+                            <connections>
+                                <action selector="toggleBluetooth:" destination="iN0-l3-epB" eventType="valueChanged" id="6lQ-Gw-fJz"/>
+                            </connections>
+                        </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fishbowl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-TW-xlq" userLabel="Title">
-                            <rect key="frame" x="20" y="38" width="135.5" height="37"/>
+                            <rect key="frame" x="20" y="35" width="135.5" height="37"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PAl-fu-Ptj">
-                            <rect key="frame" x="175.5" y="38" width="51" height="37"/>
-                        </switch>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="ZtR-TW-xlq" secondAttribute="bottom" constant="64" id="0UF-cA-K68"/>
-                        <constraint firstAttribute="bottom" secondItem="PAl-fu-Ptj" secondAttribute="bottom" constant="64" id="9ak-71-R9l"/>
                         <constraint firstItem="ZtR-TW-xlq" firstAttribute="leading" secondItem="H8S-sX-wwZ" secondAttribute="leading" constant="20" id="AMI-se-xnw"/>
-                        <constraint firstItem="ZtR-TW-xlq" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="top" constant="38" id="Rmw-om-r1x"/>
-                        <constraint firstItem="PAl-fu-Ptj" firstAttribute="leading" secondItem="ZtR-TW-xlq" secondAttribute="trailing" constant="20" id="nSb-o2-fCx"/>
-                        <constraint firstItem="PAl-fu-Ptj" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="top" constant="38" id="wAd-dm-6p5"/>
+                        <constraint firstAttribute="trailing" secondItem="PAl-fu-Ptj" secondAttribute="trailing" constant="146" id="K0g-QO-oY9"/>
+                        <constraint firstItem="ZtR-TW-xlq" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="topMargin" constant="-17" id="ZcO-ZO-ZVK"/>
+                        <constraint firstItem="PAl-fu-Ptj" firstAttribute="leading" secondItem="ZtR-TW-xlq" secondAttribute="trailing" constant="39.5" id="fCr-Dd-Qjc"/>
+                        <constraint firstItem="PAl-fu-Ptj" firstAttribute="top" secondItem="H8S-sX-wwZ" secondAttribute="top" constant="38" id="i06-Uz-fbe"/>
+                        <constraint firstAttribute="bottomMargin" secondItem="PAl-fu-Ptj" secondAttribute="bottom" constant="-5" id="m9s-v2-JJH"/>
+                        <constraint firstAttribute="bottom" secondItem="ZtR-TW-xlq" secondAttribute="bottom" constant="34" id="mFx-Mf-LLO"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <accessibility key="accessibilityConfiguration">
+                <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+            </accessibility>
             <constraints>
-                <constraint firstItem="H8S-sX-wwZ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="AI5-90-qeG"/>
-                <constraint firstItem="H8S-sX-wwZ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="1.2" id="aqp-dv-16C"/>
-                <constraint firstItem="H8S-sX-wwZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="d66-bL-sod"/>
-                <constraint firstItem="H8S-sX-wwZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="pMn-ur-6ki"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="H8S-sX-wwZ" secondAttribute="trailing" constant="21.5" id="HhC-O3-OfY"/>
+                <constraint firstItem="H8S-sX-wwZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="21.5" id="Vra-HT-D1Z"/>
+                <constraint firstItem="H8S-sX-wwZ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="1.2" constant="-16.599999999999994" id="aqp-dv-16C"/>
+                <constraint firstItem="H8S-sX-wwZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jQu-ie-6EV"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -50,7 +58,7 @@
                 <outlet property="container" destination="H8S-sX-wwZ" id="vCh-0R-cTL"/>
                 <outlet property="titleLabel" destination="ZtR-TW-xlq" id="IBN-6b-1e1"/>
             </connections>
-            <point key="canvasLocation" x="25.362318840579711" y="62.276785714285708"/>
+            <point key="canvasLocation" x="-63.04347826086957" y="60.9375"/>
         </view>
     </objects>
 </document>

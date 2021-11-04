@@ -39,7 +39,17 @@ class JoinViewController: UITableViewController {
     }
 
     // MARK: - View Configuration -
+    @objc func sampleSwitchValueChanged(sender: UISwitch!)
+        {
+            if sender.isOn {
 
+                print("switch on")
+
+            } else {
+                print("not on")
+            }
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,7 +59,7 @@ class JoinViewController: UITableViewController {
             guard let tableView = self?.tableView else { return }
             tableView.reloadSections([Sections.availableDevices], with: .automatic)
         }
-
+  
         // Register the cells we plan to use
         tableView.register(DeviceTableViewCell.self,
                            forCellReuseIdentifier: JoinViewController.deviceCellIdentifier)

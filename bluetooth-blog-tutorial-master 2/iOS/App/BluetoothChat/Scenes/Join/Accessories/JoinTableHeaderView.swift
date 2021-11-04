@@ -24,7 +24,15 @@ class JoinTableHeaderView: UIView {
         }
         return view
     }
-
+    
+    @IBAction func toggleBluetooth(_ sender: UISwitch) {
+        if sender.isOn{
+            print("ON")
+            
+        } else {
+            print("OFF")
+        }
+    }
     override func awakeFromNib() {
         // Give the logo view rounded corners
 //        let logoLayer = logoView.layer
