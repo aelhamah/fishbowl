@@ -9,18 +9,25 @@ import SwiftUI
 
 final class CreateProfile: UIViewController {
 
+   
+    
+    @IBOutlet weak var FirstName: UITextField!
+    @IBOutlet weak var LastName: UITextField!
+    @IBOutlet weak var Email: UITextField!
+    @IBOutlet weak var Birthday: UITextField!
+    @IBOutlet weak var Bio: UITextField!
+    
+    
+    
     @IBAction func SignUpComplete(_ sender: Any) {
+        
+        FishbowlStore.shared.createUserProfile(UserProfile(FullName: LastName.text, DisplayName: FirstName.text, Email: Email.text, Birthday: Birthday.text, Bio: Bio.text))
+
         
         self.performSegue(withIdentifier: "SignUpToLandingScreen", sender: self)
         
     }
     
-    @IBOutlet weak var FirstName: UITextField!
-    @IBOutlet weak var LastName: UITextField!
-    @IBOutlet weak var Email: UITextField!
-    @IBOutlet weak var PhoneNumber: UITextField!
-    @IBOutlet weak var Birthday: UITextField!
-    @IBOutlet weak var Bio: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
