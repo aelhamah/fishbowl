@@ -24,14 +24,13 @@ class JoinTableHeaderView: UIView {
         }
         return view
     }
-    
     @IBAction func toggleBluetooth(_ sender: UISwitch) {
         if sender.isOn{
             print("ON")
-            
-            
+            NotificationCenter.default.post(name: Notification.Name("bluetoothManagementOn"), object: nil)
         } else {
             print("OFF")
+            NotificationCenter.default.post(name: Notification.Name("bluetoothManagementOff"), object: nil)
         }
     }
     override func awakeFromNib() {

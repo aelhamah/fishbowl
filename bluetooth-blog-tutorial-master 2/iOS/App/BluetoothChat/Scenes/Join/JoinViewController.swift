@@ -50,6 +50,18 @@ class JoinViewController: UITableViewController {
             }
         }
     
+    @objc func stopAdvertising() {
+        // Stop advertising if we're already in progress
+        print("HERE in join viwe contrroller ")
+        deviceDiscovery.stopAdvertising()
+    }
+    
+    @objc func startAdvertising() {
+        // Stop advertising if we're already in progress
+        print("HERE in join viwe contrroller ")
+        deviceDiscovery.startAdvertising()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,7 +71,8 @@ class JoinViewController: UITableViewController {
             guard let tableView = self?.tableView else { return }
             tableView.reloadSections([Sections.availableDevices], with: .automatic)
         }
-  
+        NotificationCenter.default.addObserver(self, selector: #selector(stopAdvertising), name: Notification.Name("bluetoothManagementOff"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(startAdvertising), name: Notification.Name("bluetoothManagementOn"), object: nil)
         // Register the cells we plan to use
         tableView.register(DeviceTableViewCell.self,
                            forCellReuseIdentifier: JoinViewController.deviceCellIdentifier)
@@ -68,8 +81,9 @@ class JoinViewController: UITableViewController {
 
         // Set up the header view
         tableView.tableHeaderView = JoinTableHeaderView.instantiate()
+        
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

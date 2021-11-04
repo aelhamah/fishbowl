@@ -44,32 +44,37 @@ class BluetoothDeviceDiscovery: NSObject {
     /// Will start scanning and advertising immediately
     init(deviceName: String? = nil) {
         super.init()
-
         // Create the Bluetooth devices (Which will immediately start warming them up)
         self.centralManager = CBCentralManager(delegate: self, queue: queue)
         self.peripheralManager = CBPeripheralManager(delegate: self, queue: queue)
-
         // If a device name is provided, capture it
-//        if let deviceName = deviceName { self.deviceName = deviceName }
-    
-        //Set device name
+        // If let deviceName = deviceName { self.deviceName = deviceName }
+        // Set device name
         self.deviceName = "rithikag"
     }
+    
 
     // Start advertising (Or re-advertise) this device as a peipheral
-    fileprivate func startAdvertising() {
+    func startAdvertising() {
         // Don't start until we've finished warming up
         guard peripheralManager.state == .poweredOn else { return }
 
         // Stop advertising if we're already in progress
         if peripheralManager.isAdvertising { peripheralManager.stopAdvertising() }
-
+        
         // Start advertising with this device's name
         peripheralManager.startAdvertising(
             [CBAdvertisementDataServiceUUIDsKey: [BluetoothConstants.chatDiscoveryServiceID],
              CBAdvertisementDataLocalNameKey: deviceName])
     }
 
+    func stopAdvertising() {
+        // Stop advertising if we're already in progress
+        print("bluetooth discovery stop advetisnig")
+        // Stop advertising if we're already in progress
+        if peripheralManager.isAdvertising { peripheralManager.stopAdvertising() }
+    }
+    
     // If a new device is discovered by the central manager, update the visible list
     fileprivate func updateDeviceList(with device: Device) {
         // If a device already exists in the list, replace it with this new device
