@@ -122,7 +122,8 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
             }
             
             let user = FishbowlStore.shared.users[indexPath.row]
-//            print(user)
+            print("here")
+            print(user)
             cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
             cell.usernameLabel.text = user.username
 //            cell.messageLabel.text = chatt.message
