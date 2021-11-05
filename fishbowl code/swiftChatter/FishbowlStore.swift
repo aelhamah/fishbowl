@@ -17,7 +17,7 @@ final class FishbowlStore {
     private let nFields = Mirror(reflecting: User()).children.count
     
     // fishbowl url
-    private let serverUrl = "http://3.22.41.185/"
+    private let serverUrl = "http://3.15.21.206/"
     
     func postChatt(_ chatt: Chatt, image: UIImage?) {
             guard let apiUrl = URL(string: serverUrl+"postimages/") else {
