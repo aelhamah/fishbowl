@@ -57,6 +57,8 @@ final class FishbowlStore {
         let parameters: [String: String] = ["user_ids": "1,2"]
         print(apiUrl)
         AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
+            var success = false
+            defer { completion?(success) }
             guard let data = response.data, response.error == nil else {
                 print("getProfile: NETWORKING ERROR")
                 return
@@ -73,7 +75,8 @@ final class FishbowlStore {
                     print(value["username"]!)
                     print(value["display_name"]!)
                     self.users.append(User(username: (value["display_name"] as! String)))
-                }
+            }
+            success = true // for completion(success)
         }
     }
     
