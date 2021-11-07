@@ -17,9 +17,12 @@ struct Device {
 
     /// The reported name of this device
     let name: String
+    
+    var lastseen : Date
 
     init(peripheral: CBPeripheral, name: String = "Unknown") {
         self.peripheral = peripheral
         self.name = name
+        self.lastseen = Date()
     }
 }

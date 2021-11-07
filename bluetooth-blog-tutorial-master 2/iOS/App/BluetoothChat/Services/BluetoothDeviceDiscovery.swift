@@ -20,6 +20,8 @@ class BluetoothDeviceDiscovery: NSObject {
     public var deviceName = "Ditto" {
         didSet { startAdvertising() }
     }
+    
+    var discoveryTimer : Timer =  Timer()
 
     /// A list of devices that have been discovered by this device
     private(set) public var devices = [Device]()
@@ -50,7 +52,7 @@ class BluetoothDeviceDiscovery: NSObject {
         // If a device name is provided, capture it
         // If let deviceName = deviceName { self.deviceName = deviceName }
         // Set device name
-        self.deviceName = "rithikag"
+        self.deviceName = "aelhamah"
     }
     
 
@@ -60,7 +62,7 @@ class BluetoothDeviceDiscovery: NSObject {
         guard peripheralManager.state == .poweredOn else { return }
 
         // Stop advertising if we're already in progress
-        if peripheralManager.isAdvertising { peripheralManager.stopAdvertising() }
+//        if peripheralManager.isAdvertising { peripheralManager.stopAdvertising() }
         
         // Start advertising with this device's name
         peripheralManager.startAdvertising(
@@ -72,15 +74,16 @@ class BluetoothDeviceDiscovery: NSObject {
         // Stop advertising if we're already in progress
         print("bluetooth discovery stop advetisnig")
         // Stop advertising if we're already in progress
-        if peripheralManager.isAdvertising { peripheralManager.stopAdvertising() }
+        peripheralManager.stopAdvertising()
     }
-    
+
     // If a new device is discovered by the central manager, update the visible list
     fileprivate func updateDeviceList(with device: Device) {
         // If a device already exists in the list, replace it with this new device
         if let index = devices.firstIndex(where: { $0.peripheral.identifier == device.peripheral.identifier }) {
             guard devices[index].name != device.name else { return }
             devices.remove(at: index)
+            devices[index].lastseen = Date()
             devices.insert(device, at: index)
             devicesListUpdatedHandler?()
             return
@@ -99,7 +102,7 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
 
         // Start scanning for peripherals
         centralManager.scanForPeripherals(withServices: [BluetoothConstants.chatDiscoveryServiceID],
-                                          options: [CBCentralManagerScanOptionAllowDuplicatesKey: false])
+                                          options: [CBCentralManagerScanOptionAllowDuplicatesKey: true])
     }
 
     // Called when a peripheral is detected
@@ -119,6 +122,13 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         // Add or update this object to the visible list
         DispatchQueue.main.async { [weak self] in
             self?.updateDeviceList(with: device)
+            for (index, device) in self!.devices.enumerated() {
+                if device.lastseen + TimeInterval(5) < Date() {
+                    self!.devices.remove(at: index)
+                    
+                }
+            }
+            
         }
     }
 }
