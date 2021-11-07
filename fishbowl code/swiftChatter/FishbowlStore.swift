@@ -77,7 +77,7 @@ final class FishbowlStore {
                     self.users.append(User(username: (value["display_name"] as! String)))
             }
             success = true // for completion(success)
-        }
+        }.resume()
     }
     
 //    func getProfile(_ completion: ((Bool) -> ())?) {
