@@ -125,10 +125,9 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
             for (index, device) in self!.devices.enumerated() {
                 if device.lastseen + TimeInterval(5) < Date() {
                     self!.devices.remove(at: index)
-                    
+                    break
                 }
             }
-            
         }
     }
 }
