@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import Alamofire
 
 final class FishbowlStore {
     static let shared = FishbowlStore() // create one instance of the class to be shared
@@ -14,7 +16,7 @@ final class FishbowlStore {
     //var chatts = [Chatt]()
     //private let nFields = Mirror(reflecting: Chatt()).children.count
 
-    private let serverUrl = "https://3.22.41.185/"
+    private let serverUrl = "http://3.15.21.206/"
     
 //    func postChatt(_ chatt: Chatt) {
 //            let jsonObj = ["username": chatt.username,
@@ -45,37 +47,75 @@ final class FishbowlStore {
 //            }.resume()
 //    }
     
-    func createUserProfile(_ user: UserProfile) {
-        let jsonObj = ["fullName": user.FullName,
-                       "display_name": user.DisplayName,
-                       "email": user.Email,
-                       "birthday": user.Birthday,
-                       "bio": user.Bio]
-            guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
-                print("createUserProfile: jsonData serialization error")
-                return
-            }
-                    
-            guard let apiUrl = URL(string: serverUrl+"createusers/") else {
-                print("createUserProfile: Bad URL")
-                return
-            }
-            
-            var request = URLRequest(url: apiUrl)
-            request.httpMethod = "POST"
-            request.httpBody = jsonData
-
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let _ = data, error == nil else {
-                    print("createUserProfile: NETWORKING ERROR")
-                    return
-                }
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                    print("createUserProfile: HTTP STATUS: \(httpStatus.statusCode)")
+    func createUserProfile(_ user: UserProfile, image: UIImage?) {
+        
+        
+        guard let apiUrl = URL(string: serverUrl+"createusers/") else {
+                    print("createUserProfile: Bad URL")
                     return
                 }
                 
-            }.resume()
+                AF.upload(multipartFormData: { mpFD in
+                    if let username = user.Username?.data(using: .utf8) {
+                        mpFD.append(username, withName: "username")
+                    }
+                    if let fullName = user.FullName?.data(using: .utf8) {
+                        mpFD.append(fullName, withName: "fullName")
+                    }
+                    if let display_name = user.DisplayName?.data(using: .utf8) {
+                        mpFD.append(display_name, withName: "display_name")
+                    }
+                    if let email = user.Email?.data(using: .utf8) {
+                        mpFD.append(email, withName: "email")
+                    }
+                    if let bio = user.Bio?.data(using: .utf8) {
+                        mpFD.append(bio, withName: "bio")
+                    }
+                    if let jpegImage = image?.jpegData(compressionQuality: 1.0) {
+                        mpFD.append(jpegImage, withName: "image", fileName: "profileImage", mimeType: "image/jpeg")
+                    }
+                    
+                }, to: apiUrl, method: .post).response { response in
+                    switch (response.result) {
+                    case .success:
+                        print("createUserProfile: profile created!")
+                    case .failure:
+                        print("createUserProfile: profile creation failed")
+                    }
+            }
+        
+        
+        
+        
+//        let jsonObj = ["fullName": user.FullName,
+//                       "display_name": user.DisplayName,
+//                       "email": user.Email,
+//                       "bio": user.Bio]
+//            guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
+//                print("createUserProfile: jsonData serialization error")
+//                return
+//            }
+//
+//            guard let apiUrl = URL(string: serverUrl+"createusers/") else {
+//                print("createUserProfile: Bad URL")
+//                return
+//            }
+//
+//            var request = URLRequest(url: apiUrl)
+//            request.httpMethod = "POST"
+//            request.httpBody = jsonData
+//
+//            URLSession.shared.dataTask(with: request) { data, response, error in
+//                guard let _ = data, error == nil else {
+//                    print("createUserProfile: NETWORKING ERROR")
+//                    return
+//                }
+//                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+//                    print("createUserProfile: HTTP STATUS: \(httpStatus.statusCode)")
+//                    return
+//                }
+//
+//            }.resume()
     }
     
 //    func getChatts(_ completion: ((Bool) -> ())?) {
