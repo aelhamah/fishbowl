@@ -83,14 +83,19 @@ class BluetoothDeviceDiscovery: NSObject {
         if let index = devices.firstIndex(where: { $0.peripheral.identifier == device.peripheral.identifier }) {
             guard devices[index].name != device.name else { return }
             devices.remove(at: index)
-            devices[index].lastseen = Date()
             devices.insert(device, at: index)
+            if peripheralManager.isAdvertising {
+                devices[index].lastseen = Date()
+            }
             devicesListUpdatedHandler?()
             return
         }
 
         // If this item didn't exist in the list, append it to the end
-        devices.append(device)
+        if peripheralManager.isAdvertising {
+            devices.append(device)
+        }
+        
         devicesListUpdatedHandler?()
     }
 }
@@ -123,7 +128,7 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         DispatchQueue.main.async { [weak self] in
             self?.updateDeviceList(with: device)
             for (index, device) in self!.devices.enumerated() {
-                if device.lastseen + TimeInterval(5) < Date() {
+                if device.lastseen + TimeInterval(3) < Date() {
                     self!.devices.remove(at: index)
                     break
                 }

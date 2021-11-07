@@ -16,7 +16,7 @@ struct Device {
     let peripheral: CBPeripheral
 
     /// The reported name of this device
-    let name: String
+    var name: String
     
     var lastseen : Date
 
