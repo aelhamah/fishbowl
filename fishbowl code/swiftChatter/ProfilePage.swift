@@ -14,6 +14,13 @@ final class ProfilePage: UIViewController {
         
         // setup refreshControler here later
     }
+    @IBOutlet weak var usernameLabel: UILabel!
+
+    @IBOutlet weak var postImage: UIImageView!
+    
+    @IBOutlet weak var bioView: UITextView!
+    
+    
 }
 
 struct ContentView: View{

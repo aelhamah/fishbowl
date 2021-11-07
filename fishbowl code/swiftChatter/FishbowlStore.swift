@@ -54,7 +54,7 @@ final class FishbowlStore {
             return
         }
         
-        let parameters: [String: String] = ["user_ids": "1,2"]
+        let parameters: [String: String] = ["user_ids": "13"]
         print(apiUrl)
         AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
             var success = false
@@ -74,7 +74,9 @@ final class FishbowlStore {
             for (_, value) in usersReceived {
                     print(value["username"]!)
                     print(value["display_name"]!)
-                    self.users.append(User(username: (value["display_name"] as! String)))
+                    print(value["imageurl"]!)
+                    self.users.append(User(username: (value["display_name"] as! String),
+                                           imageUrl: (value["imageurl"] as! String)))
             }
             success = true // for completion(success)
         }.resume()

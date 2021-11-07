@@ -27,16 +27,16 @@
             </objects>
             <point key="canvasLocation" x="396" y="-204"/>
         </scene>
-        <!--PostVC-->
+        <!--Profile Page-->
         <scene sceneID="njy-aW-KID">
             <objects>
-                <viewController id="MHV-VP-iG8" customClass="PostVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MHV-VP-iG8" customClass="ProfilePage" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DCT-Nb-jMr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simu Liu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41H-oK-R6a">
-                                <rect key="frame" x="174.5" y="108" width="65" height="21"/>
+                                <rect key="frame" x="174.5" y="108" width="65" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,9 +75,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="yjH-h3-wvp"/>
                     <connections>
-                        <outlet property="messageTextView" destination="b2r-j5-foG" id="2LN-Es-OHX"/>
-                        <outlet property="postImage" destination="t5q-gX-j3K" id="uRW-yx-WiD"/>
-                        <outlet property="usernameLabel" destination="41H-oK-R6a" id="wbQ-dg-Bkp"/>
+                        <outlet property="bioView" destination="b2r-j5-foG" id="5ce-ok-Lsi"/>
+                        <outlet property="postImage" destination="t5q-gX-j3K" id="iyj-tf-zOs"/>
+                        <outlet property="usernameLabel" destination="41H-oK-R6a" id="mbE-Cn-Zt0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWD-eS-gkh" sceneMemberID="firstResponder"/>
