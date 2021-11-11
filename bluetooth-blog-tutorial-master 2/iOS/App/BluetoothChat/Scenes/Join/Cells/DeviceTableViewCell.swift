@@ -16,6 +16,8 @@ class DeviceTableViewCell: UITableViewCell {
         selectionStyle = selectable ? .blue : .none
         accessoryType = selectable ? .disclosureIndicator : .none
         textLabel?.text = device
+        imageView?.image = UIImage(named:"afternoon")!
+        
     }
 
     // Configure for a default placeholder state when no devices are found

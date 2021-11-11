@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ditto" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-6d-Bbm" userLabel="TextField">
-                        <rect key="frame" x="16" y="11" width="288" height="22"/>
+                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ditto" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-6d-Bbm" userLabel="TextField">
+                        <rect key="frame" x="28" y="11" width="292" height="22"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                         <connections>
@@ -27,9 +27,9 @@
                     </textField>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="kWS-6d-Bbm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="205" id="PIr-Tp-Fs2"/>
                     <constraint firstItem="kWS-6d-Bbm" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="STN-es-2e7"/>
-                    <constraint firstItem="kWS-6d-Bbm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="c0K-vn-NgC"/>
-                    <constraint firstItem="kWS-6d-Bbm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dZA-WX-01m"/>
+                    <constraint firstItem="kWS-6d-Bbm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="16" id="gfw-js-sLj"/>
                     <constraint firstItem="kWS-6d-Bbm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="trf-eP-sRK"/>
                 </constraints>
             </tableViewCellContentView>

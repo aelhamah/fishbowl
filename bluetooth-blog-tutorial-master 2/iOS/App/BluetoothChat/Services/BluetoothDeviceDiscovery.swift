@@ -52,7 +52,7 @@ class BluetoothDeviceDiscovery: NSObject {
         // If a device name is provided, capture it
         // If let deviceName = deviceName { self.deviceName = deviceName }
         // Set device name
-        self.deviceName = "aelhamah"
+        self.deviceName = "rithikag"
     }
     
 
@@ -123,7 +123,6 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
 
         // Capture all of this in a device object
         let device = Device(peripheral: peripheral, name: name)
-
         // Add or update this object to the visible list
         DispatchQueue.main.async { [weak self] in
             self?.updateDeviceList(with: device)
