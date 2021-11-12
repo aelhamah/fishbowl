@@ -14,4 +14,16 @@ final class ProfilePage: UIViewController {
         
         // setup refreshControler here later
     }
+    
+    
+    @IBAction func LikeButton(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func RejectButton(_ sender: Any) {
+        
+    }
+    
+    
 }

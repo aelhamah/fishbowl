@@ -14,7 +14,6 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // setup refreshControler here later
     }
    
     @IBOutlet weak var postProfilePicture: UIImageView!

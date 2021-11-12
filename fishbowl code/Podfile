@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '14.1'
+platform :ios, '15.0'
 
 target 'swiftChatter' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,5 +8,6 @@ target 'swiftChatter' do
   # Pods for swiftChatter
   pod 'SDWebImage'
   pod 'Alamofire'
+  pod 'GoogleSignIn'
 
 end

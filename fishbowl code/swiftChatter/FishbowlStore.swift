@@ -17,7 +17,7 @@ final class FishbowlStore {
     private let nFields = Mirror(reflecting: Match()).children.count
 
     private let serverUrl = "http://3.15.21.206/"
-    
+
 //    func postChatt(_ chatt: Chatt) {
 //            let jsonObj = ["username": chatt.username,
 //                           "message": chatt.message]
@@ -46,15 +46,15 @@ final class FishbowlStore {
 //                }
 //            }.resume()
 //    }
-    
+
     func createUserProfile(_ user: UserProfile, image: UIImage?) {
-        
-        
+
+
         guard let apiUrl = URL(string: serverUrl+"createusers/") else {
                     print("createUserProfile: Bad URL")
                     return
                 }
-                
+
                 AF.upload(multipartFormData: { mpFD in
                     if let username = user.Username?.data(using: .utf8) {
                         mpFD.append(username, withName: "username")
@@ -74,7 +74,7 @@ final class FishbowlStore {
                     if let jpegImage = image?.jpegData(compressionQuality: 1.0) {
                         mpFD.append(jpegImage, withName: "image", fileName: "profileImage", mimeType: "image/jpeg")
                     }
-                    
+
                 }, to: apiUrl, method: .post).response { response in
                     switch (response.result) {
                     case .success:
@@ -83,10 +83,10 @@ final class FishbowlStore {
                         print("createUserProfile: profile creation failed")
                     }
             }
-        
-        
-        
-        
+
+
+
+
 //        let jsonObj = ["fullName": user.FullName,
 //                       "display_name": user.DisplayName,
 //                       "email": user.Email,
@@ -117,7 +117,7 @@ final class FishbowlStore {
 //
 //            }.resume()
     }
-    
+
     func getMatches(_ completion: ((Bool) -> ())?) {
             //guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+"3") else {
             print("in get matches")
@@ -125,7 +125,7 @@ final class FishbowlStore {
                 print("getmatches: Bad URL")
                 return
             }
-        
+
 
             var request = URLRequest(url: apiUrl)
             request.httpMethod = "GET"
