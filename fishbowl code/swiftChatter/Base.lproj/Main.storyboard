@@ -127,9 +127,6 @@
                                 <navigationItem title="Home" id="eJV-KB-zO0">
                                     <barButtonItem key="leftBarButtonItem" title="Matches" image="heart" id="wRg-o0-Xzu">
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
-                                        <connections>
-                                            <segue destination="9In-ju-LVV" kind="showDetail" id="G0Q-av-8ez"/>
-                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" title="Settings" image="gear" catalog="system" id="01g-w2-4Z9"/>
                                 </navigationItem>
@@ -600,7 +597,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="G0Q-av-8ez"/>
         <segue reference="26I-bk-Hv0"/>
         <segue reference="l6d-7u-AMx"/>
     </inferredMetricsTieBreakers>
