@@ -25,6 +25,7 @@ final class MatchVC: UITableViewController {
 
     
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         
         // setup refreshControler here later
@@ -70,14 +71,17 @@ final class MatchVC: UITableViewController {
            return cell
        }
     private func refreshTimeline(_ sender: UIAction?) {
+        print("here")
             FishbowlStore.shared.getMatches { success in
                 DispatchQueue.main.async {
                     if success {
                         self.tableView.reloadData()
+                        print("api called")
                     }
                     // stop the refreshing animation upon completion:
                     self.refreshControl?.endRefreshing()
                 }
+                
             }
         }
     

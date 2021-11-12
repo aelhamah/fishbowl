@@ -167,5 +167,13 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 //               }
 //           }
 //       }
-    
+    @IBAction func ViewMatches(_ sender: Any) {
+        
+        
+        
+        
+        
+        self.performSegue(withIdentifier: "ShowMatches", sender: self)
+        
+    }
 }

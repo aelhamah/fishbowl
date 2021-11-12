@@ -127,6 +127,9 @@
                                 <navigationItem title="Home" id="eJV-KB-zO0">
                                     <barButtonItem key="leftBarButtonItem" title="Matches" image="heart" id="wRg-o0-Xzu">
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="ViewMatches:" destination="UAs-kv-22N" id="Ght-8Y-xJd"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" title="Settings" image="gear" catalog="system" id="01g-w2-4Z9"/>
                                 </navigationItem>
@@ -200,6 +203,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
+                    <connections>
+                        <segue destination="Tm2-gm-ibS" kind="showDetail" identifier="ShowMatches" id="kfC-XD-hAQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNI-SU-Mbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -473,10 +479,10 @@
             </objects>
             <point key="canvasLocation" x="1273.913043478261" y="-83.035714285714278"/>
         </scene>
-        <!--Table View Controller-->
+        <!--MatchVC-->
         <scene sceneID="ZeA-gU-ypI">
             <objects>
-                <tableViewController id="Tm2-gm-ibS" sceneMemberID="viewController">
+                <tableViewController id="Tm2-gm-ibS" customClass="MatchVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cj5-Mu-hxl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,7 +502,7 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="161" id="pud-Fc-4il">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="161" id="pud-Fc-4il" customClass="MatchTableCell" customModule="swiftChatter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="161"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pud-Fc-4il" id="VWq-Ts-bZ4">
@@ -531,6 +537,9 @@
                                         <constraint firstItem="iUn-e7-sB1" firstAttribute="leading" secondItem="VWq-Ts-bZ4" secondAttribute="leadingMargin" id="d8k-Ud-V6M"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="matchImageView" destination="iUn-e7-sB1" id="DLb-QT-U1F"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -597,6 +606,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="XPV-Rv-j9e"/>
         <segue reference="26I-bk-Hv0"/>
         <segue reference="l6d-7u-AMx"/>
     </inferredMetricsTieBreakers>
