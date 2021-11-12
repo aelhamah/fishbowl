@@ -8,5 +8,8 @@ target 'swiftChatter' do
   # Pods for swiftChatter
   pod 'SDWebImage'
   pod 'Alamofire'
+  pod 'GoogleSignIn', '~> 5.0.2'
+  pod 'Firebase'
+
 
 end

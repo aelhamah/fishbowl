@@ -6,8 +6,16 @@
 //
 
 import SwiftUI
+import Firebase
+import GoogleSignIn
 
-final class SignUp: UIViewController {
+final class SignUp: UIViewController, GIDSignInDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("signed in")
+     
+    }
+    
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -19,8 +27,21 @@ final class SignUp: UIViewController {
         
     }
     
+    @IBAction func googleSignInClicked(sender: UIButton) {
+            GIDSignIn.sharedInstance().signIn()
+    }
+    
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+        print("signed in")
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        
         
     
         username.layer.cornerRadius = 22

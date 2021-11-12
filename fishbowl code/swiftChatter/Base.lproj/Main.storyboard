@@ -250,9 +250,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.81960785390000002" green="0.42745098469999998" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                <buttonConfiguration key="configuration" style="plain" title="Google Sign in">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="googleSignInClickedWithSender:" destination="gLR-b0-bwb" eventType="touchUpInside" id="Ryx-ep-Egc"/>
+                                    <action selector="googleSignInSender:" destination="gLR-b0-bwb" eventType="touchUpInside" id="1iU-wj-HbZ"/>
+                                    <action selector="logimByGoogle:" destination="gLR-b0-bwb" eventType="touchUpInside" id="mCQ-3i-dXW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="705-Of-UjW">
                                 <rect key="frame" x="142" y="631" width="131" height="31"/>
@@ -299,7 +304,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="AGk-Dq-9mY"/>
                     <connections>
-                        <outlet property="SigningIn" destination="Bpo-CR-uuB" id="SIj-jL-Aar"/>
+                        <outlet property="SigningIn" destination="Bpo-CR-uuB" id="q8i-Cg-hkc"/>
                         <outlet property="password" destination="4VI-x6-8VZ" id="p8b-02-s1c"/>
                         <outlet property="username" destination="mFq-OK-EaD" id="oeP-p4-Ao6"/>
                         <segue destination="zMl-td-gyF" kind="showDetail" identifier="CreateProfilePage" id="26I-bk-Hv0"/>
