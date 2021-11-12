@@ -70,7 +70,7 @@ final class MatchVC: UITableViewController {
            return cell
        }
     private func refreshTimeline(_ sender: UIAction?) {
-            FishbowlStore.shared.getChatts { success in
+            FishbowlStore.shared.getMatches { success in
                 DispatchQueue.main.async {
                     if success {
                         self.tableView.reloadData()

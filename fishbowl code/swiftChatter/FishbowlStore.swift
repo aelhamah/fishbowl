@@ -118,8 +118,9 @@ final class FishbowlStore {
 //            }.resume()
     }
     
-    func getChatts(_ completion: ((Bool) -> ())?) {
+    func getMatches(_ completion: ((Bool) -> ())?) {
             //guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+"3") else {
+            print("in get matches")
             guard let apiUrl = URL(string: serverUrl+"getusers/?28") else {
                 print("getmatches: Bad URL")
                 return
@@ -134,26 +135,27 @@ final class FishbowlStore {
                 defer { completion?(success) }
 
                 guard let data = data, error == nil else {
-                    print("getChatts: NETWORKING ERROR")
+                    print("getMatches: NETWORKING ERROR")
                     return
                 }
                 if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                    print("getChatts: HTTP STATUS: \(httpStatus.statusCode)")
+                    print("getMatches: HTTP STATUS: \(httpStatus.statusCode)")
                     return
                 }
 
                 guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
-                    print("getChatts: failed JSON deserialization")
+                    print("getMatches: failed JSON deserialization")
                     return
                 }
-                let chattsReceived = jsonObj["matches"] as? [[String?]] ?? []
+                let matchesReceived = jsonObj["matches"] as? [[String?]] ?? []
                 self.matches = [Match]()
-                for chattEntry in chattsReceived {
-                    if chattEntry.count == self.nFields {
-                        self.matches.append(Match(imageUrl: chattEntry[0]
+                for matchEntry in matchesReceived {
+                    if matchEntry.count == self.nFields {
+                        self.matches.append(Match(imageUrl: matchEntry[0]
                                             ))
+                       print("match appended")
                     } else {
-                        print("getMatches: Received unexpected number of fields: \(chattEntry.count) instead of \(self.nFields).")
+                        print("getMatches: Received unexpected number of fields: \(matchEntry.count) instead of \(self.nFields).")
                     }
                 }
                 success = true // for completion(success)
