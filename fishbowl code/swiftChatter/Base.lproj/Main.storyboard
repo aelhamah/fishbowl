@@ -128,7 +128,7 @@
                                     <barButtonItem key="leftBarButtonItem" title="Matches" image="heart" id="wRg-o0-Xzu">
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="Tm2-gm-ibS" kind="presentation" id="wcN-65-vje"/>
+                                            <segue destination="9In-ju-LVV" kind="showDetail" id="G0Q-av-8ez"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" title="Settings" image="gear" catalog="system" id="01g-w2-4Z9"/>
@@ -555,7 +555,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHp-zd-1a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2602.898550724638" y="759.375"/>
+            <point key="canvasLocation" x="2132" y="1031"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rSA-Rc-f7F">
+            <objects>
+                <navigationController id="9In-ju-LVV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vm8-iH-U3W">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Tm2-gm-ibS" kind="showDetail" id="XPV-Rv-j9e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WwV-2x-XuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4100" y="723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LM2-XG-M77">
@@ -595,6 +611,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="G0Q-av-8ez"/>
         <segue reference="26I-bk-Hv0"/>
         <segue reference="l6d-7u-AMx"/>
     </inferredMetricsTieBreakers>
