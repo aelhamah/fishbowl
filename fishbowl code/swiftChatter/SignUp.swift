@@ -19,12 +19,14 @@ final class SignUp: UIViewController {
         
     }
     
+    @IBAction func SignInButton(_ sender: Any) {
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-        username.layer.cornerRadius = 22
-        password.layer.cornerRadius = 22
         SigningIn.layer.cornerRadius = 22
         
     }

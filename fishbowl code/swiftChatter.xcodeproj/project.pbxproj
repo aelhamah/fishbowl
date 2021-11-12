@@ -19,6 +19,8 @@
 		B362603F26E8003900A44FEC /* ChattStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362603E26E8003900A44FEC /* ChattStore.swift */; };
 		B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604626E802E000A44FEC /* ChatTableCell.swift */; };
 		B362604C26E803AC00A44FEC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604B26E803AC00A44FEC /* MainVC.swift */; };
+		BB25840B273D7DE30093CC0C /* Fishbowl_ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */; };
+		BB25840D273D84010093CC0C /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840C273D84010093CC0C /* SigninVC.swift */; };
 		BB7D04EA2733978C00B26E43 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04E92733978C00B26E43 /* SignUp.swift */; };
 		BB7D04EC27339B5600B26E43 /* CreateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04EB27339B5600B26E43 /* CreateProfile.swift */; };
 		BB7D04EE2734308700B26E43 /* FishbowlStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04ED2734308700B26E43 /* FishbowlStore.swift */; };
@@ -70,6 +72,8 @@
 		B362603E26E8003900A44FEC /* ChattStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattStore.swift; sourceTree = "<group>"; };
 		B362604626E802E000A44FEC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		B362604B26E803AC00A44FEC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishbowl_ID.swift; sourceTree = "<group>"; };
+		BB25840C273D84010093CC0C /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		BB7D04E92733978C00B26E43 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		BB7D04EB27339B5600B26E43 /* CreateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfile.swift; sourceTree = "<group>"; };
 		BB7D04ED2734308700B26E43 /* FishbowlStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishbowlStore.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				B362600426E7F1D800A44FEC /* PostVC.swift */,
 				D341A0FB2735795000F234E0 /* UserPreferences.storyboard */,
 				BB7D04E92733978C00B26E43 /* SignUp.swift */,
+				BB25840C273D84010093CC0C /* SigninVC.swift */,
 				BB7D04EB27339B5600B26E43 /* CreateProfile.swift */,
 				BBDD7D19272AFA3100040C0F /* ProfilePage.swift */,
 				D3A1D469272C3EDB00D33CFC /* ProfilePage.storyboard */,
@@ -157,6 +162,7 @@
 				BB7D04EF2734315E00B26E43 /* UserProfile.swift */,
 				BB7D04F127384AC400B26E43 /* LikedProfiles.swift */,
 				BB7D04ED2734308700B26E43 /* FishbowlStore.swift */,
+				BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */,
 				B362603926E7FFA600A44FEC /* Chatt.swift */,
 				B362603E26E8003900A44FEC /* ChattStore.swift */,
 				B362604626E802E000A44FEC /* ChatTableCell.swift */,
@@ -203,6 +209,7 @@
 				B3625FFA26E7F1D800A44FEC /* Frameworks */,
 				B3625FFB26E7F1D800A44FEC /* Resources */,
 				0AEBDD5B3FE55C17F012C991 /* [CP] Embed Pods Frameworks */,
+				FDAAB88B76683DE5DE27EA7A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,6 +367,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FDAAB88B76683DE5DE27EA7A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -377,10 +401,12 @@
 				D388E89A26FD106400C0556B /* Extensions.swift in Sources */,
 				B362603A26E7FFA600A44FEC /* Chatt.swift in Sources */,
 				B362600326E7F1D800A44FEC /* SceneDelegate.swift in Sources */,
+				BB25840D273D84010093CC0C /* SigninVC.swift in Sources */,
 				BB7D04EC27339B5600B26E43 /* CreateProfile.swift in Sources */,
 				B362603F26E8003900A44FEC /* ChattStore.swift in Sources */,
 				B362604C26E803AC00A44FEC /* MainVC.swift in Sources */,
 				BB7D04F02734315E00B26E43 /* UserProfile.swift in Sources */,
+				BB25840B273D7DE30093CC0C /* Fishbowl_ID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,13 +584,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84C6MHGUU4;
+				DEVELOPMENT_TEAM = G72JGSU347;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.rithikag.swiftChatter;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.fishbowl.FishbowlApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -578,13 +604,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84C6MHGUU4;
+				DEVELOPMENT_TEAM = G72JGSU347;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.rithikag.swiftChatter;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.fishbowl.FishbowlApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

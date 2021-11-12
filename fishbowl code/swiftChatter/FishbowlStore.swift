@@ -118,6 +118,7 @@ final class FishbowlStore {
 //            }.resume()
     }
     
+    
 //    func getChatts(_ completion: ((Bool) -> ())?) {
 //            guard let apiUrl = URL(string: serverUrl+"getchatts/") else {
 //                print("getChatts: Bad URL")

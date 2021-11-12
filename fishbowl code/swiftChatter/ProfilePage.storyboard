@@ -27,34 +27,40 @@
             </objects>
             <point key="canvasLocation" x="396" y="-204"/>
         </scene>
-        <!--Reeling one in...-->
-        <scene sceneID="a5j-Nf-wcj">
+        <!--Profile Page-->
+        <scene sceneID="OTQ-xf-0uI">
             <objects>
-                <viewController id="vxw-QU-fdN" customClass="ProfilePage" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hkM-2q-AXi">
+                <viewController id="jBc-cB-lAP" customClass="ProfilePage" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cn6-ss-JJI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2U-C8-GCb">
-                                <rect key="frame" x="232" y="654" width="100" height="102"/>
+                                <rect key="frame" x="223" y="667" width="100" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="LikeButton:" destination="jBc-cB-lAP" eventType="touchUpInside" id="K0m-lP-Lxl"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilepic" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYc-5M-SBJ">
-                                <rect key="frame" x="58" y="112" width="316" height="448"/>
+                                <rect key="frame" x="49" y="125" width="316" height="448"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9h-Vo-cy5">
-                                <rect key="frame" x="82" y="654" width="102" height="104"/>
+                                <rect key="frame" x="73" y="667" width="102" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="close" title=""/>
+                                <connections>
+                                    <action selector="RejectButton:" destination="jBc-cB-lAP" eventType="touchUpInside" id="guC-jN-bIo"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Bio Stuff Here" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQj-eZ-1x3">
-                                <rect key="frame" x="82" y="554" width="250" height="72"/>
+                                <rect key="frame" x="73" y="567" width="250" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -65,30 +71,27 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psz-8y-I1l">
-                                <rect key="frame" x="88" y="514" width="56" height="21"/>
+                                <rect key="frame" x="79" y="527" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.81960785390000002" green="0.42745098469999998" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYC-ZP-nWB">
-                                <rect key="frame" x="88" y="495" width="68" height="21"/>
+                                <rect key="frame" x="79" y="508" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.81960785390000002" green="0.42745098469999998" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="EaC-YC-FFm"/>
+                        <viewLayoutGuide key="safeArea" id="f96-l6-WA3"/>
                         <color key="backgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Reeling one in..." id="NbA-Vw-ahQ">
-                        <barButtonItem key="backBarButtonItem" title="Cast Hook" id="ELn-qe-IM3"/>
-                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BSV-ML-MB7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5P-HR-ULq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250.7246376811595" y="-1033.2589285714284"/>
+            <point key="canvasLocation" x="1672" y="-1033"/>
         </scene>
         <!--MatchPage-->
         <scene sceneID="Q9Q-Yj-Uex">
@@ -214,6 +217,7 @@
         <!--Navigation Controller-->
         <scene sceneID="wAz-zj-PHK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zf9-HX-mb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OqU-Hl-2lI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gcj-Kg-219">
@@ -221,13 +225,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vxw-QU-fdN" kind="relationship" relationship="rootViewController" id="4Uc-jy-Liz"/>
-                    </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zf9-HX-mb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340.5797101449277" y="-1033.2589285714284"/>
+            <point key="canvasLocation" x="841" y="-1033"/>
         </scene>
     </scenes>
     <resources>
