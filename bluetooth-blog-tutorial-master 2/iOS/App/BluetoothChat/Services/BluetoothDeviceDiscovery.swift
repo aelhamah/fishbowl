@@ -54,8 +54,6 @@ class BluetoothDeviceDiscovery: NSObject {
         // Set device name
         self.deviceName = "rithikag"
     }
-    
-
     // Start advertising (Or re-advertise) this device as a peipheral
     func startAdvertising() {
         // Don't start until we've finished warming up

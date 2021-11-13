@@ -25,8 +25,9 @@
 		22EF8590246D1F39003E1D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22EF858F246D1F39003E1D8D /* Assets.xcassets */; };
 		22EF8593246D1F39003E1D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EF8591246D1F39003E1D8D /* LaunchScreen.storyboard */; };
 		95BA814BDB7782C723C3C9D1 /* libPods-BluetoothChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9458C6F3AE65E4EC1A9D19BB /* libPods-BluetoothChat.a */; };
-		B31BBF3E273314A70013DDB8 /* LandingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BBF3D273314A70013DDB8 /* LandingPageController.swift */; };
 		B3F63AE1273D8114009EB2B2 /* afternoon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F63AE0273D8114009EB2B2 /* afternoon.png */; };
+		B3F63AE3273D86BB009EB2B2 /* FishbowlStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F63AE2273D86BB009EB2B2 /* FishbowlStore.swift */; };
+		B3F63AE5273D87FD009EB2B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F63AE4273D87FD009EB2B2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +52,10 @@
 		22EF8594246D1F39003E1D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ../Resources/Info.plist; sourceTree = "<group>"; };
 		371A64039425ECD7E35DBB5D /* Pods-BluetoothChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothChat.debug.xcconfig"; path = "Target Support Files/Pods-BluetoothChat/Pods-BluetoothChat.debug.xcconfig"; sourceTree = "<group>"; };
 		9458C6F3AE65E4EC1A9D19BB /* libPods-BluetoothChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BluetoothChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B31BBF3D273314A70013DDB8 /* LandingPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageController.swift; sourceTree = "<group>"; };
+		B363C55A273F3F8200F2A0C9 /* BluetoothChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BluetoothChat.entitlements; sourceTree = "<group>"; };
 		B3F63AE0273D8114009EB2B2 /* afternoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = afternoon.png; path = ../../../../../../../../Desktop/afternoon.png; sourceTree = "<group>"; };
+		B3F63AE2273D86BB009EB2B2 /* FishbowlStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishbowlStore.swift; sourceTree = "<group>"; };
+		B3F63AE4273D87FD009EB2B2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7C2B71553C038D7B99043E6 /* Pods-BluetoothChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothChat.release.xcconfig"; path = "Target Support Files/Pods-BluetoothChat/Pods-BluetoothChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +111,6 @@
 		22A78D882480C51E00CFA136 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B31BBF3C273314890013DDB8 /* LandingPage */,
 				221C57802484049E0018A070 /* Chat */,
 				22A78D892480C66900CFA136 /* Join */,
 			);
@@ -146,6 +148,8 @@
 		22EF857A246D1F38003E1D8D = {
 			isa = PBXGroup;
 			children = (
+				B3F63AE2273D86BB009EB2B2 /* FishbowlStore.swift */,
+				B3F63AE4273D87FD009EB2B2 /* User.swift */,
 				22EF8585246D1F38003E1D8D /* BluetoothChat */,
 				22EF8584246D1F38003E1D8D /* Products */,
 				A7CD6AAADDF3FEC7792AC271 /* Pods */,
@@ -164,6 +168,7 @@
 		22EF8585246D1F38003E1D8D /* BluetoothChat */ = {
 			isa = PBXGroup;
 			children = (
+				B363C55A273F3F8200F2A0C9 /* BluetoothChat.entitlements */,
 				22EF8586246D1F38003E1D8D /* AppDelegate.swift */,
 				22EF8588246D1F38003E1D8D /* SceneDelegate.swift */,
 				22D875642472D49B00A2FD4C /* Constants */,
@@ -200,14 +205,6 @@
 				B7C2B71553C038D7B99043E6 /* Pods-BluetoothChat.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B31BBF3C273314890013DDB8 /* LandingPage */ = {
-			isa = PBXGroup;
-			children = (
-				B31BBF3D273314A70013DDB8 /* LandingPageController.swift */,
-			);
-			path = LandingPage;
 			sourceTree = "<group>";
 		};
 		EDC988DD2E266C5DDD31A9D1 /* Frameworks */ = {
@@ -354,13 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31BBF3E273314A70013DDB8 /* LandingPageController.swift in Sources */,
 				227370F124837EA800FC6434 /* Device.swift in Sources */,
 				22EF8587246D1F38003E1D8D /* AppDelegate.swift in Sources */,
 				227370EE24836BAD00FC6434 /* BluetoothDeviceDiscovery.swift in Sources */,
+				B3F63AE5273D87FD009EB2B2 /* User.swift in Sources */,
 				22A78D902480C72E00CFA136 /* JoinViewController.swift in Sources */,
 				22EF8589246D1F38003E1D8D /* SceneDelegate.swift in Sources */,
 				227370EC2482CA6B00FC6434 /* JoinTableHeaderView.swift in Sources */,
+				B3F63AE3273D86BB009EB2B2 /* FishbowlStore.swift in Sources */,
 				22A78D972480F6B800CFA136 /* DeviceTableViewCell.swift in Sources */,
 				22D875662472D4BA00A2FD4C /* BluetoothConstants.swift in Sources */,
 				221C5788248548300018A070 /* BluetoothChatService.swift in Sources */,
@@ -504,6 +502,8 @@
 			baseConfigurationReference = 371A64039425ECD7E35DBB5D /* Pods-BluetoothChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BluetoothChat/BluetoothChat.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84C6MHGUU4;
 				INFOPLIST_FILE = BluetoothChat/Supporting/Info.plist;
@@ -514,6 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.com.rithikag.Bluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -524,6 +525,8 @@
 			baseConfigurationReference = B7C2B71553C038D7B99043E6 /* Pods-BluetoothChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BluetoothChat/BluetoothChat.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84C6MHGUU4;
 				INFOPLIST_FILE = BluetoothChat/Supporting/Info.plist;
@@ -534,6 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.com.rithikag.Bluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

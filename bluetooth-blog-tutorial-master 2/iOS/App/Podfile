@@ -5,7 +5,7 @@ target 'BluetoothChat' do
 
   pod 'MessageKit'
   pod 'SwiftLint'
-
+  pod 'Alamofire'
 end
 
 post_install do |pi|
