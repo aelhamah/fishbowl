@@ -25,11 +25,11 @@ class JoinViewController: UITableViewController {
         didSet { deviceDiscovery.deviceName = deviceName }
     }
     // The email associated with this device
-    private var deviceEmailIdentity = "rg@umich.edu"
+//    private var deviceEmailIdentity = "rg@umich.edu"
 
     // The Bluetooth service manager for advertising and scanning
     private var deviceDiscovery: BluetoothDeviceDiscovery!
-
+    private var peripheralDeviceEmail = ""
     // MARK: - Class Creation -
 
     init() {
@@ -79,20 +79,24 @@ class JoinViewController: UITableViewController {
         // Set up the header view
         tableView.tableHeaderView = JoinTableHeaderView.instantiate()
 
-        FishbowlStore.shared.users.append(User(displayName: "", email: self.deviceEmailIdentity))
-        getIndividualProfile(email: self.deviceEmailIdentity, users: &FishbowlStore.shared.users) {success in
-               DispatchQueue.main.async {
-                   print("reached here")
-                   if success {
-                       print("Success")
-                   } else {
-                       print("Error")
-                   }
-                   // stop the refreshing animation upon completion:
-                   self.refreshControl?.endRefreshing()
-               }
-        }
+//        var val = (deviceDiscovery.devices.count - 1)
+//        var peripheralDevice = deviceDiscovery.devices[val]
+//        FishbowlStore.shared.users.append(User(displayName: "", email: peripheralDevice.name ))
+//
+//        getIndividualProfile(email: self.peripheralDeviceEmail, users: &FishbowlStore.shared.users) {success in
+//               DispatchQueue.main.async {
+//                   print("reached here")
+//                   if success {
+//                       print("Success")
+//                   } else {
+//                       print("Error")
+//                   }
+//                   // stop the refreshing animation upon completion:
+//                   self.refreshControl?.endRefreshing()
+//               }
+//        }
     }
+
     // Get image data
     public func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
@@ -106,7 +110,7 @@ class JoinViewController: UITableViewController {
             print("Download Finished")
             // always update the UI from the main thread
             DispatchQueue.main.async { [weak self] in
-                for (index, val) in FishbowlStore.shared.users.enumerated() where val.email == self?.deviceEmailIdentity {
+                for (index, val) in FishbowlStore.shared.users.enumerated() where val.email ==  self?.peripheralDeviceEmail {
                 FishbowlStore.shared.users[index].imageData = data
             }
                 self?.tableView.reloadData()
@@ -119,8 +123,10 @@ class JoinViewController: UITableViewController {
             print("getProfile: bad URL")
             return
         }
+        
         let parameters: [String: String] = ["user_ids": email]
         print(apiUrl)
+        var url = ""
         AF.request(apiUrl, method: .get, parameters: parameters,
                    encoding: URLEncoding.default).responseJSON { response in
             guard let data = response.data, response.error == nil else {
@@ -140,17 +146,23 @@ class JoinViewController: UITableViewController {
 //                    print(value["imageurl"]!)
 //                    print(value["email"]!)
 //            }
-            for (_, value) in usersReceived where value["email"] as! String == self.deviceEmailIdentity {// swiftlint:disable:this force_cast
+            for (_, value) in usersReceived where value["email"] as! String == self.peripheralDeviceEmail  {// swiftlint:disable:this force_cast
                 print(FishbowlStore.shared.users.count)
-                for (index, val) in FishbowlStore.shared.users.enumerated() where val.email == "rg@umich.edu" {
+                for (index, val) in FishbowlStore.shared.users.enumerated() where val.email == self.peripheralDeviceEmail {
                     FishbowlStore.shared.users[index].displayName = (value["display_name"] as? String)
                     // TODO: get url from here and store in url variable below
 //                    FishbowlStore.shared.users[index].imageUrl = (value["imageurl"] as? String)
+                    url = ((value["imageurl"] as? String)!)// swiftlint:disable:this force_cast
                 }
             }
             // download the image from given image url
-            let url = URL(string: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")!
-            self.downloadImage(from: url)
+            if url != "" {
+                self.downloadImage(from: URL(string: url)!)// swiftlint:disable:this force_cast
+
+            } else {
+                url = "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg"
+                self.downloadImage(from: URL(string:url)!)// swiftlint:disable:this force_cast
+            }
         }
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -192,16 +204,17 @@ extension JoinViewController {
                      self?.deviceName = name
                  }
              }
-
             if let deviceCell = cell as? DeviceTableViewCell {
-                for value in FishbowlStore.shared.users where value.email == self.deviceEmailIdentity {
+                let device = deviceDiscovery.devices[indexPath.row]
+                for value in FishbowlStore.shared.users where value.email ==  self.peripheralDeviceEmail {
                     deviceCell.configureForDevice(named: value, selectable: false)
                 }
             } else {
-                let deviceCell = cell as? DeviceTableViewCell
+                if let deviceCell = cell as? DeviceTableViewCell {
                 print("unable to configure table cell for device")
-                deviceCell?.configureForDevice(named: User(displayName: "", email: ""), selectable: false)
+                    deviceCell.configureForDevice(named: User(displayName: "", email: ""), selectable: false)
                 }
+            }
             return cell
         }
 
@@ -213,9 +226,26 @@ extension JoinViewController {
             // If we have a list of devices, configure each cell with its name
             if deviceDiscovery.devices.count > 0 {
                 let device = deviceDiscovery.devices[indexPath.row]
-                for value in FishbowlStore.shared.users where value.email == self.deviceEmailIdentity {
+                self.peripheralDeviceEmail = (device.name) // swiftlint:disable:this force_cast
+                FishbowlStore.shared.users.append(User(displayName: "", email:  self.peripheralDeviceEmail ))
+                getIndividualProfile(email:  self.peripheralDeviceEmail, users: &FishbowlStore.shared.users) {success in
+                    DispatchQueue.main.async {
+                        print("reached here")
+                        if success {
+                            print("Success")
+                        } else {
+                            print("Error")
+                        }
+                        // stop the refreshing animation upon completion:
+                        self.refreshControl?.endRefreshing()
+                    }
+                    tableView.reloadData()
+             }
+                for value in FishbowlStore.shared.users where value.email == self.peripheralDeviceEmail {
                     deviceCell.configureForDevice(named: value, selectable: false)
                 }
+            
+                
             } else {
                 // If no devices found, show "no devices"
                 // KEEP FOR TESTING

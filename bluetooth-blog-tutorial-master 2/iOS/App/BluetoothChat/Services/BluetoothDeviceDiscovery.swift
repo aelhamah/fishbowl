@@ -52,7 +52,7 @@ class BluetoothDeviceDiscovery: NSObject {
         // If a device name is provided, capture it
         // If let deviceName = deviceName { self.deviceName = deviceName }
         // Set device name
-        self.deviceName = "rithikag"
+        self.deviceName = "rg@umich.edu"
     }
     // Start advertising (Or re-advertise) this device as a peipheral
     func startAdvertising() {
@@ -118,9 +118,8 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         if let deviceName = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
             name = deviceName
         }
-
+//        print("RSSI", RSSI)
         // Capture all of this in a device object
-        peripheral.readRSSI()
         let device = Device(peripheral: peripheral, name: name)
         // Add or update this object to the visible list
         DispatchQueue.main.async { [weak self] in
