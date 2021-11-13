@@ -22,7 +22,7 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
                 print("BLE powered on")
                 let deviceInfoProfileCBUUID = CBUUID(string: "0x180A")
 //                central.scanForPeripherals(withServices: nil, options: nil)
-            
+
             case .poweredOff: break
                 // Alert user to turn on Bluetooth
             case .resetting: break
@@ -38,9 +38,9 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 
         }
     }
-    
-    
-        
+
+
+
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
                 //Perform search every 20 seconds
         print("in central manager")
@@ -70,7 +70,7 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 //            }
 //        }
     }
-    
+
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         self.myPeripheral.discoverServices(nil)
 
@@ -82,24 +82,24 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
         for service: CBService in peripheral.services! {
             self.myPeripheral.discoverCharacteristics(nil, for: service )
         }
-        
+
     }
 
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         print(service.characteristics)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.tableView.rowHeight = 80;
         centralManager = CBCentralManager(delegate: self, queue: nil)
-        
+
         // setup refreshControler here later
                //refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
-               
+
              //  refreshTimeline(nil)
     }
-    
+
 //    guard let _ = Fishbowl_ID.shared.id else {
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //        // TODO4: programmatically instantiate SigninVC and present
@@ -135,9 +135,9 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 //            cell.usernameLabel.text = chatt.username
 ////            cell.messageLabel.text = chatt.message
 //            cell.timestampLabel.text = chatt.timestamp
-        
-    
-        
+
+
+
 //            if let urlString = chatt.imageUrl, let imageUrl = URL(string: urlString) {
 //                cell.chattImageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "photo"), options: [.progressiveLoad])
 //                cell.chattImageView.isHidden = false
@@ -145,7 +145,7 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 //                cell.chattImageView.image = nil
 //                cell.chattImageView.isHidden = true
 //            }
-        
+
 //            if let urlString = chatt.videoUrl, let videoUrl = URL(string: urlString) {
 //                cell.videoButton.isHidden = false // remember: cells are recycled and reused
 //                cell.playVideo = {
@@ -161,10 +161,10 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 //                cell.videoButton.isHidden = true
 //                cell.playVideo = nil
 //            }
-        
+
 //            return cell
 //        }
-    
+
 //    private func refreshTimeline(_ sender: UIAction?) {
 //           ChattStore.shared.getChatts { success in
 //               DispatchQueue.main.async {
@@ -176,12 +176,13 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 //               }
 //           }
 //       }
-    //SHOULD HAVE BEEN ADDED IF WE WANTED TO MAKE SURE THEY DONT CANCEL SIGN IN
-//    if let _ = ChatterID.shared.id {
-//                let store = ChattStore()
-//                store.postChatt(chatt)
-//            } else {
-//                print("Error signing in. Please try again.")
-//            }
-    
+    @IBAction func ViewMatches(_ sender: Any) {
+
+
+
+
+
+        self.performSegue(withIdentifier: "ShowMatches", sender: self)
+
+    }
 }
