@@ -99,6 +99,15 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
                
              //  refreshTimeline(nil)
     }
+    
+//    guard let _ = Fishbowl_ID.shared.id else {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        // TODO4: programmatically instantiate SigninVC and present
+//        // it.  SigninVC will be returning data using the same
+//        // ReturnDelegate protocol we used in lab1, so you need to
+//        // set it up prior to presenting SigninVC.
+//        return
+//    }
     // MARK:- TableView handlers
 
 //       override func numberOfSections(in tableView: UITableView) -> Int {
@@ -167,5 +176,12 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
 //               }
 //           }
 //       }
+    //SHOULD HAVE BEEN ADDED IF WE WANTED TO MAKE SURE THEY DONT CANCEL SIGN IN
+//    if let _ = ChatterID.shared.id {
+//                let store = ChattStore()
+//                store.postChatt(chatt)
+//            } else {
+//                print("Error signing in. Please try again.")
+//            }
     
 }

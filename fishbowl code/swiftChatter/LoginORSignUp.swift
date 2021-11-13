@@ -7,20 +7,19 @@
 
 import SwiftUI
 
-final class SignUp: UIViewController {
-
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
+final class LoginORSignUp: UIViewController {
     
     @IBOutlet weak var SigningIn: UIButton!
     
     @IBAction func GoToSignUp(_ sender: UIButton) {
+        
         self.performSegue(withIdentifier: "CreateProfilePage", sender: self)
         
     }
     
     @IBAction func SignInButton(_ sender: Any) {
         
+        self.performSegue(withIdentifier: "GoToGoogleSignIn", sender: self)
     }
     
     

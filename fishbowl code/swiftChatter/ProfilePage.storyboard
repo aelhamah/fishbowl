@@ -217,7 +217,6 @@
         <!--Navigation Controller-->
         <scene sceneID="wAz-zj-PHK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zf9-HX-mb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OqU-Hl-2lI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gcj-Kg-219">
@@ -226,6 +225,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zf9-HX-mb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841" y="-1033"/>
         </scene>

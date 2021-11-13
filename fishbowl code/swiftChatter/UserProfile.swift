@@ -9,6 +9,7 @@ import Foundation
 
 struct UserProfile {
     
+    var FishBowlID: String?
     var Username: String?
     var FullName: String?
     var DisplayName: String?

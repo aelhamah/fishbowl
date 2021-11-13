@@ -59,6 +59,9 @@ final class FishbowlStore {
                     if let username = user.Username?.data(using: .utf8) {
                         mpFD.append(username, withName: "username")
                     }
+                    if let fishbowl_ID = user.FishBowlID?.data(using: .utf8) {
+                        mpFD.append(fishbowl_ID, withName: "fishbowl_ID")
+                    }
                     if let fullName = user.FullName?.data(using: .utf8) {
                         mpFD.append(fullName, withName: "fullName")
                     }
@@ -163,4 +166,54 @@ final class FishbowlStore {
         }
 
 
+    
+    func addUser(_ idToken: String?, completion: @escaping (String) -> Void) {
+            guard let idToken = idToken else {
+                completion("FAILED")
+                return
+            }
+            
+            let jsonObj = ["clientID": "896933683203-acnt9dg8im59p8m9tdhubr06qq45t2u5.apps.googleusercontent.com",
+                        "idToken" : idToken]
+            guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
+                print("addUser: jsonData serialization error")
+                completion("FAILED")
+                return
+            }
+
+            guard let apiUrl = URL(string: serverUrl+"adduser/") else {
+                print("addUser: Bad URL")
+                completion("FAILED")
+                return
+            }
+            
+            var request = URLRequest(url: apiUrl)
+            request.httpMethod = "POST"
+            request.httpBody = jsonData
+            
+            let task =  URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data = data, error == nil else {
+                    print("addUser: NETWORKING ERROR")
+                    completion("FAILED")
+                    return
+                }
+                
+                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                    print("addUser: HTTP STATUS: \(httpStatus.statusCode)")
+                    completion("FAILED")
+                }
+                
+                guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+                    print("addUser: failed JSON deserialization")
+                    completion("FAILED")
+                    return
+                }
+
+                Fishbowl_ID.shared.id = jsonObj["fishbowlID"] as? String
+                Fishbowl_ID.shared.expiration = Date()+(jsonObj["lifetime"] as! TimeInterval)
+                completion("OK")
+            }
+            task.resume()
+        }
+    
 }

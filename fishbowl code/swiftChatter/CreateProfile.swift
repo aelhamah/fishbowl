@@ -64,7 +64,8 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBAction func SignUpComplete(_ sender: Any) {
         
-        let user = UserProfile(Username: Username.text,
+        let user = UserProfile(FishBowlID: Fishbowl_ID.shared.id,
+                               Username: Username.text,
                                FullName: LastName.text,
                                DisplayName: FirstName.text,
                                Email: Email.text,
