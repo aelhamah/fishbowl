@@ -155,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgu-GA-mq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3843" y="-1177"/>
+            <point key="canvasLocation" x="3010" y="-1238"/>
         </scene>
         <!--PostVC-->
         <scene sceneID="njy-aW-KID">

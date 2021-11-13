@@ -13,7 +13,7 @@ final class LoginORSignUp: UIViewController {
     
     @IBAction func GoToSignUp(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "CreateProfilePage", sender: self)
+        self.performSegue(withIdentifier: "GoogleSignup", sender: self)
         
     }
     

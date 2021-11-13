@@ -1,8 +1,8 @@
 //
-//  SigninVC.swift
+//  SignupVC.swift
 //  swiftChatter
 //
-//  Created by Nicole Iannaci on 11/11/21.
+//  Created by Nicole Iannaci on 11/13/21.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import SwiftUI
 import GoogleSignIn
 // TODO2.1: Declare the ReturnDelegate protocol as in lab1
 
-final class SigninVC: UIViewController, GIDSignInDelegate {
+final class SignupVC: UIViewController, GIDSignInDelegate {
     // TODO2.2: declare the returnDelegate variable for the delegatee to register itself
     private let store = FishbowlStore.shared
     
@@ -76,7 +76,7 @@ final class SigninVC: UIViewController, GIDSignInDelegate {
                             // class, PostVC
                             DispatchQueue.main.async {
 //                                self.dismiss(animated: true, completion: nil)
-                                self.performSegue(withIdentifier: "GoogleSuccessSignin", sender: self)
+                                self.performSegue(withIdentifier: "GoogleSuccessSignup", sender: self)
                             }
                             
                         }

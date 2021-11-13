@@ -13,9 +13,11 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
     }
    
+    @IBOutlet weak var ScrollView: UIScrollView!
+    
     @IBOutlet weak var postProfilePicture: UIImageView!
     
     @IBAction func pickMedia(_ sender: Any) {
