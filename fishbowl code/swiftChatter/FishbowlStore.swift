@@ -216,4 +216,33 @@ final class FishbowlStore {
             task.resume()
         }
     
+    
+    func postauth(_ user: UserProfile) async {
+            let jsonObj = ["fishbowlID": Fishbowl_ID.shared.id]
+            guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
+                print("postauth: jsonData serialization error")
+                return
+            }
+                    
+            guard let apiUrl = URL(string: serverUrl+"postauth/") else {
+                print("postauth: Bad URL")
+                return
+            }
+            
+            var request = URLRequest(url: apiUrl)
+            request.httpMethod = "POST"
+            request.httpBody = jsonData
+
+        do {
+                    let (_, response) = try await URLSession.shared.data(for: request)
+
+                    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                        print("postauth: HTTP STATUS: \(httpStatus.statusCode)")
+                        return
+                    }
+                } catch {
+                    print("postauth: NETWORKING ERROR")
+                }
+        }
+    
 }

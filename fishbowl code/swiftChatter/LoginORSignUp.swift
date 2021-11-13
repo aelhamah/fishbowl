@@ -19,6 +19,8 @@ final class LoginORSignUp: UIViewController {
     
     @IBAction func SignInButton(_ sender: Any) {
         
+//        FishbowlStore.shared.postauth(UserProfile)
+        
         self.performSegue(withIdentifier: "GoToGoogleSignIn", sender: self)
     }
     
