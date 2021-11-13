@@ -125,7 +125,7 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         DispatchQueue.main.async { [weak self] in
             self?.updateDeviceList(with: device)
             for (index, device) in self!.devices.enumerated() {
-                if device.lastseen + TimeInterval(3) < Date() {
+                if device.lastseen + TimeInterval(10) < Date() {
                     self!.devices.remove(at: index)
                     break
                 }

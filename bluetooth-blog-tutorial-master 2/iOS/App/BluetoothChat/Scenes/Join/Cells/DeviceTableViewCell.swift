@@ -21,7 +21,7 @@ class DeviceTableViewCell: UITableViewCell {
             } else {
                 textLabel?.text = "Loading Name"
             }
-        // Set profile image for landing page
+//         Set profile image for landing page
             if val.imageData != nil {
                 self.imageView?.contentMode = .scaleAspectFit
 //                self.imageView?.image = UIImage(named: "afternoon.png")
@@ -31,6 +31,7 @@ class DeviceTableViewCell: UITableViewCell {
             }
         }
     }
+
     // Configure for a default placeholder state when no devices are found
     public func configureForNoDevicesFound() {
         textLabel?.alpha = 0.5
