@@ -44,11 +44,9 @@ class JoinViewController: UITableViewController {
     // MARK: - View Configuration -
     @objc func sampleSwitchValueChanged(sender: UISwitch!) {
             if sender.isOn {
-
                 print("switch on")
-
             } else {
-                print("not on")
+                print("switch not on")
             }
         }
     @objc func stopAdvertising() {
@@ -81,8 +79,8 @@ class JoinViewController: UITableViewController {
         // Set up the header view
         tableView.tableHeaderView = JoinTableHeaderView.instantiate()
 
-        FishbowlStore.shared.users.append(User(displayName: "", email: "rg@umich.edu"))
-        getIndividualProfile(email: "60", users: &FishbowlStore.shared.users) {success in
+        FishbowlStore.shared.users.append(User(displayName: "", email: self.deviceEmailIdentity))
+        getIndividualProfile(email: self.deviceEmailIdentity, users: &FishbowlStore.shared.users) {success in
                DispatchQueue.main.async {
                    print("reached here")
                    if success {
@@ -108,7 +106,7 @@ class JoinViewController: UITableViewController {
             print("Download Finished")
             // always update the UI from the main thread
             DispatchQueue.main.async { [weak self] in
-            for (index, val) in FishbowlStore.shared.users.enumerated() where val.email == "rg@umich.edu" {
+                for (index, val) in FishbowlStore.shared.users.enumerated() where val.email == self?.deviceEmailIdentity {
                 FishbowlStore.shared.users[index].imageData = data
             }
                 self?.tableView.reloadData()
@@ -142,7 +140,7 @@ class JoinViewController: UITableViewController {
 //                    print(value["imageurl"]!)
 //                    print(value["email"]!)
 //            }
-            for (_, value) in usersReceived where value["email"] as! String == "rg@umich.edu" {// swiftlint:disable:this force_cast
+            for (_, value) in usersReceived where value["email"] as! String == self.deviceEmailIdentity {// swiftlint:disable:this force_cast
                 print(FishbowlStore.shared.users.count)
                 for (index, val) in FishbowlStore.shared.users.enumerated() where val.email == "rg@umich.edu" {
                     FishbowlStore.shared.users[index].displayName = (value["display_name"] as? String)
@@ -196,7 +194,7 @@ extension JoinViewController {
              }
 
             if let deviceCell = cell as? DeviceTableViewCell {
-                for value in FishbowlStore.shared.users where value.email == "rg@umich.edu" {
+                for value in FishbowlStore.shared.users where value.email == self.deviceEmailIdentity {
                     deviceCell.configureForDevice(named: value, selectable: false)
                 }
             } else {
@@ -215,17 +213,15 @@ extension JoinViewController {
             // If we have a list of devices, configure each cell with its name
             if deviceDiscovery.devices.count > 0 {
                 let device = deviceDiscovery.devices[indexPath.row]
-                for value in FishbowlStore.shared.users where value.email == "rg@umich.edu" {
+                for value in FishbowlStore.shared.users where value.email == self.deviceEmailIdentity {
                     deviceCell.configureForDevice(named: value, selectable: false)
                 }
             } else {
                 // If no devices found, show "no devices"
-                
                 // KEEP FOR TESTING
-//                for value in FishbowlStore.shared.users where value.email == "rg@umich.edu" {
+//                for value in FishbowlStore.shared.users where value.email == self.deviceEmailIdentity {
 //                    deviceCell.configureForDevice(named: value, selectable: false)
 //                }
-                
                 deviceCell.configureForNoDevicesFound()
             }
         }

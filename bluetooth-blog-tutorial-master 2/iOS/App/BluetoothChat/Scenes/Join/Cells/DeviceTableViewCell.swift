@@ -15,7 +15,7 @@ class DeviceTableViewCell: UITableViewCell {
         textLabel?.alpha = 1.0
         selectionStyle = selectable ? .blue : .none
         accessoryType = selectable ? .disclosureIndicator : .none
-        for val in FishbowlStore.shared.users where val.email == "rg@umich.edu" {
+        for val in FishbowlStore.shared.users where val.email == user.email {
             if let displayName = val.displayName! as? String {
                 textLabel?.text = displayName
             } else {

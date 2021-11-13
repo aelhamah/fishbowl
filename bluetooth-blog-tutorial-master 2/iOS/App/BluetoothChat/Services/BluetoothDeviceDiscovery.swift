@@ -120,6 +120,7 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         }
 
         // Capture all of this in a device object
+        peripheral.readRSSI()
         let device = Device(peripheral: peripheral, name: name)
         // Add or update this object to the visible list
         DispatchQueue.main.async { [weak self] in
