@@ -25,6 +25,10 @@
 		BB25840B273D7DE30093CC0C /* Fishbowl_ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */; };
 		BB25840D273D84010093CC0C /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840C273D84010093CC0C /* SigninVC.swift */; };
 		BB25840F27405EA10093CC0C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840E27405EA10093CC0C /* SignupVC.swift */; };
+		BB28B2BC274195DC00BB9814 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28B2BB274195DC00BB9814 /* UserPreferences.swift */; };
+		BB28B2BE27419CDD00BB9814 /* BlockedUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28B2BD27419CDD00BB9814 /* BlockedUsers.swift */; };
+		BB28B2C027419D3100BB9814 /* EditBio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28B2BF27419D3100BB9814 /* EditBio.swift */; };
+		BB28B2C227419D5600BB9814 /* EditPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28B2C127419D5600BB9814 /* EditPreferences.swift */; };
 		BB7D04EA2733978C00B26E43 /* LoginORSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04E92733978C00B26E43 /* LoginORSignUp.swift */; };
 		BB7D04EC27339B5600B26E43 /* CreateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04EB27339B5600B26E43 /* CreateProfile.swift */; };
 		BB7D04EE2734308700B26E43 /* FishbowlStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04ED2734308700B26E43 /* FishbowlStore.swift */; };
@@ -82,6 +86,10 @@
 		BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishbowl_ID.swift; sourceTree = "<group>"; };
 		BB25840C273D84010093CC0C /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		BB25840E27405EA10093CC0C /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		BB28B2BB274195DC00BB9814 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		BB28B2BD27419CDD00BB9814 /* BlockedUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedUsers.swift; sourceTree = "<group>"; };
+		BB28B2BF27419D3100BB9814 /* EditBio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBio.swift; sourceTree = "<group>"; };
+		BB28B2C127419D5600BB9814 /* EditPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreferences.swift; sourceTree = "<group>"; };
 		BB7D04E92733978C00B26E43 /* LoginORSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginORSignUp.swift; sourceTree = "<group>"; };
 		BB7D04EB27339B5600B26E43 /* CreateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfile.swift; sourceTree = "<group>"; };
 		BB7D04ED2734308700B26E43 /* FishbowlStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishbowlStore.swift; sourceTree = "<group>"; };
@@ -168,6 +176,10 @@
 				BB7D04F127384AC400B26E43 /* LikedProfiles.swift */,
 				BB7D04ED2734308700B26E43 /* FishbowlStore.swift */,
 				BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */,
+				BB28B2BB274195DC00BB9814 /* UserPreferences.swift */,
+				BB28B2BF27419D3100BB9814 /* EditBio.swift */,
+				BB28B2C127419D5600BB9814 /* EditPreferences.swift */,
+				BB28B2BD27419CDD00BB9814 /* BlockedUsers.swift */,
 				B362600B26E7F1DA00A44FEC /* LaunchScreen.storyboard */,
 				B362600626E7F1D800A44FEC /* Main.storyboard */,
 				D3A1D469272C3EDB00D33CFC /* ProfilePage.storyboard */,
@@ -403,7 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB28B2C227419D5600BB9814 /* EditPreferences.swift in Sources */,
+				BB28B2C027419D3100BB9814 /* EditBio.swift in Sources */,
 				BBDD7D1A272AFA3100040C0F /* ProfilePage.swift in Sources */,
+				BB28B2BC274195DC00BB9814 /* UserPreferences.swift in Sources */,
 				BB7D04EE2734308700B26E43 /* FishbowlStore.swift in Sources */,
 				BB7D04EA2733978C00B26E43 /* LoginORSignUp.swift in Sources */,
 				BB7D04F227384AC400B26E43 /* LikedProfiles.swift in Sources */,
@@ -415,6 +430,7 @@
 				3C8BFFD2273D7B6F001B9FDF /* Match.swift in Sources */,
 				3C8BFFD6273D8136001B9FDF /* MatchVC.swift in Sources */,
 				B362603A26E7FFA600A44FEC /* Chatt.swift in Sources */,
+				BB28B2BE27419CDD00BB9814 /* BlockedUsers.swift in Sources */,
 				B362600326E7F1D800A44FEC /* SceneDelegate.swift in Sources */,
 				BB25840D273D84010093CC0C /* SigninVC.swift in Sources */,
 				BB7D04EC27339B5600B26E43 /* CreateProfile.swift in Sources */,

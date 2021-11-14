@@ -208,7 +208,7 @@ final class FishbowlStore {
                     completion("FAILED")
                     return
                 }
-
+                
                 Fishbowl_ID.shared.id = jsonObj["fishbowlID"] as? String
                 Fishbowl_ID.shared.expiration = Date()+(jsonObj["lifetime"] as! TimeInterval)
                 completion("OK")

@@ -116,7 +116,7 @@
             <objects>
                 <tableViewController id="UAs-kv-22N" customClass="MainVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d5o-Vk-kiG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <navigationBar key="tableFooterView" contentMode="scaleToFill" id="TdZ-yA-Tla">
@@ -278,6 +278,7 @@
                     <navigationItem key="navigationItem" id="AGk-Dq-9mY"/>
                     <connections>
                         <outlet property="SigningIn" destination="Bpo-CR-uuB" id="SIj-jL-Aar"/>
+                        <outlet property="SigningUp" destination="705-Of-UjW" id="Bc5-S1-Z1I"/>
                         <segue destination="Aaj-WO-gbY" kind="showDetail" identifier="GoToGoogleSignIn" id="rFR-sm-Vkd"/>
                         <segue destination="uxt-De-iSz" kind="showDetail" identifier="GoogleSignup" id="wUL-Ey-FgF"/>
                     </connections>
@@ -327,7 +328,7 @@
             <objects>
                 <viewController id="zMl-td-gyF" customClass="CreateProfile" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WFn-oQ-hsa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MsA-oC-mOs">
@@ -667,8 +668,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kfC-XD-hAQ"/>
-        <segue reference="MoM-RK-wmK"/>
-        <segue reference="l6d-7u-AMx"/>
+        <segue reference="E03-X2-BTI"/>
+        <segue reference="RKg-be-VMI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Screen Shot 2021-10-28 at 12.23.36 PM" width="305" height="269"/>
