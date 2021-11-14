@@ -16,6 +16,7 @@ struct UserProfile {
     var Email: String?
     var Bio: String?
     @ProfilePropWrapper var imageUrl: String?
+    var imageData: Data?
 }
 
 @propertyWrapper

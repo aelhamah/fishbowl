@@ -12,7 +12,8 @@ import Alamofire
 final class FishbowlStore {
     static let shared = FishbowlStore() // create one instance of the class to be shared
     private init() {}                // and make the constructor private so no other
-                                     // instances can be created
+                                    // instances can be created
+    var users = [UserProfile]()
     var matches = [Match]()
     private let nFields = Mirror(reflecting: Match()).children.count
 
@@ -46,6 +47,41 @@ final class FishbowlStore {
 //                }
 //            }.resume()
 //    }
+    func getProfile(user_list: [Int], _ completion: ((Bool) -> ())?) {
+        guard let apiUrl = URL(string: serverUrl+"getusers/") else {
+            print("getProfile: bad URL")
+            return
+        }
+        
+        let parameters: [String: String] = ["user_ids": "13"]
+        print(apiUrl)
+        AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
+            var success = false
+            defer { completion?(success) }
+            guard let data = response.data, response.error == nil else {
+                print("getProfile: NETWORKING ERROR")
+                return
+            }
+            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+                print("getProfile: failed JSON deserialization")
+                return
+            }
+        
+            let usersReceived = jsonObj["users"] as! Dictionary<String, Dictionary<String, Any>>
+            self.users = [UserProfile]()
+//            print(usersReceived?[1]["username"])
+            for (_, value) in usersReceived {
+                    print(value["username"]!)
+                    print(value["display_name"]!)
+                    print(value["imageurl"]!)
+                    print(value["email"]!)
+                    self.users.append(UserProfile(Username: (value["display_name"] as! String),
+                         Email: (value["email"] as! String),
+                         imageUrl: (value["imageurl"] as! String)))
+            }
+            success = true // for completion(success)
+        }.resume()
+    }
 
     func createUserProfile(_ user: UserProfile, image: UIImage?) {
 

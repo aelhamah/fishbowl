@@ -76,7 +76,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         
         FishbowlStore.shared.createUserProfile(user, image: postProfilePicture.image) 
         
-        self.performSegue(withIdentifier: "SignUpToLandingScreen", sender: self)
+        self.performSegue(withIdentifier: "signUpSegue", sender: self)
         
     }
     
