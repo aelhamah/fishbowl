@@ -13,7 +13,9 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.isModalInPresentation = true;
         self.hideKeyboardWhenTappedAround()
+        ScrollView.contentSize = CGSize(width:self.view.frame.width, height:self.view.frame.height+100)
     }
    
     @IBOutlet weak var ScrollView: UIScrollView!

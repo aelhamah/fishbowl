@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gv2-hz-7b7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -117,7 +116,7 @@
             <objects>
                 <tableViewController id="UAs-kv-22N" customClass="MainVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d5o-Vk-kiG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <navigationBar key="tableFooterView" contentMode="scaleToFill" id="TdZ-yA-Tla">
@@ -332,7 +331,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MsA-oC-mOs">
-                                <rect key="frame" x="-20" y="-14" width="454" height="822"/>
+                                <rect key="frame" x="-20" y="-14" width="454" height="802"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eS-kP-h1b">
@@ -667,9 +666,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XPV-Rv-j9e"/>
+        <segue reference="kfC-XD-hAQ"/>
         <segue reference="MoM-RK-wmK"/>
-        <segue reference="RKg-be-VMI"/>
+        <segue reference="l6d-7u-AMx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Screen Shot 2021-10-28 at 12.23.36 PM" width="305" height="269"/>

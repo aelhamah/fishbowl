@@ -16,6 +16,7 @@ final class SigninVC: UIViewController, GIDSignInDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.isModalInPresentation = true;
         
         guard let signin = GIDSignIn.sharedInstance() else {
                     // TODO3.1: return "FAILED" to delegate class PostVC
