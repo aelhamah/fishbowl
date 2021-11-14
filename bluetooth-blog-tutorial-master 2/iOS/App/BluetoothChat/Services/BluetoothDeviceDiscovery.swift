@@ -52,7 +52,7 @@ class BluetoothDeviceDiscovery: NSObject {
         // If a device name is provided, capture it
         // If let deviceName = deviceName { self.deviceName = deviceName }
         // Set device name
-        self.deviceName = "rg@umich.edu"
+        self.deviceName = "taylor3@umich.edu"
     }
     // Start advertising (Or re-advertise) this device as a peipheral
     func startAdvertising() {
@@ -107,6 +107,19 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         centralManager.scanForPeripherals(withServices: [BluetoothConstants.chatDiscoveryServiceID],
                                           options: [CBCentralManagerScanOptionAllowDuplicatesKey: true])
     }
+    
+    func classifyProximity(rssi RSSI: NSNumber) -> String {
+        
+        if Int(RSSI) > -50 {
+            return "HOT"
+        } else if Int(RSSI) > -75 {
+            return "WARM"
+        } else if Int(RSSI) > -125 {
+            return "COLD"
+        } else {
+            return "ICE"
+        }
+    }
 
     // Called when a peripheral is detected
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,
@@ -118,13 +131,14 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         if let deviceName = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
             name = deviceName
         }
-//        print("RSSI", RSSI)
+        print("RSSI",classifyProximity(rssi: RSSI))
         // Capture all of this in a device object
-        let device = Device(peripheral: peripheral, name: name)
+        let device = Device(peripheral: peripheral, name: classifyProximity(rssi: RSSI))
         // Add or update this object to the visible list
         DispatchQueue.main.async { [weak self] in
             self?.updateDeviceList(with: device)
             for (index, device) in self!.devices.enumerated() {
+                
                 if device.lastseen + TimeInterval(10) < Date() {
                     self!.devices.remove(at: index)
                     break
