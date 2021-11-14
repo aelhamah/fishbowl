@@ -166,7 +166,7 @@ def postauth(request):
     json_data = json.loads(request.body)
 
     fishbowlID = json_data['fishbowlID']
-    message = json_data['message']
+  #  message = json_data['message']
 
     cursor = connection.cursor()
     cursor.execute('SELECT username, expiration FROM fishes WHERE fishbowlID = %s;', (fishbowlID,))
