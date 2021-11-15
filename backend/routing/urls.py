@@ -25,4 +25,5 @@ urlpatterns = [
     path('getmatches/', views.getmatches, name='getmatches'),
     path('postauth/', views.postauth, name='postauth'),
     path('adduser/', views.adduser, name='adduser'),
+    path('postblock/', views.postblock, name='postblock'),
 ]

@@ -27,12 +27,29 @@ def getusers(request):
     # return JsonResponse(response)
     cursor = connection.cursor()
 
+
+    # make sure that each user id is not blocked by the sender
+    cursor.execute('SELECT * FROM blocks WHERE sender = %s;', (request.GET.get('sender'),))
+    rows = cursor.fetchall()
+    do_not_show = []
+    for row in rows:
+        do_not_show.append(row[1])
+
+    cursor.execute('SELECT * FROM blocks WHERE receiver = %s;', (request.GET.get('sender'),))
+    rows = cursor.fetchall()
+    for row in rows:
+        do_not_show.append(row[1])
+
     if users_id is None:
         return JsonResponse(response)
     
     for user_id in users_id:
         cursor.execute("SELECT * FROM users WHERE email = '{}';".format(user_id))
         rows = cursor.fetchall()
+
+        if user_id in do_not_show:
+            continue
+
         response['users'][user_id] = {
             cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))
         }
@@ -82,6 +99,10 @@ def createusers(request):
         imageurl = None
     
     cursor = connection.cursor()
+
+    # delete the exiting user
+    cursor.execute('DELETE FROM users WHERE email = %s;', (email,))
+
     cursor.execute('INSERT INTO users (fullname, display_name, email, bio, imageurl, username) VALUES '
                 '(%s,%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING;', (fullname,display_name,email,bio,imageurl,username))
     
@@ -102,9 +123,23 @@ def getmatches(request):
     cursor = connection.cursor()
     if sender is None:
         return JsonResponse(response)
-    cursor.execute('SELECT * FROM matches WHERE sender = %s;', (sender))
+    cursor.execute('SELECT * FROM matches WHERE sender = %s;', (sender,))
     rows = cursor.fetchall()
-    response['matches'] = rows
+    
+    users_id = []
+    for row in rows:
+        users_id.append(row[1])
+
+    if users_id is None:
+        return JsonResponse(response)
+
+   # return JsonResponse(response)
+    for user_id in users_id:
+        cursor.execute("SELECT * FROM users WHERE email = %s;", (user_id,))
+        rows = cursor.fetchall()
+        if len(rows) == 0:
+            continue
+        response[user_id] = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}
 
     return JsonResponse(response)
 
@@ -157,7 +192,7 @@ def adduser(request):
                    '(%s, %s, %s);', (fishbowlID, username, now+lifetime))
 
     # Return chatterID and its lifetime
-    return JsonResponse({'fishbowlID': fishbowlID, 'lifetime': lifetime})
+    return JsonResponse({'fishbowlID': fishbowlID, 'lifetime': lifetime, "idinfo": idinfo})
 
 @csrf_exempt
 def postauth(request):
@@ -180,3 +215,21 @@ def postauth(request):
     # Else, insert into the chatts table
     # cursor.execute('INSERT INTO chatts (username, message) VALUES (%s, %s);', (row[0], message))
     return JsonResponse({})
+
+@csrf_exempt
+def postblock(request):
+    if request.method != 'POST':
+        return HttpResponse(status=404)
+    json_data = json.loads(request.body)
+    sender = json_data['sender']
+    receiver = json_data['receiver']
+
+    cursor = connection.cursor()
+    cursor.execute("INSERT INTO blocks (sender, receiver) VALUES ('{}', '{}');".format(sender, receiver))
+    cursor.execute("SELECT * FROM blocks WHERE sender = '{}';".format(sender))
+    rows = cursor.fetchall()
+    response = {
+        "blocks" : rows
+    }
+
+    return JsonResponse(response)

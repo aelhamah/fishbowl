@@ -90,3 +90,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 *.DS_store
+
+backend/env/*
