@@ -40,7 +40,7 @@ class JoinViewController: UITableViewController {
 //    required init?(coder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
 //    }
-//    
+//
     required init?(coder aDecoder: NSCoder) {
        super.init(coder: aDecoder)
     }
@@ -172,7 +172,7 @@ class JoinViewController: UITableViewController {
                 url = "http://3.15.21.206/media/Taylor1636832650.1411505.jpeg"
                 self.downloadImage(from: URL(string:url)!, cell:cell)// swiftlint:disable:this force_cast
             }
-            
+
 //            for value in FishbowlStore.shared.users where value.email == self.peripheralDeviceEmail {
 //                cell.configureForDevice(named: value, selectable: false)
 //            }
@@ -241,13 +241,13 @@ extension JoinViewController {
             if deviceDiscovery.devices.count > 0 {
                 let device = deviceDiscovery.devices[indexPath.row]
                 self.peripheralDeviceEmail = (device.name) // swiftlint:disable:this force_cast
-                
+
                 for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
                     print("email already exists")
 
                     return cell
                 }
-                
+
                 FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  self.peripheralDeviceEmail ))
                 getIndividualProfile(email:  self.peripheralDeviceEmail, users: &FishbowlStore.shared.users, cell: deviceCell) {success in
                     DispatchQueue.main.async {
@@ -265,7 +265,7 @@ extension JoinViewController {
 //            for value in FishbowlStore.shared.users where value.email == self.peripheralDeviceEmail {
 //                deviceCell.configureForDevice(named: value, selectable: false)
 //            }
-                
+
             } else {
                 // If no devices found, show "no devices"
                 // KEEP FOR TESTING
@@ -291,11 +291,26 @@ extension JoinViewController {
 
         guard indexPath.section == Sections.availableDevices,
                 deviceDiscovery.devices.count > 0 else { return }
-        
-//         Create a chat view controller and present it
-        let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
-                                                    currentDeviceName: deviceName)
-        navigationController?.pushViewController(chatViewController, animated: true)
+
+        // Create a chat view controller and present it
+//        let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
+
+
+
+
+
+        let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
+        let myVC = storyboard.instantiateViewController(withIdentifier: "ProfilePageView") as! ProfilePage
+        self.navigationController?.pushViewController(myVC, animated: true)
+//        self.navigationController?.pushViewController(ProfilePage(), animated: true)
+//
+//        navigationController?.pushViewController(ProfilePage(), animated: true)
+//        currentDeviceName: deviceName)
+//        let profilePageViewController =
+//
+//        let vc = storyboard.instantiateViewController(withIdentifier: "myVCID")
+//        self.present(vc, animated: true)
+//        navigationController?.pushViewController(profilePageViewController, animated: true)
 
     }
 }
