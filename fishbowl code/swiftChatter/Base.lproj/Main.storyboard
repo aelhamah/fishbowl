@@ -292,7 +292,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwW-UG-iX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3310" y="84"/>
+            <point key="canvasLocation" x="3703" y="-277"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Pbx-tS-Fex">
@@ -306,17 +306,18 @@
                     <connections>
                         <segue destination="Tm2-gm-ibS" kind="relationship" relationship="viewControllers" id="sB0-o0-srL"/>
                         <segue destination="dIL-9B-Zqz" kind="relationship" relationship="viewControllers" id="F5Q-QW-9Q4"/>
+                        <segue destination="Q5I-hP-6fS" kind="relationship" relationship="viewControllers" id="gdc-bJ-yP2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kp-MU-a7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186" y="-215"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="SY5-Gn-DlK">
             <objects>
                 <navigationController id="dIL-9B-Zqz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qZ0-IE-Wwp"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="qZ0-IE-Wwp"/>
                     <navigationItem key="navigationItem" id="qSs-aW-Zvb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pri-tm-GZx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -328,7 +329,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0o-1H-3P5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="84"/>
+            <point key="canvasLocation" x="2548" y="-277"/>
+        </scene>
+        <!--UserPreferences-->
+        <scene sceneID="w8r-Gs-aBU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserPreferences" id="Ouw-sr-q9Z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="m8x-Ls-H34"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8P-Y0-7Ze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3406" y="446"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="xL0-Fp-ggy">
@@ -538,7 +549,7 @@
             </objects>
             <point key="canvasLocation" x="871" y="2819"/>
         </scene>
-        <!--Item-->
+        <!--Matches-->
         <scene sceneID="ZeA-gU-ypI">
             <objects>
                 <tableViewController id="Tm2-gm-ibS" customClass="MatchVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
@@ -602,11 +613,11 @@
                             <outlet property="delegate" destination="Tm2-gm-ibS" id="d6Z-Tj-n7m"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="iHv-8j-SNX"/>
+                    <tabBarItem key="tabBarItem" title="Matches" image="heart" catalog="system" id="iHv-8j-SNX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHp-zd-1a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="-640"/>
+            <point key="canvasLocation" x="2548" y="-1019"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rSA-Rc-f7F">
@@ -657,6 +668,25 @@
             </objects>
             <point key="canvasLocation" x="-1433" y="963"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="rns-RL-saK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q5I-hP-6fS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="GBg-a9-DLh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2JV-9Z-oV6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ouw-sr-q9Z" kind="relationship" relationship="rootViewController" id="Ud7-ZI-Mt8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pI-VW-1Hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2493" y="542"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="MoM-RK-wmK"/>
@@ -668,6 +698,7 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="heart" width="92" height="90"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="photo" catalog="system" width="128" height="93"/>
