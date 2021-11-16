@@ -109,7 +109,12 @@ class JoinViewController: UITableViewController {
     public func downloadImage(from url: URL, cell: DeviceTableViewCell) {
         print("Download Started")
         getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
+            guard let data = data, error == nil else {
+                print("unable to get image")
+                let url = "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg"
+                self.downloadImage(from: URL(string:url)!, cell: cell)
+             
+                return }
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
             // always update the UI from the main thread
@@ -233,6 +238,7 @@ extension JoinViewController {
 //            return cell
 //        }
 
+        
         // For the devices cells, dequeue one of the device cells and configure
         let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
                                                  for: indexPath)
@@ -241,25 +247,26 @@ extension JoinViewController {
             // If we have a list of devices, configure each cell with its name
             if deviceDiscovery.devices.count > 0 {
                 let device = deviceDiscovery.devices[indexPath.row]
+                
                 self.peripheralDeviceEmail = (device.name) // swiftlint:disable:this force_cast
-                for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email?.components(separatedBy: "_")[0] == self.peripheralDeviceEmail.components(separatedBy: "_")[0] {
+                for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == self.peripheralDeviceEmail {
 //                    print("email already exists")
-
-                    if value.DisplayName != "" {
-                        print("Editing RSSI Value")
-                        let oldNameComponents = value.DisplayName?.components(separatedBy: "_")
-                        let newNameComponents = device.name.components(separatedBy: "_")
-                        if oldNameComponents?[1] != newNameComponents[1] {
-                            FishbowlStore.shared.users[index].DisplayName = device.name
+                    
+                    for (i, x) in deviceDiscovery.devices.enumerated() where x.name == self.peripheralDeviceEmail {
+                        if x.rssi != device.rssi {
+                            print("Editing RSSI Value")
+                           
+                            FishbowlStore.shared.users[index].rssi = device.rssi
                             self.tableView.reloadData()
+                        
+                            return cell
                         }
-                        return cell
                     }
-             
+                    return cell
                 }
                 
                 FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  self.peripheralDeviceEmail, rssi: device.rssi))
-                getIndividualProfile(email:  "taylor3@umich.edu", users: &FishbowlStore.shared.users, cell: deviceCell) {success in
+                getIndividualProfile(email: self.peripheralDeviceEmail, users: &FishbowlStore.shared.users, cell: deviceCell) {success in
                     DispatchQueue.main.async {
                         print("reached here")
                         if success {

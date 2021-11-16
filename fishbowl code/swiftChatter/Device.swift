@@ -26,6 +26,6 @@ struct Device {
         self.peripheral = peripheral
         self.name = name
         self.lastseen = Date()
-        self.rssi = "Calculating..."
+        self.rssi = rssi
     }
 }

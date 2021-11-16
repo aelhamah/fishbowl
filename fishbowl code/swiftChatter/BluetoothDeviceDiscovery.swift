@@ -81,7 +81,9 @@ class BluetoothDeviceDiscovery: NSObject {
         if let index = devices.firstIndex(where: { $0.peripheral.identifier == device.peripheral.identifier }) {
             guard devices[index].name != device.name else { return }
             devices.remove(at: index)
+//            FishbowlStore.shared.devices.remove(at: index)
             devices.insert(device, at: index)
+//            FishbowlStore.shared.insert(device, at:index)
             if peripheralManager.isAdvertising {
                 devices[index].lastseen = Date()
             }
@@ -126,17 +128,23 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
                         advertisementData: [String: Any], rssi RSSI: NSNumber) {
         // Get the string value of the UUID of this device as the default value
         var name = peripheral.identifier.description
-
         // Attempt to get the user-set device name of this peripheral
         if let deviceName = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
             name = deviceName
         }
 //        print("RSSI",classifyProximity(rssi: RSSI))
         
-        
+//        print(name)
+        if !name.contains("@umich.edu") {
+//            print("this is not a umich email 22" )
+            return
+        }
+        print(name)
+
         // Capture all of this in a device object
-        let device = Device(peripheral: peripheral, name: name+"_"+classifyProximity(rssi: RSSI), rssi: classifyProximity(rssi: RSSI))
+        let device = Device(peripheral: peripheral, name: name, rssi: classifyProximity(rssi: RSSI))
         // Add or update this object to the visible list
+
         DispatchQueue.main.async { [weak self] in
             self?.updateDeviceList(with: device)
             for (index, device) in self!.devices.enumerated() {

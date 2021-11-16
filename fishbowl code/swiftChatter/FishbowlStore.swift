@@ -14,6 +14,9 @@ final class FishbowlStore {
     private init() {}                // and make the constructor private so no other
                                     // instances can be created
     var users = [UserProfile]()
+    
+    public var devices = [Device]()
+    
     var matches = [Match]()
     private let nFields = Mirror(reflecting: Match()).children.count
 

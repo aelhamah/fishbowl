@@ -13,7 +13,7 @@ class DeviceTableViewCell: UITableViewCell {
      
      let button: UIButton = {
          let btn = UIButton()
-         btn.setTitle("Button", for: .normal)
+         btn.setTitle("Finding...", for: .normal)
          btn.backgroundColor = .systemPink
          btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
          return btn
@@ -34,11 +34,10 @@ class DeviceTableViewCell: UITableViewCell {
         textLabel?.alpha = 1.0
         selectionStyle = selectable ? .blue : .none
         accessoryType = selectable ? .disclosureIndicator : .none
-        for val in FishbowlStore.shared.users where val.Email == user.Email {
+        for val in FishbowlStore.shared.users where val.Email == user.Email && val.DisplayName != "" {
             if let displayName = val.DisplayName! as? String {
-                let components = displayName.components(separatedBy: "_")
-                textLabel?.text = components[0]
-                button.setTitle((components[1]), for: .normal)
+                textLabel?.text = displayName
+                button.setTitle(user.rssi, for: .normal)
             } else {
                 textLabel?.text = "Loading Name"
             }
