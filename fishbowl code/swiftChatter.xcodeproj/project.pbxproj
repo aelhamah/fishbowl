@@ -10,7 +10,6 @@
 		3C8BFFD2273D7B6F001B9FDF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BFFD1273D7B6F001B9FDF /* Match.swift */; };
 		3C8BFFD4273D7C0F001B9FDF /* MatchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BFFD3273D7C0F001B9FDF /* MatchTableCell.swift */; };
 		3C8BFFD6273D8136001B9FDF /* MatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BFFD5273D8136001B9FDF /* MatchVC.swift */; };
-		B362600126E7F1D800A44FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362600026E7F1D800A44FEC /* AppDelegate.swift */; };
 		B362600326E7F1D800A44FEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362600226E7F1D800A44FEC /* SceneDelegate.swift */; };
 		B362600526E7F1D800A44FEC /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362600426E7F1D800A44FEC /* PostVC.swift */; };
 		B362600A26E7F1DA00A44FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B362600926E7F1DA00A44FEC /* Assets.xcassets */; };
@@ -28,6 +27,7 @@
 		BB28B2C027419D3100BB9814 /* EditBio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28B2BF27419D3100BB9814 /* EditBio.swift */; };
 		BB28B2C227419D5600BB9814 /* EditPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28B2C127419D5600BB9814 /* EditPreferences.swift */; };
 		BB28B2C627440C5F00BB9814 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28B2C527440C5F00BB9814 /* TabBar.swift */; };
+		BB28B2CD2744104A00BB9814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28B2CC2744104A00BB9814 /* AppDelegate.swift */; };
 		BB7D04EA2733978C00B26E43 /* LoginORSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04E92733978C00B26E43 /* LoginORSignUp.swift */; };
 		BB7D04EC27339B5600B26E43 /* CreateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04EB27339B5600B26E43 /* CreateProfile.swift */; };
 		BB7D04EE2734308700B26E43 /* FishbowlStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D04ED2734308700B26E43 /* FishbowlStore.swift */; };
@@ -81,7 +81,6 @@
 		3C8BFFD5273D8136001B9FDF /* MatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVC.swift; sourceTree = "<group>"; };
 		77650E762D6BFD555D4E3351 /* Pods-swiftChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.release.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.release.xcconfig"; sourceTree = "<group>"; };
 		B3625FFD26E7F1D800A44FEC /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B362600026E7F1D800A44FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B362600226E7F1D800A44FEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B362600426E7F1D800A44FEC /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		B362600726E7F1D800A44FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		BB28B2BF27419D3100BB9814 /* EditBio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBio.swift; sourceTree = "<group>"; };
 		BB28B2C127419D5600BB9814 /* EditPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreferences.swift; sourceTree = "<group>"; };
 		BB28B2C527440C5F00BB9814 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		BB28B2CC2744104A00BB9814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB7D04E92733978C00B26E43 /* LoginORSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginORSignUp.swift; sourceTree = "<group>"; };
 		BB7D04EB27339B5600B26E43 /* CreateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfile.swift; sourceTree = "<group>"; };
 		BB7D04ED2734308700B26E43 /* FishbowlStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishbowlStore.swift; sourceTree = "<group>"; };
@@ -192,52 +192,27 @@
 		B3625FFF26E7F1D800A44FEC /* swiftChatter */ = {
 			isa = PBXGroup;
 			children = (
-				D3FF877227418B2D008AA765 /* BluetoothChat */,
-				B362600026E7F1D800A44FEC /* AppDelegate.swift */,
-				B362600226E7F1D800A44FEC /* SceneDelegate.swift */,
-				D3FF878C274199DB008AA765 /* BluetoothChat.entitlements */,
-				D3FF8790274199DC008AA765 /* BluetoothConstants.swift */,
-				D3FF878D274199DB008AA765 /* Device.swift */,
-				D3FF8791274199DC008AA765 /* Message.swift */,
-				D3FF878B274199DB008AA765 /* Sender.swift */,
-				D3FF878F274199DB008AA765 /* BluetoothChatService.swift */,
-				D3FF878A274199DA008AA765 /* BluetoothDeviceDiscovery.swift */,
+				BB28B2C827440E6400BB9814 /* BluetoothStuff */,
+				BB28B2CB27440F6400BB9814 /* CreateProfileAndSignUp */,
+				BB28B2CE2744106300BB9814 /* LikingUser */,
+				BB28B2C927440EE000BB9814 /* LikedMatches */,
+				BB28B2C727440E2C00BB9814 /* UserPrefences */,
+				B362600626E7F1D800A44FEC /* Main.storyboard */,
 				B362604B26E803AC00A44FEC /* MainVC.swift */,
-				BB7D04EF2734315E00B26E43 /* UserProfile.swift */,
-				BB7D04E92733978C00B26E43 /* LoginORSignUp.swift */,
-				BB25840C273D84010093CC0C /* SigninVC.swift */,
-				BB25840E27405EA10093CC0C /* SignupVC.swift */,
-				BB7D04EB27339B5600B26E43 /* CreateProfile.swift */,
-				BBDD7D19272AFA3100040C0F /* ProfilePage.swift */,
-				3C8BFFD1273D7B6F001B9FDF /* Match.swift */,
-				3C8BFFD5273D8136001B9FDF /* MatchVC.swift */,
-				3C8BFFD3273D7C0F001B9FDF /* MatchTableCell.swift */,
-				BB7D04F127384AC400B26E43 /* LikedProfiles.swift */,
+				BB28B2C527440C5F00BB9814 /* TabBar.swift */,
 				BB7D04ED2734308700B26E43 /* FishbowlStore.swift */,
 				BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */,
-				BB28B2BB274195DC00BB9814 /* UserPreferences.swift */,
-				BB28B2BF27419D3100BB9814 /* EditBio.swift */,
-				BB28B2C127419D5600BB9814 /* EditPreferences.swift */,
-				BB28B2BD27419CDD00BB9814 /* BlockedUsers.swift */,
-				D3FF878127419617008AA765 /* JoinViewController.swift */,
-				D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */,
-				D3FF877C27419617008AA765 /* TextFieldTableViewCell.xib */,
-				D3FF877D27419617008AA765 /* TextFieldTableViewCell.swift */,
-				D3FF877F27419617008AA765 /* JoinTableHeaderView.xib */,
-				D3FF878027419617008AA765 /* JoinTableHeaderView.swift */,
-				D3FF878327419617008AA765 /* ChatViewController.swift */,
-				BB28B2C527440C5F00BB9814 /* TabBar.swift */,
+				BB7D04EF2734315E00B26E43 /* UserProfile.swift */,
+				BB28B2CC2744104A00BB9814 /* AppDelegate.swift */,
+				B362600226E7F1D800A44FEC /* SceneDelegate.swift */,
+				D388E89926FD106400C0556B /* Extensions.swift */,
 				B362600B26E7F1DA00A44FEC /* Logo.storyboard */,
-				B362600626E7F1D800A44FEC /* Main.storyboard */,
-				D3A1D469272C3EDB00D33CFC /* ProfilePage.storyboard */,
-				D341A0FB2735795000F234E0 /* UserPreferences.storyboard */,
 				B362600926E7F1DA00A44FEC /* Assets.xcassets */,
 				B362600E26E7F1DA00A44FEC /* Info.plist */,
 				B362600426E7F1D800A44FEC /* PostVC.swift */,
 				B362603926E7FFA600A44FEC /* Chatt.swift */,
 				B362603E26E8003900A44FEC /* ChattStore.swift */,
 				B362604626E802E000A44FEC /* ChatTableCell.swift */,
-				D388E89926FD106400C0556B /* Extensions.swift */,
 				D3FF877827419617008AA765 /* Scenes */,
 			);
 			path = swiftChatter;
@@ -259,6 +234,71 @@
 				B362602426E7F1DB00A44FEC /* Info.plist */,
 			);
 			path = swiftChatterUITests;
+			sourceTree = "<group>";
+		};
+		BB28B2C727440E2C00BB9814 /* UserPrefences */ = {
+			isa = PBXGroup;
+			children = (
+				D341A0FB2735795000F234E0 /* UserPreferences.storyboard */,
+				BB28B2BB274195DC00BB9814 /* UserPreferences.swift */,
+				BB28B2BF27419D3100BB9814 /* EditBio.swift */,
+				BB28B2C127419D5600BB9814 /* EditPreferences.swift */,
+				BB28B2BD27419CDD00BB9814 /* BlockedUsers.swift */,
+			);
+			path = UserPrefences;
+			sourceTree = "<group>";
+		};
+		BB28B2C827440E6400BB9814 /* BluetoothStuff */ = {
+			isa = PBXGroup;
+			children = (
+				D3FF878C274199DB008AA765 /* BluetoothChat.entitlements */,
+				D3FF877C27419617008AA765 /* TextFieldTableViewCell.xib */,
+				D3FF877D27419617008AA765 /* TextFieldTableViewCell.swift */,
+				D3FF877F27419617008AA765 /* JoinTableHeaderView.xib */,
+				D3FF878027419617008AA765 /* JoinTableHeaderView.swift */,
+				D3FF8790274199DC008AA765 /* BluetoothConstants.swift */,
+				D3FF878F274199DB008AA765 /* BluetoothChatService.swift */,
+				D3FF878A274199DA008AA765 /* BluetoothDeviceDiscovery.swift */,
+				D3FF878D274199DB008AA765 /* Device.swift */,
+				D3FF8791274199DC008AA765 /* Message.swift */,
+				D3FF878B274199DB008AA765 /* Sender.swift */,
+				D3FF878127419617008AA765 /* JoinViewController.swift */,
+				D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */,
+				D3FF878327419617008AA765 /* ChatViewController.swift */,
+				D3FF877227418B2D008AA765 /* BluetoothChat */,
+			);
+			path = BluetoothStuff;
+			sourceTree = "<group>";
+		};
+		BB28B2C927440EE000BB9814 /* LikedMatches */ = {
+			isa = PBXGroup;
+			children = (
+				3C8BFFD1273D7B6F001B9FDF /* Match.swift */,
+				3C8BFFD5273D8136001B9FDF /* MatchVC.swift */,
+				BB7D04F127384AC400B26E43 /* LikedProfiles.swift */,
+				3C8BFFD3273D7C0F001B9FDF /* MatchTableCell.swift */,
+			);
+			path = LikedMatches;
+			sourceTree = "<group>";
+		};
+		BB28B2CB27440F6400BB9814 /* CreateProfileAndSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D04E92733978C00B26E43 /* LoginORSignUp.swift */,
+				BB7D04EB27339B5600B26E43 /* CreateProfile.swift */,
+				BB25840C273D84010093CC0C /* SigninVC.swift */,
+				BB25840E27405EA10093CC0C /* SignupVC.swift */,
+			);
+			path = CreateProfileAndSignUp;
+			sourceTree = "<group>";
+		};
+		BB28B2CE2744106300BB9814 /* LikingUser */ = {
+			isa = PBXGroup;
+			children = (
+				D3A1D469272C3EDB00D33CFC /* ProfilePage.storyboard */,
+				BBDD7D19272AFA3100040C0F /* ProfilePage.swift */,
+			);
+			path = LikingUser;
 			sourceTree = "<group>";
 		};
 		D3FF877827419617008AA765 /* Scenes */ = {
@@ -518,10 +558,10 @@
 				3C8BFFD4273D7C0F001B9FDF /* MatchTableCell.swift in Sources */,
 				B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */,
 				B362600526E7F1D800A44FEC /* PostVC.swift in Sources */,
+				BB28B2CD2744104A00BB9814 /* AppDelegate.swift in Sources */,
 				D3FF8792274199DC008AA765 /* Message.swift in Sources */,
 				BB28B2C627440C5F00BB9814 /* TabBar.swift in Sources */,
 				D3FF8795274199DC008AA765 /* Device.swift in Sources */,
-				B362600126E7F1D800A44FEC /* AppDelegate.swift in Sources */,
 				D388E89A26FD106400C0556B /* Extensions.swift in Sources */,
 				3C8BFFD2273D7B6F001B9FDF /* Match.swift in Sources */,
 				3C8BFFD6273D8136001B9FDF /* MatchVC.swift in Sources */,
