@@ -65,7 +65,9 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var Bio: UITextField!
     @IBOutlet weak var Username: UITextField!
     
+    @IBOutlet weak var GenderPreference: UITextField!
     
+    @IBOutlet weak var RelationshipPreference: UITextField!
     @IBAction func SignUpComplete(_ sender: Any) {
         
         let user = UserProfile(FishBowlID: Fishbowl_ID.shared.id,
@@ -74,6 +76,8 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
                                DisplayName: FirstName.text,
                                Email: Email.text,
                                Bio: Bio.text,
+                               GenderPreference: GenderPreference.text,
+                               RelationshipPreference: RelationshipPreference.text,
                                imageUrl: nil)
         
         FishbowlStore.shared.createUserProfile(user, image: postProfilePicture.image) 
