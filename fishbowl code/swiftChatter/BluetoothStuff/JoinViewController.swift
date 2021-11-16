@@ -293,9 +293,24 @@ extension JoinViewController {
                 deviceDiscovery.devices.count > 0 else { return }
 
         // Create a chat view controller and present it
-        let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
-                                                    currentDeviceName: deviceName)
-        navigationController?.pushViewController(chatViewController, animated: true)
+//        let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
+
+        
+       
+
+
+        let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
+        let myVC = storyboard.instantiateViewController(withIdentifier: "ProfilePageView") as! ProfilePage
+        self.navigationController?.pushViewController(myVC, animated: true)
+//        self.navigationController?.pushViewController(ProfilePage(), animated: true)
+//
+//        navigationController?.pushViewController(ProfilePage(), animated: true)
+//        currentDeviceName: deviceName)
+//        let profilePageViewController =
+//
+//        let vc = storyboard.instantiateViewController(withIdentifier: "myVCID")
+//        self.present(vc, animated: true)
+//        navigationController?.pushViewController(profilePageViewController, animated: true)
 
     }
 }
