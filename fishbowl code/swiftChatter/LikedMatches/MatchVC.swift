@@ -56,11 +56,11 @@ final class MatchVC: UITableViewController {
            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MatchTableCell", for: indexPath) as? MatchTableCell else {
                fatalError("No reusable cell!")
            }
-           
+           print("deque works")
            let match = FishbowlStore.shared.matches[indexPath.row]
            cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
-
-        
+           cell.usernameLabel.text = match.display_name
+           print("cell username filled")
            if let urlString = match.imageUrl, let imageUrl = URL(string: urlString) {
                     cell.matchImageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "photo"), options: [.progressiveLoad])
                     cell.matchImageView.isHidden = false
@@ -68,6 +68,7 @@ final class MatchVC: UITableViewController {
                     cell.matchImageView.image = nil
                     cell.matchImageView.isHidden = true
                 }
+           print("prior to return cell")
        
            return cell
        }
@@ -76,8 +77,8 @@ final class MatchVC: UITableViewController {
             FishbowlStore.shared.getMatches { success in
                 DispatchQueue.main.async {
                     if success {
+                        print("succesfull went to get Matches")
                         self.tableView.reloadData()
-                        print("api called")
                     }
                     // stop the refreshing animation upon completion:
                     self.refreshControl?.endRefreshing()

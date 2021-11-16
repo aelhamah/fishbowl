@@ -244,7 +244,7 @@ final class FishbowlStore {
 //                        print("no")
 //                    }
                 }
-  
+                success = true
             }.resume()
         }
 
