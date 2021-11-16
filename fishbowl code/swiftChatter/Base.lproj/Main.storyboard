@@ -294,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="3703" y="-277"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar-->
         <scene sceneID="Pbx-tS-Fex">
             <objects>
-                <tabBarController id="IVI-8a-ww4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="dashLanding" id="IVI-8a-ww4" customClass="TabBar" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KAJ-Um-bGU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
