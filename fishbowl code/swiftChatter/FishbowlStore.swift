@@ -157,11 +157,53 @@ final class FishbowlStore {
 //
 //            }.resume()
     }
-
+//
+//    func getMatches(_ completion: ((Bool) -> ())?) {
+//            //guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+"3") else {
+//            print("in get matches")
+//            guard let apiUrl = URL(string: serverUrl+"getusers/?28") else {
+//                print("getmatches: Bad URL")
+//                return
+//            }
+//
+//
+//            var request = URLRequest(url: apiUrl)
+//            request.httpMethod = "GET"
+//
+//            URLSession.shared.dataTask(with: request) { data, response, error in
+//                var success = false
+//                defer { completion?(success) }
+//
+//                guard let data = data, error == nil else {
+//                    print("getMatches: NETWORKING ERROR")
+//                    return
+//                }
+//                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+//                    print("getMatches: HTTP STATUS: \(httpStatus.statusCode)")
+//                    return
+//                }
+//
+//                guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+//                    print("getMatches: failed JSON deserialization")
+//                    return
+//                }
+//                let matchesReceived = jsonObj["matches"] as? [[String?]] ?? []
+//                self.matches = [Match]()
+//                for matchEntry in matchesReceived {
+//                    if matchEntry.count == self.nFields {
+//                        self.matches.append(Match(imageUrl: matchEntry[0]
+//                                            ))
+//                       print("match appended")
+//                    } else {
+//                        print("getMatches: Received unexpected number of fields: \(matchEntry.count) instead of \(self.nFields).")
+//                    }
+//                }
+//                success = true // for completion(success)
+//            }.resume()
+//        }
     func getMatches(_ completion: ((Bool) -> ())?) {
-            //guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+"3") else {
             print("in get matches")
-            guard let apiUrl = URL(string: serverUrl+"getusers/?28") else {
+            guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+"3") else {
                 print("getmatches: Bad URL")
                 return
             }
@@ -187,21 +229,25 @@ final class FishbowlStore {
                     print("getMatches: failed JSON deserialization")
                     return
                 }
-                let matchesReceived = jsonObj["matches"] as? [[String?]] ?? []
+                let matchesRecieved = jsonObj["matches"] as? [[String:Any]]
+
                 self.matches = [Match]()
-                for matchEntry in matchesReceived {
-                    if matchEntry.count == self.nFields {
-                        self.matches.append(Match(imageUrl: matchEntry[0]
-                                            ))
-                       print("match appended")
-                    } else {
-                        print("getMatches: Received unexpected number of fields: \(matchEntry.count) instead of \(self.nFields).")
-                    }
+                for matchEntry in matchesRecieved ?? []{
+                   // if matchEntry.count == self.nFields {
+                    self.matches.append(Match(display_name:matchEntry["display_name"] as! String,
+                                              imageUrl: matchEntry["imageurl"] as! String
+                                              ))
+                    print(self.matches)
+                    print("match appended")
+                       
+//                    } else {
+//                        //print("getMatches: Received unexpected number of fields: \(matchEntry.count) instead of \(self.nFields).")
+//                        print("no")
+//                    }
                 }
-                success = true // for completion(success)
+                success = true
             }.resume()
         }
-
 
     
     func addUser(_ idToken: String?, completion: @escaping (String) -> Void) {

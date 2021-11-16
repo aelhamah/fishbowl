@@ -11,9 +11,8 @@ import UIKit
 
 final class MatchTableCell: UITableViewCell {
 
-   
     @IBOutlet weak var matchImageView: UIImageView!
-
+    @IBOutlet weak var usernameLabel: UILabel!
     
   
     
