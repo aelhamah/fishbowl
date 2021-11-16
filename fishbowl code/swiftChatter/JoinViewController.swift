@@ -63,6 +63,7 @@ class JoinViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.isModalInPresentation = true;
 
         // Set up and run the device discovery service
         deviceDiscovery = BluetoothDeviceDiscovery(deviceName: deviceName)
