@@ -120,6 +120,7 @@ def getmatches(request):
 
     sender = request.GET.get('sender')
     response = {}
+    response["matches"] = []
     cursor = connection.cursor()
     if sender is None:
         return JsonResponse(response)
@@ -139,9 +140,12 @@ def getmatches(request):
         rows = cursor.fetchall()
         if len(rows) == 0:
             continue
-        response[user_id] = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}
+        response["matches"].append({
+            cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))
+        })
+        # response[user_id] = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}
 
-    return JsonResponse(response)
+    return JsonResponse(response,)
 
 @csrf_exempt
 def adduser(request):
@@ -230,6 +234,22 @@ def postblock(request):
     rows = cursor.fetchall()
     response = {
         "blocks" : rows
+    }
+
+    return JsonResponse(response)
+
+
+@csrf_exempt
+def getblocks(request):
+    if request.method != 'GET':
+        return HttpResponse(status=404)
+    sender = request.GET.get('sender')
+
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM blocks WHERE sender = '{}';".format(sender))
+    rows = cursor.fetchall()
+    response = {
+        "blocks" : [row[1] for row in rows]
     }
 
     return JsonResponse(response)

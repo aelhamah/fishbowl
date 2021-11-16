@@ -26,4 +26,5 @@ urlpatterns = [
     path('postauth/', views.postauth, name='postauth'),
     path('adduser/', views.adduser, name='adduser'),
     path('postblock/', views.postblock, name='postblock'),
+    path('getblocks/', views.getblocks, name='getblocks'),
 ]
