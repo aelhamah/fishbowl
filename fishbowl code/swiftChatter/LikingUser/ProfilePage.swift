@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import UIKit
+import MessageKit
+import InputBarAccessoryView
 
-final class ProfilePage: UIViewController {
+class ProfilePage: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

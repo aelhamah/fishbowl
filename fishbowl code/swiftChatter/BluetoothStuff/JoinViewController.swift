@@ -291,8 +291,8 @@ extension JoinViewController {
 
         guard indexPath.section == Sections.availableDevices,
                 deviceDiscovery.devices.count > 0 else { return }
-
-        // Create a chat view controller and present it
+        
+//         Create a chat view controller and present it
         let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
                                                     currentDeviceName: deviceName)
         navigationController?.pushViewController(chatViewController, animated: true)
