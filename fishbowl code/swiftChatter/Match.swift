@@ -8,7 +8,7 @@
 import Foundation
 
 struct Match {
-    var username: String?
+    var display_name: String?
 
 
     @MatchPropWrapper var imageUrl: String?
