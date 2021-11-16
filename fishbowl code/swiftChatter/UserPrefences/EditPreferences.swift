@@ -18,23 +18,10 @@ final class EditPreferences: UIViewController {
     
     @IBOutlet weak var ChangesButton: UIButton!
     
+    @IBOutlet weak var EditGenderPreference: UITextField!
     
-    @IBAction func WomenPreference(_ sender: Any) {
-    }
+    @IBOutlet weak var EditRelationshipPreference: UITextField!
     
-    @IBAction func MenPreference(_ sender: Any) {
-    }
-    
-    @IBAction func NonBinaryPreference(_ sender: Any) {
-    }
-    
-    
-    @IBAction func SeriousPreference(_ sender: Any) {
-    }
-    
-    
-    @IBAction func CasualPreference(_ sender: Any) {
-    }
     
     @IBAction func SaveChanges(_ sender: Any) {
         
