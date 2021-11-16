@@ -101,15 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3644.9275362318845" y="-83.035714285714278"/>
-        </scene>
-        <!--LaunchScreen-->
-        <scene sceneID="CpZ-Mc-4gg">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LaunchScreen" id="Dqo-mL-Gcc" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dcq-5Q-Uks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="625" y="816"/>
+            <point key="canvasLocation" x="5413" y="2121"/>
         </scene>
         <!--ProfilePage-->
         <scene sceneID="sYj-gv-IKe">
@@ -117,7 +109,7 @@
                 <viewControllerPlaceholder storyboardName="ProfilePage" id="tfe-ym-0xa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAc-Rc-c3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="-530"/>
+            <point key="canvasLocation" x="1886" y="1662"/>
         </scene>
         <!--Fishbowl-->
         <scene sceneID="j3h-tI-Zp2">
@@ -216,7 +208,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNI-SU-Mbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2102.898550724638" y="-83.035714285714278"/>
+            <point key="canvasLocation" x="2338" y="2122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fwT-Wc-jxg">
@@ -234,7 +226,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndU-i4-2Wo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2878.2608695652175" y="-83.035714285714278"/>
+            <point key="canvasLocation" x="4232" y="2121"/>
         </scene>
         <!--LoginOR Sign Up-->
         <scene sceneID="DhT-G4-09y">
@@ -279,15 +271,6 @@
                                     <action selector="GoToSignUp:" destination="gLR-b0-bwb" eventType="touchUpInside" id="cdS-vk-FAm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Car-Pj-3V5">
-                                <rect key="frame" x="151" y="691" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="dIL-9B-Zqz" kind="show" id="D7i-Vj-uJN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HY7-1C-If7"/>
                         <color key="backgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -295,6 +278,7 @@
                     <navigationItem key="navigationItem" id="AGk-Dq-9mY"/>
                     <connections>
                         <outlet property="SigningIn" destination="Bpo-CR-uuB" id="SIj-jL-Aar"/>
+                        <outlet property="SigningUp" destination="705-Of-UjW" id="rop-vY-KCg"/>
                         <segue destination="Aaj-WO-gbY" kind="showDetail" identifier="GoToGoogleSignIn" id="rFR-sm-Vkd"/>
                         <segue destination="uxt-De-iSz" kind="showDetail" identifier="GoogleSignup" id="wUL-Ey-FgF"/>
                     </connections>
@@ -311,7 +295,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwW-UG-iX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2045" y="-1008"/>
+            <point key="canvasLocation" x="2419" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SY5-Gn-DlK">
@@ -328,7 +312,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0o-1H-3P5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2936" y="-1008"/>
+            <point key="canvasLocation" x="1367" y="84"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="xL0-Fp-ggy">
@@ -346,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uFE-yc-UUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1368" y="103"/>
+            <point key="canvasLocation" x="-1433" y="251"/>
         </scene>
         <!--SigninVC-->
         <scene sceneID="3DM-Vv-9bH">
@@ -359,12 +343,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="UAs-kv-22N" kind="showDetail" identifier="GoogleSuccessSignin" id="9V3-CM-svB"/>
+                        <segue destination="dIL-9B-Zqz" kind="showDetail" identifier="GoogleSuccessSignin" id="xVr-xg-WdX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c80-kB-24X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="-599"/>
+            <point key="canvasLocation" x="-1394" y="-455"/>
         </scene>
         <!--Create Profile-->
         <scene sceneID="h2K-oV-djL">
@@ -462,7 +446,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="SignUpComplete:" destination="zMl-td-gyF" eventType="touchUpInside" id="4VX-ZL-cLl"/>
-                                            <segue destination="Dqo-mL-Gcc" kind="showDetail" identifier="signUpSegue" id="gZf-iY-2hK"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Mw-hB-HqQ">
@@ -514,11 +497,12 @@
                         <outlet property="ScrollView" destination="MsA-oC-mOs" id="Yb5-wl-WVF"/>
                         <outlet property="Username" destination="Enf-yh-vcF" id="ur9-Va-njv"/>
                         <outlet property="postProfilePicture" destination="9Mw-hB-HqQ" id="kac-gs-Qjp"/>
+                        <segue destination="dIL-9B-Zqz" kind="showDetail" identifier="signUpSegue" id="13U-6V-vcr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxn-Gb-qbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-430.43478260869568" y="815.625"/>
+            <point key="canvasLocation" x="-430" y="963"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cc7-3c-JUU">
@@ -536,7 +520,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3H-2l-Sku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273.913043478261" y="-83.035714285714278"/>
+            <point key="canvasLocation" x="1313" y="2121"/>
         </scene>
         <!--MatchVC-->
         <scene sceneID="ZeA-gU-ypI">
@@ -609,7 +593,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHp-zd-1a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2132" y="1031"/>
+            <point key="canvasLocation" x="1777" y="3111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rSA-Rc-f7F">
@@ -625,7 +609,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WwV-2x-XuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4100" y="723"/>
+            <point key="canvasLocation" x="2836" y="3110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LM2-XG-M77">
@@ -661,58 +645,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rgo-ye-maf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1368" y="816"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="Qtn-IQ-zww">
-            <objects>
-                <tableViewController id="vAr-bY-kvg" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wSO-nk-BiO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NDf-QJ-xkF">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NDf-QJ-xkF" id="jW0-w4-Qh6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vAr-bY-kvg" id="frD-uL-FJy"/>
-                            <outlet property="delegate" destination="vAr-bY-kvg" id="bWL-D4-hdU"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Yxa-7n-tAO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HbP-lJ-mPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1433" y="-1974"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Fh6-Fg-aZP">
-            <objects>
-                <navigationController id="enh-Gq-J0B" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LgH-j0-GqP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="vAr-bY-kvg" kind="relationship" relationship="rootViewController" id="t0s-fC-LJb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dke-t2-O4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-429" y="-1974"/>
+            <point key="canvasLocation" x="-1433" y="963"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XPV-Rv-j9e"/>
+        <segue reference="kfC-XD-hAQ"/>
         <segue reference="MoM-RK-wmK"/>
-        <segue reference="9V3-CM-svB"/>
+        <segue reference="13U-6V-vcr"/>
+        <segue reference="7eX-lD-uz6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Screen Shot 2021-10-28 at 12.23.36 PM" width="305" height="269"/>

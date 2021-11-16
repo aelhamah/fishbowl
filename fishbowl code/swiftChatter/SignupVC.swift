@@ -87,7 +87,7 @@ final class SignupVC: UIViewController, GIDSignInDelegate {
 //
 //                                window.makeKeyAndVisible()
 
-//                                self.performSegue(withIdentifier: "GoogleSuccessSignup", sender: self)
+                                self.performSegue(withIdentifier: "GoogleSuccessSignup", sender: self)
                             }
                             
                         }

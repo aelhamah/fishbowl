@@ -30,7 +30,7 @@ final class LoginORSignUp: UIViewController {
         super.viewDidLoad()
         
         SigningIn.layer.cornerRadius = 22
-        SigningUp.layer.cornerRadius = 22
+        SigningUp.layer.cornerRadius = 22 
         
     }
 }
