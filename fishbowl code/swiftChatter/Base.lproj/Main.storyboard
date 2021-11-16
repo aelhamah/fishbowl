@@ -301,7 +301,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KAJ-Um-bGU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92549026010000002" green="0.43921568989999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Tm2-gm-ibS" kind="relationship" relationship="viewControllers" id="sB0-o0-srL"/>
@@ -317,7 +320,9 @@
         <scene sceneID="SY5-Gn-DlK">
             <objects>
                 <navigationController id="dIL-9B-Zqz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="qZ0-IE-Wwp"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="qZ0-IE-Wwp">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="qSs-aW-Zvb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pri-tm-GZx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -556,7 +561,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cj5-Mu-hxl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <navigationBar key="tableFooterView" contentMode="scaleToFill" id="6Oe-lM-uRq">
                             <rect key="frame" x="0.0" y="228" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -603,6 +609,7 @@
                                         <constraint firstItem="iUn-e7-sB1" firstAttribute="leading" secondItem="VWq-Ts-bZ4" secondAttribute="leadingMargin" id="d8k-Ud-V6M"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.87058818339999999" green="0.61568629740000003" blue="0.60784316059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="matchImageView" destination="iUn-e7-sB1" id="DLb-QT-U1F"/>
                                 </connections>
@@ -692,6 +699,7 @@
         <segue reference="MoM-RK-wmK"/>
         <segue reference="2m6-OI-fUm"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Screen Shot 2021-10-28 at 12.23.36 PM" width="305" height="269"/>
         <image name="appIcon" width="938" height="830"/>
