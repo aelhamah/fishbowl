@@ -27,6 +27,7 @@ final class MatchVC: UITableViewController {
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        super.isModalInPresentation = true;
         
         // setup refreshControler here later
              refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
