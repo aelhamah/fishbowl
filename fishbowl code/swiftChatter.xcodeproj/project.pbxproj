@@ -20,6 +20,7 @@
 		B362603F26E8003900A44FEC /* ChattStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362603E26E8003900A44FEC /* ChattStore.swift */; };
 		B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604626E802E000A44FEC /* ChatTableCell.swift */; };
 		B362604C26E803AC00A44FEC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604B26E803AC00A44FEC /* MainVC.swift */; };
+		B363C55C2743534900F2A0C9 /* physics.png in Resources */ = {isa = PBXBuildFile; fileRef = B363C55B2743534900F2A0C9 /* physics.png */; };
 		BB25840B273D7DE30093CC0C /* Fishbowl_ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */; };
 		BB25840D273D84010093CC0C /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840C273D84010093CC0C /* SigninVC.swift */; };
 		BB25840F27405EA10093CC0C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840E27405EA10093CC0C /* SignupVC.swift */; };
@@ -94,6 +95,7 @@
 		B362603E26E8003900A44FEC /* ChattStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattStore.swift; sourceTree = "<group>"; };
 		B362604626E802E000A44FEC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		B362604B26E803AC00A44FEC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		B363C55B2743534900F2A0C9 /* physics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = physics.png; path = ../../../../../Desktop/physics.png; sourceTree = "<group>"; };
 		BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishbowl_ID.swift; sourceTree = "<group>"; };
 		BB25840C273D84010093CC0C /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		BB25840E27405EA10093CC0C /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
@@ -194,6 +196,10 @@
 				D3FF878B274199DB008AA765 /* Sender.swift */,
 				D3FF878F274199DB008AA765 /* BluetoothChatService.swift */,
 				D3FF878A274199DA008AA765 /* BluetoothDeviceDiscovery.swift */,
+				D3FF878127419617008AA765 /* JoinViewController.swift */,
+				D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */,
+				D3FF877C27419617008AA765 /* TextFieldTableViewCell.xib */,
+				D3FF877D27419617008AA765 /* TextFieldTableViewCell.swift */,
 				B362604B26E803AC00A44FEC /* MainVC.swift */,
 				BB7D04EF2734315E00B26E43 /* UserProfile.swift */,
 				BB7D04E92733978C00B26E43 /* LoginORSignUp.swift */,
@@ -208,10 +214,6 @@
 				BB7D04ED2734308700B26E43 /* FishbowlStore.swift */,
 				BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */,
 				D3FF877627419170008AA765 /* LaunchScreen.storyboard */,
-				D3FF878127419617008AA765 /* JoinViewController.swift */,
-				D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */,
-				D3FF877C27419617008AA765 /* TextFieldTableViewCell.xib */,
-				D3FF877D27419617008AA765 /* TextFieldTableViewCell.swift */,
 				D3FF877F27419617008AA765 /* JoinTableHeaderView.xib */,
 				D3FF878027419617008AA765 /* JoinTableHeaderView.swift */,
 				D3FF878327419617008AA765 /* ChatViewController.swift */,
@@ -227,6 +229,7 @@
 				B362603E26E8003900A44FEC /* ChattStore.swift */,
 				B362604626E802E000A44FEC /* ChatTableCell.swift */,
 				D388E89926FD106400C0556B /* Extensions.swift */,
+				B363C55B2743534900F2A0C9 /* physics.png */,
 			);
 			path = swiftChatter;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				D3FF879C2741A1CA008AA765 /* LaunchScreen.storyboard in Resources */,
 				D3FF879D2741A1CA008AA765 /* Logo.storyboard in Resources */,
 				D3FF879E2741A1CA008AA765 /* Main.storyboard in Resources */,
+				B363C55C2743534900F2A0C9 /* physics.png in Resources */,
 				D341A0FC2735795000F234E0 /* UserPreferences.storyboard in Resources */,
 				D3FF87A02741A32B008AA765 /* TextFieldTableViewCell.xib in Resources */,
 				D3FF879F2741A2B6008AA765 /* JoinTableHeaderView.xib in Resources */,
@@ -702,14 +706,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ZUZFHW3MH;
+				DEVELOPMENT_TEAM = 84C6MHGUU4;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.aelhamah.Bluetooth;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.rithikag.Bluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -723,14 +727,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ZUZFHW3MH;
+				DEVELOPMENT_TEAM = 84C6MHGUU4;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.aelhamah.Bluetooth;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.rithikag.Bluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

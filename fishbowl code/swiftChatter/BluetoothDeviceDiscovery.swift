@@ -131,9 +131,11 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         if let deviceName = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
             name = deviceName
         }
-        print("RSSI",classifyProximity(rssi: RSSI))
+//        print("RSSI",classifyProximity(rssi: RSSI))
+        
+        
         // Capture all of this in a device object
-        let device = Device(peripheral: peripheral, name: classifyProximity(rssi: RSSI))
+        let device = Device(peripheral: peripheral, name: name+"_"+classifyProximity(rssi: RSSI), rssi: classifyProximity(rssi: RSSI))
         // Add or update this object to the visible list
         DispatchQueue.main.async { [weak self] in
             self?.updateDeviceList(with: device)
