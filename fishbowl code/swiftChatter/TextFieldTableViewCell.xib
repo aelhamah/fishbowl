@@ -25,6 +25,7 @@
                         </connections>
                     </textField>
                 </subviews>
+                <color key="backgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstItem="kWS-6d-Bbm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="205" id="PIr-Tp-Fs2"/>
                     <constraint firstItem="kWS-6d-Bbm" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="STN-es-2e7"/>

@@ -692,7 +692,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pI-VW-1Hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2493" y="542"/>
+            <point key="canvasLocation" x="2548" y="542"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
