@@ -77,7 +77,17 @@ final class SignupVC: UIViewController, GIDSignInDelegate {
                             // class, PostVC
                             DispatchQueue.main.async {
 //                                self.dismiss(animated: true, completion: nil)
-                                self.performSegue(withIdentifier: "GoogleSuccessSignup", sender: self)
+                              
+//                                var window: UIWindow?
+//                                guard let scene = (scene as? UIWindowScene) else { return }
+//
+//                                let window = UIWindow(windowScene: scene)
+//                                window.rootViewController = UINavigationController(rootViewController: JoinViewController())
+//                                self.window = window
+//
+//                                window.makeKeyAndVisible()
+
+//                                self.performSegue(withIdentifier: "GoogleSuccessSignup", sender: self)
                             }
                             
                         }
