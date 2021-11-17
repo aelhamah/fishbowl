@@ -19,6 +19,7 @@ struct UserProfile {
     var RelationshipPreference: String?
     @ProfilePropWrapper var imageUrl: String?
     var imageData: Data?
+    var rssi: String?
 }
 
 @propertyWrapper

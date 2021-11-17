@@ -40,7 +40,7 @@ class JoinViewController: UITableViewController {
 //    required init?(coder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
 //    }
-//
+//    
     required init?(coder aDecoder: NSCoder) {
        super.init(coder: aDecoder)
     }
@@ -63,7 +63,6 @@ class JoinViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.isModalInPresentation = true;
 
         // Set up and run the device discovery service
         deviceDiscovery = BluetoothDeviceDiscovery(deviceName: deviceName)
@@ -110,7 +109,12 @@ class JoinViewController: UITableViewController {
     public func downloadImage(from url: URL, cell: DeviceTableViewCell) {
         print("Download Started")
         getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
+            guard let data = data, error == nil else {
+                print("unable to get image")
+                let url = "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg"
+                self.downloadImage(from: URL(string:url)!, cell: cell)
+             
+                return }
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
             // always update the UI from the main thread
@@ -129,6 +133,10 @@ class JoinViewController: UITableViewController {
     func getIndividualProfile(email: String, users: inout [UserProfile], cell: DeviceTableViewCell, _ completion: ((Bool) -> Void)? ) {
         guard let apiUrl = URL(string: "http://3.15.21.206/"+"getusers/") else {
             print("getProfile: bad URL")
+            print("Getting image with dummy image")
+            // use dummy image
+            let url = "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg"
+            self.downloadImage(from: URL(string: url)!, cell:cell)
             return
         }
         let parameters: [String: String] = ["user_ids": email]
@@ -157,8 +165,6 @@ class JoinViewController: UITableViewController {
                 print(FishbowlStore.shared.users.count)
                 for (index, val) in FishbowlStore.shared.users.enumerated() where val.Email == self.peripheralDeviceEmail {
                     FishbowlStore.shared.users[index].DisplayName = (value["display_name"] as? String)
-                    // TODO: get url from here and store in url variable below
-//                    FishbowlStore.shared.users[index].imageUrl = (value["imageurl"] as? String)
                     if value["imageurl"] != nil {
                         url = ((value["imageurl"] as? String)!)// swiftlint:disable:this force_cast
                     }
@@ -166,13 +172,13 @@ class JoinViewController: UITableViewController {
             }
             // download the image from given image url
             if url != "" {
-                self.downloadImage(from: URL(string: "http://3.15.21.206/media/Taylor1636832650.1411505.jpeg")!, cell:cell)// swiftlint:disable:this force_cast
+                self.downloadImage(from: URL(string: url)!, cell:cell)// swiftlint:disable:this force_cast
 
             } else {
                 url = "http://3.15.21.206/media/Taylor1636832650.1411505.jpeg"
                 self.downloadImage(from: URL(string:url)!, cell:cell)// swiftlint:disable:this force_cast
             }
-
+            
 //            for value in FishbowlStore.shared.users where value.email == self.peripheralDeviceEmail {
 //                cell.configureForDevice(named: value, selectable: false)
 //            }
@@ -204,34 +210,35 @@ extension JoinViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
 //        // For the name section, dequeue a text field cell and configure it
-        if indexPath.section == Sections.name {
+//        if indexPath.section == Sections.name {
+//
+//            // Ideally, we'll make the device name editable.
+//            // This code shows a table cell with an editable text field
+//
+//            // CHANGE USER NAME
+//             let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.nameCellIdentifier,
+//                                                     for: indexPath)
+//             if let nameCell = cell as? TextFieldTableViewCell {
+//                 nameCell.textField.text = deviceName
+//                 nameCell.textFieldChangedHandler = { [weak self] name in
+//                     self?.deviceName = name
+//                 }
+//             }
+//            if let deviceCell = cell as? DeviceTableViewCell {
+//                let device = deviceDiscovery.devices[indexPath.row]
+//                for value in FishbowlStore.shared.users where value.Email ==  self.peripheralDeviceEmail {
+//                    deviceCell.configureForDevice(named: value, selectable: false)
+//                }
+//            } else {
+//                if let deviceCell = cell as? DeviceTableViewCell {
+//                print("unable to configure table cell for device")
+////                    deviceCell.configureForDevice(named: User(displayName: "", email: ""), selectable: false)
+//                }
+//            }
+//            return cell
+//        }
 
-            // Ideally, we'll make the device name editable.
-            // This code shows a table cell with an editable text field
-
-            // CHANGE USER NAME
-             let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.nameCellIdentifier,
-                                                     for: indexPath)
-             if let nameCell = cell as? TextFieldTableViewCell {
-                 nameCell.textField.text = deviceName
-                 nameCell.textFieldChangedHandler = { [weak self] name in
-                     self?.deviceName = name
-                 }
-             }
-            if let deviceCell = cell as? DeviceTableViewCell {
-                let device = deviceDiscovery.devices[indexPath.row]
-                for value in FishbowlStore.shared.users where value.Email ==  self.peripheralDeviceEmail {
-                    deviceCell.configureForDevice(named: value, selectable: false)
-                }
-            } else {
-                if let deviceCell = cell as? DeviceTableViewCell {
-                print("unable to configure table cell for device")
-//                    deviceCell.configureForDevice(named: User(displayName: "", email: ""), selectable: false)
-                }
-            }
-            return cell
-        }
-
+        
         // For the devices cells, dequeue one of the device cells and configure
         let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
                                                  for: indexPath)
@@ -240,16 +247,26 @@ extension JoinViewController {
             // If we have a list of devices, configure each cell with its name
             if deviceDiscovery.devices.count > 0 {
                 let device = deviceDiscovery.devices[indexPath.row]
+                
                 self.peripheralDeviceEmail = (device.name) // swiftlint:disable:this force_cast
-
-                for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
-                    print("email already exists")
-
+                for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == self.peripheralDeviceEmail {
+//                    print("email already exists")
+                    
+                    for (i, x) in deviceDiscovery.devices.enumerated() where x.name == self.peripheralDeviceEmail {
+                        if x.rssi != device.rssi {
+                            print("Editing RSSI Value")
+                           
+                            FishbowlStore.shared.users[index].rssi = device.rssi
+                            self.tableView.reloadData()
+                        
+                            return cell
+                        }
+                    }
                     return cell
                 }
-
-                FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  self.peripheralDeviceEmail ))
-                getIndividualProfile(email:  self.peripheralDeviceEmail, users: &FishbowlStore.shared.users, cell: deviceCell) {success in
+                
+                FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  self.peripheralDeviceEmail, rssi: device.rssi))
+                getIndividualProfile(email: self.peripheralDeviceEmail, users: &FishbowlStore.shared.users, cell: deviceCell) {success in
                     DispatchQueue.main.async {
                         print("reached here")
                         if success {
@@ -265,13 +282,31 @@ extension JoinViewController {
 //            for value in FishbowlStore.shared.users where value.email == self.peripheralDeviceEmail {
 //                deviceCell.configureForDevice(named: value, selectable: false)
 //            }
-
+                
             } else {
                 // If no devices found, show "no devices"
-                // KEEP FOR TESTING
-//                for value in FishbowlStore.shared.users where value.email == self.deviceEmailIdentity {
-//                    deviceCell.configureForDevice(named: value, selectable: false)
+//                 KEEP FOR TESTING
+//                let url = "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg"
+//                let temp = UserProfile(FishBowlID: "1", Username: "rg", FullName: "rithika ganesh", DisplayName: "rithikag", Email: "rg@umich.edu", Bio: "hey hi", imageUrl: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg", rssi: "nearby")
+//                FishbowlStore.shared.users.append(temp)
+//                getData(from: URL(string:url)!) { data, response, error in
+//                    guard let data = data, error == nil else { return }
+//                    print(response?.suggestedFilename ?? URL(string:url)!.lastPathComponent)
+//                    print("Download Finished")
+//                    // always update the UI from the main thread
+//                    DispatchQueue.main.async { [weak self] in
+//                        for (index, val) in FishbowlStore.shared.users.enumerated() where val.Email ==  "rg@umich.edu" {
+//                            FishbowlStore.shared.users[index].imageData = data;
+//                    }
+//                        for value in FishbowlStore.shared.users where value.Email == "rg@umich.edu" {
+//
+//                            deviceCell.configureForDevice(named: value, selectable: false)
+//                        }
 //                }
+//
+//                }
+                
+               
                 deviceCell.configureForNoDevicesFound()
             }
         }
@@ -293,24 +328,9 @@ extension JoinViewController {
                 deviceDiscovery.devices.count > 0 else { return }
 
         // Create a chat view controller and present it
-//        let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
-
-
-
-
-
-        let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
-        let myVC = storyboard.instantiateViewController(withIdentifier: "ProfilePageView") as! ProfilePage
-        self.navigationController?.pushViewController(myVC, animated: true)
-//        self.navigationController?.pushViewController(ProfilePage(), animated: true)
-//
-//        navigationController?.pushViewController(ProfilePage(), animated: true)
-//        currentDeviceName: deviceName)
-//        let profilePageViewController =
-//
-//        let vc = storyboard.instantiateViewController(withIdentifier: "myVCID")
-//        self.present(vc, animated: true)
-//        navigationController?.pushViewController(profilePageViewController, animated: true)
+        let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
+                                                    currentDeviceName: deviceName)
+        navigationController?.pushViewController(chatViewController, animated: true)
 
     }
 }
