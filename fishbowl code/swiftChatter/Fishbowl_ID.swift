@@ -13,8 +13,7 @@ final class Fishbowl_ID {
     
     var expiration = Date(timeIntervalSince1970: 0.0)
     private var field: String?
-    var id: String? {
-        get { Date() >= expiration ? nil : field }
-        set(newValue) { field = newValue }
-    }
+    var info: [String:Any] = [:]
+    var id: String = "DojaID"
+    var email: String = "DojaEmail"
 }
