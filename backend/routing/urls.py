@@ -27,4 +27,5 @@ urlpatterns = [
     path('adduser/', views.adduser, name='adduser'),
     path('postblock/', views.postblock, name='postblock'),
     path('getblocks/', views.getblocks, name='getblocks'),
+    path('updatebio/', views.updatebio, name='updatebio'),
 ]

@@ -13,6 +13,9 @@ from google.oauth2 import id_token
 from google.auth.transport import requests
 
 import hashlib
+
+# sender is an email address
+# receivers are id_tokens of users
 def getusers(request):
     if request.method != 'GET':
         return HttpResponse(status=404)
@@ -26,6 +29,13 @@ def getusers(request):
     
     # return JsonResponse(response)
     cursor = connection.cursor()
+
+    # get mappings from fishbowlIDs to emails
+    cursor.execute('SELECT fishbowlID, email FROM fishes;')
+    rows = cursor.fetchall()
+    fish_id_to_email = {}
+    for row in rows:
+        fish_id_to_email[row[0].strip()] = row[1]
 
 
     # make sure that each user id is not blocked by the sender
@@ -44,7 +54,8 @@ def getusers(request):
         return JsonResponse(response)
     
     for user_id in users_id:
-        cursor.execute("SELECT * FROM users WHERE email = '{}';".format(user_id))
+        user_email = fish_id_to_email[user_id]
+        cursor.execute("SELECT * FROM users WHERE email = '{}';".format(user_email))
         rows = cursor.fetchall()
 
         if user_id in do_not_show:
@@ -74,6 +85,8 @@ def postlikes(request):
     
     if rows:
         response['status'] = 'matched'
+    else:
+        response['status'] = 'unmatched'
     cursor.execute('INSERT INTO matches (sender, receiver) VALUES (%s,%s);',(str(sender), str(receiver)))
 
     return JsonResponse(response)
@@ -134,6 +147,8 @@ def getmatches(request):
     if users_id is None:
         return JsonResponse(response)
 
+    # Only get stuff that user matches on (I am <sender> and looking for <receiver>)
+
    # return JsonResponse(response)
     for user_id in users_id:
         cursor.execute("SELECT * FROM users WHERE email = %s;", (user_id,))
@@ -165,6 +180,7 @@ def adduser(request):
         # OAuth (requiring user to log back in to Google).
         # idToken has a lifetime of about 1 hour
         idinfo = id_token.verify_oauth2_token(idToken, requests.Request(), clientID)
+        email = idinfo['email']
     except ValueError:
         # Invalid or expired token
         return HttpResponse(status=511)  # 511 Network Authentication Required
@@ -181,7 +197,7 @@ def adduser(request):
     hashable = idToken + backendSecret + nonce
     fishbowlID = hashlib.sha256(hashable.strip().encode('utf-8')).hexdigest()
 
-    # Lifetime of chatterID is min of time to idToken expiration
+    # Lifetime of fishbowlID is min of time to idToken expiration
     # (int()+1 is just ceil()) and target lifetime, which should
     # be less than idToken lifetime (~1 hour).
     lifetime = min(int(idinfo['exp']-now)+1, 60) # secs, up to idToken's lifetime
@@ -190,14 +206,16 @@ def adduser(request):
     # clean up db table of expired chatterIDs
     cursor.execute('DELETE FROM fishes WHERE %s > expiration;', (now, ))
 
-    # insert new chatterID
+    # insert new fishbowlID
     # Ok for chatterID to expire about 1 sec beyond idToken expiration
-    cursor.execute('INSERT INTO fishes (fishbowlID, username, expiration) VALUES '
-                   '(%s, %s, %s);', (fishbowlID, username, now+lifetime))
+    cursor.execute('INSERT INTO fishes (fishbowlID, username, expiration, email) VALUES '
+                   '(%s, %s, %s);', (fishbowlID, username, now+lifetime, email))
 
     # Return chatterID and its lifetime
     return JsonResponse({'fishbowlID': fishbowlID, 'lifetime': lifetime, "idinfo": idinfo})
 
+
+# NOT BEING USED?
 @csrf_exempt
 def postauth(request):
     if request.method != 'POST':
@@ -253,3 +271,15 @@ def getblocks(request):
     }
 
     return JsonResponse(response)
+
+@csrf_exempt
+def updatebio(request):
+    if request.method != 'POST':
+        return HttpResponse(status=404)
+    json_data = json.loads(request.body)
+    email = json_data['email']
+    bio = json_data['bio']
+
+    cursor = connection.cursor()
+    cursor.execute("UPDATE users SET bio = '{}' WHERE email = '{}';".format(bio, email))
+    return JsonResponse()
