@@ -67,7 +67,44 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBOutlet weak var GenderPreference: UITextField!
     
+    @IBOutlet weak var genderPreferenceDropdown: UIPickerView!
     @IBOutlet weak var RelationshipPreference: UITextField!
+    
+//    var genderPreferenceList = ["Men", "Women", "Men and Women", "Any"]
+    
+    var list = ["1", "2", "3"]
+
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
+        return 1
+    }
+
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+
+        return list.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+
+        self.view.endEditing(true)
+        return list[row]
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+
+        self.GenderPreference.text = self.list[row]
+        self.genderPreferenceDropdown.isHidden = true
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+
+        if textField == self.GenderPreference {
+            self.genderPreferenceDropdown.isHidden = false
+            //if you don't want the users to se the keyboard type:
+
+            textField.endEditing(true)
+        }
+    }
+    
     @IBAction func SignUpComplete(_ sender: Any) {
         
         let user = UserProfile(FishBowlID: Fishbowl_ID.shared.id,
