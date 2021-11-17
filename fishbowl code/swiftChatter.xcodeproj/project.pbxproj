@@ -19,7 +19,8 @@
 		B362603F26E8003900A44FEC /* ChattStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362603E26E8003900A44FEC /* ChattStore.swift */; };
 		B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604626E802E000A44FEC /* ChatTableCell.swift */; };
 		B362604C26E803AC00A44FEC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604B26E803AC00A44FEC /* MainVC.swift */; };
-		B363C55C2743534900F2A0C9 /* physics.png in Resources */ = {isa = PBXBuildFile; fileRef = B363C55B2743534900F2A0C9 /* physics.png */; };
+		B37076852745B50C0062C19E /* MyCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37076842745B50C0062C19E /* MyCell1.swift */; };
+		B37076872745B5230062C19E /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37076862745B5230062C19E /* GenericCell.swift */; };
 		BB25840B273D7DE30093CC0C /* Fishbowl_ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */; };
 		BB25840D273D84010093CC0C /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840C273D84010093CC0C /* SigninVC.swift */; };
 		BB25840F27405EA10093CC0C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840E27405EA10093CC0C /* SignupVC.swift */; };
@@ -99,7 +100,8 @@
 		B362603E26E8003900A44FEC /* ChattStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattStore.swift; sourceTree = "<group>"; };
 		B362604626E802E000A44FEC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		B362604B26E803AC00A44FEC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		B363C55B2743534900F2A0C9 /* physics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = physics.png; path = ../../../../../Desktop/physics.png; sourceTree = "<group>"; };
+		B37076842745B50C0062C19E /* MyCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell1.swift; sourceTree = "<group>"; };
+		B37076862745B5230062C19E /* GenericCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCell.swift; sourceTree = "<group>"; };
 		BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishbowl_ID.swift; sourceTree = "<group>"; };
 		BB25840C273D84010093CC0C /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		BB25840E27405EA10093CC0C /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				B3625FFE26E7F1D800A44FEC /* Products */,
 				4BB4E32EE1F0EB772C73335F /* Pods */,
 				E28B91A398B948BDB506AF6D /* Frameworks */,
+				B37076832745A1B20062C19E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,6 +243,13 @@
 			path = swiftChatterUITests;
 			sourceTree = "<group>";
 		};
+		B37076832745A1B20062C19E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		BB28B2C727440E2C00BB9814 /* UserPrefences */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +280,8 @@
 				D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */,
 				D3FF878327419617008AA765 /* ChatViewController.swift */,
 				D3FF877227418B2D008AA765 /* BluetoothChat */,
+				B37076842745B50C0062C19E /* MyCell1.swift */,
+				B37076862745B5230062C19E /* GenericCell.swift */,
 			);
 			path = BluetoothStuff;
 			sourceTree = "<group>";
@@ -461,7 +473,6 @@
 			files = (
 				D3FF879D2741A1CA008AA765 /* Logo.storyboard in Resources */,
 				D3FF879E2741A1CA008AA765 /* Main.storyboard in Resources */,
-				B363C55C2743534900F2A0C9 /* physics.png in Resources */,
 				D341A0FC2735795000F234E0 /* UserPreferences.storyboard in Resources */,
 				D3FF87A02741A32B008AA765 /* TextFieldTableViewCell.xib in Resources */,
 				D3FF879F2741A2B6008AA765 /* JoinTableHeaderView.xib in Resources */,
@@ -554,6 +565,7 @@
 				BB28B2C227419D5600BB9814 /* EditPreferences.swift in Sources */,
 				BB28B2C027419D3100BB9814 /* EditBio.swift in Sources */,
 				BBDD7D1A272AFA3100040C0F /* ProfilePage.swift in Sources */,
+				B37076852745B50C0062C19E /* MyCell1.swift in Sources */,
 				BB28B2BC274195DC00BB9814 /* UserPreferences.swift in Sources */,
 				D3FF878627419693008AA765 /* TextFieldTableViewCell.swift in Sources */,
 				BBDD7D1A272AFA3100040C0F /* ProfilePage.swift in Sources */,
@@ -567,6 +579,7 @@
 				BB28B2CD2744104A00BB9814 /* AppDelegate.swift in Sources */,
 				D3FF8792274199DC008AA765 /* Message.swift in Sources */,
 				BB28B2C627440C5F00BB9814 /* TabBar.swift in Sources */,
+				B37076872745B5230062C19E /* GenericCell.swift in Sources */,
 				D3FF8795274199DC008AA765 /* Device.swift in Sources */,
 				D388E89A26FD106400C0556B /* Extensions.swift in Sources */,
 				3C8BFFD2273D7B6F001B9FDF /* Match.swift in Sources */,

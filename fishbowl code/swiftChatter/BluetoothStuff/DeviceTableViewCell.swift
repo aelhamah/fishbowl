@@ -66,7 +66,7 @@ class DeviceTableViewCell: UITableViewCell {
             
             //Set constraints as per your requirements
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 300).isActive = true
+            button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 250).isActive = true
             button.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
             button.widthAnchor.constraint(equalToConstant: 100).isActive = true
             button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
