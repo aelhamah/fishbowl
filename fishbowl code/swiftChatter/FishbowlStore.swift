@@ -215,7 +215,7 @@ final class FishbowlStore {
 //        }
     func getMatches(_ completion: ((Bool) -> ())?) {
             print("in get matches")
-            guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+"3") else {
+        guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+Fishbowl_ID.shared.email) else {
                 print("getmatches: Bad URL")
                 return
             }
@@ -304,8 +304,12 @@ final class FishbowlStore {
                     return
                 }
                 
-                Fishbowl_ID.shared.id = jsonObj["fishbowlID"] as? String
+                Fishbowl_ID.shared.id = jsonObj["fishbowlID"] as? String ?? "DojaID"
                 Fishbowl_ID.shared.expiration = Date()+(jsonObj["lifetime"] as! TimeInterval)
+                Fishbowl_ID.shared.info = jsonObj["idinfo"] as! [String:Any]
+                Fishbowl_ID.shared.email = Fishbowl_ID.shared.info as? String ?? "DojaEmail"
+//                print(info["email"])
+//                Fishbowl_ID.shared.info = jsonObj["idinfo"] as! [String:String]
                 completion("OK")
             }
             task.resume()
@@ -323,7 +327,7 @@ final class FishbowlStore {
                 print("postauth: Bad URL")
                 return
             }
-            
+        
             var request = URLRequest(url: apiUrl)
             request.httpMethod = "POST"
             request.httpBody = jsonData
