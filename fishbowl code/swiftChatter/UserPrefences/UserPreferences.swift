@@ -17,6 +17,11 @@ final class UserPreferences: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var newProfilePicture: UIImageView!
     
+    @IBOutlet weak var relationshipPreference: UILabel!
+    @IBOutlet weak var genderPreference: UILabel!
+    
+    @IBOutlet weak var bio: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         super.isModalInPresentation = true;
@@ -25,7 +30,20 @@ final class UserPreferences: UIViewController, UIImagePickerControllerDelegate, 
         LookAtBlocked.layer.cornerRadius = 22
         BioButton.layer.cornerRadius = 22
         PreferencesButton.layer.cornerRadius = 22
+        
+        var user_list = ["change this later"]
+        var user = FishbowlStore.shared.getProfile(user_list: user_list) { success in
+                       DispatchQueue.main.async {
+                           print("reached here")
+                           if success {
+                               print("suceeded")
+                               self.genderPreference.text = "Men"
+                               self.relationshipPreference.text = "Casual"
+                           }
+                       }
+                   }
     }
+    
 
     @IBAction func GoToBlockedUsers(_ sender: Any) {
         self.performSegue(withIdentifier: "GoToBlockedUsers", sender: self)

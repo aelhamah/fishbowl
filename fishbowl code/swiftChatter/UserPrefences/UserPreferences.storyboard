@@ -149,7 +149,10 @@
                         <outlet property="BioButton" destination="kw7-V9-Y0G" id="pud-17-mZC"/>
                         <outlet property="LookAtBlocked" destination="Ojy-B4-QN3" id="hgH-qg-KRC"/>
                         <outlet property="PreferencesButton" destination="glA-cj-bdj" id="cL9-Pz-Tt8"/>
+                        <outlet property="bio" destination="mI4-yE-igM" id="f6e-7z-IhU"/>
+                        <outlet property="genderPreference" destination="ajJ-ay-dkv" id="kww-jV-5e5"/>
                         <outlet property="newProfilePicture" destination="w8r-xg-YWM" id="4SC-e7-JYT"/>
+                        <outlet property="relationshipPreference" destination="s7x-Ge-RWJ" id="Pyh-gC-LLd"/>
                         <segue destination="ucO-Wj-jEv" kind="showDetail" identifier="GoToEditBio" id="hY9-Du-F9p"/>
                         <segue destination="pQ1-Fy-TJm" kind="showDetail" identifier="GoToEditPreferences" id="q9t-uT-MHy"/>
                     </connections>
