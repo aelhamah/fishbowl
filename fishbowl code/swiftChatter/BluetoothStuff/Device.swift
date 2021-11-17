@@ -19,10 +19,13 @@ struct Device {
     var name: String
     
     var lastseen : Date
+    
+    var rssi : String
 
-    init(peripheral: CBPeripheral, name: String = "Unknown") {
+    init(peripheral: CBPeripheral, name: String = "Unknown", rssi: String) {
         self.peripheral = peripheral
         self.name = name
         self.lastseen = Date()
+        self.rssi = rssi
     }
 }
