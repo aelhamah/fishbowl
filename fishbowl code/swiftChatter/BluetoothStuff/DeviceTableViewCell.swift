@@ -50,9 +50,6 @@ class DeviceTableViewCell: UITableViewCell {
                 imageView?.image = nil
             }
             
-            
-            
-            
         }
         
     }
