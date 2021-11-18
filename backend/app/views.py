@@ -209,7 +209,7 @@ def adduser(request):
     # insert new fishbowlID
     # Ok for chatterID to expire about 1 sec beyond idToken expiration
     cursor.execute('INSERT INTO fishes (fishbowlID, username, expiration, email) VALUES '
-                   '(%s, %s, %s);', (fishbowlID, username, now+lifetime, email))
+                   '(%s, %s, %s, %s);', (fishbowlID, username, now+lifetime, email))
 
     # Return chatterID and its lifetime
     return JsonResponse({'fishbowlID': fishbowlID, 'lifetime': lifetime, "idinfo": idinfo})
