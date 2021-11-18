@@ -54,6 +54,8 @@ def getusers(request):
         return JsonResponse(response)
     
     for user_id in users_id:
+        if user_id in do_not_show or user_id not in fish_id_to_email:
+            continue
         user_email = fish_id_to_email[user_id]
         cursor.execute("SELECT * FROM users WHERE email = '{}';".format(user_email))
         rows = cursor.fetchall()
@@ -64,6 +66,11 @@ def getusers(request):
         response['users'][user_id] = {
             cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))
         }
+        #replace https with http
+        response['users'][user_id]['imageurl'] = response['users'][user_id]['imageurl'].replace('https', 'http')
+        response['users'][user_id]['token'] = user_id
+
+
     return JsonResponse(response)
 
 @csrf_exempt
@@ -111,6 +118,8 @@ def createusers(request):
         fs = FileSystemStorage()
         filename = fs.save(filename, content)
         imageurl = fs.url(filename)
+        # change from http to https
+        imageurl = imageurl.replace("http://", "https://")
     else:
         imageurl = None
     
@@ -173,7 +182,6 @@ def adduser(request):
     json_data = json.loads(request.body)
     clientID = json_data['clientID']   # the front end app's OAuth 2.0 Client ID
     idToken = json_data['idToken']     # user's OpenID ID Token, a JSon Web Token (JWT)
-
     now = time.time()                  # secs since epoch (1/1/70, 00:00:00 UTC)
 
     try:
@@ -199,11 +207,12 @@ def adduser(request):
     nonce = str(now)
     hashable = idToken + backendSecret + nonce
     fishbowlID = hashlib.sha256(hashable.strip().encode('utf-8')).hexdigest()
+    fishbowlID = fishbowlID[:10]
 
     # Lifetime of fishbowlID is min of time to idToken expiration
     # (int()+1 is just ceil()) and target lifetime, which should
     # be less than idToken lifetime (~1 hour).
-    lifetime = min(int(idinfo['exp']-now)+1, 60) # secs, up to idToken's lifetime
+    lifetime = min(int(idinfo['exp']-now)+1, 60 * 60) # secs, up to idToken's lifetime
 
     cursor = connection.cursor()
     # clean up db table of expired chatterIDs
