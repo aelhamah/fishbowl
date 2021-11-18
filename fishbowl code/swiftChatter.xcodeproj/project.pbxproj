@@ -200,8 +200,8 @@
 				BB28B2CE2744106300BB9814 /* LikingUser */,
 				BB28B2C927440EE000BB9814 /* LikedMatches */,
 				BB28B2C727440E2C00BB9814 /* UserPrefences */,
-				B362600626E7F1D800A44FEC /* Main.storyboard */,
 				B362604B26E803AC00A44FEC /* MainVC.swift */,
+				B362600626E7F1D800A44FEC /* Main.storyboard */,
 				BB28B2C527440C5F00BB9814 /* TabBar.swift */,
 				BB7D04ED2734308700B26E43 /* FishbowlStore.swift */,
 				BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */,
@@ -771,14 +771,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84C6MHGUU4;
+				DEVELOPMENT_TEAM = G72JGSU347;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.rithikag.Bluetooth;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.nician.fishbowl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -792,14 +792,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84C6MHGUU4;
+				DEVELOPMENT_TEAM = G72JGSU347;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.rithikag.Bluetooth;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.nician.fishbowl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

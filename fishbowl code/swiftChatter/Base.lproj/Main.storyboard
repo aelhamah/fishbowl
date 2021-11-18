@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gv2-hz-7b7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gv2-hz-7b7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -307,7 +307,7 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Tm2-gm-ibS" kind="relationship" relationship="viewControllers" id="sB0-o0-srL"/>
+                        <segue destination="xmJ-hF-4Uz" kind="relationship" relationship="viewControllers" id="sB0-o0-srL"/>
                         <segue destination="dIL-9B-Zqz" kind="relationship" relationship="viewControllers" id="F5Q-QW-9Q4"/>
                         <segue destination="Q5I-hP-6fS" kind="relationship" relationship="viewControllers" id="gdc-bJ-yP2"/>
                     </connections>
@@ -627,7 +627,15 @@
                         <outlet property="LastName" destination="bhV-re-vYY" id="eQd-xg-fob"/>
                         <outlet property="ScrollView" destination="MsA-oC-mOs" id="Yb5-wl-WVF"/>
                         <outlet property="Username" destination="Enf-yh-vcF" id="ur9-Va-njv"/>
+                        <outlet property="bothPreferenceOutlet" destination="2fM-dG-cqC" id="bHO-XZ-Pwq"/>
+                        <outlet property="casualRelationship" destination="U4G-dA-zUR" id="hfs-fq-C3d"/>
+                        <outlet property="femaleIdentityButton" destination="IKe-31-hqb" id="G8n-ud-rW3"/>
+                        <outlet property="maleIdentityButton" destination="FJX-Iv-WpZ" id="NaG-60-Ud1"/>
+                        <outlet property="menPreferenceOutlet" destination="xrT-PZ-oA4" id="NMQ-p6-4FZ"/>
+                        <outlet property="nonbinaryIdentityButton" destination="CCq-g2-q03" id="b6V-3C-9J5"/>
                         <outlet property="postProfilePicture" destination="9Mw-hB-HqQ" id="kac-gs-Qjp"/>
+                        <outlet property="seriousRelationship" destination="NSz-3W-Vkj" id="aEy-Mf-cvs"/>
+                        <outlet property="womenPreferenceOutlet" destination="JmR-hR-1ug" id="MJn-pd-bHu"/>
                         <segue destination="IVI-8a-ww4" kind="showDetail" identifier="signUpSegue" id="2m6-OI-fUm"/>
                     </connections>
                 </viewController>
@@ -653,12 +661,12 @@
             </objects>
             <point key="canvasLocation" x="871" y="2819"/>
         </scene>
-        <!--Matches-->
+        <!--MatchVC-->
         <scene sceneID="ZeA-gU-ypI">
             <objects>
                 <tableViewController id="Tm2-gm-ibS" customClass="MatchVC" customModule="swiftChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cj5-Mu-hxl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexBackgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -720,11 +728,11 @@
                             <outlet property="delegate" destination="Tm2-gm-ibS" id="d6Z-Tj-n7m"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Matches" image="heart" catalog="system" id="iHv-8j-SNX"/>
+                    <navigationItem key="navigationItem" id="OSE-3L-TQb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHp-zd-1a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="-1019"/>
+            <point key="canvasLocation" x="3457.971014492754" y="-1019.1964285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rSA-Rc-f7F">
@@ -794,6 +802,25 @@
             </objects>
             <point key="canvasLocation" x="2548" y="542"/>
         </scene>
+        <!--Matches-->
+        <scene sceneID="37L-z1-qqz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xmJ-hF-4Uz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Matches" image="heart" catalog="system" id="iHv-8j-SNX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="59z-AO-Gv8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tm2-gm-ibS" kind="relationship" relationship="rootViewController" id="dsh-5g-0o5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJi-ht-fn5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2547.826086956522" y="-1019.1964285714286"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="MoM-RK-wmK"/>
@@ -805,8 +832,8 @@
         <image name="appIcon" width="938" height="830"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart" width="92" height="90"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="photo" catalog="system" width="128" height="93"/>

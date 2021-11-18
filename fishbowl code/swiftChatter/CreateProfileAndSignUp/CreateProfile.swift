@@ -88,7 +88,9 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         interest = "men"
 
         
-        sender.tintColor = UIColor.systemPink
+        menPreferenceOutlet.tintColor = UIColor.systemPink
+        womenPreferenceOutlet.tintColor = UIColor.white
+        bothPreferenceOutlet.tintColor = UIColor.white
         
       
       
@@ -113,10 +115,28 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         interestWomen = true
         interestBoth = false
         
-        sender.tintColor = UIColor.systemPink
+        menPreferenceOutlet.tintColor = UIColor.white
+        womenPreferenceOutlet.tintColor = UIColor.systemPink
+        bothPreferenceOutlet.tintColor = UIColor.white
  
         //print(interest)
     }
+    
+    @IBOutlet weak var menPreferenceOutlet: UIButton!
+    
+    @IBOutlet weak var womenPreferenceOutlet: UIButton!
+    
+    
+    @IBOutlet weak var bothPreferenceOutlet: UIButton!
+    
+    @IBOutlet weak var casualRelationship: UIButton!
+    
+    @IBOutlet weak var seriousRelationship: UIButton!
+    
+    @IBOutlet weak var maleIdentityButton: UIButton!
+    
+    @IBOutlet weak var femaleIdentityButton: UIButton!
+    @IBOutlet weak var nonbinaryIdentityButton: UIButton!
     
     @IBAction func interestBoth(_ sender: UIButton) {
         interest = "both"
@@ -125,7 +145,10 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         interestWomen = false
         interestBoth = true
         
-        sender.tintColor = UIColor.systemPink
+        menPreferenceOutlet.tintColor = UIColor.white
+        womenPreferenceOutlet.tintColor = UIColor.white
+        bothPreferenceOutlet.tintColor = UIColor.systemPink
+        
 
         //print(interest)
     }
@@ -133,32 +156,41 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBAction func casual(_ sender: UIButton) {
         looking_for = "casual"
-        sender.tintColor = UIColor.systemPink
+        casualRelationship.tintColor = UIColor.systemPink
+        seriousRelationship.tintColor = UIColor.white
+        
         //print(looking_for)
     }
     
     @IBAction func serious(_ sender: UIButton) {
         looking_for = "serious"
-        sender.tintColor = UIColor.systemPink
+        casualRelationship.tintColor = UIColor.white
+        seriousRelationship.tintColor = UIColor.systemPink
         //print(looking_for)
     }
     
     
     @IBAction func identifyMale(_ sender: UIButton) {
         identify = "male"
-        sender.tintColor = UIColor.systemPink
+        maleIdentityButton.tintColor = UIColor.systemPink
+        femaleIdentityButton.tintColor = UIColor.white
+        nonbinaryIdentityButton.tintColor = UIColor.white
         //print(identify)
     }
     
     @IBAction func identifyFemale(_ sender: UIButton) {
         identify = "female"
-        sender.tintColor = UIColor.systemPink
+        maleIdentityButton.tintColor = UIColor.white
+        femaleIdentityButton.tintColor = UIColor.systemPink
+        nonbinaryIdentityButton.tintColor = UIColor.white
         //print(identify)
     }
     
     @IBAction func non_binary(_ sender: UIButton) {
         identify = "non-binary"
-        sender.tintColor = UIColor.systemPink
+        maleIdentityButton.tintColor = UIColor.white
+        femaleIdentityButton.tintColor = UIColor.white
+        nonbinaryIdentityButton.tintColor = UIColor.systemPink
         //print(identify)
     }
     @IBAction func SignUpComplete(_ sender: Any) {
