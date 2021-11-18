@@ -21,11 +21,13 @@ struct Device {
     var lastseen : Date
     
     var rssi : String
+//    var email:String
 
     init(peripheral: CBPeripheral, name: String = "Unknown", rssi: String) {
         self.peripheral = peripheral
         self.name = name
         self.lastseen = Date()
         self.rssi = rssi
+//        self.email = email
     }
 }
