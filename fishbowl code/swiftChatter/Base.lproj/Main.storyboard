@@ -554,14 +554,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-bg-RgQ">
-                                        <rect key="frame" x="54" y="495" width="310" height="134"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="zMl-td-gyF" id="tpa-qG-jfc"/>
-                                            <outlet property="delegate" destination="zMl-td-gyF" id="DoN-2q-boB"/>
-                                        </connections>
-                                    </pickerView>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ZXT-Lm-Ldl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Zm0-Tg-fbY"/>
@@ -585,7 +577,6 @@
                         <outlet property="RelationshipPreference" destination="gLJ-OR-gCM" id="a2s-9x-Ub0"/>
                         <outlet property="ScrollView" destination="MsA-oC-mOs" id="Yb5-wl-WVF"/>
                         <outlet property="Username" destination="Enf-yh-vcF" id="ur9-Va-njv"/>
-                        <outlet property="genderPreferenceDropdown" destination="XOT-bg-RgQ" id="glI-yS-QvY"/>
                         <outlet property="postProfilePicture" destination="9Mw-hB-HqQ" id="kac-gs-Qjp"/>
                         <segue destination="IVI-8a-ww4" kind="showDetail" identifier="signUpSegue" id="2m6-OI-fUm"/>
                     </connections>
@@ -764,8 +755,8 @@
         <image name="appIcon" width="938" height="830"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="heart" width="92" height="90"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart" width="92" height="90"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="photo" catalog="system" width="128" height="93"/>
