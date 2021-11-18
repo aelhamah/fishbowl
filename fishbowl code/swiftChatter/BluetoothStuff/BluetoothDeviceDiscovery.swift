@@ -52,7 +52,7 @@ class BluetoothDeviceDiscovery: NSObject {
         // If a device name is provided, capture it
         // If let deviceName = deviceName { self.deviceName = deviceName }
         // Set device name
-        self.deviceName = Fishbowl_ID.shared.id!
+        self.deviceName = Fishbowl_ID.shared.id
     }
     // Start advertising (Or re-advertise) this device as a peipheral
     func startAdvertising() {
