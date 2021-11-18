@@ -27,7 +27,7 @@
                                     <action selector="LikeButton:" destination="jBc-cB-lAP" eventType="touchUpInside" id="K0m-lP-Lxl"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilepic" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYc-5M-SBJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYc-5M-SBJ">
                                 <rect key="frame" x="49" y="125" width="316" height="448"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -85,6 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jAW-2C-HHz"/>
                     <connections>
+                        <outlet property="FishiesPicture" destination="FYc-5M-SBJ" id="IZw-rk-b8V"/>
                         <segue destination="iEe-NA-DNh" kind="showDetail" identifier="itsAMatch" id="mwa-gk-gLG"/>
                         <segue destination="shW-Dr-9hT" kind="showDetail" identifier="RejectUserSegue" id="EcU-jv-Use"/>
                     </connections>
