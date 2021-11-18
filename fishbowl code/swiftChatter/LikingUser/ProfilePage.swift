@@ -16,7 +16,7 @@ class ProfilePage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("SANITY CHECK:")
         print(FishbowlStore.shared.fishies)
         
         // setup refreshControler here later
