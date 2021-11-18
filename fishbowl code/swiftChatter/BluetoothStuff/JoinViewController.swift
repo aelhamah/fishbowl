@@ -237,10 +237,16 @@ extension JoinViewController {
         guard indexPath.section == Sections.availableDevices,
                 deviceDiscovery.devices.count > 0 else { return }
         
-        FishbowlStore.shared.fishies = FishesProfile(FishBowlID: "1", Username: "nic", FullName: "nic", DisplayName: "nic", Email: "nic", Bio: "nic", GenderPreference: "nic", RelationshipPreference: "nic", imageUrl: nil, imageData: nil, rssi: "nic")
+//        let device = deviceDiscovery.devices[indexPath.row]
+//        for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == device.name {
+//            FishbowlStore.shared.fishies = FishbowlStore.shared.users[index]
+//        }
+    
+//        FishbowlStore.shared.fishies = FishesProfile(FishBowlID: device.name, Username: "nic", FullName: "nic", DisplayName: "nic", Email: "nic", Bio: "nic", GenderPreference: "nic", RelationshipPreference: "nic", imageUrl: nil, imageData: nil, rssi: "nic")
+        FishbowlStore.shared.fishies = FishbowlStore.shared.users[indexPath.row]
         
         let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
-        let myVC = storyboard.instantiateViewController(withIdentifier: "ProfilePageView") as! ProfilePage
+        let myVC = storyboard.instantiateViewController(withIdentifier: "ProfilePage") as! ProfilePage
         self.navigationController?.pushViewController(myVC, animated: true)
 
 

@@ -92,5 +92,7 @@ class DeviceTableViewCell: UITableViewCell {
         selectionStyle = .none
         accessoryType = .none
         textLabel?.text = "No devices found."
+        imageView?.image = nil
+        button.setTitle("looking", for:.normal)
     }
 }

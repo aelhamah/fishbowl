@@ -199,7 +199,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
                                Username: Username.text,
                                FullName: LastName.text,
                                DisplayName: FirstName.text,
-                               Email: Email.text,
+                               Email: Fishbowl_ID.shared.email,
                                Bio: Bio.text,
                                GenderPreference: interest,
                                RelationshipPreference: looking_for,
