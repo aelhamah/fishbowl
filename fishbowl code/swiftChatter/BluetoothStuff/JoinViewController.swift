@@ -82,23 +82,7 @@ class JoinViewController: UITableViewController {
         
         // Set up the header view
         tableView.tableHeaderView = JoinTableHeaderView.instantiate()
-        
-        //        var val = (deviceDiscovery.devices.count - 1)
-        //        var peripheralDevice = deviceDiscovery.devices[val]
-        //        FishbowlStore.shared.users.append(User(displayName: "", email: peripheralDevice.name ))
-        //
-        //        getIndividualProfile(email: self.peripheralDeviceEmail, users: &FishbowlStore.shared.users) {success in
-        //               DispatchQueue.main.async {
-        //                   print("reached here")
-        //                   if success {
-        //                       print("Success")
-        //                   } else {
-        //                       print("Error")
-        //                   }
-        //                   // stop the refreshing animation upon completion:
-        //                   self.refreshControl?.endRefreshing()
-        //               }
-        //        }
+
     }
     
     // Get image data
@@ -126,13 +110,6 @@ class JoinViewController: UITableViewController {
                 }
                 completion(true)
                 
-//                for value in FishbowlStore.shared.users where value.Email == self?.peripheralDeviceEmail {
-//                    if let deviceCell = cell as? DeviceTableViewCell {
-//                        deviceCell.configureForDevice(named: value, selectable: false)
-//                    }
-//                }
-                
-//                self?.tableView.reloadData()
             }
         }
     }
@@ -172,8 +149,10 @@ class JoinViewController: UITableViewController {
                 print("DisplayName", value["display_name"]!)
                 print("ImageURL", value["imageurl"]!)
                 print("Email", value["email"]!)
+                print("ID Token", value["token"])
             }
-            for (_, value) in usersReceived where value["email"] as! String == self.peripheralDeviceEmail  {// swiftlint:disable:this force_cast
+            
+            for (_, value) in usersReceived where value["token"] as? String == self.peripheralDeviceEmail  {// swiftlint:disable:this force_cast
                 print(FishbowlStore.shared.users.count)
                 for (index, val) in FishbowlStore.shared.users.enumerated() where val.Email == self.peripheralDeviceEmail {
                     FishbowlStore.shared.users[index].DisplayName = (value["display_name"] as? String)
@@ -223,7 +202,7 @@ extension JoinViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // For the devices cells, dequeue one of the device cells and configure
-       
+      
         var tempBool = false
         let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
                                                  for: indexPath)
@@ -231,7 +210,7 @@ extension JoinViewController {
             if deviceDiscovery.devices.count > 0 {
             let device = deviceDiscovery.devices[indexPath.row]
             self.peripheralDeviceEmail = device.name
-                
+                                
             for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == self.peripheralDeviceEmail {
                 //                    print("email already exists")
                 
@@ -262,34 +241,13 @@ extension JoinViewController {
                         if success {
                             print("Success")
                             
-//                            for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
-//                                if value.imageUrl != "" {
-//
-//                                    self.downloadImage(from: URL(string: value.imageUrl!)!, )// swiftlint:disable:this force_cast
-//
-//
-//                                }
-//
-//                                } else {
-//                                    let url = "http://3.15.21.206/media/Taylor1636832650.1411505.jpeg"
-//                                    self.downloadImage(from: URL(string:url)!, cell:cell)// swiftlint:disable:this force_cast
-//                                }
-//                            }
-                            
                             for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
                                 deviceCell.configureForDevice(named: value, selectable: false)
                             }
                             
-                            //                        tableView.reloadData()
                             
                         } else {
                             print("Error")
-
-//                            deviceDiscovery.devices.remove(at: indexPath.row)
-//                            for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
-//                                deviceCell.configureForDevice(named: value, selectable: false)
-//                            }
-//                            self.tableView.deleteRows(at: [indexPath], with: .fade)
                             
                             for (index,value) in FishbowlStore.shared.users.enumerated() where value.Email == self.peripheralDeviceEmail {
                                 //remove them from list so that we can try again
@@ -344,130 +302,9 @@ extension JoinViewController {
 //                }
             }
         }
+        
         return cell
     }
-    
-    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //
-    //        // IF THIS IS A NEW USER, then we send the get request
-    //
-    //        var tempBool = false
-    //        if deviceDiscovery.devices.count > 0 {
-    //
-    //            let device = deviceDiscovery.devices[indexPath.row]
-    //
-    ////            self.peripheralDeviceEmail = (device.name) // swiftlint:disable:this force_cast
-    //            self.peripheralDeviceEmail = "DojaEmail"
-    //
-    //            for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == self.peripheralDeviceEmail {
-    //    //                    print("email already exists")
-    //
-    //                for (i, x) in deviceDiscovery.devices.enumerated() where x.name == self.peripheralDeviceEmail {
-    //                    if x.rssi != device.rssi {
-    //                        print("Editing RSSI Value")
-    //
-    //                        FishbowlStore.shared.users[index].rssi = device.rssi
-    //                        self.tableView.reloadData()
-    //    //                    return cell
-    //                    }
-    //                }
-    //    //            return cell
-    //                tempBool = true
-    //            }
-    //
-    //            if tempBool == false {
-    //                let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
-    //                                                         for: indexPath)
-    //                if let deviceCell = cell as? DeviceTableViewCell {
-    //                    deviceCell.configureForNoDevicesFound()
-    //                }
-    //            FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  self.peripheralDeviceEmail, rssi: device.rssi))
-    //                // TODO change email to self.peripheralDeviceEmail
-    //            getIndividualProfile(email: "DojaEmail", users: &FishbowlStore.shared.users) {success in
-    //                DispatchQueue.main.async {
-    //                    print("reached here")
-    //                    if success {
-    //                        print("Success")
-    //                    } else {
-    //                        print("Error")
-    //                    }
-    //                    // download the image from given image url
-    //                    for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
-    //                        if value.imageUrl != "" {
-    //                            self.downloadImage(from: URL(string: value.imageUrl!)!)// swiftlint:disable:this force_cast
-    //                        } else {
-    //                            let url = "http://3.15.21.206/media/Taylor1636832650.1411505.jpeg"
-    //                            self.downloadImage(from: URL(string:url)!)// swiftlint:disable:this force_cast
-    //                        }
-    //                    }
-    //
-    ////                    self.refreshControl?.endRefreshing()
-    //                    if let deviceCell = cell as? DeviceTableViewCell {
-    //                        for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
-    //                            deviceCell.configureForDevice(named: value, selectable: false)
-    //                        }
-    //
-    ////                        tableView.reloadData()
-    //                    }
-    //
-    //                }
-    //            }
-    //
-    //        }
-    //        }else {
-    //            let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
-    //                                                     for: indexPath)
-    //            if let deviceCell = cell as? DeviceTableViewCell {
-    //                deviceCell.configureForNoDevicesFound()
-    //            }
-    //            return cell
-    //            if FishbowlStore.shared.users.count != 1 {
-    //            self.peripheralDeviceEmail = "DojaEmail"
-    //            FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  self.peripheralDeviceEmail, rssi: "WARM"))
-    //                // TODO change email to self.peripheralDeviceEmail
-    //            getIndividualProfile(email: "DojaID", users: &FishbowlStore.shared.users) {success in
-    //                DispatchQueue.main.async {
-    //                    print("reached here")
-    //                    if success {
-    //                        print("Success")
-    //
-    //                        for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
-    //                            if value.imageUrl != "" {
-    //                                self.downloadImage(from: URL(string: value.imageUrl!)!)// swiftlint:disable:this force_cast
-    //                            } else {
-    //                                let url = "http://3.15.21.206/media/Taylor1636832650.1411505.jpeg"
-    //                                self.downloadImage(from: URL(string:url)!)// swiftlint:disable:this force_cast
-    //                            }
-    //                        }
-    //
-    //
-    //                        let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
-    //                                                                 for: indexPath)
-    //
-    //                        self.refreshControl?.endRefreshing()
-    //                        if let deviceCell = cell as? DeviceTableViewCell {
-    //                            for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
-    //                                deviceCell.configureForDevice(named: value, selectable: false)
-    //                            }
-    //
-    //    //                        tableView.reloadData()
-    //                        }
-    //
-    //                    } else {
-    //                        print("Error")
-    //                        self.tableView.deleteRows(at: [indexPath], with: .fade)
-    //                    }
-    // download the image from given image url
-    
-    //
-    //                }
-    //            }
-    //        }
-    //
-    //    }
-    //            return cell
-    
-    //}
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == Sections.availableDevices { return "Available Devices" }

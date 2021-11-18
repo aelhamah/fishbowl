@@ -138,7 +138,8 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
 ////            print("this is not a umich email 22" )
 //            return
 //        }
-//        print(name)
+        
+//        print("DEVICE NAME: ", name)
 
         // Capture all of this in a device object
         let device = Device(peripheral: peripheral, name: name, rssi: classifyProximity(rssi: RSSI))
