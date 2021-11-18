@@ -133,12 +133,11 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
             name = deviceName
         }
 //        print("RSSI",classifyProximity(rssi: RSSI))
-        
 //        print(name)
-        if !name.contains("@umich.edu") {
-//            print("this is not a umich email 22" )
-            return
-        }
+//        if !name.contains("@umich.edu") {
+////            print("this is not a umich email 22" )
+//            return
+//        }
 //        print(name)
 
         // Capture all of this in a device object
@@ -149,10 +148,10 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
             self?.updateDeviceList(with: device)
             for (index, device) in self!.devices.enumerated() {
                 
-                if device.lastseen + TimeInterval(10) < Date() {
-                    self!.devices.remove(at: index)
-                    break
-                }
+//                if device.lastseen + TimeInterval(20) < Date() {
+//                    self!.devices.remove(at: index)
+//                    break
+//                }
             }
         }
     }

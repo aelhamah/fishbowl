@@ -230,6 +230,8 @@ extension JoinViewController {
         if let deviceCell = cell as? DeviceTableViewCell {
             if deviceDiscovery.devices.count > 0 {
             let device = deviceDiscovery.devices[indexPath.row]
+            self.peripheralDeviceEmail = device.name
+                
             for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == self.peripheralDeviceEmail {
                 //                    print("email already exists")
                 
@@ -250,10 +252,11 @@ extension JoinViewController {
             
             // If we have a list of devices, configure each cell with its name
             if deviceDiscovery.devices.count > 0 && tempBool == false {
-                self.peripheralDeviceEmail = "DojaEmail"
+                let device = deviceDiscovery.devices[indexPath.row]
+                self.peripheralDeviceEmail = device.name
                 FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  self.peripheralDeviceEmail, rssi: "WARM"))
                 // TODO change email to self.peripheralDeviceEmail
-                getIndividualProfile(email: "DojaID", users: &FishbowlStore.shared.users) {success in
+                getIndividualProfile(email: self.peripheralDeviceEmail, users: &FishbowlStore.shared.users) {success in
                     DispatchQueue.main.async {
                         print("reached here")
                         if success {
@@ -283,7 +286,11 @@ extension JoinViewController {
                             print("Error")
 
 //                            deviceDiscovery.devices.remove(at: indexPath.row)
-                            self.tableView.deleteRows(at: [indexPath], with: .fade)
+//                            for value in FishbowlStore.shared.users where value.Email == self.peripheralDeviceEmail {
+//                                deviceCell.configureForDevice(named: value, selectable: false)
+//                            }
+//                            self.tableView.deleteRows(at: [indexPath], with: .fade)
+                            
                             for (index,value) in FishbowlStore.shared.users.enumerated() where value.Email == self.peripheralDeviceEmail {
                                 //remove them from list so that we can try again
                                 FishbowlStore.shared.users.remove(at: index)
