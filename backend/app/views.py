@@ -269,8 +269,15 @@ def getblocks(request):
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM blocks WHERE sender = '{}';".format(sender))
     rows = cursor.fetchall()
+    blocks = []
+    for row in rows:
+        # get the receiver information
+        cursor.execute("SELECT * FROM users WHERE email = '{}';".format(row[1]))
+        receiver = cursor.fetchone()
+        blocks.append({cursor.description[i][0]: receiver[i] for i in range(len(cursor.description))}) 
+
     response = {
-        "blocks" : [row[1] for row in rows]
+        "blocks" : blocks
     }
 
     return JsonResponse(response)
