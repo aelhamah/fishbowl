@@ -202,44 +202,25 @@ extension JoinViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // For the devices cells, dequeue one of the device cells and configure
-
-        var tempBool = false
-                // For the devices cells, dequeue one of the device cells and configure
-//        if deviceDiscovery.devices.count > 0 {
-//        let device = deviceDiscovery.devices[indexPath.row]
-//                    for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == self.peripheralDeviceEmail {
-//                        //                    print("email already exists")
-//
-//                        for (i, x) in deviceDiscovery.devices.enumerated() where x.name == self.peripheralDeviceEmail {
-//                            if x.rssi != device.rssi {
-//                                print("Editing RSSI Value")
-//
-//                                FishbowlStore.shared.users[index].rssi = device.rssi
-//                                self.tableView.reloadData()
-//                                //                    return cell
-//                            }
-//                        }
-//                        //            return cell
-//                        tempBool = true
-//                    }
-//        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
                                                  for: indexPath)
         if let deviceCell = cell as? DeviceTableViewCell {
             
-                    // If we have a list of devices, configure each cell with its name
-                    if deviceDiscovery.devices.count > 0 {
-                        let device = deviceDiscovery.devices[indexPath.row]
-                        for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == device.name {
-                        deviceCell.configureForDevice(named: value)
-                        }
-                    } else {
-                        // If no devices found, show "no devices"
-                        deviceCell.configureForNoDevicesFound()
-                    }
+            // If we have a list of devices, configure each cell with its name
+            if deviceDiscovery.devices.count > 0 {
+                let device = deviceDiscovery.devices[indexPath.row]
+                for var (index, value) in FishbowlStore.shared.users.enumerated() where value.Email == device.name {
+                    FishbowlStore.shared.users[index].rssi = device.rssi
+                    deviceCell.configureForDevice(named: value)
                 }
-
-                return cell
+            } else {
+                // If no devices found, show "no devices"
+                deviceCell.configureForNoDevicesFound()
+            }
+        }
+        
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

@@ -20,6 +20,7 @@ struct UserProfile {
     @ProfilePropWrapper var imageUrl: String?
     var imageData: Data?
     var rssi: String?
+    var configuredCell: Bool?
 }
 
 @propertyWrapper

@@ -168,7 +168,20 @@ class BluetoothDeviceDiscovery: NSObject {
     fileprivate func updateDeviceList(with device: Device) {
         // If a device already exists in the list, replace it with this new device
         if let index = devices.firstIndex(where: { $0.peripheral.identifier == device.peripheral.identifier }) {
-            guard devices[index].name != device.name else { return }
+            guard devices[index].name != device.name else {
+                devices[index].rssiCounter -= 1
+                if  devices[index].rssiCounter == 0 {
+                    if devices[index].rssi != device.rssi
+                    {
+                        devices[index].rssi = device.rssi
+                        devicesListUpdatedHandler?()
+                    }
+                    devices[index].rssiCounter = 30
+                }
+               
+                return
+                
+            }
             devices.remove(at: index)
 //            FishbowlStore.shared.devices.remove(at: index)
             devices.insert(device, at: index)
@@ -176,9 +189,12 @@ class BluetoothDeviceDiscovery: NSObject {
             if peripheralManager.isAdvertising {
                 devices[index].lastseen = Date()
             }
-            devicesListUpdatedHandler?()
+//            devices[index].rssi = device.rssi
+//            devicesListUpdatedHandler?()
             return
         }
+        
+        
 
         // If this item didn't exist in the list, append it to the end
         if peripheralManager.isAdvertising {
@@ -189,9 +205,8 @@ class BluetoothDeviceDiscovery: NSObject {
             }
             
             if tempBool == false {
-                
             
-            FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  device.name, rssi: device.rssi))
+                FishbowlStore.shared.users.append(UserProfile(DisplayName: "", Email:  device.name, rssi: device.rssi, configuredCell: false))
             getIndividualProfile(email: device.name, users: &FishbowlStore.shared.users) {success in
                 DispatchQueue.main.async {
                     print("reached here")
@@ -253,7 +268,8 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         // Capture all of this in a device object
         let device = Device(peripheral: peripheral, name: name, rssi: classifyProximity(rssi: RSSI) )
         // Add or update this object to the visible list
-
+        print("Device Name:", device.name)
+        print("RSSI:", device.rssi)
         DispatchQueue.main.async { [weak self] in
             self?.updateDeviceList(with: device)
             for (index, device) in self!.devices.enumerated() {

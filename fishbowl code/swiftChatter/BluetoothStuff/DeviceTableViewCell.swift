@@ -52,6 +52,10 @@ class DeviceTableViewCell: UITableViewCell {
             
         }
         
+        for var (index,value) in FishbowlStore.shared.users.enumerated() where value.Email == user.Email {
+            FishbowlStore.shared.users[index].configuredCell = true
+        }
+        
     }
 
     
