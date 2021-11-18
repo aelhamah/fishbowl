@@ -512,15 +512,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4t-ix-jG4">
-                                        <rect key="frame" x="54" y="458" width="310" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="zMl-td-gyF" id="cJB-im-bH5"/>
-                                        </connections>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm looking for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5D-hX-ZrL">
                                         <rect key="frame" x="54" y="500" width="113" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -528,12 +519,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-OR-gCM">
-                                        <rect key="frame" x="54" y="529" width="310" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naR-CR-erQ">
                                         <rect key="frame" x="54" y="637" width="279" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -548,12 +533,79 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w6V-fN-SFs">
-                                        <rect key="frame" x="54" y="595" width="310" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrT-PZ-oA4">
+                                        <rect key="frame" x="62" y="461" width="77" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Men"/>
+                                        <connections>
+                                            <action selector="interestMen:" destination="zMl-td-gyF" eventType="touchUpInside" id="m8i-IQ-9Gy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmR-hR-1ug">
+                                        <rect key="frame" x="157" y="461" width="96" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Women"/>
+                                        <connections>
+                                            <action selector="interestWomen:" destination="zMl-td-gyF" eventType="touchUpInside" id="UsP-gJ-Fep"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fM-dG-cqC">
+                                        <rect key="frame" x="268" y="461" width="85" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Both"/>
+                                        <connections>
+                                            <action selector="interestBoth:" destination="zMl-td-gyF" eventType="touchUpInside" id="BHk-s5-OCK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4G-dA-zUR">
+                                        <rect key="frame" x="54" y="532" width="151" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="manButton"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Casual Relationship"/>
+                                        <connections>
+                                            <action selector="casual:" destination="zMl-td-gyF" eventType="touchUpInside" id="l0e-fV-GXm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJX-Iv-WpZ">
+                                        <rect key="frame" x="54" y="594" width="75" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Male"/>
+                                        <connections>
+                                            <action selector="identifyMale:" destination="zMl-td-gyF" eventType="touchUpInside" id="GXk-LJ-8pR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKe-31-hqb">
+                                        <rect key="frame" x="146" y="594" width="99" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Female"/>
+                                        <connections>
+                                            <action selector="identifyFemale:" destination="zMl-td-gyF" eventType="touchUpInside" id="upw-5V-Y6w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCq-g2-q03">
+                                        <rect key="frame" x="253" y="594" width="130" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Non-binary"/>
+                                        <connections>
+                                            <action selector="non_binary:" destination="zMl-td-gyF" eventType="touchUpInside" id="M3N-dG-y9A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSz-3W-Vkj">
+                                        <rect key="frame" x="227" y="532" width="156" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Serious Relationship"/>
+                                        <connections>
+                                            <action selector="serious:" destination="zMl-td-gyF" eventType="touchUpInside" id="eBS-0S-Lty"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ZXT-Lm-Ldl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Zm0-Tg-fbY"/>
@@ -572,9 +624,7 @@
                         <outlet property="Bio" destination="OkK-3S-tJL" id="BAg-uR-YkQ"/>
                         <outlet property="Email" destination="LuN-eC-ndv" id="uoU-Sc-abj"/>
                         <outlet property="FirstName" destination="JTG-4z-zNH" id="zCk-PJ-Jio"/>
-                        <outlet property="GenderPreference" destination="U4t-ix-jG4" id="8oQ-tj-YZ4"/>
                         <outlet property="LastName" destination="bhV-re-vYY" id="eQd-xg-fob"/>
-                        <outlet property="RelationshipPreference" destination="gLJ-OR-gCM" id="a2s-9x-Ub0"/>
                         <outlet property="ScrollView" destination="MsA-oC-mOs" id="Yb5-wl-WVF"/>
                         <outlet property="Username" destination="Enf-yh-vcF" id="ur9-Va-njv"/>
                         <outlet property="postProfilePicture" destination="9Mw-hB-HqQ" id="kac-gs-Qjp"/>
