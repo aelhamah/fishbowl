@@ -123,6 +123,7 @@ final class MatchVC: UITableViewController {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
            // populate a single cell
            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MatchTableCell", for: indexPath) as? MatchTableCell else {
                fatalError("No reusable cell!")
@@ -147,6 +148,7 @@ final class MatchVC: UITableViewController {
             FishbowlStore.shared.getMatches { success in
                 DispatchQueue.main.async {
                     if success {
+                        print("refresh timeline")
                         self.tableView.reloadData()
                     }
                     // stop the refreshing animation upon completion:
