@@ -101,6 +101,9 @@ def createusers(request):
     display_name = request.POST.get("display_name")
     email = request.POST.get("email")
     bio = request.POST.get("bio")
+    gender_preference = request.POST.get("gender_preference")
+    relationship_preference = request.POST.get("relationship_preference")
+    gender_identity = request.POST.get("gender_identity")
 
     if request.FILES.get("image"):
         content = request.FILES['image']
@@ -116,8 +119,8 @@ def createusers(request):
     # delete the exiting user
     cursor.execute('DELETE FROM users WHERE email = %s;', (email,))
 
-    cursor.execute('INSERT INTO users (fullname, display_name, email, bio, imageurl, username) VALUES '
-                '(%s,%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING;', (fullname,display_name,email,bio,imageurl,username))
+    cursor.execute('INSERT INTO users (fullname, display_name, email, bio, imageurl, username, gender_preference, relationship_preference, gender_identity) VALUES '
+            '(%s,%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING;', (fullname,display_name,email,bio,imageurl,username,gender_preference,relationship_preference,gender_identity))
     
     cursor.execute('SELECT id FROM users WHERE email = %s;', (email,))
     rows = cursor.fetchall()
