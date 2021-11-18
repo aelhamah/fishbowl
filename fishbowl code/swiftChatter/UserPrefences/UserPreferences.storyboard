@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5fx-pu-y4D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5fx-pu-y4D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="dashLanding" id="WBk-ke-PwM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXV-4A-alu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-173" y="-179"/>
+            <point key="canvasLocation" x="-1639" y="-82"/>
         </scene>
         <!--Title-->
         <scene sceneID="1wj-7w-UNB">
@@ -153,13 +153,13 @@
                         <outlet property="genderPreference" destination="ajJ-ay-dkv" id="kww-jV-5e5"/>
                         <outlet property="newProfilePicture" destination="w8r-xg-YWM" id="4SC-e7-JYT"/>
                         <outlet property="relationshipPreference" destination="s7x-Ge-RWJ" id="Pyh-gC-LLd"/>
-                        <segue destination="ucO-Wj-jEv" kind="showDetail" identifier="GoToEditBio" id="hY9-Du-F9p"/>
                         <segue destination="pQ1-Fy-TJm" kind="showDetail" identifier="GoToEditPreferences" id="q9t-uT-MHy"/>
+                        <segue destination="ucO-Wj-jEv" kind="showDetail" identifier="GoToEditBio" id="6ew-ct-w3J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL9-7k-viQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421.73913043478262" y="22.767857142857142"/>
+            <point key="canvasLocation" x="-319" y="-183"/>
         </scene>
         <!--Edit Bio-->
         <scene sceneID="RS3-GK-Gui">
@@ -224,6 +224,7 @@
                         <viewLayoutGuide key="safeArea" id="VvP-1x-7Og"/>
                         <color key="backgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HM7-vH-56K"/>
                     <connections>
                         <outlet property="ChangesButton" destination="eoZ-jn-hh8" id="MgZ-XP-PFQ"/>
                         <outlet property="NewBiography" destination="8R8-yw-hgZ" id="xZR-Ox-lTg"/>
@@ -232,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaF-rn-4WV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1417.3913043478262" y="1355.3571428571429"/>
+            <point key="canvasLocation" x="-507.24637681159425" y="1355.3571428571429"/>
         </scene>
         <!--Blocked Users-->
         <scene sceneID="rSa-w1-Rcj">
@@ -250,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHv-Lg-Vhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2312" y="1355"/>
+            <point key="canvasLocation" x="3221.739130434783" y="1354.6875"/>
         </scene>
         <!--Edit Preferences-->
         <scene sceneID="Jm2-vQ-l3R">
@@ -300,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFt-cB-4gG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500.00000000000006" y="1354.6875"/>
+            <point key="canvasLocation" x="1410.144927536232" y="1354.6875"/>
         </scene>
         <!--Blocked Users-->
         <scene sceneID="FCW-wy-BKV">
@@ -395,7 +396,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ejk-r0-Ont"/>
+        <segue reference="uUW-72-hTB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EditBio" width="328" height="252"/>

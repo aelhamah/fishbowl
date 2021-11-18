@@ -19,8 +19,6 @@
 		B362603F26E8003900A44FEC /* ChattStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362603E26E8003900A44FEC /* ChattStore.swift */; };
 		B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604626E802E000A44FEC /* ChatTableCell.swift */; };
 		B362604C26E803AC00A44FEC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604B26E803AC00A44FEC /* MainVC.swift */; };
-		B37076852745B50C0062C19E /* MyCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37076842745B50C0062C19E /* MyCell1.swift */; };
-		B37076872745B5230062C19E /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37076862745B5230062C19E /* GenericCell.swift */; };
 		BB25840B273D7DE30093CC0C /* Fishbowl_ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */; };
 		BB25840D273D84010093CC0C /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840C273D84010093CC0C /* SigninVC.swift */; };
 		BB25840F27405EA10093CC0C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840E27405EA10093CC0C /* SignupVC.swift */; };
@@ -100,8 +98,6 @@
 		B362603E26E8003900A44FEC /* ChattStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattStore.swift; sourceTree = "<group>"; };
 		B362604626E802E000A44FEC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		B362604B26E803AC00A44FEC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		B37076842745B50C0062C19E /* MyCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell1.swift; sourceTree = "<group>"; };
-		B37076862745B5230062C19E /* GenericCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCell.swift; sourceTree = "<group>"; };
 		BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishbowl_ID.swift; sourceTree = "<group>"; };
 		BB25840C273D84010093CC0C /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		BB25840E27405EA10093CC0C /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
@@ -182,7 +178,7 @@
 				B3625FFE26E7F1D800A44FEC /* Products */,
 				4BB4E32EE1F0EB772C73335F /* Pods */,
 				E28B91A398B948BDB506AF6D /* Frameworks */,
-				B37076832745A1B20062C19E /* Recovered References */,
+				DB68B1282745AC2E0017A8FC /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,8 +200,8 @@
 				BB28B2CE2744106300BB9814 /* LikingUser */,
 				BB28B2C927440EE000BB9814 /* LikedMatches */,
 				BB28B2C727440E2C00BB9814 /* UserPrefences */,
-				B362600626E7F1D800A44FEC /* Main.storyboard */,
 				B362604B26E803AC00A44FEC /* MainVC.swift */,
+				B362600626E7F1D800A44FEC /* Main.storyboard */,
 				BB28B2C527440C5F00BB9814 /* TabBar.swift */,
 				BB7D04ED2734308700B26E43 /* FishbowlStore.swift */,
 				BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */,
@@ -355,6 +351,13 @@
 			children = (
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		DB68B1282745AC2E0017A8FC /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		E28B91A398B948BDB506AF6D /* Frameworks */ = {
@@ -779,14 +782,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84C6MHGUU4;
+				DEVELOPMENT_TEAM = G72JGSU347;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.rithikag.Bluetooth;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.nician.fishbowl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -800,14 +803,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84C6MHGUU4;
+				DEVELOPMENT_TEAM = G72JGSU347;
 				INFOPLIST_FILE = swiftChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.rithikag.Bluetooth;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.nician.fishbowl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

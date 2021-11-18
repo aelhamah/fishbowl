@@ -67,44 +67,132 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBOutlet weak var GenderPreference: UITextField!
     
-    @IBOutlet weak var genderPreferenceDropdown: UIPickerView!
+  //  @IBOutlet weak var genderPreferenceDropdown: UIPickerView!
     @IBOutlet weak var RelationshipPreference: UITextField!
     
-//    var genderPreferenceList = ["Men", "Women", "Men and Women", "Any"]
+    var interest = ""
+    var looking_for = ""
+    var identify = ""
+    var interestMen = false
+    var interestWomen = false
+    var interestBoth = false
+    var casualbool = false
+    var seriousbool = false
+    var identifyMale = false
+    var identifyFemale = false
+    var identifyNonBinary = false
     
-    var list = ["1", "2", "3"]
+    
+    
+    @IBAction func interestMen(_ sender: UIButton) {
+        interest = "men"
 
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
-        return 1
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-
-        return list.count
-    }
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-
-        self.view.endEditing(true)
-        return list[row]
-    }
-
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-
-        self.GenderPreference.text = self.list[row]
-        self.genderPreferenceDropdown.isHidden = true
-    }
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-
-        if textField == self.GenderPreference {
-            self.genderPreferenceDropdown.isHidden = false
-            //if you don't want the users to se the keyboard type:
-
-            textField.endEditing(true)
-        }
+        
+        menPreferenceOutlet.tintColor = UIColor.systemPink
+        womenPreferenceOutlet.tintColor = UIColor.white
+        bothPreferenceOutlet.tintColor = UIColor.white
+        
+      
+      
+        
+//
+        
+//        var manButton = sender as UIButton
+//        dispatch_async(dispatch_get_main_queue()) {
+//            self.memberButton.highlighted = manButton == self.memberButton
+//            self.signUpButton.highlighted = manButton == self.signUpButton
+//        }
+        
+    
+        
+        
+        print(interest)
     }
     
+    @IBAction func interestWomen(_ sender: UIButton) {
+        interest = "women"
+        interestMen = false
+        interestWomen = true
+        interestBoth = false
+        
+        menPreferenceOutlet.tintColor = UIColor.white
+        womenPreferenceOutlet.tintColor = UIColor.systemPink
+        bothPreferenceOutlet.tintColor = UIColor.white
+ 
+        //print(interest)
+    }
+    
+    @IBOutlet weak var menPreferenceOutlet: UIButton!
+    
+    @IBOutlet weak var womenPreferenceOutlet: UIButton!
+    
+    
+    @IBOutlet weak var bothPreferenceOutlet: UIButton!
+    
+    @IBOutlet weak var casualRelationship: UIButton!
+    
+    @IBOutlet weak var seriousRelationship: UIButton!
+    
+    @IBOutlet weak var maleIdentityButton: UIButton!
+    
+    @IBOutlet weak var femaleIdentityButton: UIButton!
+    @IBOutlet weak var nonbinaryIdentityButton: UIButton!
+    
+    @IBAction func interestBoth(_ sender: UIButton) {
+        interest = "both"
+    
+        interestMen = false
+        interestWomen = false
+        interestBoth = true
+        
+        menPreferenceOutlet.tintColor = UIColor.white
+        womenPreferenceOutlet.tintColor = UIColor.white
+        bothPreferenceOutlet.tintColor = UIColor.systemPink
+        
+
+        //print(interest)
+    }
+    
+    
+    @IBAction func casual(_ sender: UIButton) {
+        looking_for = "casual"
+        casualRelationship.tintColor = UIColor.systemPink
+        seriousRelationship.tintColor = UIColor.white
+        
+        //print(looking_for)
+    }
+    
+    @IBAction func serious(_ sender: UIButton) {
+        looking_for = "serious"
+        casualRelationship.tintColor = UIColor.white
+        seriousRelationship.tintColor = UIColor.systemPink
+        //print(looking_for)
+    }
+    
+    
+    @IBAction func identifyMale(_ sender: UIButton) {
+        identify = "male"
+        maleIdentityButton.tintColor = UIColor.systemPink
+        femaleIdentityButton.tintColor = UIColor.white
+        nonbinaryIdentityButton.tintColor = UIColor.white
+        //print(identify)
+    }
+    
+    @IBAction func identifyFemale(_ sender: UIButton) {
+        identify = "female"
+        maleIdentityButton.tintColor = UIColor.white
+        femaleIdentityButton.tintColor = UIColor.systemPink
+        nonbinaryIdentityButton.tintColor = UIColor.white
+        //print(identify)
+    }
+    
+    @IBAction func non_binary(_ sender: UIButton) {
+        identify = "non-binary"
+        maleIdentityButton.tintColor = UIColor.white
+        femaleIdentityButton.tintColor = UIColor.white
+        nonbinaryIdentityButton.tintColor = UIColor.systemPink
+        //print(identify)
+    }
     @IBAction func SignUpComplete(_ sender: Any) {
         
         let user = UserProfile(FishBowlID: Fishbowl_ID.shared.id,
@@ -113,8 +201,8 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
                                DisplayName: FirstName.text,
                                Email: Email.text,
                                Bio: Bio.text,
-                               GenderPreference: GenderPreference.text,
-                               RelationshipPreference: RelationshipPreference.text,
+                               GenderPreference: interest,
+                               RelationshipPreference: looking_for,
                                imageUrl: nil)
         
         FishbowlStore.shared.createUserProfile(user, image: postProfilePicture.image) 

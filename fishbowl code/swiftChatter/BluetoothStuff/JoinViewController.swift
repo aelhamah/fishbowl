@@ -322,11 +322,18 @@ extension JoinViewController {
 
         guard indexPath.section == Sections.availableDevices,
                 deviceDiscovery.devices.count > 0 else { return }
+        
+        FishbowlStore.shared.fishies = FishesProfile(FishBowlID: "1", Username: "nic", FullName: "nic", DisplayName: "nic", Email: "nic", Bio: "nic", GenderPreference: "nic", RelationshipPreference: "nic", imageUrl: nil, imageData: nil, rssi: "nic")
+        
+        let storyboard = UIStoryboard(name: "ProfilePage", bundle: nil)
+        let myVC = storyboard.instantiateViewController(withIdentifier: "ProfilePageView") as! ProfilePage
+        self.navigationController?.pushViewController(myVC, animated: true)
+
 
         // Create a chat view controller and present it
-        let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
-                                                    currentDeviceName: deviceName)
-        navigationController?.pushViewController(chatViewController, animated: true)
+//        let chatViewController = ChatViewController(device: deviceDiscovery.devices[indexPath.row],
+//                                                    currentDeviceName: deviceName)
+//        navigationController?.pushViewController(chatViewController, animated: true)
 
     }
 }

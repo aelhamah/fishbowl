@@ -10,14 +10,16 @@ import Foundation
 struct FishesProfile {
     
     var FishBowlID: String?
-
+    var Username: String?
+    var FullName: String?
     var DisplayName: String?
+    var Email: String?
     var Bio: String?
-    var Gender: String?
-    var Sexuality: String?
-    var Relationship: String?
+    var GenderPreference: String?
+    var RelationshipPreference: String?
     @FishesPropWrapper var imageUrl: String?
     var imageData: Data?
+    var rssi: String?
 }
 
 @propertyWrapper

@@ -12,6 +12,7 @@ target 'swiftChatter' do
   pod 'GoogleSignIn'
   pod 'MessageKit'
   pod 'SwiftLint'
+  pod 'DropDown'
 
 end
 

@@ -18,9 +18,9 @@ final class EditPreferences: UIViewController {
     
     @IBOutlet weak var ChangesButton: UIButton!
     
-    @IBOutlet weak var EditGenderPreference: UITextField!
+   
     
-    @IBOutlet weak var EditRelationshipPreference: UITextField!
+
     
     
     @IBAction func SaveChanges(_ sender: Any) {

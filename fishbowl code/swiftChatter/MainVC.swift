@@ -93,6 +93,7 @@ final class MainVC: UITableViewController, CBCentralManagerDelegate, CBPeriphera
         super.viewDidLoad()
 //        self.tableView.rowHeight = 80;
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        
 
         // setup refreshControler here later
                //refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
