@@ -23,6 +23,7 @@ class BluetoothDeviceDiscovery: NSObject {
     }
     
     var discoveryTimer : Timer =  Timer()
+    var isAdvertising : Bool = true
 
     /// A list of devices that have been discovered by this device
     private(set) public var devices = [Device]()
@@ -54,12 +55,35 @@ class BluetoothDeviceDiscovery: NSObject {
         // If let deviceName = deviceName { self.deviceName = deviceName }
         // Set device name
         self.deviceName = Fishbowl_ID.shared.id
+        
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { timer in
+            print("processing")
+            for (index, device) in self.devices.enumerated() {
+                print("looking at "+device.name)
+                if device.lastseen + TimeInterval(5) < Date() {
+                    self.devices.remove(at: index)
+                    for (index,value) in FishbowlStore.shared.users.enumerated() where value.Email == device.name {
+                        //remove them from list so that we can try again
+                        FishbowlStore.shared.users.remove(at: index)
+                        break
+                    }
+                    print("removed "+device.name)
+                    self.devicesListUpdatedHandler?()
+                    break
+                }
+            }
+//
+//            if randomNumber == 10 {
+//                timer.invalidate()
+//            }
+        }
     }
     // Start advertising (Or re-advertise) this device as a peipheral
     func startAdvertising() {
         // Don't start until we've finished warming up
         guard peripheralManager.state == .poweredOn else { return }
 
+        isAdvertising = true
         // Stop advertising if we're already in progress
 //        if peripheralManager.isAdvertising { peripheralManager.stopAdvertising() }
         
@@ -73,7 +97,10 @@ class BluetoothDeviceDiscovery: NSObject {
         // Stop advertising if we're already in progress
         print("bluetooth discovery stop advetisnig")
         // Stop advertising if we're already in progress
+        isAdvertising = false
         peripheralManager.stopAdvertising()
+        devices = [Device]()
+        FishbowlStore.shared.users = [UserProfile]()
     }
     
     // Get image data
@@ -182,9 +209,9 @@ class BluetoothDeviceDiscovery: NSObject {
                 return
                 
             }
-            devices.remove(at: index)
-//            FishbowlStore.shared.devices.remove(at: index)
-            devices.insert(device, at: index)
+//            devices.remove(at: index)
+////            FishbowlStore.shared.devices.remove(at: index)
+//            devices.insert(device, at: index)
 //            FishbowlStore.shared.insert(device, at:index)
             if peripheralManager.isAdvertising {
                 devices[index].lastseen = Date()
@@ -271,14 +298,11 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         print("Device Name:", device.name)
         print("RSSI:", device.rssi)
         DispatchQueue.main.async { [weak self] in
-            self?.updateDeviceList(with: device)
-            for (index, device) in self!.devices.enumerated() {
+//            if ((self?.isAdvertising) == true) {
+                self?.updateDeviceList(with: device)
                 
-//                if device.lastseen + TimeInterval(20) < Date() {
-//                    self!.devices.remove(at: index)
-//                    break
-//                }
-            }
+//            }
+        
         }
     }
 }

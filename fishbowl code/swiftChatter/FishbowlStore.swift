@@ -112,7 +112,7 @@ final class FishbowlStore {
                         mpFD.append(display_name, withName: "display_name")
                     }
                     if let email = user.Email?.data(using: .utf8) {
-                        mpFD.append(email, withName: "email")
+                        mpFD.append(Fishbowl_ID.shared.email.data(using: .utf8)!, withName: "email")
                     }
                     if let bio = user.Bio?.data(using: .utf8) {
                         mpFD.append(bio, withName: "bio")
@@ -307,7 +307,7 @@ final class FishbowlStore {
                 Fishbowl_ID.shared.id = jsonObj["fishbowlID"] as? String ?? "DojaID"
                 Fishbowl_ID.shared.expiration = Date()+(jsonObj["lifetime"] as! TimeInterval)
                 Fishbowl_ID.shared.info = jsonObj["idinfo"] as! [String:Any]
-                Fishbowl_ID.shared.email = Fishbowl_ID.shared.info as? String ?? "DojaEmail"
+                Fishbowl_ID.shared.email = Fishbowl_ID.shared.info["email"] as? String ?? "DojaEmail"
 //                print(info["email"])
 //                Fishbowl_ID.shared.info = jsonObj["idinfo"] as! [String:String]
                 completion("OK")
