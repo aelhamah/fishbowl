@@ -172,6 +172,12 @@ class BluetoothDeviceDiscovery: NSObject {
                 print(FishbowlStore.shared.users.count)
                 for (index, val) in FishbowlStore.shared.users.enumerated() where val.Email == email {
                     FishbowlStore.shared.users[index].DisplayName = (value["display_name"] as? String)
+                    
+                    FishbowlStore.shared.users[index].Bio = (value["bio"] as? String)
+                    FishbowlStore.shared.users[index].GenderPreference = (value["gender_preference"] as? String)
+                    FishbowlStore.shared.users[index].RelationshipPreference = (value["relationship_preference"] as? String)
+                    
+                    
                     if value["imageurl"] != nil {
                         url = ((value["imageurl"] as? String)!)// swiftlint:disable:this force_cast
                         FishbowlStore.shared.users[index].imageUrl = url
