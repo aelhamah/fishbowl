@@ -31,17 +31,17 @@ final class UserPreferences: UIViewController, UIImagePickerControllerDelegate, 
         BioButton.layer.cornerRadius = 22
         PreferencesButton.layer.cornerRadius = 22
         
-        var user_list = ["change this later"]
-        var user = FishbowlStore.shared.getProfile(user_list: user_list) { success in
-                       DispatchQueue.main.async {
-                           print("reached here")
-                           if success {
-                               print("suceeded")
-                               self.genderPreference.text = "Men"
-                               self.relationshipPreference.text = "Casual"
-                           }
-                       }
-                   }
+//        var user_list = ["change this later"]
+//        var user = FishbowlStore.shared.getProfile(user_list: user_list) { success in
+//                       DispatchQueue.main.async {
+//                           print("reached here")
+//                           if success {
+//                               print("suceeded")
+//                               self.genderPreference.text = "Men"
+//                               self.relationshipPreference.text = "Casual"
+//                           }
+//                       }
+//                   }
     }
     
 

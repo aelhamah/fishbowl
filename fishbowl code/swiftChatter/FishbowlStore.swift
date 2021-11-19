@@ -20,41 +20,41 @@ final class FishbowlStore {
 
     private let serverUrl = "http://3.15.21.206/"
 
-    func getProfile(user_list: [String], _ completion: ((Bool) -> ())?) -> [UserProfile]? {
-        guard let apiUrl = URL(string: serverUrl+"getusers/") else {
-            print("getProfile: bad URL")
-            return []
-        }
-        
-        let parameters: [String: String] = ["user_ids": "jenna@umich.edu"]
-        print(apiUrl)
-        AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
-            var success = false
-            defer { completion?(success) }
-            guard let data = response.data, response.error == nil else {
-                print("getProfile: NETWORKING ERROR")
-                return
-            }
-            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
-                print("getProfile: failed JSON deserialization")
-                return
-            }
-        
-            let usersReceived = jsonObj["users"] as! Dictionary<String, Dictionary<String, Any>>
-            self.users = [UserProfile]()
-//            print(usersReceived?[1]["username"])
-            for (_, value) in usersReceived {
-                    print(value["bio"]!)
-                    print(value["username"]!)
-                self.users.append(UserProfile(Username: (value["username"] as! String), Bio: (value["bio"] as! String)))
-            }
-            success = true // for completion(success)
-//            print(self.users)
-        }.resume()
-        return users
-    }
+//    func getProfile(user_list: [String], _ completion: ((Bool) -> ())?) -> [UserProfile]? {
+//        guard let apiUrl = URL(string: serverUrl+"getusers/") else {
+//            print("getProfile: bad URL")
+//            return []
+//        }
+//        
+//        let parameters: [String: String] = ["user_ids": "jenna@umich.edu"]
+//        print(apiUrl)
+//        AF.request(apiUrl, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
+//            var success = false
+//            defer { completion?(success) }
+//            guard let data = response.data, response.error == nil else {
+//                print("getProfile: NETWORKING ERROR")
+//                return
+//            }
+//            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+//                print("getProfile: failed JSON deserialization")
+//                return
+//            }
+//        
+//            let usersReceived = jsonObj["users"] as! Dictionary<String, Dictionary<String, Any>>
+//            self.users = [UserProfile]()
+////            print(usersReceived?[1]["username"])
+//            for (_, value) in usersReceived {
+//                    print(value["bio"]!)
+//                    print(value["username"]!)
+//                self.users.append(UserProfile(Username: (value["username"] as! String), Bio: (value["bio"] as! String)))
+//            }
+//            success = true // for completion(success)
+////            print(self.users)
+//        }.resume()
+//        return users
+//    }
     
-    func getProfile(id_token: String, sender: String, completion: @escaping (_ success: Bool) -> ()) {
+    func getProfile(id_token: String, completion: @escaping (_ success: Bool) -> ()) {
         guard let apiUrl = URL(string: "http://3.15.21.206/"+"getusers/") else {
             print("getProfile: bad URL")
             print("Getting image with dummy image")
@@ -63,14 +63,12 @@ final class FishbowlStore {
             //            self.downloadImage(from: URL(string: url)!)
             return
         }
-        let parameters = [
-            "user_ids": id_token,
-            "sender": sender
-        ]
+        let parameters: [String: String] = ["user_ids": id_token]
         print(apiUrl)
         var url = ""
         AF.request(apiUrl, method: .get, parameters: parameters,
                    encoding: URLEncoding.default).responseJSON { response in
+            print(response)
             guard let data = response.data, response.error == nil else {
                 print("getProfile: NETWORKING ERROR")
                 completion(false)
