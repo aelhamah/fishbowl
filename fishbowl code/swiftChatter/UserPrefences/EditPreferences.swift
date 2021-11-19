@@ -66,6 +66,7 @@ final class EditPreferences: UIViewController {
         //        var current_userid = Fishbowl_ID.shared.id
         // hardcoded change later
         var current_userid = "155b8782d2"
+        // call getusers api to retrieve all the info of current user
         FishbowlStore.shared.getProfile(id_token: current_userid) { success in
                        DispatchQueue.main.async {
                            print("reached here")
@@ -73,9 +74,18 @@ final class EditPreferences: UIViewController {
                                print("sucess hehe")
                            }
                        }
-//        then we need to call getusers api to retrieve all the info of current user
-//        then we update the relevant info
-//        call createusers api to update everything
+////        then we update the relevant info
+//            let user = UserProfile(FishBowlID: Fishbowl_ID.shared.id,
+//                                   Username: Username.text,
+//                                   FullName: LastName.text,
+//                                   DisplayName: FirstName.text,
+//                                   Email: Fishbowl_ID.shared.email,
+//                                   Bio: Bio.text,
+//                                   GenderPreference: interest,
+//                                   RelationshipPreference: looking_for,
+//                                   imageUrl: nil)
+//            //        call createusers api to update everything
+//            FishbowlStore.shared.createUserProfile(user, image: postProfilePicture.image)
         var current_userid = Fishbowl_ID.shared.id
 
 
