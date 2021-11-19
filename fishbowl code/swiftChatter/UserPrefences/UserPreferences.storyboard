@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5fx-pu-y4D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5fx-pu-y4D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -276,26 +276,62 @@
                                     <action selector="SaveChanges:" destination="pQ1-Fy-TJm" eventType="touchUpInside" id="u4A-pH-cBo"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Men, Women, Etc." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBd-P6-hU7">
-                                <rect key="frame" x="52" y="282" width="303" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERU-bf-vwy">
+                                <rect key="frame" x="64" y="285" width="73" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Casual, Serious" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Tt-iU-DcT">
-                                <rect key="frame" x="52" y="430" width="303" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Women"/>
+                                <connections>
+                                    <action selector="IntWomen:" destination="pQ1-Fy-TJm" eventType="touchUpInside" id="5Pv-Mc-dFE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yj-k7-DeL">
+                                <rect key="frame" x="169" y="285" width="52" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Men"/>
+                                <connections>
+                                    <action selector="IntMen:" destination="pQ1-Fy-TJm" eventType="touchUpInside" id="tXk-Vx-Pdf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaa-Dp-gYu">
+                                <rect key="frame" x="263" y="285" width="77" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Both"/>
+                                <connections>
+                                    <action selector="IntBoth:" destination="pQ1-Fy-TJm" eventType="touchUpInside" id="1uf-ha-R5f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajq-GZ-aMA">
+                                <rect key="frame" x="55" y="432" width="90" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Casual"/>
+                                <connections>
+                                    <action selector="IntCasual:" destination="pQ1-Fy-TJm" eventType="touchUpInside" id="yeh-lL-pYK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ2-k9-9HK">
+                                <rect key="frame" x="153" y="432" width="84" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Serious"/>
+                                <connections>
+                                    <action selector="IntSerious:" destination="pQ1-Fy-TJm" eventType="touchUpInside" id="bof-V8-KkO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TqL-M0-Sn8"/>
                         <color key="backgroundColor" red="0.91764706370000004" green="0.85490196939999996" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <outlet property="ChangesButton" destination="yy4-uF-sXB" id="jJS-EW-VcA"/>
-                        <outlet property="EditGenderPreference" destination="hBd-P6-hU7" id="LPO-F8-VTD"/>
-                        <outlet property="EditRelationshipPreference" destination="2Tt-iU-DcT" id="rCI-MZ-gae"/>
+                        <outlet property="genderPreferenceBoth" destination="jaa-Dp-gYu" id="oRS-Aj-Kjp"/>
+                        <outlet property="genderPreferenceMen" destination="0Yj-k7-DeL" id="E9h-4Y-I7B"/>
+                        <outlet property="genderPreferenceWomen" destination="ERU-bf-vwy" id="Zim-oE-7QY"/>
+                        <outlet property="relationshipPreferenceCasual" destination="Ajq-GZ-aMA" id="WZT-sN-JTi"/>
+                        <outlet property="relationshipPreferenceSerious" destination="aZ2-k9-9HK" id="z2n-PG-0GZ"/>
                         <segue destination="5fx-pu-y4D" kind="showDetail" identifier="GoBackToPreferences" id="Ejk-r0-Ont"/>
                     </connections>
                 </viewController>
@@ -396,7 +432,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uUW-72-hTB"/>
+        <segue reference="Ejk-r0-Ont"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EditBio" width="328" height="252"/>
