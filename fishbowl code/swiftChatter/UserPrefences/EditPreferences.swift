@@ -62,6 +62,14 @@ final class EditPreferences: UIViewController {
     
     @IBAction func SaveChanges(_ sender: Any) {
         
+//        first we need to pull the current users ID token
+//        then we need to call getusers api to retrieve all the info of current user
+//        then we update the relevant info
+//        call createusers api to update everything
+        current_userid = Fishbowl_ID.shared.id
+        
+        
+        
         self.performSegue(withIdentifier: "GoBackToPreferences", sender: self)
         // call post
     }
