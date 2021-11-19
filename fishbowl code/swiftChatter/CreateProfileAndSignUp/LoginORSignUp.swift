@@ -25,6 +25,10 @@ final class LoginORSignUp: UIViewController {
         self.performSegue(withIdentifier: "GoToGoogleSignIn", sender: self)
     }
     
+    @IBAction func sugihPath(_ sender: Any) {
+        self.performSegue(withIdentifier: "sugihShortcut", sender: self)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

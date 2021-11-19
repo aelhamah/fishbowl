@@ -66,7 +66,7 @@ final class EditPreferences: UIViewController {
 //        then we need to call getusers api to retrieve all the info of current user
 //        then we update the relevant info
 //        call createusers api to update everything
-        current_userid = Fishbowl_ID.shared.id
+        var current_userid = Fishbowl_ID.shared.id
         
         
         
