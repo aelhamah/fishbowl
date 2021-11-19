@@ -62,11 +62,13 @@ final class EditPreferences: UIViewController {
     
     @IBAction func SaveChanges(_ sender: Any) {
         
-//        first we need to pull the current users ID token
+//        get current users ID token
+        //        var current_userid = Fishbowl_ID.shared.id
+        // hardcoded change later
+        var current_userid = "155b8782d2"
 //        then we need to call getusers api to retrieve all the info of current user
 //        then we update the relevant info
 //        call createusers api to update everything
-        current_userid = Fishbowl_ID.shared.id
         
         
         

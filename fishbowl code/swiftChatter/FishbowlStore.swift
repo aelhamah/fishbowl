@@ -54,6 +54,68 @@ final class FishbowlStore {
         return users
     }
     
+    func getProfile(id_token: String, sender: String, completion: @escaping (_ success: Bool) -> ()) {
+        guard let apiUrl = URL(string: "http://3.15.21.206/"+"getusers/") else {
+            print("getProfile: bad URL")
+            print("Getting image with dummy image")
+            // use dummy image
+            let url = "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg"
+            //            self.downloadImage(from: URL(string: url)!)
+            return
+        }
+        let parameters = [
+            "user_ids": id_token,
+            "sender": sender
+        ]
+        print(apiUrl)
+        var url = ""
+        AF.request(apiUrl, method: .get, parameters: parameters,
+                   encoding: URLEncoding.default).responseJSON { response in
+            guard let data = response.data, response.error == nil else {
+                print("getProfile: NETWORKING ERROR")
+                completion(false)
+                return
+            }
+            guard let jsonObj = try? JSONSerialization.jsonObject(with: data)
+                    as? [String: Any] else {
+                        print("getProfile: failed JSON deserialization")
+                        completion(false)
+                        return
+                    }
+            var usersReceived: [String: [String: Any]] = [:]
+            usersReceived = jsonObj["users"] as! Dictionary<String, Dictionary<String, Any>> // swiftlint:disable:this force_cast
+            if (usersReceived.count == 0) {
+                return completion(false)
+            }
+            for (_, value) in usersReceived {
+                print("Username", value["username"]!)
+                print("DisplayName", value["display_name"]!)
+                print("ImageURL", value["imageurl"]!)
+                print("Email", value["email"]!)
+                print("ID Token", value["token"]!)
+                print("Gender pref", value["gender_preference"]!)
+            }
+            
+            for (_, value) in usersReceived where value["token"] as? String == id_token  {// swiftlint:disable:this force_cast
+                print(FishbowlStore.shared.users.count)
+                for (index, val) in FishbowlStore.shared.users.enumerated() where val.Email == id_token {
+                    FishbowlStore.shared.users[index].DisplayName = (value["display_name"] as? String)
+                    
+                    FishbowlStore.shared.users[index].Bio = (value["bio"] as? String)
+                    FishbowlStore.shared.users[index].GenderPreference = (value["gender_preference"] as? String)
+                    FishbowlStore.shared.users[index].RelationshipPreference = (value["relationship_preference"] as? String)
+                    
+                    
+                    if value["imageurl"] != nil {
+                        url = ((value["imageurl"] as? String)!)// swiftlint:disable:this force_cast
+                        FishbowlStore.shared.users[index].imageUrl = url
+                    }
+                }
+//                completion(true)
+            }
+        }
+    }
+    
 //    func getProfile(user_list: [Int], _ completion: ((Bool) -> ())?) {
 //        guard let apiUrl = URL(string: serverUrl+"getusers/") else {
 //            print("getProfile: bad URL")
