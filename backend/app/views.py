@@ -5,7 +5,7 @@ from django.db import connection
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse, HttpResponse, response
 import os, time
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
@@ -85,6 +85,20 @@ def getusers(request):
 
     return JsonResponse(response)
 
+def is_mutual_like(sender, receiver):
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM matches WHERE sender = %s AND receiver = %s;', (sender, receiver))
+    rows = cursor.fetchall()
+    if len(rows) == 0:
+        return False
+
+    cursor.execute('SELECT * FROM matches WHERE sender = %s AND receiver = %s;', (receiver, sender))
+    rows = cursor.fetchall()
+    if len(rows) == 0:
+        return False
+
+    return True
+
 @csrf_exempt
 def postlikes(request):
     if request.method != 'POST':
@@ -92,22 +106,16 @@ def postlikes(request):
     json_data = json.loads(request.body)
     sender = json_data['sender']
     receiver = json_data['receiver']
-    sender_receiver = str(sender) + "_" + str(receiver)
-    receiver_sender = str(receiver) + "_" + str(sender)
-    cursor = connection.cursor()
-    cursor.execute('INSERT INTO likes (sender_receiver) VALUES '
-                '(%s) ON CONFLICT (sender_receiver) DO NOTHING;', (sender_receiver,))
 
-    cursor.execute('SELECT * FROM likes WHERE sender_receiver = %s;', (receiver_sender,))
-    rows = cursor.fetchall()
-    response = {}
+    cursor = connection.cursor()
+    cursor.execute('INSERT INTO matches (sender, receiver) VALUES (%s,%s);',(str(sender), str(receiver)))
     
-    if rows:
+    response = {}
+    if is_mutual_like(sender, receiver):
         response['status'] = 'matched'
     else:
         response['status'] = 'unmatched'
-    cursor.execute('INSERT INTO matches (sender, receiver) VALUES (%s,%s);',(str(sender), str(receiver)))
-
+    
     return JsonResponse(response)
 
 @csrf_exempt
@@ -191,8 +199,13 @@ def getmatches(request):
 
    # return JsonResponse(response)
     for user_id in users_id:
+
+        if not is_mutual_like(sender, user_id):
+            continue
+
         cursor.execute("SELECT * FROM users WHERE email = %s;", (user_id,))
         rows = cursor.fetchall()
+
         if len(rows) == 0:
             continue
         response["matches"].append({
