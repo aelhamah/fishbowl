@@ -18,6 +18,7 @@ final class Fishbowl_ID {
     var email: String = "DojaEmail"
     var genderPreference: String = "null"
     var relationshipPreference: String = "null"
+    var genderIdentity: String = "null"
     var name: String = "null"
     var bio: String = "null"
     var user_info: [String:Any] = [:]

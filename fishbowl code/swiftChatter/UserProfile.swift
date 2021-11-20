@@ -17,6 +17,7 @@ struct UserProfile {
     var Bio: String?
     var GenderPreference: String?
     var RelationshipPreference: String?
+    var GenderIdentity: String?
     @ProfilePropWrapper var imageUrl: String?
     var imageData: Data?
     var rssi: String?

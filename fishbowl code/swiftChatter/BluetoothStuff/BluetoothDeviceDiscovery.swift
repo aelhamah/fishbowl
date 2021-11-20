@@ -139,7 +139,7 @@ class BluetoothDeviceDiscovery: NSObject {
             //            self.downloadImage(from: URL(string: url)!)
             return
         }
-        let parameters: [String: String] = ["user_ids": email]
+        let parameters: [String: String] = ["user_ids": email, "sender": Fishbowl_ID.shared.email]
         print(apiUrl)
         var url = ""
         AF.request(apiUrl, method: .get, parameters: parameters,

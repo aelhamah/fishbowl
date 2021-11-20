@@ -90,6 +90,9 @@ final class FishbowlStore {
                     if let relationshipPreference = user.RelationshipPreference?.data(using: .utf8) {
                         mpFD.append(relationshipPreference, withName: "relationship_preference")
                     }
+                    if let genderIdentity = user.GenderIdentity?.data(using: .utf8) {
+                        mpFD.append(genderIdentity, withName: "gender_identity")
+                    }
                     if let jpegImage = image?.jpegData(compressionQuality: 1.0) {
                         mpFD.append(jpegImage, withName: "image", fileName: "profileImage", mimeType: "image/jpeg")
                     }

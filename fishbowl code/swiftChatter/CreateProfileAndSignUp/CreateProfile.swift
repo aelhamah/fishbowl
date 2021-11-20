@@ -188,6 +188,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         femaleIdentityButton.tintColor = UIColor.white
         nonbinaryIdentityButton.tintColor = UIColor.white
         //print(identify)
+        Fishbowl_ID.shared.genderIdentity = identify
         
     }
     
@@ -197,6 +198,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         femaleIdentityButton.tintColor = UIColor.systemPink
         nonbinaryIdentityButton.tintColor = UIColor.white
         //print(identify)
+        Fishbowl_ID.shared.genderIdentity = identify
     }
     
     @IBAction func non_binary(_ sender: UIButton) {
@@ -205,6 +207,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         femaleIdentityButton.tintColor = UIColor.white
         nonbinaryIdentityButton.tintColor = UIColor.systemPink
         //print(identify)
+        Fishbowl_ID.shared.genderIdentity = identify
     }
     @IBAction func SignUpComplete(_ sender: Any) {
         
@@ -216,6 +219,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
                                Bio: Bio.text,
                                GenderPreference: interest,
                                RelationshipPreference: looking_for,
+                               GenderIdentity: identify,
                                imageUrl: nil)
         
         
