@@ -27,7 +27,7 @@ final class UserPreferences: UIViewController, UIImagePickerControllerDelegate, 
         super.isModalInPresentation = true;
         self.hideKeyboardWhenTappedAround()
         newProfilePicture.setRounded()
-        LookAtBlocked.layer.cornerRadius = 22
+        
         BioButton.layer.cornerRadius = 22
         PreferencesButton.layer.cornerRadius = 22
         
@@ -51,9 +51,7 @@ final class UserPreferences: UIViewController, UIImagePickerControllerDelegate, 
     }
     
 
-    @IBAction func GoToBlockedUsers(_ sender: Any) {
-        self.performSegue(withIdentifier: "GoToBlockedUsers", sender: self)
-    }
+ 
     
     @IBAction func GoToEditBio(_ sender: Any) {
         self.performSegue(withIdentifier: "GoToEditBio", sender: self)
