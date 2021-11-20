@@ -115,10 +115,15 @@ def createusers(request):
     if request.method != 'POST':
         return HttpResponse(status=404)
 
+    email = request.POST.get("email")
+    cursor = connection.cursor()
+
+    # check if user exists
+    cursor.execute('SELECT * FROM users WHERE email = %s;', (email,))
+    rows = cursor.fetchall()
     username = request.POST.get("username")
     fullname = request.POST.get("fullname")
     display_name = request.POST.get("display_name")
-    email = request.POST.get("email")
     bio = request.POST.get("bio")
     gender_preference = request.POST.get("gender_preference")
     relationship_preference = request.POST.get("relationship_preference")
@@ -126,7 +131,7 @@ def createusers(request):
 
     if request.FILES.get("image"):
         content = request.FILES['image']
-        filename = display_name+str(time.time())+".jpeg"
+        filename = email+str(time.time())+".jpeg"
         fs = FileSystemStorage()
         filename = fs.save(filename, content)
         imageurl = fs.url(filename)
@@ -134,21 +139,32 @@ def createusers(request):
         imageurl = imageurl.replace("http://", "https://")
     else:
         imageurl = None
-    
-    cursor = connection.cursor()
 
-    # delete the exiting user
-    cursor.execute('DELETE FROM users WHERE email = %s;', (email,))
+    if rows:
+        # Update the database accordingly
+        if username is not None:
+            cursor.execute('UPDATE users SET username = %s WHERE email = %s;', (username, email)) 
+        if fullname is not None:
+            cursor.execute('UPDATE users SET display_name = %s WHERE email = %s;', (display_name, email))
+        if bio is not None:
+            cursor.execute('UPDATE users SET bio = %s WHERE email = %s;', (bio, email))
+        if gender_preference is not None:
+            cursor.execute('UPDATE users SET gender_preference = %s WHERE email = %s;', (gender_preference, email))
+        if relationship_preference is not None:
+            cursor.execute('UPDATE users SET relationship_preference = %s WHERE email = %s;', (relationship_preference, email))
+        if gender_identity is not None:
+            cursor.execute('UPDATE users SET gender_identity = %s WHERE email = %s;',(gender_identity, email))
+        if imageurl is not None:
+            cursor.execute('UPDATE users SET imageurl = %s WHERE email = %s;',(imageurl, email))
 
-    cursor.execute('INSERT INTO users (fullname, display_name, email, bio, imageurl, username, gender_preference, relationship_preference, gender_identity) VALUES '
-            '(%s,%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING;', (fullname,display_name,email,bio,imageurl,username,gender_preference,relationship_preference,gender_identity))
+    else:
+        cursor.execute('INSERT INTO users (display_name, email, bio, imageurl, gender_preference, relationship_preference, gender_identity) VALUES '
+            '(%s,%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING;', (display_name,email,bio,imageurl,gender_preference,relationship_preference,gender_identity))
     
-    cursor.execute('SELECT id FROM users WHERE email = %s;', (email,))
+    cursor.execute('SELECT * FROM users WHERE email = %s;', (email,))
     rows = cursor.fetchall()
     
-    response = {}
-    response['user_id'] = rows  
-    
+    response = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}
     return JsonResponse(response)
 
 def getmatches(request):
@@ -236,7 +252,13 @@ def adduser(request):
                    '(%s, %s, %s, %s);', (fishbowlID, username, now+lifetime, email))
 
     # Return chatterID and its lifetime
-    return JsonResponse({'fishbowlID': fishbowlID, 'lifetime': lifetime, "idinfo": idinfo})
+    cursor.execute("SELECT * FROM users WHERE email = '{}';".format(email))
+    rows = cursor.fetchall()
+    user_info = {}
+    if len(rows) > 0:
+        user_info = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}    
+
+    return JsonResponse({'fishbowlID': fishbowlID,  'lifetime': lifetime, "idinfo": idinfo, "user_info": user_info})
 
 
 # NOT BEING USED?
