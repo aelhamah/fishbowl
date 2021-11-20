@@ -69,33 +69,14 @@ final class EditPreferences: UIViewController {
 
     @IBAction func SaveChanges(_ sender: Any) {
 
-//        get current users ID token
-//        var current_userid = Fishbowl_ID.shared.id
-//        hardcoded change later
-        var current_userid = "155b8782d2"
-//        // call getusers api to retrieve all the info of current user
-//        FishbowlStore.shared.getProfile(id_token: current_userid) { success in
-//                       DispatchQueue.main.async {
-//                           print("reached here")
-//                           if success {
-//                               print("sucess hehe")
-//                           }
-//                       }
-//        then we update the relevant info: Fishbowl_ID.shared.id
-        
-        //request yourself with own IDtoken
+        print(Fishbowl_ID.shared.id)
             let user = UserProfile(FishBowlID: Fishbowl_ID.shared.id,
-                                   Username: "nician",
-                                   FullName: "test",
-                                   DisplayName: "nicole",
-                                   Email: "nician@umich.edu",
-                                   Bio: "test update",
-                                   GenderPreference: "men",
-                                   RelationshipPreference: "serious",
-                                   imageUrl: nil)
+                                   Email: Fishbowl_ID.shared.email,
+                                   GenderPreference: Fishbowl_ID.shared.genderPreference,
+                                   RelationshipPreference: Fishbowl_ID.shared.relationshipPreference
+            )
 //        call createusers api to update everything
-            var imageA3: UIImage = UIImage()
-            FishbowlStore.shared.createUserProfile(user, image: imageA3)
+            FishbowlStore.shared.createUserProfile(user, image: nil)
 
 
         self.performSegue(withIdentifier: "GoBackToPreferences", sender: self)
