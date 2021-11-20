@@ -32,6 +32,8 @@ final class EditPreferences: UIViewController {
         genderPreferenceMen.tintColor = UIColor.blue
         genderPreferenceWomen.tintColor = UIColor.systemPink
         genderPreferenceBoth.tintColor = UIColor.blue
+        
+        Fishbowl_ID.shared.genderPreference = genderPreferenceChange
     }
 
     @IBAction func IntMen(_ sender: Any) {
@@ -39,6 +41,7 @@ final class EditPreferences: UIViewController {
         genderPreferenceMen.tintColor = UIColor.systemPink
         genderPreferenceWomen.tintColor = UIColor.blue
         genderPreferenceBoth.tintColor = UIColor.blue
+        Fishbowl_ID.shared.genderPreference = genderPreferenceChange
     }
 
     @IBAction func IntBoth(_ sender: Any) {
@@ -46,18 +49,22 @@ final class EditPreferences: UIViewController {
         genderPreferenceMen.tintColor = UIColor.blue
         genderPreferenceWomen.tintColor = UIColor.blue
         genderPreferenceBoth.tintColor = UIColor.systemPink
+        Fishbowl_ID.shared.genderPreference = genderPreferenceChange
     }
 
     @IBAction func IntCasual(_ sender: Any) {
         relationshipPreferenceChange = "casual"
         relationshipPreferenceCasual.tintColor = UIColor.systemPink
         relationshipPreferenceSerious.tintColor = UIColor.blue
+        Fishbowl_ID.shared.relationshipPreference = relationshipPreferenceChange
     }
 
     @IBAction func IntSerious(_ sender: Any) {
         relationshipPreferenceChange = "serious"
         relationshipPreferenceCasual.tintColor = UIColor.blue
         relationshipPreferenceSerious.tintColor = UIColor.systemPink
+        
+        Fishbowl_ID.shared.relationshipPreference = relationshipPreferenceChange
     }
 
     @IBAction func SaveChanges(_ sender: Any) {
@@ -74,8 +81,10 @@ final class EditPreferences: UIViewController {
 //                               print("sucess hehe")
 //                           }
 //                       }
-//        then we update the relevant info
-            let user = UserProfile(FishBowlID: "155b8782d2",
+//        then we update the relevant info: Fishbowl_ID.shared.id
+        
+        //request yourself with own IDtoken
+            let user = UserProfile(FishBowlID: Fishbowl_ID.shared.id,
                                    Username: "nician",
                                    FullName: "test",
                                    DisplayName: "nicole",

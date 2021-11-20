@@ -61,7 +61,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBOutlet weak var FirstName: UITextField!
     @IBOutlet weak var LastName: UITextField!
-    @IBOutlet weak var Email: UITextField!
+ 
     @IBOutlet weak var Bio: UITextField!
     @IBOutlet weak var Username: UITextField!
     
@@ -92,6 +92,8 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         womenPreferenceOutlet.tintColor = UIColor.white
         bothPreferenceOutlet.tintColor = UIColor.white
         
+        Fishbowl_ID.shared.genderPreference = interest
+        
       
       
         
@@ -118,6 +120,8 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         menPreferenceOutlet.tintColor = UIColor.white
         womenPreferenceOutlet.tintColor = UIColor.systemPink
         bothPreferenceOutlet.tintColor = UIColor.white
+        
+        Fishbowl_ID.shared.genderPreference = interest
  
         //print(interest)
     }
@@ -149,6 +153,9 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         womenPreferenceOutlet.tintColor = UIColor.white
         bothPreferenceOutlet.tintColor = UIColor.systemPink
         
+        Fishbowl_ID.shared.genderPreference = interest
+        
+        
 
         //print(interest)
     }
@@ -159,6 +166,10 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         casualRelationship.tintColor = UIColor.systemPink
         seriousRelationship.tintColor = UIColor.white
         
+        Fishbowl_ID.shared.relationshipPreference = looking_for
+        
+        
+        
         //print(looking_for)
     }
     
@@ -167,6 +178,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         casualRelationship.tintColor = UIColor.white
         seriousRelationship.tintColor = UIColor.systemPink
         //print(looking_for)
+        Fishbowl_ID.shared.relationshipPreference = looking_for
     }
     
     
@@ -176,6 +188,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
         femaleIdentityButton.tintColor = UIColor.white
         nonbinaryIdentityButton.tintColor = UIColor.white
         //print(identify)
+        
     }
     
     @IBAction func identifyFemale(_ sender: UIButton) {
@@ -204,6 +217,9 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
                                GenderPreference: interest,
                                RelationshipPreference: looking_for,
                                imageUrl: nil)
+        
+        
+        print(user)
         
         FishbowlStore.shared.createUserProfile(user, image: postProfilePicture.image) 
         
