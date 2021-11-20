@@ -20,8 +20,40 @@ final class FishbowlStore {
 
     private let serverUrl = "http://3.15.21.206/"
     
-    func blockUser() {
+    func blockUser(_ sender: String, _ reciever: String) {
+        let jsonObj = ["sender": sender,
+                       "reciever" : reciever]
         
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
+            print("blockUser: jsonData serialization error")
+            return
+        }
+
+        guard let apiUrl = URL(string: serverUrl+"postblock/") else {
+            print("blockUser: Bad URL")
+            return
+        }
+        var request = URLRequest(url: apiUrl)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
+        
+        _ =  URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print("blockUser: NETWORKING ERROR")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                print("blockUser: HTTP STATUS: \(httpStatus.statusCode)")
+            }
+            
+            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+                print("blockUser: failed JSON deserialization")
+                return
+            }
+            
+            print(jsonObj)
+        }
     }
     
 

@@ -23,7 +23,8 @@ class ProfilePage: UIViewController {
     @IBOutlet weak var Bio: UITextView!
     
     @IBAction func blockUser(_ sender: Any) {
-        
+        let senderEmail = Fishbowl_ID.shared.email
+        FishbowlStore.shared.blockUser(senderEmail, FishbowlStore.shared.fishies.Email ?? "error")
     }
     
     override func viewDidLoad() {
