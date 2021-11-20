@@ -22,6 +22,7 @@ final class UserPreferences: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var bio: UITextView!
     
+    @IBOutlet weak var name: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         super.isModalInPresentation = true;
@@ -34,8 +35,9 @@ final class UserPreferences: UIViewController, UIImagePickerControllerDelegate, 
         self.genderPreference.text = Fishbowl_ID.shared.genderPreference
         self.relationshipPreference.text = Fishbowl_ID.shared.relationshipPreference
         
+        self.name.text = Fishbowl_ID.shared.name
         
-        
+        self.bio.text = Fishbowl_ID.shared.bio
         
 //        var user_list = ["change this later"]
 //        var user = FishbowlStore.shared.getProfile(user_list: user_list) { success in

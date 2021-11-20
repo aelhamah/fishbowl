@@ -85,7 +85,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     
     
     @IBAction func interestMen(_ sender: UIButton) {
-        interest = "men"
+        interest = "male"
 
         
         menPreferenceOutlet.tintColor = UIColor.systemPink
@@ -112,7 +112,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     @IBAction func interestWomen(_ sender: UIButton) {
-        interest = "women"
+        interest = "female"
         interestMen = false
         interestWomen = true
         interestBoth = false
@@ -143,7 +143,7 @@ final class CreateProfile: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var nonbinaryIdentityButton: UIButton!
     
     @IBAction func interestBoth(_ sender: UIButton) {
-        interest = "both"
+        interest = "non-binary"
     
         interestMen = false
         interestWomen = false

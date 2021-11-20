@@ -32,12 +32,6 @@
                                 <rect key="frame" x="8" y="308" width="399" height="329"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bluetooth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m7-wc-nZI">
-                                <rect key="frame" x="60" y="492" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1q-xe-DER">
                                 <rect key="frame" x="317" y="199" width="27" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,10 +50,6 @@
                                     <action selector="pickPhotoLibrary:" destination="5fx-pu-y4D" eventType="touchUpInside" id="w8s-k1-Woy"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLw-Ax-5SJ">
-                                <rect key="frame" x="115" y="527" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Preferences" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diX-nq-4jp">
                                 <rect key="frame" x="219" y="492" width="92" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,7 +69,7 @@
                                     <action selector="GoToEditPreferences:" destination="5fx-pu-y4D" eventType="touchUpInside" id="hR9-3V-nn1"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name, Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMW-1u-2Ec">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMW-1u-2Ec">
                                 <rect key="frame" x="65" y="349" width="149" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -137,6 +127,7 @@
                         <outlet property="PreferencesButton" destination="glA-cj-bdj" id="cL9-Pz-Tt8"/>
                         <outlet property="bio" destination="mI4-yE-igM" id="f6e-7z-IhU"/>
                         <outlet property="genderPreference" destination="ajJ-ay-dkv" id="kww-jV-5e5"/>
+                        <outlet property="name" destination="tMW-1u-2Ec" id="UC7-1F-iAR"/>
                         <outlet property="newProfilePicture" destination="w8r-xg-YWM" id="4SC-e7-JYT"/>
                         <outlet property="relationshipPreference" destination="s7x-Ge-RWJ" id="Pyh-gC-LLd"/>
                         <segue destination="pQ1-Fy-TJm" kind="showDetail" identifier="GoToEditPreferences" id="q9t-uT-MHy"/>

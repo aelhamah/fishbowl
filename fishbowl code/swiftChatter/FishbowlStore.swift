@@ -152,7 +152,7 @@ final class FishbowlStore {
 
     func createUserProfile(_ user: UserProfile, image: UIImage?) {
 
-
+        print(Fishbowl_ID.shared.email)
         guard let apiUrl = URL(string: serverUrl+"createusers/") else {
                     print("createUserProfile: Bad URL")
                     return
@@ -368,6 +368,12 @@ final class FishbowlStore {
                 Fishbowl_ID.shared.expiration = Date()+(jsonObj["lifetime"] as! TimeInterval)
                 Fishbowl_ID.shared.info = jsonObj["idinfo"] as! [String:Any]
                 Fishbowl_ID.shared.email = Fishbowl_ID.shared.info["email"] as? String ?? "DojaEmail"
+                Fishbowl_ID.shared.user_info = jsonObj["user_info"] as! [String: Any]
+                Fishbowl_ID.shared.relationshipPreference = Fishbowl_ID.shared.user_info["relationship_preference"] as? String ?? "casual"
+                Fishbowl_ID.shared.genderPreference = Fishbowl_ID.shared.user_info["gender_preference"] as? String ?? "male"
+                Fishbowl_ID.shared.name = Fishbowl_ID.shared.user_info["display_name"] as? String ?? "name"
+                Fishbowl_ID.shared.bio = Fishbowl_ID.shared.user_info["bio"] as? String ?? "biography"
+//                print(jsonObj)
 //                print(info["email"])
 //                Fishbowl_ID.shared.info = jsonObj["idinfo"] as! [String:String]
                 completion("OK")

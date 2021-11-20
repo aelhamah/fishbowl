@@ -28,7 +28,7 @@ final class EditPreferences: UIViewController {
     @IBOutlet weak var ChangesButton: UIButton!
 
     @IBAction func IntWomen(_ sender: Any) {
-        genderPreferenceChange = "women"
+        genderPreferenceChange = "female"
         genderPreferenceMen.tintColor = UIColor.blue
         genderPreferenceWomen.tintColor = UIColor.systemPink
         genderPreferenceBoth.tintColor = UIColor.blue
@@ -37,7 +37,7 @@ final class EditPreferences: UIViewController {
     }
 
     @IBAction func IntMen(_ sender: Any) {
-        genderPreferenceChange = "men"
+        genderPreferenceChange = "male"
         genderPreferenceMen.tintColor = UIColor.systemPink
         genderPreferenceWomen.tintColor = UIColor.blue
         genderPreferenceBoth.tintColor = UIColor.blue
