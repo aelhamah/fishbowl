@@ -22,6 +22,10 @@ class ProfilePage: UIViewController {
     @IBOutlet weak var Relationship: UILabel!
     @IBOutlet weak var Bio: UITextView!
     
+    @IBAction func blockUser(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
