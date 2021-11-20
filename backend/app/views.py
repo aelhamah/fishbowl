@@ -37,7 +37,6 @@ def getusers(request):
     for row in rows:
         fish_id_to_email[row[0].strip()] = row[1]
 
-
     # make sure that each user id is not blocked by the sender
     cursor.execute('SELECT * FROM blocks WHERE sender = %s;', (request.GET.get('sender'),))
     rows = cursor.fetchall()
@@ -52,23 +51,36 @@ def getusers(request):
 
     if users_id is None:
         return JsonResponse(response)
+
+    # get sender's pereferences from users
+    cursor.execute('SELECT gender_preference, relationship_preference, gender_identity FROM users WHERE email = %s;', (request.GET.get('sender'),))
+    row = cursor.fetchone()
+    gender_pref = row[0]
+    relation_pref = row[1]
+    gender_identity = row[2]
+    
     
     for user_id in users_id:
+        # check if it is in do not show or exists at all
         if user_id in do_not_show or user_id not in fish_id_to_email:
             continue
         user_email = fish_id_to_email[user_id]
         cursor.execute("SELECT * FROM users WHERE email = '{}';".format(user_email))
         rows = cursor.fetchall()
 
-        if user_id in do_not_show:
-            continue
-
-        response['users'][user_id] = {
+        user_block = {
             cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))
         }
         #replace https with http
-        response['users'][user_id]['imageurl'] = response['users'][user_id]['imageurl'].replace('https', 'http')
-        response['users'][user_id]['token'] = user_id
+        if user_block['imageurl'] is not None:
+            user_block['imageurl'] = user_block['imageurl'].replace('https', 'http')
+        user_block['token'] = user_id
+
+        # if the gender_identity and relationship_preference match add them
+        if user_block['gender_identity'] == gender_pref \
+            and user_block['relationship_preference'] == relation_pref \
+                and user_block['gender_preference'] == gender_identity: 
+            response['users'][user_id] = user_block
 
 
     return JsonResponse(response)
