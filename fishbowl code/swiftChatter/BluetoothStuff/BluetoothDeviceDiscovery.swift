@@ -176,7 +176,7 @@ class BluetoothDeviceDiscovery: NSObject {
                     FishbowlStore.shared.users[index].Bio = (value["bio"] as? String)
                     FishbowlStore.shared.users[index].GenderPreference = (value["gender_preference"] as? String)
                     FishbowlStore.shared.users[index].RelationshipPreference = (value["relationship_preference"] as? String)
-                    
+                    FishbowlStore.shared.users[index].Actual_Email = (value["email"] as? String)
                     
                     if value["imageurl"] != nil {
                         url = ((value["imageurl"] as? String)!)// swiftlint:disable:this force_cast
@@ -301,8 +301,8 @@ extension BluetoothDeviceDiscovery: CBCentralManagerDelegate {
         // Capture all of this in a device object
         let device = Device(peripheral: peripheral, name: name, rssi: classifyProximity(rssi: RSSI) )
         // Add or update this object to the visible list
-        print("Device Name:", device.name)
-        print("RSSI:", device.rssi)
+//        print("Device Name:", device.name)
+//        print("RSSI:", device.rssi)
         DispatchQueue.main.async { [weak self] in
 //            if ((self?.isAdvertising) == true) {
                 self?.updateDeviceList(with: device)

@@ -14,6 +14,7 @@ struct UserProfile {
     var FullName: String?
     var DisplayName: String?
     var Email: String?
+    var Actual_Email: String?
     var Bio: String?
     var GenderPreference: String?
     var RelationshipPreference: String?

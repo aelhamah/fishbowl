@@ -36,7 +36,7 @@ class MatchBack: UIViewController {
                 }
         
         Name.text = FishbowlStore.shared.fishies.DisplayName;
-//        Gender.text = FishbowlStore.shared.fishies.;
+        Gender.text = FishbowlStore.shared.fishies.GenderIdentity;
         Sexuality.text = FishbowlStore.shared.fishies.GenderPreference;
         Relationship.text = FishbowlStore.shared.fishies.RelationshipPreference;
         Bio.text = FishbowlStore.shared.fishies.Bio;

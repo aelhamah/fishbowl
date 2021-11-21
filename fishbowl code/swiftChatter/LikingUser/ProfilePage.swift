@@ -39,7 +39,7 @@ class ProfilePage: UIViewController {
                 }
         
         DisplayName.text = FishbowlStore.shared.fishies.DisplayName;
-//        Gender.text = FishbowlStore.shared.fishies.;
+        Gender.text = FishbowlStore.shared.fishies.GenderIdentity;
         Sexuality.text = FishbowlStore.shared.fishies.GenderPreference;
         Relationship.text = FishbowlStore.shared.fishies.RelationshipPreference;
         Bio.text = FishbowlStore.shared.fishies.Bio; 
@@ -52,8 +52,11 @@ class ProfilePage: UIViewController {
 
     @IBAction func LikeButton(_ sender: Any) {
         
-        FishbowlStore.shared.likeUser(Fishbowl_ID.shared.email, FishbowlStore.shared.fishies.Email ?? "nil")
-        
+        FishbowlStore.shared.likeUser(Fishbowl_ID.shared.email, FishbowlStore.shared.fishies.Actual_Email ?? "nil")
+        print(Fishbowl_ID.shared.email)
+        print(FishbowlStore.shared.fishies)
+        print(FishbowlStore.shared.fishies.Actual_Email)
+        print("sanity")
     }
 
 

@@ -61,7 +61,7 @@ final class FishbowlStore {
                        "reciever" : reciever]
         
         guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
-            print("blockUser: jsonData serialization error")
+            print("postLikes: jsonData serialization error")
             return
         }
 
@@ -73,23 +73,42 @@ final class FishbowlStore {
         request.httpMethod = "POST"
         request.httpBody = jsonData
         
-        _ =  URLSession.shared.dataTask(with: request) { data, response, error in
+        let task =  URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
-                print("postLikes: NETWORKING ERROR")
+                print("addUser: NETWORKING ERROR")
                 return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                print("postLikes: HTTP STATUS: \(httpStatus.statusCode)")
+                print("addUser: HTTP STATUS: \(httpStatus.statusCode)")
             }
             
             guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
-                print("postLikes: failed JSON deserialization")
+                print("addUser: failed JSON deserialization")
                 return
             }
             let match_check = jsonObj["status"] as? [[String:Any]]
             print(match_check)
         }
+        task.resume()
+//
+//        URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard let data = data, error == nil else {
+//                print("postLikes: NETWORKING ERROR")
+//                return
+//            }
+//
+//            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+//                print("postLikes: HTTP STATUS: \(httpStatus.statusCode)")
+//            }
+//
+//            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+//                print("postLikes: failed JSON deserialization")
+//                return
+//            }
+//            let match_check = jsonObj["status"] as? [[String:Any]]
+//            print(match_check)
+//        }.resume()
     }
     
 
