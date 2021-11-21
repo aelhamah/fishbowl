@@ -56,6 +56,42 @@ final class FishbowlStore {
         }
     }
     
+    func likeUser(_ sender: String, _ reciever: String) {
+        let jsonObj = ["sender": sender,
+                       "reciever" : reciever]
+        
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
+            print("blockUser: jsonData serialization error")
+            return
+        }
+
+        guard let apiUrl = URL(string: serverUrl+"postlikes/") else {
+            print("postLikes: Bad URL")
+            return
+        }
+        var request = URLRequest(url: apiUrl)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
+        
+        _ =  URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print("postLikes: NETWORKING ERROR")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                print("postLikes: HTTP STATUS: \(httpStatus.statusCode)")
+            }
+            
+            guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
+                print("postLikes: failed JSON deserialization")
+                return
+            }
+            let match_check = jsonObj["status"] as? [[String:Any]]
+            print(jsonObj)
+        }
+    }
+    
 
     func createUserProfile(_ user: UserProfile, image: UIImage?) {
 
