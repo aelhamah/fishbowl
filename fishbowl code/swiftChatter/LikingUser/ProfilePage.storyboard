@@ -35,7 +35,6 @@
                                 <buttonConfiguration key="configuration" style="plain" image="close" title=""/>
                                 <connections>
                                     <action selector="RejectButton:" destination="jBc-cB-lAP" eventType="touchUpInside" id="guC-jN-bIo"/>
-                                    <segue destination="shW-Dr-9hT" kind="showDetail" id="3JM-dB-Jag"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQj-eZ-1x3">
@@ -122,6 +121,7 @@
                         <outlet property="Relationship" destination="dAS-kR-cQg" id="uuh-Bn-H5l"/>
                         <outlet property="Sexuality" destination="Iga-dz-Nzm" id="Llx-44-XkB"/>
                         <segue destination="iEe-NA-DNh" kind="showDetail" identifier="itsAMatch" id="mwa-gk-gLG"/>
+                        <segue destination="shW-Dr-9hT" kind="showDetail" identifier="RejectUserSegue" id="zWL-UZ-RBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5P-HR-ULq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -260,7 +260,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3JM-dB-Jag"/>
+        <segue reference="zWL-UZ-RBP"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemRedColor"/>
     <resources>
