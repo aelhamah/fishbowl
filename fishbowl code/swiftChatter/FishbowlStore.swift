@@ -88,7 +88,7 @@ final class FishbowlStore {
                 return
             }
             let match_check = jsonObj["status"] as? [[String:Any]]
-            print(jsonObj)
+            print(match_check)
         }
     }
     

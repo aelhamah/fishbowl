@@ -51,7 +51,9 @@ class ProfilePage: UIViewController {
 
 
     @IBAction func LikeButton(_ sender: Any) {
-
+        
+        FishbowlStore.shared.likeUser(Fishbowl_ID.shared.email, FishbowlStore.shared.fishies.Email ?? "nil")
+        
     }
 
 
