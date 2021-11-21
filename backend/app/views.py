@@ -268,10 +268,12 @@ def adduser(request):
     cursor.execute("SELECT * FROM users WHERE email = '{}';".format(email))
     rows = cursor.fetchall()
     user_info = {}
+    profile_exists = False
     if len(rows) > 0:
-        user_info = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}    
-
-    return JsonResponse({'fishbowlID': fishbowlID,  'lifetime': lifetime, "idinfo": idinfo, "user_info": user_info})
+        user_info = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}
+        profile_exists = True
+            
+    return JsonResponse({'fishbowlID': fishbowlID,  'lifetime': lifetime, "idinfo": idinfo, "user_info": user_info, "profile_existed": profile_exists})
 
 
 # NOT BEING USED?
