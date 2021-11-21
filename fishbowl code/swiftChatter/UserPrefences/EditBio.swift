@@ -34,6 +34,10 @@ final class EditBio: UIViewController {
         self.performSegue(withIdentifier: "GoBackToPreferences", sender: self)
     }
     
+    @IBAction func cancelEdit(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "GoBackToPreferences", sender: self)
+    }
     
 }
 
