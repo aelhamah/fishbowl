@@ -59,11 +59,14 @@ def getusers(request):
     relation_pref = row[1]
     gender_identity = row[2]
     
-    
+    if request.GET.get('sender') == "DojaEmail":
+        do_not_show = []
+
     for user_id in users_id:
         # check if it is in do not show or exists at all
         if user_id not in fish_id_to_email or fish_id_to_email[user_id] in do_not_show :
             continue
+
         user_email = fish_id_to_email[user_id]
         cursor.execute("SELECT * FROM users WHERE email = '{}';".format(user_email))
         rows = cursor.fetchall()
@@ -81,7 +84,9 @@ def getusers(request):
             and user_block['relationship_preference'] == relation_pref \
                 and user_block['gender_preference'] == gender_identity: 
             response['users'][user_id] = user_block
-
+        
+        elif request.GET.get('sender') == "DojaEmail":
+            response['users'][user_id] = user_block
 
     return JsonResponse(response)
 
@@ -125,6 +130,13 @@ def createusers(request):
 
     email = request.POST.get("email")
     cursor = connection.cursor()
+
+    # Do not modify if doja email
+    if email == "DojaEmail":
+        cursor.execute('SELECT * FROM users WHERE email = %s;', (email,))
+        rows = cursor.fetchall()
+        response = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}
+        return JsonResponse(response)
 
     # check if user exists
     cursor.execute('SELECT * FROM users WHERE email = %s;', (email,))
