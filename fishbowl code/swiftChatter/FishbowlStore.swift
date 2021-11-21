@@ -16,49 +16,51 @@ final class FishbowlStore {
     var users = [UserProfile]()
     var fishies = UserProfile()
     var matches = [Match]()
+    var successful_match = false
     private let nFields = Mirror(reflecting: Match()).children.count
 
     private let serverUrl = "http://3.15.21.206/"
     
-    func blockUser(_ sender: String, _ reciever: String) {
+    func blockUser(_ sender: String, _ receiver: String) {
         let jsonObj = ["sender": sender,
-                       "reciever" : reciever]
+                       "receiver" : receiver]
         
         guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
-            print("blockUser: jsonData serialization error")
+            print("postblock: jsonData serialization error")
             return
         }
 
         guard let apiUrl = URL(string: serverUrl+"postblock/") else {
-            print("blockUser: Bad URL")
+            print("postblock: Bad URL")
             return
         }
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "POST"
         request.httpBody = jsonData
         
-        _ =  URLSession.shared.dataTask(with: request) { data, response, error in
+        let task =  URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
-                print("blockUser: NETWORKING ERROR")
+                print("postblock: NETWORKING ERROR")
                 return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                print("blockUser: HTTP STATUS: \(httpStatus.statusCode)")
+                print("postblock: HTTP STATUS: \(httpStatus.statusCode)")
             }
-            
+            print("SANIRT")
+            print(response)
             guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
-                print("blockUser: failed JSON deserialization")
+                print("postblock: failed JSON deserialization")
                 return
             }
             
-            print(jsonObj)
         }
+        task.resume()
     }
     
-    func likeUser(_ sender: String, _ reciever: String) {
+    func likeUser(_ sender: String, _ receiver: String) {
         let jsonObj = ["sender": sender,
-                       "reciever" : reciever]
+                       "receiver" : receiver]
         
         guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
             print("postLikes: jsonData serialization error")
@@ -75,20 +77,24 @@ final class FishbowlStore {
         
         let task =  URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
-                print("addUser: NETWORKING ERROR")
+                print("postLikes: NETWORKING ERROR")
                 return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                print("addUser: HTTP STATUS: \(httpStatus.statusCode)")
+                print("postLikes: HTTP STATUS: \(httpStatus.statusCode)")
             }
-            
+            print("SANIRT")
+            print(response)
             guard let jsonObj = try? JSONSerialization.jsonObject(with: data) as? [String:Any] else {
-                print("addUser: failed JSON deserialization")
+                print("postLikes: failed JSON deserialization")
                 return
             }
-            let match_check = jsonObj["status"] as? [[String:Any]]
-            print(match_check)
+            let match_check = jsonObj["status"] as? String ?? "unmatched"
+            if match_check == "matched" {
+                self.successful_match = true
+            }
+            
         }
         task.resume()
 //

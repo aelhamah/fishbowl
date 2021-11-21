@@ -24,7 +24,9 @@ class ProfilePage: UIViewController {
     
     @IBAction func blockUser(_ sender: Any) {
         let senderEmail = Fishbowl_ID.shared.email
-        FishbowlStore.shared.blockUser(senderEmail, FishbowlStore.shared.fishies.Email ?? "error")
+        FishbowlStore.shared.blockUser(senderEmail, FishbowlStore.shared.fishies.Actual_Email ?? "error")
+        self.performSegue(withIdentifier: "blockReturn", sender: self)
+        
     }
     
     override func viewDidLoad() {
@@ -57,6 +59,10 @@ class ProfilePage: UIViewController {
         print(FishbowlStore.shared.fishies)
         print(FishbowlStore.shared.fishies.Actual_Email)
         print("sanity")
+        if FishbowlStore.shared.successful_match {
+            FishbowlStore.shared.successful_match = false
+            self.performSegue(withIdentifier: "itsAMatch", sender: self)
+        }
     }
 
 
