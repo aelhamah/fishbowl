@@ -57,11 +57,4 @@ class ProfilePage: UIViewController {
     }
 
 
-    @IBAction func RejectButton(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "RejectUserSegue", sender: self)
-
-    }
-
-
 }
