@@ -47,7 +47,7 @@ def getusers(request):
     cursor.execute('SELECT * FROM blocks WHERE receiver = %s;', (request.GET.get('sender'),))
     rows = cursor.fetchall()
     for row in rows:
-        do_not_show.append(row[1])
+        do_not_show.append(row[0])
 
     if users_id is None:
         return JsonResponse(response)
@@ -62,7 +62,7 @@ def getusers(request):
     
     for user_id in users_id:
         # check if it is in do not show or exists at all
-        if user_id in do_not_show or user_id not in fish_id_to_email:
+        if user_id not in fish_id_to_email or fish_id_to_email[user_id] in do_not_show :
             continue
         user_email = fish_id_to_email[user_id]
         cursor.execute("SELECT * FROM users WHERE email = '{}';".format(user_email))
