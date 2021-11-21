@@ -82,7 +82,13 @@ final class EditPreferences: UIViewController {
         self.performSegue(withIdentifier: "GoBackToPreferences", sender: self)
         // call post
     }
-
+    
+    
+    @IBAction func cancelEdit(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "GoBackToPreferences", sender: self)
+    }
+    
 
 //}
 }
