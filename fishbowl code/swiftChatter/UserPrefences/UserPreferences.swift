@@ -27,7 +27,6 @@ final class UserPreferences: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         super.isModalInPresentation = true;
         self.hideKeyboardWhenTappedAround()
-        newProfilePicture.setRounded()
         
         BioButton.layer.cornerRadius = 22
         PreferencesButton.layer.cornerRadius = 22
