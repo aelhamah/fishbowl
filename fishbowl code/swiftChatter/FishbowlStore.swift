@@ -17,6 +17,7 @@ final class FishbowlStore {
     var fishies = UserProfile()
     var matches = [Match]()
     var successful_match = false
+    var profile_existed = false
     private let nFields = Mirror(reflecting: Match()).children.count
 
     private let serverUrl = "http://3.15.21.206/"
@@ -273,6 +274,7 @@ final class FishbowlStore {
 //                print(info["email"])
 //                Fishbowl_ID.shared.info = jsonObj["idinfo"] as! [String:String]
                 completion("OK")
+                self.profile_existed = true
             }
             task.resume()
         }

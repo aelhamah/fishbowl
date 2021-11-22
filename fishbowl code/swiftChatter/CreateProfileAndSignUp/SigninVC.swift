@@ -35,6 +35,9 @@ final class SigninVC: UIViewController, GIDSignInDelegate {
                     // which triggers the sign(_:didSignInFor:withError:) delegate/handler
                     signin.restorePreviousSignIn()
                 }
+        
+        
+    
     }
     
     func didRefreshTokens(auth: GIDAuthentication?, error: Error?) {
@@ -77,7 +80,13 @@ final class SigninVC: UIViewController, GIDSignInDelegate {
                             // class, PostVC
                             DispatchQueue.main.async {
 //                                self.dismiss(animated: true, completion: nil)
-                                self.performSegue(withIdentifier: "GoogleSuccessSignin", sender: self)
+                                if !FishbowlStore.shared.profile_existed {
+                                    //make user sign up instead
+                                    self.performSegue(withIdentifier: "signUpFailure", sender: self)
+                                }
+                                else{
+                                    self.performSegue(withIdentifier: "GoogleSuccessSignin", sender: self)
+                                }
                             }
                             
                         }
