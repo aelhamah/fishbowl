@@ -59,7 +59,7 @@ def getusers(request):
     relation_pref = row[1]
     gender_identity = row[2]
     
-    if request.GET.get('sender') == "DojaEmail":
+    if request.GET.get('sender') == "DojaEmail" or request.GET.get('sender') == "TaylorEmail":
         do_not_show = []
 
     for user_id in users_id:
@@ -85,7 +85,7 @@ def getusers(request):
                 and user_block['gender_preference'] == gender_identity: 
             response['users'][user_id] = user_block
         
-        elif request.GET.get('sender') == "DojaEmail":
+        elif request.GET.get('sender') == "DojaEmail" or request.GET.get('sender') == "TaylorEmail":
             response['users'][user_id] = user_block
 
     return JsonResponse(response)
@@ -132,7 +132,7 @@ def createusers(request):
     cursor = connection.cursor()
 
     # Do not modify if doja email
-    if email == "DojaEmail":
+    if email == "DojaEmail" or email == "TaylorEmail":
         cursor.execute('SELECT * FROM users WHERE email = %s;', (email,))
         rows = cursor.fetchall()
         response = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}
@@ -178,8 +178,12 @@ def createusers(request):
             cursor.execute('UPDATE users SET imageurl = %s WHERE email = %s;',(imageurl, email))
 
     else:
-        cursor.execute('INSERT INTO users (display_name, email, bio, imageurl, gender_preference, relationship_preference, gender_identity) VALUES '
-            '(%s,%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING;', (display_name,email,bio,imageurl,gender_preference,relationship_preference,gender_identity))
+        if bio is None:
+            bio = "No bio"
+        if username is None:
+            username = email
+        cursor.execute('INSERT INTO users (display_name,username, email, bio, imageurl, gender_preference, relationship_preference, gender_identity) VALUES '
+            '(%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING;', (display_name,username,email,bio,imageurl,gender_preference,relationship_preference,gender_identity))
     
     cursor.execute('SELECT * FROM users WHERE email = %s;', (email,))
     rows = cursor.fetchall()
