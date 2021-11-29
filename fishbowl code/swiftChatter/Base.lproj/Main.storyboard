@@ -277,7 +277,6 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="GoToSignUp:" destination="gLR-b0-bwb" eventType="touchUpInside" id="AuY-51-xXA"/>
                                     <action selector="sugihPath:" destination="gLR-b0-bwb" eventType="touchUpInside" id="39J-lT-DZb"/>
                                 </connections>
                             </button>
@@ -888,7 +887,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="IxZ-UX-GbF"/>
-        <segue reference="2m6-OI-fUm"/>
+        <segue reference="njo-x4-kyg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -897,8 +896,8 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="doja" width="980" height="653"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="heart" width="92" height="90"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart" width="92" height="90"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="hook" width="600" height="600"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
