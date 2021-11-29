@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1^$ep_(04)yqy95r_pb^frxn81x)*$z!!#deqhy)ijmpeq=-j3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.22.41.185','fishbowl.ml', 'www.fishbowl.ml',  'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['fishbowl.ml', 'www.fishbowl.ml', '3.15.21.206', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -128,3 +128,7 @@ STATIC_ROOT = BASE_DIR/ 'static'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = 'https://3.15.21.206/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760

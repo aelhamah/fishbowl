@@ -21,4 +21,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('getusers/', views.getusers, name='getusers'),
     path('postlikes/', views.postlikes, name='postlikes'),
+    path('createusers/', views.createusers, name='createusers'),
+    path('getmatches/', views.getmatches, name='getmatches'),
+    path('postauth/', views.postauth, name='postauth'),
+    path('adduser/', views.adduser, name='adduser'),
+    path('postblock/', views.postblock, name='postblock'),
+    path('getblocks/', views.getblocks, name='getblocks'),
+    path('updatebio/', views.updatebio, name='updatebio'),
 ]
