@@ -74,6 +74,12 @@ def getusers(request):
         user_block = {
             cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))
         }
+
+        # check if user_email likes sender
+        cursor.execute('SELECT * FROM matches WHERE sender = %s AND receiver = %s;', (user_email, request.GET.get('sender')))
+        rows = cursor.fetchall()
+        user_block['likes_sender'] = (len(rows) > 0)
+
         #replace https with http
         if user_block['imageurl'] is not None:
             user_block['imageurl'] = user_block['imageurl'].replace('https', 'http')
@@ -214,6 +220,7 @@ def getmatches(request):
     # Only get stuff that user matches on (I am <sender> and looking for <receiver>)
 
    # return JsonResponse(response)
+    matched_user_emails = []
     for user_id in users_id:
 
         if not is_mutual_like(sender, user_id):
@@ -224,9 +231,16 @@ def getmatches(request):
 
         if len(rows) == 0:
             continue
-        response["matches"].append({
+
+        temp = {
             cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))
-        })
+        }
+
+        if temp['email'] in matched_user_emails:
+            continue
+
+        response["matches"].append(temp)
+        matched_user_emails.append(temp['email'])
         # response[user_id] = {cursor.description[i][0]: rows[0][i] for i in range(len(cursor.description))}
 
     return JsonResponse(response,)
