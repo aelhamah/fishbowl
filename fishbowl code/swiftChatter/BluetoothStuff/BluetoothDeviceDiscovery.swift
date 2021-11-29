@@ -177,6 +177,7 @@ class BluetoothDeviceDiscovery: NSObject {
                     FishbowlStore.shared.users[index].GenderPreference = (value["gender_preference"] as? String)
                     FishbowlStore.shared.users[index].RelationshipPreference = (value["relationship_preference"] as? String)
                     FishbowlStore.shared.users[index].Actual_Email = (value["email"] as? String)
+                    FishbowlStore.shared.users[index].likes_sender = (value["likes_sender"] as? Bool)
                     
                     if value["imageurl"] != nil {
                         url = ((value["imageurl"] as? String)!)// swiftlint:disable:this force_cast
