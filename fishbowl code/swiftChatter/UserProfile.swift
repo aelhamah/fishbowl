@@ -23,6 +23,7 @@ struct UserProfile {
     var imageData: Data?
     var rssi: String?
     var configuredCell: Bool?
+    var likes_sender: Bool?
 }
 
 @propertyWrapper

@@ -171,8 +171,8 @@ final class FishbowlStore {
 
     func getMatches(_ completion: ((Bool) -> ())?) {
             print("in get matches")
-        guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+"3") else {
-           // guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+Fishbowl_ID.shared.email) else {
+        //guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+"3") else {
+            guard let apiUrl = URL(string: serverUrl+"getmatches/?sender="+Fishbowl_ID.shared.email) else {
                 print("getmatches: Bad URL")
                 return
             }

@@ -277,7 +277,6 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="GoToSignUp:" destination="gLR-b0-bwb" eventType="touchUpInside" id="AuY-51-xXA"/>
                                     <action selector="sugihPath:" destination="gLR-b0-bwb" eventType="touchUpInside" id="39J-lT-DZb"/>
                                 </connections>
                             </button>

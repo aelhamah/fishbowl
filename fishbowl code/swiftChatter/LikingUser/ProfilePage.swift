@@ -55,13 +55,12 @@ class ProfilePage: UIViewController {
     @IBAction func LikeButton(_ sender: Any) {
         
         FishbowlStore.shared.likeUser(Fishbowl_ID.shared.email, FishbowlStore.shared.fishies.Actual_Email ?? "nil")
-        print(Fishbowl_ID.shared.email)
-        print(FishbowlStore.shared.fishies)
-        print(FishbowlStore.shared.fishies.Actual_Email)
-        print("sanity")
-        if FishbowlStore.shared.successful_match {
+        print(FishbowlStore.shared.fishies.likes_sender)
+        if FishbowlStore.shared.fishies.likes_sender ?? false {
             FishbowlStore.shared.successful_match = false
             self.performSegue(withIdentifier: "itsAMatch", sender: self)
+        } else {
+            self.performSegue(withIdentifier: "RejectUserSegue", sender: self)
         }
     }
 
