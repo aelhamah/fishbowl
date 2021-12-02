@@ -404,7 +404,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hook" translatesAutoresizingMaskIntoConstraints="NO" id="BeR-gl-uL1">
-                                <rect key="frame" x="64" y="72" width="240" height="286"/>
+                                <rect key="frame" x="64" y="75" width="240" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -888,7 +888,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="IxZ-UX-GbF"/>
-        <segue reference="2m6-OI-fUm"/>
+        <segue reference="njo-x4-kyg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -897,8 +897,8 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="doja" width="980" height="653"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="heart" width="92" height="90"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart" width="92" height="90"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="hook" width="600" height="600"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
