@@ -45,12 +45,8 @@
 		D3FF878527419693008AA765 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */; };
 		D3FF878627419693008AA765 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF877D27419617008AA765 /* TextFieldTableViewCell.swift */; };
 		D3FF87872741969F008AA765 /* JoinTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF878027419617008AA765 /* JoinTableHeaderView.swift */; };
-		D3FF8788274196A8008AA765 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF878327419617008AA765 /* ChatViewController.swift */; };
-		D3FF8792274199DC008AA765 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF8791274199DC008AA765 /* Message.swift */; };
 		D3FF8793274199DC008AA765 /* BluetoothConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF8790274199DC008AA765 /* BluetoothConstants.swift */; };
-		D3FF8794274199DC008AA765 /* BluetoothChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF878F274199DB008AA765 /* BluetoothChatService.swift */; };
 		D3FF8795274199DC008AA765 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF878D274199DB008AA765 /* Device.swift */; };
-		D3FF8797274199DC008AA765 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF878B274199DB008AA765 /* Sender.swift */; };
 		D3FF8798274199DC008AA765 /* BluetoothDeviceDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF878A274199DA008AA765 /* BluetoothDeviceDiscovery.swift */; };
 		D3FF879D2741A1CA008AA765 /* Logo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B362600B26E7F1DA00A44FEC /* Logo.storyboard */; };
 		D3FF879E2741A1CA008AA765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B362600626E7F1D800A44FEC /* Main.storyboard */; };
@@ -128,14 +124,10 @@
 		D3FF877F27419617008AA765 /* JoinTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinTableHeaderView.xib; sourceTree = "<group>"; };
 		D3FF878027419617008AA765 /* JoinTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTableHeaderView.swift; sourceTree = "<group>"; };
 		D3FF878127419617008AA765 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
-		D3FF878327419617008AA765 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		D3FF878A274199DA008AA765 /* BluetoothDeviceDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDeviceDiscovery.swift; sourceTree = "<group>"; };
-		D3FF878B274199DB008AA765 /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
 		D3FF878C274199DB008AA765 /* BluetoothChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BluetoothChat.entitlements; sourceTree = "<group>"; };
 		D3FF878D274199DB008AA765 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		D3FF878F274199DB008AA765 /* BluetoothChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothChatService.swift; sourceTree = "<group>"; };
 		D3FF8790274199DC008AA765 /* BluetoothConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConstants.swift; sourceTree = "<group>"; };
-		D3FF8791274199DC008AA765 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,14 +256,10 @@
 				D3FF877F27419617008AA765 /* JoinTableHeaderView.xib */,
 				D3FF878027419617008AA765 /* JoinTableHeaderView.swift */,
 				D3FF8790274199DC008AA765 /* BluetoothConstants.swift */,
-				D3FF878F274199DB008AA765 /* BluetoothChatService.swift */,
 				D3FF878A274199DA008AA765 /* BluetoothDeviceDiscovery.swift */,
 				D3FF878D274199DB008AA765 /* Device.swift */,
-				D3FF8791274199DC008AA765 /* Message.swift */,
-				D3FF878B274199DB008AA765 /* Sender.swift */,
 				D3FF878127419617008AA765 /* JoinViewController.swift */,
 				D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */,
-				D3FF878327419617008AA765 /* ChatViewController.swift */,
 				D3FF877227418B2D008AA765 /* BluetoothChat */,
 			);
 			path = Bluetooth;
@@ -576,7 +564,6 @@
 				B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */,
 				B362600526E7F1D800A44FEC /* PostVC.swift in Sources */,
 				BB28B2CD2744104A00BB9814 /* AppDelegate.swift in Sources */,
-				D3FF8792274199DC008AA765 /* Message.swift in Sources */,
 				BB28B2C627440C5F00BB9814 /* TabBar.swift in Sources */,
 				D3FF8795274199DC008AA765 /* Device.swift in Sources */,
 				D388E89A26FD106400C0556B /* Extensions.swift in Sources */,
@@ -586,11 +573,9 @@
 				B362603A26E7FFA600A44FEC /* Chatt.swift in Sources */,
 				BB28B2BE27419CDD00BB9814 /* BlockedUsers.swift in Sources */,
 				B362600326E7F1D800A44FEC /* SceneDelegate.swift in Sources */,
-				D3FF8794274199DC008AA765 /* BluetoothChatService.swift in Sources */,
 				D3FF878427419669008AA765 /* JoinViewController.swift in Sources */,
 				D3FF87872741969F008AA765 /* JoinTableHeaderView.swift in Sources */,
 				BB25840D273D84010093CC0C /* SigninVC.swift in Sources */,
-				D3FF8788274196A8008AA765 /* ChatViewController.swift in Sources */,
 				D3FF8798274199DC008AA765 /* BluetoothDeviceDiscovery.swift in Sources */,
 				BB7D04EC27339B5600B26E43 /* CreateProfile.swift in Sources */,
 				B362603F26E8003900A44FEC /* ChattStore.swift in Sources */,
@@ -601,7 +586,6 @@
 				BB28B2D4274B2F9C00BB9814 /* signUpFailure.swift in Sources */,
 				D3FF8793274199DC008AA765 /* BluetoothConstants.swift in Sources */,
 				BB25840B273D7DE30093CC0C /* Fishbowl_ID.swift in Sources */,
-				D3FF8797274199DC008AA765 /* Sender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
