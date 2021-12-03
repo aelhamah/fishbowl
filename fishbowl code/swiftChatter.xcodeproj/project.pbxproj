@@ -40,7 +40,6 @@
 		D341A0FC2735795000F234E0 /* UserPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D341A0FB2735795000F234E0 /* UserPreferences.storyboard */; };
 		D388E89A26FD106400C0556B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388E89926FD106400C0556B /* Extensions.swift */; };
 		D3A1D46A272C3EDB00D33CFC /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A1D469272C3EDB00D33CFC /* ProfilePage.storyboard */; };
-		D3FF877327418B2D008AA765 /* BluetoothChat in Resources */ = {isa = PBXBuildFile; fileRef = D3FF877227418B2D008AA765 /* BluetoothChat */; };
 		D3FF878427419669008AA765 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF878127419617008AA765 /* JoinViewController.swift */; };
 		D3FF878527419693008AA765 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */; };
 		D3FF878627419693008AA765 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF877D27419617008AA765 /* TextFieldTableViewCell.swift */; };
@@ -117,7 +116,6 @@
 		D341A0FB2735795000F234E0 /* UserPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPreferences.storyboard; sourceTree = "<group>"; };
 		D388E89926FD106400C0556B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D3A1D469272C3EDB00D33CFC /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
-		D3FF877227418B2D008AA765 /* BluetoothChat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BluetoothChat; sourceTree = "<group>"; };
 		D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		D3FF877C27419617008AA765 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		D3FF877D27419617008AA765 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				B362603926E7FFA600A44FEC /* Chatt.swift */,
 				B362603E26E8003900A44FEC /* ChattStore.swift */,
 				B362604626E802E000A44FEC /* ChatTableCell.swift */,
-				D3FF877827419617008AA765 /* Scenes */,
 			);
 			path = fishbowl;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				D3FF878D274199DB008AA765 /* Device.swift */,
 				D3FF878127419617008AA765 /* JoinViewController.swift */,
 				D3FF877B27419617008AA765 /* DeviceTableViewCell.swift */,
-				D3FF877227418B2D008AA765 /* BluetoothChat */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -297,45 +293,6 @@
 				BB28B2CF274417F600BB9814 /* FishesProfile.swift */,
 			);
 			path = LikingUser;
-			sourceTree = "<group>";
-		};
-		D3FF877827419617008AA765 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				D3FF877927419617008AA765 /* Join */,
-				D3FF878227419617008AA765 /* Chat */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		D3FF877927419617008AA765 /* Join */ = {
-			isa = PBXGroup;
-			children = (
-				D3FF877A27419617008AA765 /* Cells */,
-				D3FF877E27419617008AA765 /* Accessories */,
-			);
-			path = Join;
-			sourceTree = "<group>";
-		};
-		D3FF877A27419617008AA765 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		D3FF877E27419617008AA765 /* Accessories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Accessories;
-			sourceTree = "<group>";
-		};
-		D3FF878227419617008AA765 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Chat;
 			sourceTree = "<group>";
 		};
 		DB68B1282745AC2E0017A8FC /* Recovered References */ = {
@@ -466,7 +423,6 @@
 				D3FF879F2741A2B6008AA765 /* JoinTableHeaderView.xib in Resources */,
 				B362600A26E7F1DA00A44FEC /* Assets.xcassets in Resources */,
 				D3A1D46A272C3EDB00D33CFC /* ProfilePage.storyboard in Resources */,
-				D3FF877327418B2D008AA765 /* BluetoothChat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
