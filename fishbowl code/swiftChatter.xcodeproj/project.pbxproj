@@ -123,7 +123,6 @@
 		D3FF878027419617008AA765 /* JoinTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTableHeaderView.swift; sourceTree = "<group>"; };
 		D3FF878127419617008AA765 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		D3FF878A274199DA008AA765 /* BluetoothDeviceDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDeviceDiscovery.swift; sourceTree = "<group>"; };
-		D3FF878C274199DB008AA765 /* BluetoothChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BluetoothChat.entitlements; sourceTree = "<group>"; };
 		D3FF878D274199DB008AA765 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D3FF8790274199DC008AA765 /* BluetoothConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,7 +246,6 @@
 		BB28B2C827440E6400BB9814 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				D3FF878C274199DB008AA765 /* BluetoothChat.entitlements */,
 				D3FF877C27419617008AA765 /* TextFieldTableViewCell.xib */,
 				D3FF877D27419617008AA765 /* TextFieldTableViewCell.swift */,
 				D3FF877F27419617008AA765 /* JoinTableHeaderView.xib */,
