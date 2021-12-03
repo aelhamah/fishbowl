@@ -176,7 +176,7 @@
 		B3625FF426E7F1D800A44FEC = {
 			isa = PBXGroup;
 			children = (
-				B3625FFF26E7F1D800A44FEC /* swiftChatter */,
+				B3625FFF26E7F1D800A44FEC /* fishbowl */,
 				B362601626E7F1DB00A44FEC /* swiftChatterTests */,
 				B362602126E7F1DB00A44FEC /* swiftChatterUITests */,
 				B3625FFE26E7F1D800A44FEC /* Products */,
@@ -196,10 +196,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B3625FFF26E7F1D800A44FEC /* swiftChatter */ = {
+		B3625FFF26E7F1D800A44FEC /* fishbowl */ = {
 			isa = PBXGroup;
 			children = (
-				BB28B2C827440E6400BB9814 /* BluetoothStuff */,
+				BB28B2C827440E6400BB9814 /* Bluetooth */,
 				BB28B2CB27440F6400BB9814 /* CreateProfileAndSignUp */,
 				BB28B2CE2744106300BB9814 /* LikingUser */,
 				BB28B2C927440EE000BB9814 /* LikedMatches */,
@@ -222,7 +222,7 @@
 				B362604626E802E000A44FEC /* ChatTableCell.swift */,
 				D3FF877827419617008AA765 /* Scenes */,
 			);
-			path = swiftChatter;
+			path = fishbowl;
 			sourceTree = "<group>";
 		};
 		B362601626E7F1DB00A44FEC /* swiftChatterTests */ = {
@@ -255,7 +255,7 @@
 			path = UserPrefences;
 			sourceTree = "<group>";
 		};
-		BB28B2C827440E6400BB9814 /* BluetoothStuff */ = {
+		BB28B2C827440E6400BB9814 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
 				D3FF878C274199DB008AA765 /* BluetoothChat.entitlements */,
@@ -274,7 +274,7 @@
 				D3FF878327419617008AA765 /* ChatViewController.swift */,
 				D3FF877227418B2D008AA765 /* BluetoothChat */,
 			);
-			path = BluetoothStuff;
+			path = Bluetooth;
 			sourceTree = "<group>";
 		};
 		BB28B2C927440EE000BB9814 /* LikedMatches */ = {
@@ -779,8 +779,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G72JGSU347;
-				INFOPLIST_FILE = swiftChatter/Info.plist;
+				DEVELOPMENT_TEAM = C39Z862JD3;
+				INFOPLIST_FILE = fishbowl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -800,8 +800,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G72JGSU347;
-				INFOPLIST_FILE = swiftChatter/Info.plist;
+				DEVELOPMENT_TEAM = C39Z862JD3;
+				INFOPLIST_FILE = fishbowl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
