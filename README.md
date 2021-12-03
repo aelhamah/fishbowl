@@ -1,8 +1,9 @@
 # UM EECS441§3&4 F21 Fishbowl
 Team GitHub for fishbowl project. EECS 441 Fall 2021
 
-| Demo  | Wiki | Trello |
-| ------------- | ------------- |
+
+| Demo  |  Wiki |  Trello  |
+|:-----:|:-----:|:--------:|
 |[<img src="https://eecs441.eecs.umich.edu/img/admin/video.png">][demo_page]|[<img src="https://eecs441.eecs.umich.edu/img/admin/wiki.png">][wiki_page]|[<img src="https://eecs441.eecs.umich.edu/img/admin/trello.png">][process_page]|
 
 ![Elevator Pitch](/assets/title.png)
