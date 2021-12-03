@@ -14,23 +14,15 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
-  - InputBarAccessoryView (5.4.0):
-    - InputBarAccessoryView/Core (= 5.4.0)
-  - InputBarAccessoryView/Core (5.4.0)
-  - MessageKit (3.7.0):
-    - InputBarAccessoryView (~> 5.4.0)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
-  - SwiftLint (0.45.0)
 
 DEPENDENCIES:
   - Alamofire
   - DropDown
   - GoogleSignIn
-  - MessageKit
   - SDWebImage
-  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -40,10 +32,7 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
-    - InputBarAccessoryView
-    - MessageKit
     - SDWebImage
-    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -52,11 +41,8 @@ SPEC CHECKSUMS:
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
-  InputBarAccessoryView: 74d471ab1fa1736806be50328df79257e52865a9
-  MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
-  SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
 
-PODFILE CHECKSUM: 293f097ce5b448c20c7ad0864a7f81fb1cdbf0e0
+PODFILE CHECKSUM: 5ca1e5bb737ee4b8bc95139c52373ab970f5123c
 
 COCOAPODS: 1.11.2

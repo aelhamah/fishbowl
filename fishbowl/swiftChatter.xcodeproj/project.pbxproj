@@ -11,13 +11,7 @@
 		3C8BFFD4273D7C0F001B9FDF /* MatchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BFFD3273D7C0F001B9FDF /* MatchTableCell.swift */; };
 		3C8BFFD6273D8136001B9FDF /* MatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BFFD5273D8136001B9FDF /* MatchVC.swift */; };
 		B362600326E7F1D800A44FEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362600226E7F1D800A44FEC /* SceneDelegate.swift */; };
-		B362600526E7F1D800A44FEC /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362600426E7F1D800A44FEC /* PostVC.swift */; };
 		B362600A26E7F1DA00A44FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B362600926E7F1DA00A44FEC /* Assets.xcassets */; };
-		B362601826E7F1DB00A44FEC /* swiftChatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362601726E7F1DB00A44FEC /* swiftChatterTests.swift */; };
-		B362602326E7F1DB00A44FEC /* swiftChatterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362602226E7F1DB00A44FEC /* swiftChatterUITests.swift */; };
-		B362603A26E7FFA600A44FEC /* Chatt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362603926E7FFA600A44FEC /* Chatt.swift */; };
-		B362603F26E8003900A44FEC /* ChattStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362603E26E8003900A44FEC /* ChattStore.swift */; };
-		B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604626E802E000A44FEC /* ChatTableCell.swift */; };
 		B362604C26E803AC00A44FEC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362604B26E803AC00A44FEC /* MainVC.swift */; };
 		BB25840B273D7DE30093CC0C /* Fishbowl_ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */; };
 		BB25840D273D84010093CC0C /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25840C273D84010093CC0C /* SigninVC.swift */; };
@@ -80,20 +74,12 @@
 		77650E762D6BFD555D4E3351 /* Pods-swiftChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.release.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.release.xcconfig"; sourceTree = "<group>"; };
 		B3625FFD26E7F1D800A44FEC /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B362600226E7F1D800A44FEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B362600426E7F1D800A44FEC /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		B362600726E7F1D800A44FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B362600926E7F1DA00A44FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B362600C26E7F1DA00A44FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Logo.storyboard; sourceTree = "<group>"; };
 		B362600E26E7F1DA00A44FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B362601326E7F1DB00A44FEC /* swiftChatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftChatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B362601726E7F1DB00A44FEC /* swiftChatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftChatterTests.swift; sourceTree = "<group>"; };
-		B362601926E7F1DB00A44FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B362601E26E7F1DB00A44FEC /* swiftChatterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftChatterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B362602226E7F1DB00A44FEC /* swiftChatterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftChatterUITests.swift; sourceTree = "<group>"; };
-		B362602426E7F1DB00A44FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B362603926E7FFA600A44FEC /* Chatt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatt.swift; sourceTree = "<group>"; };
-		B362603E26E8003900A44FEC /* ChattStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattStore.swift; sourceTree = "<group>"; };
-		B362604626E802E000A44FEC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		B362604B26E803AC00A44FEC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		BB25840A273D7DE30093CC0C /* Fishbowl_ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishbowl_ID.swift; sourceTree = "<group>"; };
 		BB25840C273D84010093CC0C /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
@@ -166,8 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				B3625FFF26E7F1D800A44FEC /* fishbowl */,
-				B362601626E7F1DB00A44FEC /* swiftChatterTests */,
-				B362602126E7F1DB00A44FEC /* swiftChatterUITests */,
 				B3625FFE26E7F1D800A44FEC /* Products */,
 				4BB4E32EE1F0EB772C73335F /* Pods */,
 				E28B91A398B948BDB506AF6D /* Frameworks */,
@@ -205,30 +189,8 @@
 				B362600B26E7F1DA00A44FEC /* Logo.storyboard */,
 				B362600926E7F1DA00A44FEC /* Assets.xcassets */,
 				B362600E26E7F1DA00A44FEC /* Info.plist */,
-				B362600426E7F1D800A44FEC /* PostVC.swift */,
-				B362603926E7FFA600A44FEC /* Chatt.swift */,
-				B362603E26E8003900A44FEC /* ChattStore.swift */,
-				B362604626E802E000A44FEC /* ChatTableCell.swift */,
 			);
 			path = fishbowl;
-			sourceTree = "<group>";
-		};
-		B362601626E7F1DB00A44FEC /* swiftChatterTests */ = {
-			isa = PBXGroup;
-			children = (
-				B362601726E7F1DB00A44FEC /* swiftChatterTests.swift */,
-				B362601926E7F1DB00A44FEC /* Info.plist */,
-			);
-			path = swiftChatterTests;
-			sourceTree = "<group>";
-		};
-		B362602126E7F1DB00A44FEC /* swiftChatterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B362602226E7F1DB00A44FEC /* swiftChatterUITests.swift */,
-				B362602426E7F1DB00A44FEC /* Info.plist */,
-			);
-			path = swiftChatterUITests;
 			sourceTree = "<group>";
 		};
 		BB28B2C727440E2C00BB9814 /* UserPrefences */ = {
@@ -374,7 +336,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					B3625FFC26E7F1D800A44FEC = {
 						CreatedOnToolsVersion = 12.4;
@@ -509,14 +471,11 @@
 				BBDD7D1A272AFA3100040C0F /* ProfilePage.swift in Sources */,
 				BB28B2BC274195DC00BB9814 /* UserPreferences.swift in Sources */,
 				D3FF878627419693008AA765 /* TextFieldTableViewCell.swift in Sources */,
-				BBDD7D1A272AFA3100040C0F /* ProfilePage.swift in Sources */,
 				D3FF878527419693008AA765 /* DeviceTableViewCell.swift in Sources */,
 				BB7D04EE2734308700B26E43 /* FishbowlStore.swift in Sources */,
 				BB7D04EA2733978C00B26E43 /* LoginORSignUp.swift in Sources */,
 				BB7D04F227384AC400B26E43 /* LikedProfiles.swift in Sources */,
 				3C8BFFD4273D7C0F001B9FDF /* MatchTableCell.swift in Sources */,
-				B362604726E802E000A44FEC /* ChatTableCell.swift in Sources */,
-				B362600526E7F1D800A44FEC /* PostVC.swift in Sources */,
 				BB28B2CD2744104A00BB9814 /* AppDelegate.swift in Sources */,
 				BB28B2C627440C5F00BB9814 /* TabBar.swift in Sources */,
 				D3FF8795274199DC008AA765 /* Device.swift in Sources */,
@@ -524,7 +483,6 @@
 				3C8BFFD2273D7B6F001B9FDF /* Match.swift in Sources */,
 				3C8BFFD6273D8136001B9FDF /* MatchVC.swift in Sources */,
 				BB28B2D22747FE9400BB9814 /* MatchedBack.swift in Sources */,
-				B362603A26E7FFA600A44FEC /* Chatt.swift in Sources */,
 				BB28B2BE27419CDD00BB9814 /* BlockedUsers.swift in Sources */,
 				B362600326E7F1D800A44FEC /* SceneDelegate.swift in Sources */,
 				D3FF878427419669008AA765 /* JoinViewController.swift in Sources */,
@@ -532,7 +490,6 @@
 				BB25840D273D84010093CC0C /* SigninVC.swift in Sources */,
 				D3FF8798274199DC008AA765 /* BluetoothDeviceDiscovery.swift in Sources */,
 				BB7D04EC27339B5600B26E43 /* CreateProfile.swift in Sources */,
-				B362603F26E8003900A44FEC /* ChattStore.swift in Sources */,
 				BB28B2D0274417F600BB9814 /* FishesProfile.swift in Sources */,
 				BB25840F27405EA10093CC0C /* SignupVC.swift in Sources */,
 				B362604C26E803AC00A44FEC /* MainVC.swift in Sources */,
@@ -547,7 +504,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B362601826E7F1DB00A44FEC /* swiftChatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +511,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B362602326E7F1DB00A44FEC /* swiftChatterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
