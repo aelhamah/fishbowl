@@ -13,15 +13,16 @@
 			buildPhases = (
 			);
 			dependencies = (
+				516126FDDB0E27141872D6D807713903 /* PBXTargetDependency */,
 				0DAF46B681B46AF56656ECF293BC0136 /* PBXTargetDependency */,
 				61EF8135CEE2C8836CA344B23FF2E799 /* PBXTargetDependency */,
 			);
 			name = GoogleSignIn;
-			productName = GoogleSignIn;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0243C815758D1D145C7F37165277EEFA /* OIDTokenUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC191C40C3B4677BE38B6B40BD47358 /* OIDTokenUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		02621C4B82398D0657F474E21493A3A2 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AF89CD56FA8679B5168D272F72A3F /* HTTPMethod.swift */; };
 		02931F156BBB20F35A591D790A37C541 /* SDImageHEICCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8F4C09DB0D42D19E9F5C7A8F6BAC4 /* SDImageHEICCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		02DB462B121245593CE653B9B377F970 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E8ACC8D78189C589D2CC292A3BF5F /* Protected.swift */; };
@@ -37,37 +38,53 @@
 		0EDBD47EB727226433C431B9DC8D5EAB /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B4357B653F52AF72E41DC4D65EF0B3 /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0F4322740A001E3D7BFD2C333BCF907D /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2E65A3B096419CCA0D2B4649AFFF81 /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FFA0C960F26666918569059FB8E92BC /* SDImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 575732F51A40D9AC18152A089E918CEC /* SDImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10FA4B082EFE76833B278505FF0150F7 /* OIDAuthorizationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC09696BD1FB6348D0FCD204B8338C7 /* OIDAuthorizationResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		11E79385CD0DA86166E63D21E7E078E9 /* SDImageIOAnimatedCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = D3B09F0BFB502A34589294960D7C55F5 /* SDImageIOAnimatedCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13E62623092B680C6A5C349D48B8A4FD /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1ABC32C1877DA3070B5C8954B5D6AB /* CachedResponseHandler.swift */; };
 		15956F79CA3C3D6B29A43C675B5D7271 /* SDWebImageOptionsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF32E7E7746EC44BF4FE8AD16F5F27F /* SDWebImageOptionsProcessor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		161B289F1C83A7281E6842E33014033F /* OIDClientMetadataParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = BD78CF7D52741FA345D5A386BDAAAC42 /* OIDClientMetadataParameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		168AB5EA0EBEB75D0434B55D0B97AD47 /* SDImageIOAnimatedCoderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 83206AF3936D03C04DF532634AAE50DC /* SDImageIOAnimatedCoderInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		172602BC134521DFB653114E4CA6CFC4 /* SDInternalMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BE39D75E5B7603440EF7557333207 /* SDInternalMacros.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1773084DECF68CADD45567FBEC56036D /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95205ACF63256598EC24FB089E50D6A6 /* Alamofire-dummy.m */; };
+		17EC3E69469BB4FE2ACD89184105A8BA /* OIDFieldMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = AC3EF16A02F0D50B415A3AF380E3F4F0 /* OIDFieldMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18303B692A81A7D708973A6B9CBA75D8 /* SDAsyncBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 020BAA9601A9934E1790B8AE233C4FD4 /* SDAsyncBlockOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1C236D8572AD6EF88B07A4443C91307C /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E7499B503EAF7B4DAFD702E1464F3A /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C24BE50632D74BE44F1BE763F595AF1 /* SDWebImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C725AA7D81E02A62EC47A5A30E3AC2D /* SDWebImageTransition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87C9EAC0E88CF26C914AE399FD3D5B9 /* RequestTaskMap.swift */; };
+		1D66D60A6F32CFF16C509D1396D0EFDE /* OIDURLQueryComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E44C13C4501DE95517E74AE49FD7933 /* OIDURLQueryComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		20004B99F5050F59E747AB8DFAD7E891 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DC45F80E726655F09672868B61C3D25 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		212FE9ADE82512247BA4239AE7299896 /* OIDClientMetadataParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481A5F3209BD7B2817E837849514ECD /* OIDClientMetadataParameters.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2156F1E12D1F62F8322CFE5C29277E6E /* OIDResponseTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3254C27C42CE46E8F8D1E1FBE645ACE0 /* OIDResponseTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		228FAD7365988F95E641667E3AC2871F /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B9FC71E0B05D3D3DD742655324A0B7 /* UIImage+GIF.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2550F0D474DE846FEC5C76CBE85F927E /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413F1E8C1264B34B15E9AC52B53E24A5 /* OperationQueue+Alamofire.swift */; };
 		26BF15D648EFA59FCA18AE285AC5B2A1 /* UIImage+MemoryCacheCost.h in Headers */ = {isa = PBXBuildFile; fileRef = 946028D06F74EB6BA0C25FCFEF65983C /* UIImage+MemoryCacheCost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2782B24A2261DE8B330B44157B9942B8 /* OIDRegistrationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B771D31F3F5502A589DC1A5194B3BE /* OIDRegistrationRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		278F5B2C01E923AA0C691D79BD0F321F /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 137DC7E2C46739C3AC8A16561C3451F6 /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27C856FA691325CABE6952A9DF9AF7E9 /* SDImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F34A68DACCDA95C667D7371BE690992 /* SDImageIOCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		28B3A5802FE1E10CA6FC533270DA81C0 /* OIDAuthorizationService+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402B8EA60178A29ACE87F2855FDD1B5 /* OIDAuthorizationService+IOS.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2A9C212E03A0AF890063DDC084AA7256 /* UIColor+SDHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = CB486BC03549A601C99D4FF6028C2B5B /* UIColor+SDHexString.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2B8D87053F5FA5B148962FE2DD101A00 /* SDImageAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B38896853A236C379525083EFC4E1216 /* SDImageAssetManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2CF8AD404E3183EA512D35D5A875E6AF /* OIDErrorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7438A7B4DFF64F2B5D2C5B1CE24C374B /* OIDErrorUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2D1BB7642BDABB1A045A25B32F3A8EF2 /* SDImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E26C903249C1CAB0D983AF3F3EA6C5 /* SDImageLoader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2D7E7D5F025A1006C0D373B5884B6E52 /* SDWebImageDownloaderResponseModifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A686255091EFAD093A7C3253B1297A5 /* SDWebImageDownloaderResponseModifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EF390C79F02F4E85DB5FB4C1F042498 /* OIDExternalUserAgentIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDAA06744F8C28E3DBC5872D15A57CC /* OIDExternalUserAgentIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F85FF5597762E2E3C6961C6DD690A60 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F8714290638E0F205029B73958800414 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FD8A4D19B6D8B858DB8DF62B2E0C55F /* SDImageAPNGCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCDFA62577AA67E034A5EBD419DD4E3 /* SDImageAPNGCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		30A331CD9286145E92DB11D671664C63 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9402EDE5FEDCF3E10AC93F72A772C2 /* MultipartUpload.swift */; };
+		320D03F92E37CA225E1AB819D00B09B6 /* OIDAuthStateErrorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3CB47FFEAD046AD376310DA33CB60C /* OIDAuthStateErrorDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		329A4057057BEC4C150E9D97BD0C60AD /* SDImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E976C494C2AA4A3C7ED8D051E4ABF797 /* SDImageCoderHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		32F911D6150E642B8F2CDC98AEF3E73A /* OIDRegistrationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F33A0679A6B8A65FC77098CB358C9049 /* OIDRegistrationResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		336BA7F271A33087B951BA4C6C6B2C6F /* SDImageAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE8D35A07D58A17592B5F4E8D2FA5A5 /* SDImageAssetManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		33C0E2EFD1C8046A2020D25FD1F1611F /* SDImageAWebPCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 40F11BE0407B4F81878E1DB5F6E09D6B /* SDImageAWebPCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33F86FAB918B148A63A1575667F9B570 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4318624E91138C75D2E5C77809C79C5 /* CFNetwork.framework */; };
+		34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC67F16A19995A3FE0393B27CBD8A3 /* Foundation.framework */; };
 		35F8A515D18F548B170CBDF30C9E6913 /* SDDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B7A058129B69E71BC19D7687F4EE9 /* SDDeviceHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		361E2ABC39FC721CAC0A60D97B914F8A /* OIDError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7036C260758AF68B8AADA5055926E48B /* OIDError.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3699EA4664E80BCE798E241B592DFAF4 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 829AF88D0B5DEB16AFA6D3AEFFA87A33 /* SDWebImage-dummy.m */; };
 		369EC1ED8EC10CD883F462D757A47039 /* NSBezierPath+SDRoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = FB405B86A63EDFBEFE3117946226BBF1 /* NSBezierPath+SDRoundedCorners.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		36DC3ACDD3D67D6800CABB2100702A0A /* OIDAuthStateChangeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDE4865EB0C903CE40EF4C6654F4612 /* OIDAuthStateChangeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36F35669F3AFF65477B2366FC09A1B3F /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EDEC414D41FE678CFB9DE40D03710DEA /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37B71CC20A787EAE0662CD1A40DA64B6 /* OIDExternalUserAgentSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD1A114B8A93BFC30242C2FB1478A1D /* OIDExternalUserAgentSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37E3C820BC838123661E1391BEAF8092 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6A5FEEE9710B20FD85F4A0AF33F21B /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38CF7D5EE6C28780FE3F9C1E63CFF3D4 /* SDAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 308F97D5B58A67FCB6474D926D3A162B /* SDAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39E82F6F59D0300E9F838CEE2DF94DBE /* SDWebImageDownloaderRequestModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A006D5627D2C473FA353B0D8BBC4735 /* SDWebImageDownloaderRequestModifier.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -76,23 +93,40 @@
 		3B372FE75AE987254A0E571E860205C8 /* GTMAppAuthFetcherAuthorization+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 35279401E57FC5402FC8A7DAB8467244 /* GTMAppAuthFetcherAuthorization+Keychain.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		42822E48A1441AD8E0011D37C1625B36 /* SDAnimatedImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 435D176B67EA05B405D85225E00F88CB /* SDAnimatedImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42ABC791D3D130AC05E2FC6A7BF23420 /* GTMSessionFetcher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDE4784953757F4DE40ABEF91A5D2E0 /* GTMSessionFetcher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		439CAB2D08FC0211211A3C29A8FBC623 /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 083E591C814B53F049459B7924A8E839 /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4447683B19506EEA079DF50B4439B0D5 /* OIDGrantTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 173F216FA8DFFD5AB38E444C3E9DB900 /* OIDGrantTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		449EC829DD62DE2FCBC6EC9DCEEF7C81 /* OIDTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4971A8972378E61DD994DFBF0C2AE69C /* OIDTokenRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		457F8F3576D65A8717113C59D6665554 /* OIDEndSessionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = FA687C7E43357B0420E56D524AACF6CD /* OIDEndSessionResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4634BA717BFCE522E5B42304C6A78B5D /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA13206FC5C6C34EC9CACC3366549B /* ParameterEncoding.swift */; };
+		468CEC1F1ED6564685600D76F289F8CB /* AppAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A07904DE14C9A388A9592CDDE30F7ADB /* AppAuthCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47050ED9027A5F811BB7D889FB05EF58 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDFC6FC8271CBB124969FC17B2CBA84 /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		471611F482CDC15BF464E3BA9CB83968 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B288D222BB16AAE4705C7D0CB4C7380E /* Notifications.swift */; };
+		478FB747A4426C8364A9E0EF192D4A82 /* OIDURLSessionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B2A17EF82108D21E36396B1829EA4 /* OIDURLSessionProvider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4816ED359D1CCB98A1C010564EE02C2F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D17456396B6B6CEEF3EC186CA70919 /* SafariServices.framework */; };
+		4845BF5ED5999291320D49E88162F62A /* OIDError.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FC509CFBFFC13791572D8F39E58C52 /* OIDError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48920AFFC7C0E2FEA632DAA2BD63287D /* SDWebImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CAD5617D2F441722AC319F8EDBFA710 /* SDWebImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A24503FE25D6B716A3E4E138451B70F /* OIDURLSessionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = C388EE8599D0B7551351F40E8A223514 /* OIDURLSessionProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A27F890C33243C4548A25318264B375 /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B7227109E1C65B4A8B1B33F73A76784 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B16A7CB72C60B453E9D0BC11626CB02 /* SDAnimatedImagePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89D7716F373B3131D347B978AFC20B /* SDAnimatedImagePlayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4BCBAFF452CC26193E9FE60FCADDD5CA /* SDAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB0985D6E98B963709A0EB78715A0D3 /* SDAnimatedImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4C765081895B1F7551FED0CA1DBF8B77 /* OIDTokenRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A51381EACFFFA7410BFFAF78E73D4E75 /* OIDTokenRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CF4277C7E40245C9B0D7A59BED5FDCE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3E9B880428D8B970369ABCA7D531DC /* Security.framework */; };
+		4EA7A5404DB139E46B796B715346BD6D /* OIDAuthState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5269033FA39011AAA7B2436A23B36CC2 /* OIDAuthState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4FB353F2B2E7D7AE0811D7C538DA2B36 /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = B4B2A39BEE2CC0A34C25679E67CFDCFE /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		512FAFBD71830F126224C033B6C45F4E /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A107365871248B99CC27221CE631E96 /* RetryPolicy.swift */; };
+		515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653A937D878BC249048403FEB7DE4DA /* DropDown+Appearance.swift */; };
 		519B33DCAE0FB73CC313A2C2AD434449 /* SDImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F668F1CF98F4C83981D7C3976C963428 /* SDImageCoderHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51C24FAAC45273CE7FF920D0CC553274 /* OIDExternalUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = F39B99094F3B513EA039855401ECB1D6 /* OIDExternalUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51F891EA712D8F14CF1DD77BF20B62A9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F8318A620830CFC2F20C3F760F3E6F /* ImageIO.framework */; };
 		523861A018452CE8BB166B59A7872BDA /* SDImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 155D3F4147CF0594CD7F3E0D8C13678D /* SDImageFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52BE6F747C26DF2A24532458E55DC10F /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36ADFAE4806FF86528AD4F9706B48D5 /* HTTPHeaders.swift */; };
+		52DCCBBE231688834A4430EC4DC5E2F3 /* OIDTokenUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F8DDE13BEFE4C66E42530F9B52D0ED9 /* OIDTokenUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53EB94FD573DA6A0E3BB533CDECBC092 /* SDGraphicsImageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EAF17A83935A05B4A1728086F5F79D /* SDGraphicsImageRenderer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		551E477DFE0DF7EA481165609280D1D7 /* OIDAuthorizationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = FABA8B29F242F61FF8C149F1A4C801FE /* OIDAuthorizationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		552CBD078015451B9D1CF3EAE0FBD7D8 /* SDAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E37F76820F759B7F90515E8702336F04 /* SDAnimatedImageView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		564149C1EA39335BB3C5E2BBCB3FE4CD /* SDImageLoadersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1957E29F823BB1AEA764D8B735BE5AE2 /* SDImageLoadersManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5700F2B87DCC93D832B29F89E850CB79 /* OIDServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A147FCE861CA63F3EF61F062E349076 /* OIDServiceConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		57A6ACE1BAEA7426248B6F56DC8F5133 /* OIDAuthState+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = C1586F29F355475B36BD7EB150A4B5B4 /* OIDAuthState+IOS.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		57E1C476BA5F8DD1ED740FE8DBC05D8A /* SDAnimatedImagePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857C82142EA4CC259D91DFFA1DEA640 /* SDAnimatedImagePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		583C30A05E70888990BE81F96BCDC441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC67F16A19995A3FE0393B27CBD8A3 /* Foundation.framework */; };
 		59380493ADFF755D12D611DBB3885C1F /* SDImageCachesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD496EE9EEEBDC7DCAFEBDE175DB297B /* SDImageCachesManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -100,13 +134,21 @@
 		5A8A649CF43F751DE6767B40B8F70984 /* SDWebImageDownloaderDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A53985E2EF5D33129B2AD76761571E7 /* SDWebImageDownloaderDecryptor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5B69919844A3BD774BAABB186D6A524F /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2629A3BF4ABCD35DC6262CABAE105E /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BBE7719912593F1DEFF8E763EAD4ED6 /* SDImageCacheDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 47701FBC75F5B96F318A28F4EEE24C49 /* SDImageCacheDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BD985E4671C5879F20406153E3E574C /* AppAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 90A126AB3B53FEC4E1FC87057003D056 /* AppAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C30A69EE52BA8E83D3650742268891E /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF886B641667D07EE9F755F067AF030 /* UIImage+MultiFormat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5E3B1A932202F529808ECC95A1E21886 /* GTMOAuth2KeychainCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FEFCE45C4482129F494130F4E5F0A04 /* GTMOAuth2KeychainCompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E594FA3290D3D70F500572D0AC100DB /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C601999FFEFA2771E7C4136A9355327 /* URLConvertible+URLRequestConvertible.swift */; };
+		5F8F0237CE1054B9A08B2C40671DF085 /* OIDTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBF2C0751A0C681884E22ED67E00FCB /* OIDTokenResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		609C294F0E6CBB52B14839910F733176 /* SDWebImageDownloaderConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B293CBBF7E92E13231DC9B2AD94C36B /* SDWebImageDownloaderConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6264526D8F9C1ACEF1013E5A724FD971 /* OIDAuthState.h in Headers */ = {isa = PBXBuildFile; fileRef = F77F827755181976EE7C185032485892 /* OIDAuthState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		646C9F55A668E111DD5822AB2F9FDE6F /* OIDAuthorizationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DA024F9CA8D84B9185B0E3A95BBA62B6 /* OIDAuthorizationRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		66EF2ED358A6F0E96F196030CF6D56DF /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5544254E3C9626F0EF66B80D5B0742 /* UIImageView+HighlightedWebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		67B3DCBA30FDEDA18E0D4E3B2C16C911 /* SDImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6DD5AC0284010175DAD008DC98F2C6 /* SDImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67EC3D04252892C191FEC258377C2C3B /* OIDScopeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A274605FE45BD52C11E4D1428D5DDA4F /* OIDScopeUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6823031D9F492AECA9C447439E7A3060 /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F92A166CDA92892DD5758893D5302973 /* OIDExternalUserAgentIOSCustomBrowser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		688337B18659C4BF722F87AFC4FEEF81 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8C38272D7F930DF54B0B0436BC874 /* SessionDelegate.swift */; };
+		689710AEBB6FCF80CC6CF503FCCE5BBB /* OIDScopes.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DA6168917FF125A3FBC3A5D63AB11F /* OIDScopes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1C12C26A8D7DDE56E0EEBB52EF5438 /* DropDownCell.xib */; };
 		6C93ABDF963DDA7C78AADD9F22CD5CB1 /* NSBezierPath+SDRoundedCorners.h in Headers */ = {isa = PBXBuildFile; fileRef = 83CEB8C6F7D2BCCC8E803C4B6C6D81DB /* NSBezierPath+SDRoundedCorners.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6D0D7FF411B4872030FD7181FF474164 /* SDImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B23F6CE7534F03B9CC93C8034ED42 /* SDImageGIFCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6D7EE18A1E5ED131AF465E3FFC1CA31D /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = DE59442FE42BF6AA09AD6F9DE0B76D96 /* GTMSessionUploadFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -116,8 +158,11 @@
 		6F84C5070371BA044717908A7E1C67A3 /* GTMAppAuthFetcherAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 664591AA6EF0C27F76591F3F4AC586B8 /* GTMAppAuthFetcherAuthorization.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		702DE3AFC75BB529CF054A92329FE3C9 /* SDWebImageDownloaderResponseModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 41959E1BAFDFBFD6B0A6C6899C2D2E56 /* SDWebImageDownloaderResponseModifier.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		73F2DE8B48DC2F7C87529AB3901B9E94 /* UIImage+Metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1AD33D247C2AE9B91E40BEFA91C3E7 /* UIImage+Metadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07E65F60E955F85C6A57C361EEB2A80 /* DPDConstants.swift */; };
+		752935D37B27C4524979795B8403211D /* OIDExternalUserAgentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2B08CD48456D05925DBF4F851DF6F9 /* OIDExternalUserAgentRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79A1927E310E44D235FA8B38780DB05C /* UIImage+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D81522C8BC59339F8152FAB165C4CDA /* UIImage+Transform.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7BB42D91C3145DF6BC3788056816B090 /* SDImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9268750F8BEC61848F4DE44DE0A0182A /* SDImageFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7BE52B1B5401BD6D7FB28C1C7335C65F /* OIDEndSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E51582807499A79CCA6FED44170119C7 /* OIDEndSessionResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7D895A643F2E20E2C4471195DDDA1CD9 /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FA3AE9DA4AB793DF971404EB396C97 /* SDImageGraphics.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7D9E8F8A5D02148FCC2DBD6319BCC3D1 /* SDWebImageDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6169682E4A70A06F3639E165C0F0C7 /* SDWebImageDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DFFE9662914D8A88A834B4294EE330E /* SDDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 38157CF1DFB217FA049CDE2A6D6C99A3 /* SDDiskCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -128,17 +173,23 @@
 		80FFCC4BACFEC6D1D970AAF18910DCA2 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A29EA19256BC2E57BA2EC35C9255A5E /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		81F24B729C1A112F376A1573E97CB523 /* SDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B98DBA3ECE31774E18A1F6B80AA63 /* SDMemoryCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8433F353F3016EFF0316F48188D6B651 /* SDInternalMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE94721B908D7294AC6744D653FBDC5 /* SDInternalMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B286C44D3978D5904549CA995CAC02A /* DropDown.swift */; };
+		84721D9C8FAD373C09FFCDA8D18F212A /* OIDErrorUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A883E7194981F98E0A44CC401D99FA /* OIDErrorUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B624227D73D3746CEFD48E49D74635 /* SDAssociatedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E0D2EF975B581260D266367CE135B787 /* SDAssociatedObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		85EA64E2C72CFDEC660AAB46F068F1FA /* GTMAppAuthFetcherAuthorization+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 988242B629F263B2F631F256E9A9672D /* GTMAppAuthFetcherAuthorization+Keychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		860A9B90C64C2FA779BC2EE34BEBCE31 /* SDFileAttributeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 153B9E3DD2CBC3EB1CD9E3D193BAF914 /* SDFileAttributeHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8821E3636BB86560FC2F2D2CFF545F16 /* SDImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4717ED32361E33800D1467CAC21F92 /* SDImageCodersManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B01A8E62A6F967C32BD7689FA90DD3 /* DPDKeyboardListener.swift */; };
 		8B9CDBE3FFD712120CD66DD8B06C44E4 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE40BC3F51EF13F4F55612563EED20 /* ParameterEncoder.swift */; };
 		8C5D0B2A7B52DF68D03820244993E91B /* SDImageTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = BEE26D7767FDD83595B049F1739F8369 /* SDImageTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C9D609988FE2993BB116B4B00FAC57B /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A237B773CA7A4210BBD60E0DAFBB0C /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF9E0A7ADD7449CF2026546440EBB1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC67F16A19995A3FE0393B27CBD8A3 /* Foundation.framework */; };
 		8D12C95C43E8E67A253ACD545E9A11D2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3E9B880428D8B970369ABCA7D531DC /* Security.framework */; };
 		8F88549F032EFFEA9C281860520CC879 /* SDWebImageIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = D24591CE4F76E3C527D1C74C3D64D17D /* SDWebImageIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F9E1EEF2FE52E3231A769722D5C4148 /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F2CB799BE2D1AF0EAD4244E3D18B01 /* ServerTrustEvaluation.swift */; };
+		907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EC6356A541FA6628DA912C2D2A8025 /* DropDown-dummy.m */; };
 		909CBA577868D6E976AC82340B50343E /* SDImageCachesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 10D441B27542146E6A379E538DEFE828 /* SDImageCachesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E859F49028AD945BABCEA95587DFD3 /* OIDURLQueryComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF64DAF2B7B224A1D51CCBA9FD4A19F /* OIDURLQueryComponent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9203F7DCFC5605A1529D322115799CA4 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3676751158F25722A8FB41BB18707165 /* GTMSessionFetcherService.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9417B501496C79C9303BF947EC52DBCB /* SDImageCacheDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0B29F00CF8FFB9814AAF4F39006D1 /* SDImageCacheDefine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		941822CDF68EB8F4D49F150457A82616 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC2C4FDB967C47B895BC7F21FA4206 /* ResponseSerialization.swift */; };
@@ -161,9 +212,14 @@
 		A2AAC3F9DFA643D1EAA21540278C9D59 /* NSButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6FC8121BA46E3F19C499D4306FC6AC /* NSButton+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A2CE92DE43AB450DE1AAA129BFBADCBE /* SDGraphicsImageRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C8D0CDCC484166A61480972E4E864C4 /* SDGraphicsImageRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3153333FC136836B0028E6AB2A56BEE /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C8F90DCD3EFC3A66184E11E3F961C /* AlamofireExtended.swift */; };
+		A35244C9342474C7118D33BE2996BF00 /* OIDAuthorizationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D328219B8F1112A954879AB1890E807 /* OIDAuthorizationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A48332BBA60DA4C89A237BBD2CC744E5 /* OIDResponseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 132AC2B2BFBE10B7227DBE0F579FADE7 /* OIDResponseTypes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A4F1202CE5BBE79F3BBCAE3D2B16BC03 /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D596C1F4CFBC3AA9DE709D31DD0C4 /* Result+Alamofire.swift */; };
 		A664924D6CCE2922A3F81EC932F4D476 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A9E1FED9B3624E09C1EB8FC8A2805A /* AFError.swift */; };
 		A70325829958CE36738F0F6F8D32935E /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB87D64170A662DA6F28A2ABBA4DA5 /* UIButton+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A8206B7C1B9BC38DF66915E95B029BDE /* OIDFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1F40AFF0E01D65CF8CA4533B689F0 /* OIDFieldMapping.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A88A28AD0AE43322D415B1F83183EB66 /* AppAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 750BD444B31380E5CFC5BC040DA1B101 /* AppAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9BBB81C38ED12E9CF718ACD96A3E50A /* OIDTokenResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 12E82508DE018F07D00AB7917D56F7E2 /* OIDTokenResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDA648BCD7D5504F119450C8B958744 /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD8A600671CDB17B86D6C160D29B5A /* GTMSessionFetcher-dummy.m */; };
 		AC5F5B98B67491E7A5203985F1EDEEB8 /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A03312A5CEA03EA081586921B716F1 /* SDImageCacheConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AD0CFDA140E346502935BA58225E6EF3 /* SDWebImageDownloaderRequestModifier.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B6A9A414B8C7AC2A17A0818B0C5262 /* SDWebImageDownloaderRequestModifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -171,14 +227,19 @@
 		B04279CC3476C6D75EDE63B360B89DEC /* SDWebImageTransitionInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1913FA548B399391C7DD1A3C630A790A /* SDWebImageTransitionInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B128DE666CCA7CF6B0F09411D8209A92 /* SDWebImageCacheKeyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = CECB866AF91058CEE90736B60294873B /* SDWebImageCacheKeyFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B407158FBB032349F10702686E54E086 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D11D1B548F18902DAFBD0EC0E381805E /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B40B071395954881429075EA56BF9512 /* OIDExternalUserAgentIOSCustomBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 46CB9DD6EBA5283AFE818C36F80A4CDB /* OIDExternalUserAgentIOSCustomBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4195AA5407186FD660A6DF15A2269B1 /* SDImageCachesManagerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0366ED829FC35B0AAC85D040D83F8656 /* SDImageCachesManagerOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B6473B8E8353317F75D6800D4F7054CB /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB144333D55D2FF5ACD211A547CAC0 /* NetworkReachabilityManager.swift */; };
+		B702E735ADF976FCCBE40BC37FA9468E /* OIDExternalUserAgentCatalyst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD745017B8A6FFA0A1C1C86426D182B /* OIDExternalUserAgentCatalyst.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060135D91284D99EDA0FC054CC142E30 /* DPDUIView+Extension.swift */; };
 		B76B400EB5746F13312A85747C6E5296 /* SDImageAWebPCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6A6FA072580C4428ED700F5B8FA01D /* SDImageAWebPCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B89D1C69742F61878115334A1D2DFFE7 /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DABFE9EB935C0761362A8B436A633 /* URLRequest+Alamofire.swift */; };
 		B8A56E94E316B9C418EB4F9F6C58990E /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E65C9475593AC1D3411201DB02E202BD /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B9B31EE690E38E99AA1DE5F15DF10D87 /* SDImageIOAnimatedCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D383044FA8E335BDB667ED20334BB85 /* SDImageIOAnimatedCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BB4A42BC10B2E69F4579A26457C28CDA /* OIDRegistrationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB5B681EA2189D372CCE5161B145AEE1 /* OIDRegistrationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC6F43206BCDC8350CA17932BB6A8333 /* UIImage+MemoryCacheCost.m in Sources */ = {isa = PBXBuildFile; fileRef = E510F7DD956B95CB9F2153840B3BA53C /* UIImage+MemoryCacheCost.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BD074722CD72470954ADB5B1198E01C5 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C81E459F1EEC4F240D22E2C9A6C065F /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EC3CF7AC0BBDC566E924E6CC618A9F /* DropDownCell.swift */; };
 		BF424FAF2361CA5B7DF5923FDC00FB52 /* SDImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0667CC0826509475DA3F48B8B18EC /* SDImageCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C0DB0E4FE2F9204287EFE38773350E54 /* SDImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F870F267ACD86A5B7D0AB3F6E76F26D /* SDImageTransformer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C16A047C4E8D856309A486182A490993 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB866D7B93114A7CABB242A7449E2F3A /* MultipartFormData.swift */; };
@@ -188,47 +249,66 @@
 		C7F66519CE6148F21D7DB11423F1D34D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECF2D2C00C9A011348D79E15A6AA7A /* Response.swift */; };
 		CB6501E3DC7617EDD869A1032945BDE3 /* GTMOAuth2KeychainCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0894CDE24D16741C8970DF79BC5BA2 /* GTMOAuth2KeychainCompatibility.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CB841CB15A3F90985AC76D7FEAC9D15D /* SDWebImageCacheSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6878313504AFD0FF48FEAC46C9F966B /* SDWebImageCacheSerializer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CCF47FFB15F39E4ACAF3C9320138B20E /* OIDExternalUserAgentCatalyst.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F8D2FA9A49D088AF15444CA11B5436F /* OIDExternalUserAgentCatalyst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0214C8BBDA006C76CE5F2666C6F7366 /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D745240D61B4FC3CBB8DB5EEF607F3 /* GTMSessionFetcherLogging.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D08E73CE77698A4EC2EFF175667F92A8 /* OIDEndSessionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 670E1DB4AFF179611DE4189A9FACDC09 /* OIDEndSessionRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D15FEA31AA9625BBF041FB91E48A9995 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327572DB5F6A5908B71E86955D42DE6 /* Validation.swift */; };
 		D340F603D2D378520C7DF6D1017C5867 /* GTMAppAuthFetcherAuthorization.h in Headers */ = {isa = PBXBuildFile; fileRef = D3FE6ABED849819822F994C5648A1AE0 /* GTMAppAuthFetcherAuthorization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D37347FE542A3746FA04A8748ABAE512 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 354C2EC93FA1435F31F7FBE0FD78C7AF /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D4E46E32B33677BF28DFCDB6ED0EBEFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC67F16A19995A3FE0393B27CBD8A3 /* Foundation.framework */; };
+		D53BA1EB19FC853BD345171432069A98 /* OIDScopeUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C02911977CF8F28CBD395DEB5EDDB8C3 /* OIDScopeUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D556C63635E7A83C7A9B04FB104F7339 /* UIImage+Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A4399481F91E526F8E95F23D6064A6F /* UIImage+Transform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5642F71CE45450DF87F7190152DB0F3 /* OIDAuthorizationService+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F7960282AACE3EF538559383C4C75757 /* OIDAuthorizationService+IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CF3B9ACF3B1EECF3EE52136AF95362 /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = D90CE2D6374CF2AF5C781669B92D2549 /* SDAnimatedImageRep.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D5E764D19ECD3D66AA66BC58BF5EDF7A /* Pods-swiftChatter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0996936BE25986F793A72C34EE5668 /* Pods-swiftChatter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6BF615AE563D92D7B33D3C90A8AE28A /* SDWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = A551A72A960E5FB4CECF8AC0CFFA75F0 /* SDWebImageError.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D7BA04ADFE3104907F100E9370184A65 /* UIImage+ExtendedCacheData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B436A02342F7881AA79EEADBED88BC2 /* UIImage+ExtendedCacheData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D975B260AB44081399BCB612916CE675 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA5DE366BEF98D6311AAA252BEB7D87 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DBBAC864AD405BED53782364E0F0D5F3 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = B6E74457CB307263C5BBCB8A2B12E960 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCBADC25E2C2DB473A8410FB4B0F52A1 /* OIDGrantTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = A450DFCEB0DF968E9E2C62192C235788 /* OIDGrantTypes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DCD0C33A2B50811D53CF68F021284B47 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40897D2E13B8A2FBA0738012AFB997 /* DispatchQueue+Alamofire.swift */; };
 		DD58A00EACBEE274C381B491519C6B8C /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D927B70146966E887A2264CF9DAC8 /* RedirectHandler.swift */; };
 		DECA57AF64C5C257919649ECBB75F0B9 /* SDWebImageCacheSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 024A02E24B7F6F02A3B717F54F1D6FF9 /* SDWebImageCacheSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF5F5C6094F63DCA1B608E0FC42C73AA /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D599A0EF79937FCCE03E481CC3DB3B98 /* SDWebImageIndicator.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E0A045EFE8632A1839FF0F23C4797FB7 /* OIDServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4716385EB7CCEC75744D7FE4719E4F /* OIDServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C3B686361B593EA66848A309AEA2F4F /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0C65E16219718869CD2AFCA2C5465CB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9BA65A34FBC89B3D90FC4476169284 /* Request.swift */; };
 		E12E8C473C6DCB7B1EF8BE177296D88E /* SDWebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D94DF44382FBAD6E1D694E56185B63 /* SDWebImageOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E1769C267E82B0C24FE0FFBF949F0A6E /* StringEncoding+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382673602FCF3317C0A3AA1098E02096 /* StringEncoding+Alamofire.swift */; };
+		E26AED5213E670359331FD86FEE5AA61 /* OIDEndSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A5D9A0B8D9E86919513E546A37BC5 /* OIDEndSessionRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E2D4DF482E8F882B8FEC15020D3AEAA9 /* OIDIDToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF12AE980BCAE3C4E000045CCF16862 /* OIDIDToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E37A937FF07E63C06A9CD72B744903D2 /* OIDIDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 44610DE63CFCF92C825EE56FF2605E36 /* OIDIDToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E45874B5AD52335020CDE0A13EE83E2B /* SDAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9154F2791A4F2FC530123AE46FDFB784 /* SDAssociatedObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E4769450B905673E871A79F8A9A2E443 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = CC3EE06FD0FF82EFE5DAC073BCF2348F /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E515780850EBAD40342EBF2997BFC2D2 /* SDWebImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 16CE99FE8516637804995CB47731C349 /* SDWebImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E556832E0C191FCFABB9E97C87D243EF /* SDmetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E08B490E9FF5B941C7D277FE412D44 /* SDmetamacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E5C54585B5B2C0D195F4CEA28F28E67D /* OIDScopes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AAE62423B904E55ADAF5584F6F898C7 /* OIDScopes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5C6051933677CDF392BF6356271A92E /* SDImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = FD7A3596A4A62EBF307918ACDEEB569A /* SDImageIOCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E68DFBC20982FEA7114CBB25144D3086 /* OIDAuthState+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E2B3372D80A0BBB6784B992A19BC9AB /* OIDAuthState+IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7FA1E1CD066D0335A95376C73E3F8ED /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B98CAED325B00F5FABDAC1BDEE4CFAF9 /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E857ADCAD7B647883D5B2AEC3F16D1D5 /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F55AD54D58B05B612B644DC27072D9 /* URLSessionConfiguration+Alamofire.swift */; };
 		E8CE28499C17965A931605D4F47AAEBF /* NSImage+Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3CAE9A139A657F585EC874B863E645 /* NSImage+Compatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8D519B63C2077979F799769F9A35072 /* SDImageCachesManagerOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B1CE8F43499FEB4C0B5FB688EAE3057C /* SDImageCachesManagerOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EABCD7C4A52C54F0628D7ABD99C4CAE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC67F16A19995A3FE0393B27CBD8A3 /* Foundation.framework */; };
+		EBE36AFF9964F232ABAEA6E260C5CF82 /* OIDServiceDiscovery.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A4824875993EB5B910AEAEC6CFAC55F /* OIDServiceDiscovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC11B17DA78F7EEBEBC3EFAF68C6DF9F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7484E5AAD4760D72C363C07AF63DFB1 /* Session.swift */; };
 		EEAF3E2823C52A6FCF66117ADDE1B217 /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBF87EFA9CC24248D100B885FD41AC3 /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F05E13CBC2808E06F21F78BF9519E394 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7573B8C4FDEB0A734A3FE9A338B684DA /* UIView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F077E74D9855D0D7FCF570F8E8ED4A1E /* SDFileAttributeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FA41CA6DD8A50D6B4D7C6930DBA4E4AC /* SDFileAttributeHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F13E1FAA0CF777B6DE30634A7ADCE983 /* UIImage+ExtendedCacheData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B06B342EE940C564C985D108CF19D /* UIImage+ExtendedCacheData.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F161112B04B9AC7D276D9F588BA6E313 /* SDDeviceHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 15848DEA6D376E88C6640B15FE60DE09 /* SDDeviceHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F33FF8F03032563B5E139FEFF45C8AC2 /* AppAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE08D509A59BEB6650DCD0883E5D3BF1 /* AppAuth-dummy.m */; };
 		F36D96A4346C90A2D11CB3B6A2ECF4CF /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD554AA4B6FE7BD2198DDD901EC6281 /* AuthenticationInterceptor.swift */; };
 		F463DEB020D5C466D4613947AE4BE16F /* SDAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAA9B285EEF1602217BB77C4FDB63D5 /* SDAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4811CFAC05932CE436CC2C32BAD91E6 /* UIColor+SDHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8609296A2C5A49DD8FDCDD89FBB084 /* UIColor+SDHexString.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F48DF0E834600559051C32B935091B69 /* OIDServiceDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB59FEB87C764F45092965783F2CA89 /* OIDServiceDiscovery.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F5D2A31C7EB1DE010771140B6E7ABAD8 /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C526A98C9AD4A06F60936D614D20F /* URLEncodedFormEncoder.swift */; };
 		F63BE0585331CAA3482EF736803F8243 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD21B7F681892A27949943D128770183 /* RequestInterceptor.swift */; };
+		F669C9FCB019B2E1EF3293E6CB7B0386 /* OIDAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9A392A4A3D5416D2A26FFDC9DB774 /* OIDAuthorizationService.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F6E75F5FD0501A6E1464C1153B20CB97 /* OIDDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F372CE9EA1FA22C9C125B4CD9D987AC /* OIDDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7289F163C285103D6CCAB39447153CA /* SDWebImageDownloaderConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC1588952BFC6724FD767AB9D1F3910 /* SDWebImageDownloaderConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F73DDC76DF23F2ED79BC390786744537 /* OIDExternalUserAgentIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 44725C9E507E7173124D6E271747A0B9 /* OIDExternalUserAgentIOS.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F950D208FA4D412081B58F83807785A4 /* OIDRegistrationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = F99BBD5F0699F6DCA819BFB8C832DBB8 /* OIDRegistrationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC1A10ED83DC5A31B6A794ABAF1CAB5 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E30B16D24F63A25CAB0BCCCDAC055 /* NSData+ImageContentType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FE0189D2FE038AD82C4CCF5A801A50A3 /* SDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D28DCEA6A92F148562EF67AE4E1631A6 /* SDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE0F565517D67F89FFADB733A9591CEB /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D65C6C7B02FC177F62B655A506F229 /* GTMSessionFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -252,6 +332,13 @@
 			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
 			remoteInfo = SDWebImage;
 		};
+		2524BC36820F823A633DD7988909E179 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
+		};
 		385475CE5CDCDAB2FED2204F3EBCCC05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -266,6 +353,13 @@
 			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
 			remoteInfo = GTMSessionFetcher;
 		};
+		5E32FD6138FCC335D0E8684098FEB98C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
+			remoteInfo = DropDown;
+		};
 		712CFAD39B66BA264E5754236E2A182A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -273,12 +367,26 @@
 			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
 			remoteInfo = GTMSessionFetcher;
 		};
+		7C77CBAD224238319FE8597FA5C7C793 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
+		};
 		8ADB8529338012287CEF9E887DCA7BDB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
 			remoteInfo = GTMAppAuth;
+		};
+		9B35B82BCCE964FEA601559B1900F699 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
 		};
 		AB604D17E20D6B76FD78D9E9CDDB20FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -376,6 +484,7 @@
 		3DB59FEB87C764F45092965783F2CA89 /* OIDServiceDiscovery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceDiscovery.m; path = Source/AppAuthCore/OIDServiceDiscovery.m; sourceTree = "<group>"; };
 		3DE57FD7DBF2A86CB8E5A31CF4B27EB2 /* AppAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppAuth.release.xcconfig; sourceTree = "<group>"; };
 		3F8D2FA9A49D088AF15444CA11B5436F /* OIDExternalUserAgentCatalyst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentCatalyst.h; path = Source/AppAuth/iOS/OIDExternalUserAgentCatalyst.h; sourceTree = "<group>"; };
+		3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F11BE0407B4F81878E1DB5F6E09D6B /* SDImageAWebPCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAWebPCoder.h; path = SDWebImage/Core/SDImageAWebPCoder.h; sourceTree = "<group>"; };
 		413F1E8C1264B34B15E9AC52B53E24A5 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		41959E1BAFDFBFD6B0A6C6899C2D2E56 /* SDWebImageDownloaderResponseModifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderResponseModifier.m; path = SDWebImage/Core/SDWebImageDownloaderResponseModifier.m; sourceTree = "<group>"; };
@@ -470,9 +579,10 @@
 		988242B629F263B2F631F256E9A9672D /* GTMAppAuthFetcherAuthorization+Keychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMAppAuthFetcherAuthorization+Keychain.h"; path = "GTMAppAuth/Sources/Public/GTMAppAuth/GTMAppAuthFetcherAuthorization+Keychain.h"; sourceTree = "<group>"; };
 		990DABFE9EB935C0761362A8B436A633 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		9AC1588952BFC6724FD767AB9D1F3910 /* SDWebImageDownloaderConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderConfig.h; path = SDWebImage/Core/SDWebImageDownloaderConfig.h; sourceTree = "<group>"; };
+		9B6725B782188F18CB76A740433F14E4 /* DropDown */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDE4784953757F4DE40ABEF91A5D2E0 /* GTMSessionFetcher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-umbrella.h"; sourceTree = "<group>"; };
 		9CE94721B908D7294AC6744D653FBDC5 /* SDInternalMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDInternalMacros.h; path = SDWebImage/Private/SDInternalMacros.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E2B08CD48456D05925DBF4F851DF6F9 /* OIDExternalUserAgentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentRequest.h; path = Source/AppAuthCore/OIDExternalUserAgentRequest.h; sourceTree = "<group>"; };
 		9E2E65A3B096419CCA0D2B4649AFFF81 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/Core/SDImageCache.h; sourceTree = "<group>"; };
 		9E44C13C4501DE95517E74AE49FD7933 /* OIDURLQueryComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLQueryComponent.h; path = Source/AppAuthCore/OIDURLQueryComponent.h; sourceTree = "<group>"; };
@@ -651,6 +761,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C995E4C83DD7C871B49CE6B60842DA24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -665,6 +783,15 @@
 			files = (
 				EABCD7C4A52C54F0628D7ABD99C4CAE0 /* Foundation.framework in Frameworks */,
 				8D12C95C43E8E67A253ACD545E9A11D2 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8703AD13333A0CEC142335B7F4DFB50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF9E0A7ADD7449CF2026546440EBB1F /* Foundation.framework in Frameworks */,
+				4816ED359D1CCB98A1C010564EE02C2F /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +813,7 @@
 				3B3BD1357AEAA5E760AB89C4662E8DED /* Core */,
 				6F3FFAE0AF93B708742BE1B8EBF419BF /* Support Files */,
 			);
+			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -741,6 +869,8 @@
 			isa = PBXGroup;
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
+				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */,
+				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
 				6FD122EA0AB9AB2A8FFA5F676C795DF0 /* GTMAppAuth */,
 				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher */,
 				8087356FF9ED40E237E5E8BA2CE6EA0D /* Pods-swiftChatter */,
@@ -967,6 +1097,7 @@
 				6327572DB5F6A5908B71E86955D42DE6 /* Validation.swift */,
 				1B5FACCA62EC828C0A3152856B1935DC /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1015,6 +1146,7 @@
 				E470086DDD864F920C2698967066611E /* Resources */,
 				AD97143244BC9BBB4A01C5BEFF46ADE9 /* Support Files */,
 			);
+			name = DropDown;
 			path = DropDown;
 			sourceTree = "<group>";
 		};
@@ -1059,6 +1191,7 @@
 				A3033AE2659F1F30E81556676FEFBF41 /* Core */,
 				3AD804EACEDADD47863C8736987AAEA4 /* Support Files */,
 			);
+			name = GTMSessionFetcher;
 			path = GTMSessionFetcher;
 			sourceTree = "<group>";
 		};
@@ -1162,6 +1295,7 @@
 				015778DC35B4CDE10308BD931C6547C4 /* Resources */,
 				1BC9196969D4D1837821A6B89B611381 /* Support Files */,
 			);
+			name = GoogleSignIn;
 			path = GoogleSignIn;
 			sourceTree = "<group>";
 		};
@@ -1222,6 +1356,7 @@
 				FA0894CDE24D16741C8970DF79BC5BA2 /* GTMOAuth2KeychainCompatibility.m */,
 				D16D2364904D08CCAC9FD20A3416D4F4 /* Support Files */,
 			);
+			name = GTMAppAuth;
 			path = GTMAppAuth;
 			sourceTree = "<group>";
 		};
@@ -1240,6 +1375,7 @@
 				6E5CEA5059843E75E2D7307DBE28C894 /* ExternalUserAgent */,
 				10CD7CCF7ED33F370423E9CD24971C15 /* Support Files */,
 			);
+			name = AppAuth;
 			path = AppAuth;
 			sourceTree = "<group>";
 		};
@@ -1368,6 +1504,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A580A63AF4C377C0A5656869023B866 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD985E4671C5879F20406153E3E574C /* AppAuth.h in Headers */,
+				A88A28AD0AE43322D415B1F83183EB66 /* AppAuth-umbrella.h in Headers */,
+				468CEC1F1ED6564685600D76F289F8CB /* AppAuthCore.h in Headers */,
+				A35244C9342474C7118D33BE2996BF00 /* OIDAuthorizationRequest.h in Headers */,
+				551E477DFE0DF7EA481165609280D1D7 /* OIDAuthorizationResponse.h in Headers */,
+				439CAB2D08FC0211211A3C29A8FBC623 /* OIDAuthorizationService.h in Headers */,
+				D5642F71CE45450DF87F7190152DB0F3 /* OIDAuthorizationService+IOS.h in Headers */,
+				6264526D8F9C1ACEF1013E5A724FD971 /* OIDAuthState.h in Headers */,
+				E68DFBC20982FEA7114CBB25144D3086 /* OIDAuthState+IOS.h in Headers */,
+				36DC3ACDD3D67D6800CABB2100702A0A /* OIDAuthStateChangeDelegate.h in Headers */,
+				320D03F92E37CA225E1AB819D00B09B6 /* OIDAuthStateErrorDelegate.h in Headers */,
+				161B289F1C83A7281E6842E33014033F /* OIDClientMetadataParameters.h in Headers */,
+				F6E75F5FD0501A6E1464C1153B20CB97 /* OIDDefines.h in Headers */,
+				D08E73CE77698A4EC2EFF175667F92A8 /* OIDEndSessionRequest.h in Headers */,
+				457F8F3576D65A8717113C59D6665554 /* OIDEndSessionResponse.h in Headers */,
+				4845BF5ED5999291320D49E88162F62A /* OIDError.h in Headers */,
+				84721D9C8FAD373C09FFCDA8D18F212A /* OIDErrorUtilities.h in Headers */,
+				51C24FAAC45273CE7FF920D0CC553274 /* OIDExternalUserAgent.h in Headers */,
+				CCF47FFB15F39E4ACAF3C9320138B20E /* OIDExternalUserAgentCatalyst.h in Headers */,
+				2EF390C79F02F4E85DB5FB4C1F042498 /* OIDExternalUserAgentIOS.h in Headers */,
+				B40B071395954881429075EA56BF9512 /* OIDExternalUserAgentIOSCustomBrowser.h in Headers */,
+				752935D37B27C4524979795B8403211D /* OIDExternalUserAgentRequest.h in Headers */,
+				37B71CC20A787EAE0662CD1A40DA64B6 /* OIDExternalUserAgentSession.h in Headers */,
+				17EC3E69469BB4FE2ACD89184105A8BA /* OIDFieldMapping.h in Headers */,
+				4447683B19506EEA079DF50B4439B0D5 /* OIDGrantTypes.h in Headers */,
+				E2D4DF482E8F882B8FEC15020D3AEAA9 /* OIDIDToken.h in Headers */,
+				BB4A42BC10B2E69F4579A26457C28CDA /* OIDRegistrationRequest.h in Headers */,
+				F950D208FA4D412081B58F83807785A4 /* OIDRegistrationResponse.h in Headers */,
+				2156F1E12D1F62F8322CFE5C29277E6E /* OIDResponseTypes.h in Headers */,
+				E5C54585B5B2C0D195F4CEA28F28E67D /* OIDScopes.h in Headers */,
+				D53BA1EB19FC853BD345171432069A98 /* OIDScopeUtilities.h in Headers */,
+				E0A045EFE8632A1839FF0F23C4797FB7 /* OIDServiceConfiguration.h in Headers */,
+				EBE36AFF9964F232ABAEA6E260C5CF82 /* OIDServiceDiscovery.h in Headers */,
+				4C765081895B1F7551FED0CA1DBF8B77 /* OIDTokenRequest.h in Headers */,
+				A9BBB81C38ED12E9CF718ACD96A3E50A /* OIDTokenResponse.h in Headers */,
+				52DCCBBE231688834A4430EC4DC5E2F3 /* OIDTokenUtilities.h in Headers */,
+				1D66D60A6F32CFF16C509D1396D0EFDE /* OIDURLQueryComponent.h in Headers */,
+				4A24503FE25D6B716A3E4E138451B70F /* OIDURLSessionProvider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97CE91431E229797751455423C79CA4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -1384,6 +1573,8 @@
 			);
 			dependencies = (
 				1DEA62D73E4E37B279FEF2D6CCBFBD14 /* PBXTargetDependency */,
+				F769D4D671FDC387D41E323866063EBF /* PBXTargetDependency */,
+				D6AD2AECAA9DB18416F1FC6FE4C9D602 /* PBXTargetDependency */,
 				E6DCE05E550F438B64F99DB377047D54 /* PBXTargetDependency */,
 				4D2221464A60C9E981315ECF15AE2D96 /* PBXTargetDependency */,
 				A61E191E200E31F8D7E8283FFDB4F70D /* PBXTargetDependency */,
@@ -1412,6 +1603,24 @@
 			productReference = B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */;
 			productType = "com.apple.product-type.framework";
 		};
+		5C642AA10FB29936669CC269F42079C6 /* AppAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5A2205A881DE5528CA6FE384DDD74F /* Build configuration list for PBXNativeTarget "AppAuth" */;
+			buildPhases = (
+				6A580A63AF4C377C0A5656869023B866 /* Headers */,
+				40CB315F2657285858FED8D71870B415 /* Sources */,
+				E8703AD13333A0CEC142335B7F4DFB50 /* Frameworks */,
+				2DE9CAF821DA733AF87E03FB3357AFE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppAuth;
+			productName = AppAuth;
+			productReference = 3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */;
+			productType = "com.apple.product-type.framework";
+		};
 		8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1166072F19D605AE7E4B016DD27CFA21 /* Build configuration list for PBXNativeTarget "GTMAppAuth" */;
@@ -1424,6 +1633,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5579E9A1BE44158E5E34F130EE81E8A5 /* PBXTargetDependency */,
 				20AC5881B07995FCEEE97C2532A88C91 /* PBXTargetDependency */,
 			);
 			name = GTMAppAuth;
@@ -1447,6 +1657,24 @@
 			name = GTMSessionFetcher;
 			productName = GTMSessionFetcher;
 			productReference = C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildPhases = (
+				97CE91431E229797751455423C79CA4F /* Headers */,
+				48864C435B3DB37698CF568C638CF98F /* Sources */,
+				808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */,
+				EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropDown;
+			productName = DropDown;
+			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
@@ -1490,6 +1718,8 @@
 			projectRoot = "";
 			targets = (
 				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
+				5C642AA10FB29936669CC269F42079C6 /* AppAuth */,
+				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
 				CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */,
 				8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */,
 				D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */,
@@ -1500,6 +1730,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2DE9CAF821DA733AF87E03FB3357AFE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4ADA1692CFBDCDD9FAC8186D586F7CCA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1535,6 +1772,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1543,6 +1788,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				A11EE0A18AA924515ABB955BC6E9A306 /* Pods-swiftChatter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40CB315F2657285858FED8D71870B415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33FF8F03032563B5E139FEFF45C8AC2 /* AppAuth-dummy.m in Sources */,
+				646C9F55A668E111DD5822AB2F9FDE6F /* OIDAuthorizationRequest.m in Sources */,
+				10FA4B082EFE76833B278505FF0150F7 /* OIDAuthorizationResponse.m in Sources */,
+				F669C9FCB019B2E1EF3293E6CB7B0386 /* OIDAuthorizationService.m in Sources */,
+				28B3A5802FE1E10CA6FC533270DA81C0 /* OIDAuthorizationService+IOS.m in Sources */,
+				4EA7A5404DB139E46B796B715346BD6D /* OIDAuthState.m in Sources */,
+				57A6ACE1BAEA7426248B6F56DC8F5133 /* OIDAuthState+IOS.m in Sources */,
+				212FE9ADE82512247BA4239AE7299896 /* OIDClientMetadataParameters.m in Sources */,
+				E26AED5213E670359331FD86FEE5AA61 /* OIDEndSessionRequest.m in Sources */,
+				7BE52B1B5401BD6D7FB28C1C7335C65F /* OIDEndSessionResponse.m in Sources */,
+				361E2ABC39FC721CAC0A60D97B914F8A /* OIDError.m in Sources */,
+				2CF8AD404E3183EA512D35D5A875E6AF /* OIDErrorUtilities.m in Sources */,
+				B702E735ADF976FCCBE40BC37FA9468E /* OIDExternalUserAgentCatalyst.m in Sources */,
+				F73DDC76DF23F2ED79BC390786744537 /* OIDExternalUserAgentIOS.m in Sources */,
+				6823031D9F492AECA9C447439E7A3060 /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */,
+				A8206B7C1B9BC38DF66915E95B029BDE /* OIDFieldMapping.m in Sources */,
+				DCBADC25E2C2DB473A8410FB4B0F52A1 /* OIDGrantTypes.m in Sources */,
+				E37A937FF07E63C06A9CD72B744903D2 /* OIDIDToken.m in Sources */,
+				2782B24A2261DE8B330B44157B9942B8 /* OIDRegistrationRequest.m in Sources */,
+				32F911D6150E642B8F2CDC98AEF3E73A /* OIDRegistrationResponse.m in Sources */,
+				A48332BBA60DA4C89A237BBD2CC744E5 /* OIDResponseTypes.m in Sources */,
+				689710AEBB6FCF80CC6CF503FCCE5BBB /* OIDScopes.m in Sources */,
+				67EC3D04252892C191FEC258377C2C3B /* OIDScopeUtilities.m in Sources */,
+				5700F2B87DCC93D832B29F89E850CB79 /* OIDServiceConfiguration.m in Sources */,
+				F48DF0E834600559051C32B935091B69 /* OIDServiceDiscovery.m in Sources */,
+				449EC829DD62DE2FCBC6EC9DCEEF7C81 /* OIDTokenRequest.m in Sources */,
+				5F8F0237CE1054B9A08B2C40671DF085 /* OIDTokenResponse.m in Sources */,
+				0243C815758D1D145C7F37165277EEFA /* OIDTokenUtilities.m in Sources */,
+				91E859F49028AD945BABCEA95587DFD3 /* OIDURLQueryComponent.m in Sources */,
+				478FB747A4426C8364A9E0EF192D4A82 /* OIDURLSessionProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48864C435B3DB37698CF568C638CF98F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */,
+				89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */,
+				B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */,
+				84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */,
+				515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */,
+				907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */,
+				BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1717,6 +2013,18 @@
 			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
 			targetProxy = 0862BB3C461CE044CB7FB436EC0DC04A /* PBXContainerItemProxy */;
 		};
+		516126FDDB0E27141872D6D807713903 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 7C77CBAD224238319FE8597FA5C7C793 /* PBXContainerItemProxy */;
+		};
+		5579E9A1BE44158E5E34F130EE81E8A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 9B35B82BCCE964FEA601559B1900F699 /* PBXContainerItemProxy */;
+		};
 		61EF8135CEE2C8836CA344B23FF2E799 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GTMSessionFetcher;
@@ -1735,11 +2043,23 @@
 			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
 			targetProxy = 0C8D5D4A61D6E1F7E8CE0773E17368B0 /* PBXContainerItemProxy */;
 		};
+		D6AD2AECAA9DB18416F1FC6FE4C9D602 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
+			targetProxy = 5E32FD6138FCC335D0E8684098FEB98C /* PBXContainerItemProxy */;
+		};
 		E6DCE05E550F438B64F99DB377047D54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GTMAppAuth;
 			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
 			targetProxy = F8BA3CB41D232A112A751A21D1E13539 /* PBXContainerItemProxy */;
+		};
+		F769D4D671FDC387D41E323866063EBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 2524BC36820F823A633DD7988909E179 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1848,6 +2168,40 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		3116465253E5D2735E81E263946C254A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC24E417D9ABDD150AF53B0F42B46CA8 /* AppAuth.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AppAuth/AppAuth.modulemap";
+				PRODUCT_MODULE_NAME = AppAuth;
+				PRODUCT_NAME = AppAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		404F12B2C59759932BAF08C9ED5F7FFA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2205,6 +2559,76 @@
 			};
 			name = Debug;
 		};
+		C24518E891FAA59668669823639498EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1B2D09F1F99B1BE06A4B35ACAA0181 /* DropDown.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C787002FA4C4FE6BC561E4294D831DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE57FD7DBF2A86CB8E5A31CF4B27EB2 /* AppAuth.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AppAuth/AppAuth.modulemap";
+				PRODUCT_MODULE_NAME = AppAuth;
+				PRODUCT_NAME = AppAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D99A25D85E0373E4BC96998F090FA60F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC2DCAA2C6862E23D60D4E76F86BA2A7 /* GoogleSignIn.release.xcconfig */;
@@ -2256,6 +2680,40 @@
 			};
 			name = Debug;
 		};
+		E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9B02A281A47BAE2F93F9A41240E6B90 /* DropDown.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2286,6 +2744,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */,
+				C24518E891FAA59668669823639498EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7F982436D96A9F7AAE7AE29D12E88120 /* Build configuration list for PBXAggregateTarget "GoogleSignIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2300,6 +2767,15 @@
 			buildConfigurations = (
 				79CAC264ADFE5B001A5B7C3B7E3C344F /* Debug */,
 				2A7DA26AF0A7C5162BE1469DC8E89D03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5A2205A881DE5528CA6FE384DDD74F /* Build configuration list for PBXNativeTarget "AppAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3116465253E5D2735E81E263946C254A /* Debug */,
+				C787002FA4C4FE6BC561E4294D831DFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B3625FFC26E7F1D800A44FEC"
                BuildableName = "swiftChatter.app"
                BlueprintName = "swiftChatter"
-               ReferencedContainer = "container:swiftChatter.xcodeproj">
+               ReferencedContainer = "container:fishbowl.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "B362601226E7F1DB00A44FEC"
                BuildableName = "swiftChatterTests.xctest"
                BlueprintName = "swiftChatterTests"
-               ReferencedContainer = "container:swiftChatter.xcodeproj">
+               ReferencedContainer = "container:fishbowl.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "B362601D26E7F1DB00A44FEC"
                BuildableName = "swiftChatterUITests.xctest"
                BlueprintName = "swiftChatterUITests"
-               ReferencedContainer = "container:swiftChatter.xcodeproj">
+               ReferencedContainer = "container:fishbowl.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "B3625FFC26E7F1D800A44FEC"
             BuildableName = "swiftChatter.app"
             BlueprintName = "swiftChatter"
-            ReferencedContainer = "container:swiftChatter.xcodeproj">
+            ReferencedContainer = "container:fishbowl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -84,7 +84,7 @@
             BlueprintIdentifier = "B3625FFC26E7F1D800A44FEC"
             BuildableName = "swiftChatter.app"
             BlueprintName = "swiftChatter"
-            ReferencedContainer = "container:swiftChatter.xcodeproj">
+            ReferencedContainer = "container:fishbowl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
