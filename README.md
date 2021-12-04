@@ -6,8 +6,8 @@ Team GitHub for fishbowl project. EECS 441 Fall 2021
 |:-----:|:-----:|:--------:|
 |[<img src="https://eecs441.eecs.umich.edu/img/admin/video.png">][demo_page]|[<img src="https://eecs441.eecs.umich.edu/img/admin/wiki.png">][wiki_page]|[<img src="https://eecs441.eecs.umich.edu/img/admin/trello.png">][process_page]|
 
-![Elevator Pitch](/assets/title.png)
-![Team](/assets/team.png)
+![Elevator Pitch](/assets/cover.png)
+![Team](/assets/subteams.png)
 
 [demo_page]: https://www.youtube.com/watch?v=5cE-bp5Bu0I
 [wiki_page]: https://github.com/aelhamah/fishbowl/wiki
