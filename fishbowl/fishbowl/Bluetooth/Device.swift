@@ -1,9 +1,4 @@
-//
-//  Device.swift
-//  BluetoothChat
-//
-//  Created by Tim Oliver on 31/5/20.
-//  Copyright © 2020 DittoLive Incorporated. All rights reserved.
+//  Adapted from from Tim Oliver's DittoLive Project (see acknowledgements)
 //
 
 import Foundation

@@ -1,9 +1,4 @@
-//
-//  DeviceTableViewCell.swift
-//  BluetoothChat
-//
-//  Created by Tim Oliver on 29/5/20.
-//  Copyright © 2020 DittoLive Incorporated. All rights reserved.
+//  Adapted from from Tim Oliver's DittoLive Project (see acknowledgements)
 //
 
 import UIKit

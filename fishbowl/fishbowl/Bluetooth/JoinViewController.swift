@@ -1,9 +1,4 @@
-//
-//  JoinViewController.swift
-//  FishBowl
-//
-//  Created by Rithika Ganesh on 10/21/21
-//  Copyright © 2020 DittoLive Incorporated. All rights reserved.
+//  Adapted from from Tim Oliver's DittoLive Project (see acknowledgements)
 //
 
 import UIKit

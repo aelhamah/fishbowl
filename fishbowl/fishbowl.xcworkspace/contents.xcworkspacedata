@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/aelhamahmy/Documents/GitHub/fishbowl/fishbowl/fishbowl.xcodeproj">
+      location = "group:fishbowl.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:fishbowl.xcodeproj">
    </FileRef>
 </Workspace>
